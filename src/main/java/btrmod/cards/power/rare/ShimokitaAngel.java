@@ -3,6 +3,7 @@ package btrmod.cards.power.rare;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.ShimokitaAngelPower;
+import btrmod.powers.SoloPowers.NijikaSoloPower;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -35,6 +36,7 @@ public class ShimokitaAngel extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new ShimokitaAngelPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new NijikaSoloPower(p)));
     }
 
     @Override

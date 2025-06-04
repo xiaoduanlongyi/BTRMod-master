@@ -24,7 +24,7 @@ public class BocchiDraw extends BaseCard {
             1
     );
 
-    private static final int GROOVE = 7;
+    private static final int GROOVE = 5;
     private static final int UPG_GROOVE = -2;
 
     public BocchiDraw() {

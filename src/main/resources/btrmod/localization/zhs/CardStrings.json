@@ -113,9 +113,9 @@
     "DESCRIPTION": "${modID}:波奇 ！ NL 随机对敌人造成 !D! 点伤害 !M! 次 。 NL 每次攻击施加1层 易伤 。"
   },
 
-  "${modID}:AnoBand": {
-    "NAME": "那个乐队",
-    "DESCRIPTION": "消耗 所有 ${modID}:律动 。每消耗一层 ${modID}:律动 ，对敌人造成 !M! 点伤害。 NL 只有在 ${modID}:波奇自闭 小于 !${modID}:BAP_VALUE! 时可以打出。",
+  "${modID}:ConfidentBocchi": {
+    "NAME": "波门",
+    "DESCRIPTION": "消耗所有 ${modID}:律动 。 NL 每层 ${modID}:律动 对敌人造成 !M! 伤害。 NL 只有在 ${modID}:波奇自闭 小于 !${modID}:BAP_VALUE! 时可以打出。 NL 进入 ${modID}:波门 。",
     "EXTENDED_DESCRIPTION": [
       " NL （造成 !${modID}:PREVIEW_DAMAGE! 点伤害。）",
       ""
@@ -181,7 +181,7 @@
 
   "${modID}:ShimokitaAngel": {
     "NAME": "下北泽的大天使",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 在每回合开始时移除 NL !M! 层 ${modID}:波奇自闭 。"
+    "DESCRIPTION": "${modID}:虹夏 ！ NL 在每回合开始时移除 NL !M! 层 ${modID}:波奇自闭 。 NL 进入 ${modID}:虹门 。"
   },
 
   "${modID}:RyoQuickWrite": {
@@ -273,5 +273,28 @@
   "${modID}:OctopusBocchi": {
     "NAME": "八爪波奇",
     "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !B! 点 格挡 。 NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 消耗 一张随机手牌 。"
+  },
+
+  "${modID}:FadeAway": {
+    "NAME": "消逝的波奇",
+    "DESCRIPTION": "造成 6 点基础伤害 。 NL 每层 ${modID}:波奇自闭 增加 !M! 点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 ",
+    " 点伤害）"
+    ]
+  },
+
+  "${modID}:NijikaThumbUp": {
+    "NAME": "天使的肯定",
+    "DESCRIPTION": "${modID}:虹夏 ！ NL 移除 !${modID}:BASE! 层 ${modID}:波奇自闭 。 NL 如果当前 ${modID}:波奇自闭 层数大于 !${modID}:THRESHOLD! ,多移除 !${modID}:BONUS! 层。"
+  },
+
+  "${modID}:AnoBand": {
+    "NAME": "那个乐队",
+    "DESCRIPTION": "${modID}:波奇 ！ NL 对所有敌人造成 !D! 伤害。 NL 获得 !${modID}:GRV! 层 ${modID}:律动 。 NL 移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 进入 ${modID}:波门 。"
+  },
+
+  "${modID}:BocchiHappy": {
+    "NAME": "波奇被夸",
+    "DESCRIPTION": "${modID}:波奇 ！ NL 造成 !D! 点伤害。 NL 移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。"
   }
 }
