@@ -1,0 +1,67 @@
+{
+  "${modID}:ExampleCard": {
+    "NAME": "Name",
+    "DESCRIPTION": "Description. NL Second line.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+
+  "${modID}:StrikeKita": {
+    "NAME": "Strum Strike",
+    "DESCRIPTION": "Kita. NL Deal !D! damage."
+  },
+
+  "${modID}:StrikeNijika": {
+    "NAME": "Drum Stick Strike",
+    "DESCRIPTION": "Nijika. NL Deal !D! damage."
+  },
+
+  "${modID}:MatureMango": {
+    "NAME": "Mature Mango",
+    "DESCRIPTION": "Gain !B! block."
+  },
+
+  "${modID}:GiveMeMoney": {
+    "NAME": "Give me money!!!",
+    "DESCRIPTION": "Gain !M! gold. Shuffle 3 Eat Grass into your draw pile. NL Exhaust"
+  },
+
+  "${modID}:EatGrass": {
+    "NAME": "Eat Grass",
+    "DESCRIPTION": 	"Lose !M! HP. Deal !D! damage."
+  },
+
+  "${modID}:BocchiGambade": {
+    "NAME": "Gorilla?",
+    "DESCRIPTION": 	"Reduce 1 Bocchi Anxiety. NL Draw !M! cards. NL Exhaust"
+  },
+
+  "${modID}:FireBocchi": {
+    "NAME": "Fire Bocchi",
+    "DESCRIPTION": 	"Deal !D! damage. NL Apply !M! Vulnerable."
+  },
+
+  "${modID}:SuperBocchi": {
+    "NAME": "Super Bocchi",
+    "DESCRIPTION": 	"Reduce !${modID}:BA1! Bocchi Anxiety. NL Gain !M! Strength . NL Gain !M! Dexterity ."
+  },
+
+  "${modID}:BocchiScream": {
+    "NAME": "Bocchi's Scream",
+    "DESCRIPTION": 	"Gain !${modID}:BA2! Bocchi Anxiety. NL ALL enemies lose !M! Strength . NL Exhaust ."
+  },
+
+  "${modID}:RevengeOnByrd": {
+    "NAME": "Revenge on Byrd",
+    "DESCRIPTION": 	"Deal !D! damage !M! times."
+  },
+
+  "${modID}:GuitarHero": {
+    "NAME": "Guitar Hero",
+    "DESCRIPTION": "Ethereal. NL The first Bocchi card you play each turn is played twice."
+  }
+}

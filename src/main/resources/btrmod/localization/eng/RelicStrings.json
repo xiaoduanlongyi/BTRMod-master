@@ -1,0 +1,18 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+
+  "${modID}:BocchiStartRelic": {
+    "NAME": "Bocchi's Rock",
+    "FLAVOR": "XXXXXXXX",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b",
+      " #ystacks of Bocchi’s Anxiety."
+    ]
+  }
+}

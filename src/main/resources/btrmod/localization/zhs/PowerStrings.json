@@ -1,0 +1,84 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+
+  "${modID}:BocchiAfraidPower": {
+    "NAME": "波奇酱的自闭值",
+    "DESCRIPTIONS": [
+      "波奇酱的攻击造成的伤害减少 #b",
+      "%。"
+    ]
+  },
+
+  "${modID}:GuitarHeroPower": {
+    "NAME": "吉他英雄",
+    "DESCRIPTIONS": [
+      "你在每回合打出的第一张波奇属性牌将被打出两次。",
+      "你在每回合打出的前 #b",
+      " 张波奇属性牌将被打出两次。"
+    ]
+  },
+
+  "${modID}:ShimokitaAngelPower": {
+    "NAME": "下北泽的大天使",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，移除 #b",
+      " 点 #y波奇自闭 。"
+    ]
+  },
+
+  "${modID}:GroovePower": {
+    "NAME": "律动",
+    "DESCRIPTIONS": [
+      "#y律动 会使一些特定的卡牌伤害提升。"
+    ]
+  },
+
+  "${modID}:BocchiSoloPower": {
+    "NAME": "波奇酱的Solo",
+    "DESCRIPTIONS": [
+      "在波门状态下，获得或移除 #y波奇自闭 时，都会额外再获得或移除 #y1 层"
+    ]
+  },
+
+  "${modID}:RyoSoloPower": {
+    "NAME": "凉仙贝的Solo",
+    "DESCRIPTIONS": [
+      "在凉门状态下，获得和失去的 #y律动 翻倍。"
+    ]
+  },
+
+  "${modID}:NijikaSoloPower": {
+    "NAME": "虹夏的Solo",
+    "DESCRIPTIONS": [
+      "在虹门状态下， #y律动 的使用效果翻倍。"
+    ]
+  },
+
+  "${modID}:KitaSoloPower": {
+    "NAME": "喜多的Solo",
+    "DESCRIPTIONS": [
+      "在喜多状态下，每回合开始时额外获得 [E] 。 NL 每打出一张带有 #y喜多 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+    ]
+  },
+
+  "${modID}:RyoThumbUpPower": {
+    "NAME": "凉的肯定",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b",
+      " 层 #y律动 。"
+    ]
+  },
+
+  "${modID}:DistortionPower": {
+    "NAME": "扭曲",
+    "DESCRIPTIONS": [
+      "卡牌的费用随机，持续 #b",
+      " 回合。"
+    ]
+  }
+}
