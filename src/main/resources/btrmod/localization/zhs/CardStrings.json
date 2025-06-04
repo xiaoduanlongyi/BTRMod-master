@@ -268,5 +268,10 @@
     "NAME": "菊里挥舞",
     "DESCRIPTION": "当前每有一名敌人，移除 !M! 层 ${modID}:波奇自闭 ，获得 !${modID}:GRV! 层 ${modID}:律动 。",
     "UPGRADE_DESCRIPTION": "固有 。 NL 当前每有一名敌人，移除 !M! 层 ${modID}:波奇自闭 ，获得 !${modID}:GRV! 层 ${modID}:律动 。"
+  },
+
+  "${modID}:OctopusBocchi": {
+    "NAME": "八爪波奇",
+    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !B! 点 格挡 。 NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 消耗 一张随机手牌 。"
   }
 }

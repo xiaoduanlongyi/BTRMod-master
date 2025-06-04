@@ -2,8 +2,10 @@ package btrmod.cards.skill.common;
 
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
+import btrmod.powers.BocchiAfraidPower;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,37 +23,28 @@ public class OctopusBocchi extends BaseCard {
             CardType.SKILL,
             CardRarity.COMMON,
             CardTarget.ALL_ENEMY,
-            0
+            1
     );
 
-    private static final int WEAK = 1;
-    private static final int UPG_WEAK = 1;
-    private static final int BLOCK = 5;
-    private static final int UPG_BLOCK = 0;
+    private static final int BLOCK = 8;
+    private static final int UPG_BLOCK = 2;
+    private static final int BAP = 2;
+    private static final int UPG_BAP = -1;
 
     public OctopusBocchi() {
         super(ID, info);
 
         setBlock(BLOCK, UPG_BLOCK);
-        setMagic(WEAK, UPG_WEAK);
-        setExhaust(true);
+        setCustomVar("BAP", BAP, UPG_BAP);
 
         tags.add(BOCCHI);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        if (AbstractDungeon.player.currentBlock > 5) {
-            addToBot(new GainBlockAction(p, -block));
-        }
-        else{
-            addToBot(new RemoveAllBlockAction(p, p));
-        }
-
-        for(AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, magicNumber, false), magicNumber));
-        }
+        addToBot(new GainBlockAction(p,block));
+        addToBot(new ApplyPowerAction(p, p, new BocchiAfraidPower(p, customVar("BAP"))));
+        addToBot(new ExhaustAction(1, true, false, false));
     }
 
     @Override
