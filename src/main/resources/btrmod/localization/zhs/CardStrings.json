@@ -37,7 +37,7 @@
 
   "${modID}:Ensemble": {
     "NAME": "合奏！",
-    "DESCRIPTION": "造成 !${modID}:BAS! 点基础伤害。 NL 每4点 ${modID}:律动 额外造成1点伤害。",
+    "DESCRIPTION": "造成 !${modID}:BAS! 点基础伤害。 NL 每点 ${modID}:律动 额外造成1点伤害。",
     "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害)"]
   },
 
@@ -53,7 +53,7 @@
 
   "${modID}:EatGrass": {
     "NAME": "吃草",
-    "DESCRIPTION": "${modID}:凉 。 NL 失去 !M! HP。造成 !D! 点伤害。"
+    "DESCRIPTION": "${modID}:凉 。 NL 失去 !M! HP。造成 !D! 点伤害。 NL 消耗 。"
   },
 
   "${modID}:BocchiGambade": {

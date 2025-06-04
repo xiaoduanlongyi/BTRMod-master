@@ -38,6 +38,7 @@ public class RockYou extends BaseCard {
 
         setCustomVar("GRV", GROOVE, UPG_GROOVE);
         setCustomVar("BAP", BOCCHI_AFRAID, UPG_BOCCHI_AFRAID);
+        setExhaust(true);
 
         tags.add(BOCCHI);
         tags.add(GROOVE_GRANT);

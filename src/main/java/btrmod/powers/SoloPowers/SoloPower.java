@@ -39,8 +39,10 @@ public abstract class SoloPower extends BasePower {
         updateDescription();
     }
 
-    /** How many times each Groove stack should count? */
-    public int getGrooveMultiplier() {
-        return 1; // default = no change
+    /**
+     * How many times each Groove stack should count?
+     */
+    public float getGrooveMultiplier() {
+        return 1f; // default = no change
     }
 }

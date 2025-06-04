@@ -7,6 +7,7 @@ import btrmod.powers.GroovePower;
 import btrmod.powers.SoloPowers.NijikaSoloPower;
 import btrmod.powers.SoloPowers.SoloPower;
 import btrmod.util.CardStats;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -30,7 +31,7 @@ public class AnoBand extends BaseCard {
             CardTarget.ENEMY,
             2
     );
-    private static final int PER_STACK_DAMAGE = 2;
+    private static final int PER_STACK_DAMAGE = 3;
     private static final int UPG_PER_STACK_DAMAGE = 1;
     private static final int BAP_MAX = 2;
     private static final int UPG_BAP_MAX = 1;
@@ -59,14 +60,14 @@ public class AnoBand extends BaseCard {
         }
 
         // What multiplier does NijikaSoloPower impose?
-        int mult = 1;
+        float mult = 1f;
         if (p.hasPower(NijikaSoloPower.POWER_ID)) {
             mult = ((SoloPower) p.getPower(NijikaSoloPower.POWER_ID))
                     .getGrooveMultiplier();
         }
 
         //Effective stacks = raw × multiplier
-        int effectiveStacks = rawStacks * mult;
+        int effectiveStacks = MathUtils.floor(rawStacks * mult);
 
         // 按消耗层数×伤害 发一次伤害
         if (rawStacks > 0) {
@@ -102,14 +103,14 @@ public class AnoBand extends BaseCard {
                 ? AbstractDungeon.player.getPower(GroovePower.POWER_ID).amount
                 : 0;
 
-        int mult = 1;
+        float mult = 1;
         if (AbstractDungeon.player.hasPower(NijikaSoloPower.POWER_ID)) {
             mult = ((SoloPower)AbstractDungeon.player
                     .getPower(NijikaSoloPower.POWER_ID))
                     .getGrooveMultiplier();
         }
 
-            int effectiveStacks = rawStacks * mult;
+            int effectiveStacks = MathUtils.floor(rawStacks * mult);
             int previewDmg = effectiveStacks * magicNumber;
 
             setCustomVar("PREVIEW_DAMAGE", previewDmg);

@@ -5,6 +5,7 @@ import btrmod.powers.SoloPowers.NijikaSoloPower;
 import btrmod.powers.SoloPowers.RyoSoloPower;
 import btrmod.powers.SoloPowers.SoloPower;
 import btrmod.util.CardTagEnum;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -25,14 +26,14 @@ public class GroovePower extends BasePower {
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
         if (card != null && card.hasTag(CardTagEnum.GROOVE_USE)) {
-            int mult = 1;
+            float mult = 1f;
             if (owner.hasPower(NijikaSoloPower.POWER_ID)) {
                 mult = ((SoloPower)owner.getPower(NijikaSoloPower.POWER_ID)).getGrooveMultiplier();
             }
 
             float cardMultiplier = getCardGrooveMultiplier(card);
 
-            float grooveBonus = this.amount * mult * cardMultiplier;
+            float grooveBonus = MathUtils.floor(amount * mult * cardMultiplier);
             return damage + grooveBonus;
         }
         return damage;

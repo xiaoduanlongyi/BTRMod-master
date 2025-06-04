@@ -29,6 +29,7 @@ public class EatGrass extends BaseCard {
 
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
         setMagic(MAGIC);
+        setExhaust(true);
 
     }
 

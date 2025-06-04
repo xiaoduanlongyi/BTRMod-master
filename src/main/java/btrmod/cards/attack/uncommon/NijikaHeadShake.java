@@ -31,7 +31,7 @@ public class NijikaHeadShake extends BaseCard implements GrooveMultiplierCard {
 
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
-    private static  final int HIT_TIME= 2;
+    private static  final int HIT_TIME= 3;
     private static  final int UPG_HIT_TIME = 1;
     private static final float GROOVE_MULTIPLIER = 0.5f;
 

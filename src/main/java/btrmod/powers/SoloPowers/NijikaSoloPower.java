@@ -1,8 +1,6 @@
 package btrmod.powers.SoloPowers;
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.PowerStrings;
 
 import static btrmod.BTRMod.makeID;
 
@@ -14,8 +12,8 @@ public class NijikaSoloPower extends SoloPower {
     }
 
     @Override
-    public int getGrooveMultiplier() {
-        return 2; // every Stack of Groove now counts double
+    public float getGrooveMultiplier() {
+        return 1.5f; // every Stack of Groove now counts double
     }
 
     public void updateDescription() {

@@ -41,28 +41,28 @@
   "${modID}:BocchiSoloPower": {
     "NAME": "波奇酱的Solo",
     "DESCRIPTIONS": [
-      "在波门状态下，获得或移除 #y波奇自闭 时，都会额外再获得或移除 #y1 层"
+      "在波门状态下，获得或移除 #y波奇自闭 时，都会额外再获得或移除 #y1 层。 NL 每打出一张 #y波奇 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
     ]
   },
 
   "${modID}:RyoSoloPower": {
     "NAME": "凉仙贝的Solo",
     "DESCRIPTIONS": [
-      "在凉门状态下，获得和失去的 #y律动 翻倍。"
+      "在凉门状态下，获得和失去的 #y律动 翻倍。 NL 每打出一张 #y凉 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
     ]
   },
 
   "${modID}:NijikaSoloPower": {
     "NAME": "虹夏的Solo",
     "DESCRIPTIONS": [
-      "在虹门状态下， #y律动 的使用效果翻倍。"
+      "在虹门状态下， #y律动 的伤害增幅为1.5倍数。 NL 每打出一张 #y虹夏 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
     ]
   },
 
   "${modID}:KitaSoloPower": {
     "NAME": "喜多的Solo",
     "DESCRIPTIONS": [
-      "在喜多状态下，每回合开始时额外获得 [E] 。 NL 每打出一张带有 #y喜多 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+      "在喜多状态下，每回合开始时额外获得 [E] 。 NL 每打出一张 #y喜多 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
     ]
   },
 
