@@ -1,5 +1,6 @@
 package btrmod.cards.attack.rare;
 
+import btrmod.BTRMod;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
@@ -7,6 +8,7 @@ import btrmod.powers.GroovePower;
 import btrmod.powers.SoloPowers.BocchiSoloPower;
 import btrmod.powers.SoloPowers.NijikaSoloPower;
 import btrmod.powers.SoloPowers.SoloPower;
+import btrmod.subscribers.ComboSoloSubscriber;
 import btrmod.util.CardStats;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -54,6 +56,11 @@ public class AnoBand extends BaseCard {
         addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.LIGHTNING));
         addToBot(new ApplyPowerAction(p, p, new GroovePower(p, customVar("GRV"))));
         addToBot(new ReducePowerAction(p, p, BocchiAfraidPower.POWER_ID, customVar("BAP")));
+
+        ComboSoloSubscriber combo = BTRMod.getComboSoloSubscriber();
+        if (combo != null) {
+            combo.clearRecentTags();
+        }
         addToBot(new ApplyPowerAction(p, p, new BocchiSoloPower(p)));
     }
 

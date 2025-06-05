@@ -80,5 +80,13 @@
       "卡牌的费用随机，持续 #b",
       " 回合。"
     ]
+  },
+
+  "${modID}:ComboCounterPower": {
+    "NAME": "角色连击",
+    "DESCRIPTIONS": [
+      "当前已连续打出 %s 卡：",
+      " /3"
+    ]
   }
 }

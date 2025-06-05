@@ -6,6 +6,7 @@ import basemod.interfaces.*;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.relics.BaseRelic;
+import btrmod.subscribers.ComboSoloSubscriber;
 import btrmod.util.GeneralUtils;
 import btrmod.util.KeywordInfo;
 import btrmod.util.TextureLoader;
@@ -43,6 +44,7 @@ public class BTRMod implements
     static { loadModInfo(); }
     private static final String resourcesFolder = checkResourcesPath();
     public static final Logger logger = LogManager.getLogger(modID); //Used to output to the console.
+    public static ComboSoloSubscriber comboSoloSubscriber;
 
     //This is used to prefix the IDs of various objects like cards and relics,
     //to avoid conflicts between different mods using the same name for things.
@@ -69,7 +71,12 @@ public class BTRMod implements
 
         BaseMod.subscribe(new btrmod.subscribers.ComboSoloSubscriber());
         logger.info("ComboSoloSubscriber subscribed to BaseMod.");
+        comboSoloSubscriber = new ComboSoloSubscriber();
 
+    }
+
+    public static ComboSoloSubscriber getComboSoloSubscriber() {
+        return comboSoloSubscriber;
     }
 
     @Override
