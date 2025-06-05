@@ -35,7 +35,6 @@ public class RyoTouchFace extends BaseCard {
         setBlock(BLOCK, UPG_BLOCK);
 
         tags.add(RYO);
-        tags.add(BOCCHI);
     }
 
     @Override

@@ -139,7 +139,7 @@
 
   "${modID}:KitaKira": {
     "NAME": "Kita~Kita~",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 使所有敌人 ${modID}:眩晕 。 NL 进入 ${modID}:喜门 。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:喜多 ！ NL 使一个敌人 ${modID}:眩晕 。 NL 进入 ${modID}:喜门 。 NL 消耗 。"
   },
 
   "${modID}:MuliMuli": {
@@ -266,8 +266,8 @@
 
   "${modID}:KikuriWave": {
     "NAME": "菊里挥舞",
-    "DESCRIPTION": "当前每有一名敌人，移除 !M! 层 ${modID}:波奇自闭 ，获得 !${modID}:GRV! 层 ${modID}:律动 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 当前每有一名敌人，移除 !M! 层 ${modID}:波奇自闭 ，获得 !${modID}:GRV! 层 ${modID}:律动 。"
+    "DESCRIPTION": "当前每有一名敌人，移除 !M! 层 ${modID}:波奇自闭 ，获得 !${modID}:GRV! 层 ${modID}:律动 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 当前每有一名敌人，移除 !M! 层 ${modID}:波奇自闭 ，获得 !${modID}:GRV! 层 ${modID}:律动 。 NL 消耗 。"
   },
 
   "${modID}:OctopusBocchi": {

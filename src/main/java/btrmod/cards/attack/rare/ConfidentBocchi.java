@@ -57,10 +57,10 @@ public class ConfidentBocchi extends BaseCard {
             addToBot(new RemoveSpecificPowerAction(p, p, GroovePower.POWER_ID));
         }
 
-        // What multiplier does NijikaSoloPower impose?
+        // What multiplier does BocchiSoloPower impose?
         float mult = 1f;
-        if (p.hasPower(NijikaSoloPower.POWER_ID)) {
-            mult = ((SoloPower) p.getPower(NijikaSoloPower.POWER_ID))
+        if (p.hasPower(BocchiSoloPower.POWER_ID)) {
+            mult = ((SoloPower) p.getPower(BocchiSoloPower.POWER_ID))
                     .getGrooveMultiplier();
         }
 
@@ -104,9 +104,9 @@ public class ConfidentBocchi extends BaseCard {
                 : 0;
 
         float mult = 1;
-        if (AbstractDungeon.player.hasPower(NijikaSoloPower.POWER_ID)) {
+        if (AbstractDungeon.player.hasPower(BocchiSoloPower.POWER_ID)) {
             mult = ((SoloPower)AbstractDungeon.player
-                    .getPower(NijikaSoloPower.POWER_ID))
+                    .getPower(BocchiSoloPower.POWER_ID))
                     .getGrooveMultiplier();
         }
 

@@ -19,7 +19,7 @@ public class KitaKira extends BaseCard {
             KessokuBandChar.Meta.CARD_COLOR,
             CardType.SKILL,
             CardRarity.RARE,
-            CardTarget.ALL_ENEMY,
+            CardTarget.ENEMY,
             3
     );
 
@@ -34,9 +34,7 @@ public class KitaKira extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            addToBot(new StunMonsterAction(mo, p));
-        }
+        addToBot(new StunMonsterAction(m, p));
         addToBot(new ApplyPowerAction(p, p, new KitaSoloPower(p)));
     }
 

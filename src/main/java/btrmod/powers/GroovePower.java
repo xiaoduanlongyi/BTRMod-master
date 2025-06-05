@@ -1,6 +1,7 @@
 package btrmod.powers;
 
 import btrmod.interfaces.GrooveMultiplierCard;
+import btrmod.powers.SoloPowers.BocchiSoloPower;
 import btrmod.powers.SoloPowers.NijikaSoloPower;
 import btrmod.powers.SoloPowers.RyoSoloPower;
 import btrmod.powers.SoloPowers.SoloPower;
@@ -27,8 +28,8 @@ public class GroovePower extends BasePower {
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
         if (card != null && card.hasTag(CardTagEnum.GROOVE_USE)) {
             float mult = 1f;
-            if (owner.hasPower(NijikaSoloPower.POWER_ID)) {
-                mult = ((SoloPower)owner.getPower(NijikaSoloPower.POWER_ID)).getGrooveMultiplier();
+            if (owner.hasPower(BocchiSoloPower.POWER_ID)) {
+                mult = ((SoloPower)owner.getPower(BocchiSoloPower.POWER_ID)).getGrooveMultiplier();
             }
 
             float cardMultiplier = getCardGrooveMultiplier(card);

@@ -37,6 +37,7 @@ public class KikuriWave extends BaseCard {
         setMagic(BAP, UPG_BAP);
         setCustomVar("GRV", GROOVE, UPG_GROOVE);
         setInnate(false, true);
+        setExhaust(true);
 
         tags.add(GROOVE_GRANT);
     }

@@ -17,10 +17,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
 public class ComboCounterPower extends BasePower {
     public static final String POWER_ID = BTRMod.makeID("ComboCounterPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-
-    /** 当前正在统计的角色 Tag (BOCCHI / KITA / NIJIKA / RYO) */
     private AbstractCard.CardTags trackedTag;
-    /** 连击的最大需求数＝3 */
     private static final int MAX_COMBO = 3;
 
     /**
@@ -33,8 +30,6 @@ public class ComboCounterPower extends BasePower {
         super(POWER_ID, PowerType.BUFF, false, owner, null, initialCount);
 
         this.trackedTag = tag;
-        // BasePower 会根据 ID 自动读取 PowerStrings 并执行 updateDescription()
-        // 但 updateDescription() 里需要根据 trackedTag 拼接文字，所以这里我们要手动再一次更新描述。
         updateDescription();
     }
 

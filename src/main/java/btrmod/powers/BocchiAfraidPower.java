@@ -1,6 +1,7 @@
 package btrmod.powers;
 
 import btrmod.powers.SoloPowers.BocchiSoloPower;
+import btrmod.powers.SoloPowers.NijikaSoloPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -41,20 +42,11 @@ public class BocchiAfraidPower extends BasePower {
     }
 
     @Override
-    public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
-        if (owner.hasPower(BocchiSoloPower.POWER_ID)) {
-            super.stackPower(stackAmount);
-        }
-        updateDescription();
-    }
-
-    @Override
     public void reducePower(int reduceAmount) {
         // 先做一次正常扣减
         super.reducePower(reduceAmount);
         // 如果玩家身上有 SoloPower，就再多扣一次
-        if (owner.hasPower(BocchiSoloPower.POWER_ID)) {
+        if (owner.hasPower(NijikaSoloPower.POWER_ID)) {
             super.reducePower(reduceAmount);
         }
         updateDescription();
