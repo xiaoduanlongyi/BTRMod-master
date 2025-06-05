@@ -67,6 +67,9 @@ public class BTRMod implements
         BaseMod.subscribe(new btrmod.subscribers.SoloGrantGrooveSubscriber());
         logger.info("SoloGrantGrooveSubscriber subscribed to BaseMod.");
 
+        BaseMod.subscribe(new btrmod.subscribers.ComboSoloSubscriber());
+        logger.info("ComboSoloSubscriber subscribed to BaseMod.");
+
     }
 
     @Override
