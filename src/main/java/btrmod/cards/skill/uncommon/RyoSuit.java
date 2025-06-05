@@ -1,18 +1,14 @@
 package btrmod.cards.skill.uncommon;
 
 import btrmod.cards.BaseCard;
-import btrmod.cards.attack.EatGrass;
-import btrmod.cards.attack.RyoHenchman1;
-import btrmod.cards.attack.RyoHenchman2;
+import btrmod.cards.attack.special.RyoHenchman1;
+import btrmod.cards.attack.special.RyoHenchman2;
 import btrmod.character.KessokuBandChar;
-import btrmod.powers.BocchiAfraidPower;
 import btrmod.powers.SoloPowers.RyoSoloPower;
 import btrmod.util.CardStats;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.RYO;

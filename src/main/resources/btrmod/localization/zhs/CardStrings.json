@@ -58,7 +58,7 @@
 
   "${modID}:BocchiGambade": {
     "NAME": "波奇打气",
-    "DESCRIPTION": "${modID}:波奇 ! NL 减少1层 ${modID}:波奇自闭 。 NL 抽 !M! 张牌。 NL 进入 ${modID}:波奇酱的solo 。"
+    "DESCRIPTION": "${modID}:波奇 ! NL 减少1层 ${modID}:波奇自闭 。 NL 抽 !M! 张牌。"
   },
 
   "${modID}:FireBocchi": {
@@ -137,7 +137,7 @@
     "DESCRIPTION": "${modID}:凉 ！ NL 移除 !M! 层 ${modID}:波奇自闭 。 NL 失去 !${modID}:MONEY_RETURN! 金币 。 NL 消耗 。"
   },
 
-  "${modID}:KitaKira": {
+  "${modID}:KitaKita": {
     "NAME": "Kita~Kita~",
     "DESCRIPTION": "${modID}:喜多 ！ NL 使一个敌人 ${modID}:眩晕 。 NL 进入 ${modID}:喜门 。 NL 消耗 。"
   },
@@ -296,5 +296,63 @@
   "${modID}:BocchiHappy": {
     "NAME": "波奇被夸",
     "DESCRIPTION": "${modID}:波奇 ！ NL 造成 !D! 点伤害。 NL 移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。"
+  },
+
+  "${modID}:BocchiOrKita": {
+    "NAME": "波喜多",
+    "DESCRIPTION": "选择进入 ${modID}:波门 或 ${modID}:喜门 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 选择进入 ${modID}:波门 或 ${modID}:喜门 。 NL 消耗 。"
+  },
+
+  "${modID}:NijikaOrRyo": {
+    "NAME": "虹夏凉",
+    "DESCRIPTION": "选择进入 ${modID}:虹门 或 ${modID}:凉门 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 选择进入 ${modID}:虹门 或 ${modID}:凉门 。 NL 消耗 。"
+  },
+
+  "${modID}:ToBocchiSolo": {
+    "NAME": "波门",
+    "DESCRIPTION": "进入 ${modID}:波门 。"
+  },
+
+  "${modID}:ToKitaSolo": {
+    "NAME": "喜门",
+    "DESCRIPTION": "进入 ${modID}:喜门 。"
+  },
+
+  "${modID}:ToNijikaSolo": {
+    "NAME": "虹门",
+    "DESCRIPTION": "进入 ${modID}:虹门 。"
+  },
+
+  "${modID}:ToRyoSolo": {
+    "NAME": "凉门",
+    "DESCRIPTION": "进入 ${modID}:凉门 。"
+  },
+
+  "${modID}:DominationKita": {
+    "NAME": "支配恶魔",
+    "DESCRIPTION": "${modID}:喜多 ！ NL 手牌中每有一张 ${modID}:波奇 卡，造成 !M! 点伤害。 NL 获得 !${modID}:DISTOR! 层 ${modID}:扭曲 。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 ",
+      " 点伤害）"
+    ]
+  },
+
+  "${modID}:KitaKira": {
+    "NAME": "喜多闪耀",
+    "DESCRIPTION": "${modID}:喜多 ！ NL 对所有敌人和自己施加 !M! 层 易伤 。 NL 消耗 。"
+  },
+
+  "${modID}:BocchiHeartbeat": {
+    "NAME": "帝王引擎",
+    "DESCRIPTION": "${modID}:波奇 ！ NL 抽 !M! 张牌 。 NL 获得 !${modID}:GRV! 层 ${modID}:律动 。 NL 将一张 *灼伤 放入抽牌堆 。"
+  },
+
+  "${modID}:DistortedBocchi": {
+    "NAME": "抽象波奇",
+    "DESCRIPTION": "${modID}:波奇 ！ NL 每有1层 ${modID}:波奇自闭 ，获得1层 ${modID}:扭曲 。",
+    "EXTENDED_DESCRIPTION": [" NL (获得 !M! ",
+      " 层 ${modID}:扭曲 ）"
+    ]
   }
 }

@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static btrmod.util.CardTagEnum.BOCCHI;
 import static btrmod.util.CardTagEnum.GROOVE_EXHAUST;
 
 public class ConfidentBocchi extends BaseCard {
@@ -45,6 +46,7 @@ public class ConfidentBocchi extends BaseCard {
         setCustomVar("BAP_VALUE", BAP_MAX, UPG_BAP_MAX);
 
         tags.add(GROOVE_EXHAUST);
+        tags.add(BOCCHI);
     }
 
     @Override

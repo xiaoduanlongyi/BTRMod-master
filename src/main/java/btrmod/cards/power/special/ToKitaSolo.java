@@ -1,45 +1,42 @@
-package btrmod.cards.skill.rare;
+package btrmod.cards.power.special;
 
 import btrmod.cards.BaseCard;
-import btrmod.character.KessokuBandChar;
 import btrmod.powers.SoloPowers.KitaSoloPower;
 import btrmod.util.CardStats;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.SpotlightPlayerEffect;
 
-import static btrmod.util.CardTagEnum.KITA;
-
-public class KitaKira extends BaseCard {
-    public static final String ID = makeID(KitaKira.class.getSimpleName());
+public class ToKitaSolo extends BaseCard {
+    public static final String ID = makeID(ToKitaSolo.class.getSimpleName());
     private static final CardStats info = new CardStats(
-            KessokuBandChar.Meta.CARD_COLOR,
-            CardType.SKILL,
-            CardRarity.RARE,
-            CardTarget.ENEMY,
-            3
+            CardColor.COLORLESS,
+            CardType.POWER,
+            CardRarity.SPECIAL,
+            CardTarget.NONE,
+            -2
     );
 
-    public KitaKira() {
+    public ToKitaSolo() {
         super(ID, info);
-
-        setExhaust(true);
-        setCostUpgrade(2);
-
-        tags.add(KITA);
     }
 
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new StunMonsterAction(m, p));
+        this.onChoseThisOption();
+    }
+
+    public void onChoseThisOption() {
+        AbstractPlayer p = AbstractDungeon.player;
+        AbstractDungeon.effectList.add(new SpotlightPlayerEffect());
         addToBot(new ApplyPowerAction(p, p, new KitaSoloPower(p)));
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new KitaKira();
+        return new ToKitaSolo();
     }
+
 }

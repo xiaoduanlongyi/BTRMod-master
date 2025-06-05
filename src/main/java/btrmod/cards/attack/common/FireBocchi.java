@@ -27,8 +27,8 @@ public class FireBocchi extends BaseCard {
             2
     );
 
-    private static final int DAMAGE = 16;
-    private static final int UPG_DAMAGE = 6;
+    private static final int DAMAGE = 12;
+    private static final int UPG_DAMAGE = 4;
     private static final int VULNERABLE = 2;
     private static final int UPG_VULNERABLE = 1;
 

@@ -15,7 +15,7 @@ public class BocchiStartRelic extends BaseRelic {
     private static final RelicTier RARITY = RelicTier.STARTER; //The relic's rarity.
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
 
-    private static final int AnxietyLevel = 6; //For convenience of changing it later and clearly knowing what the number means instead of just having a 10 sitting around in the code.
+    private static final int AnxietyLevel = 7; //For convenience of changing it later and clearly knowing what the number means instead of just having a 10 sitting around in the code.
 
     public BocchiStartRelic() {
         super(ID, NAME, KessokuBandChar.Meta.CARD_COLOR, RARITY, SOUND);

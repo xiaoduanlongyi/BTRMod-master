@@ -41,7 +41,7 @@
   "${modID}:BocchiSoloPower": {
     "NAME": "波奇酱的Solo",
     "DESCRIPTIONS": [
-      "在波门状态下，#y律动 的额外造成 #y50% 的额外伤害。 NL 每打出一张 #y波奇 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+      "在波门状态下， #y律动 多造成 #y50% 的额外伤害。 NL 每打出一张 #y波奇 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
     ]
   },
 
@@ -85,7 +85,7 @@
   "${modID}:ComboCounterPower": {
     "NAME": "角色连击",
     "DESCRIPTIONS": [
-      "当前已连续打出 %s 卡：",
+      "已连续打出 #y%s 卡：",
       " /3"
     ]
   }

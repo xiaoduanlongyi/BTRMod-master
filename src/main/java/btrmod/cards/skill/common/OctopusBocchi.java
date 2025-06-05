@@ -19,7 +19,7 @@ public class OctopusBocchi extends BaseCard {
             KessokuBandChar.Meta.CARD_COLOR,
             CardType.SKILL,
             CardRarity.COMMON,
-            CardTarget.ALL_ENEMY,
+            CardTarget.NONE,
             1
     );
 

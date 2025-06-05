@@ -1,7 +1,7 @@
 package btrmod.cards.skill.uncommon;
 
 import btrmod.cards.BaseCard;
-import btrmod.cards.attack.EatGrass;
+import btrmod.cards.attack.special.EatGrass;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
 import btrmod.util.CardStats;
