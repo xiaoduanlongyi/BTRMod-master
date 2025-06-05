@@ -141,14 +141,14 @@ public class ComboSoloSubscriber implements OnCardUseSubscriber, OnStartBattleSu
     private void applyOrUpdateComboCounter(AbstractPlayer p, AbstractCard.CardTags tag, int count) {
         if (!p.hasPower(ComboCounterPower.POWER_ID)) {
             // 1) 玩家身上没有时，创建新的 ComboCounterPower，amount = count
-            ComboCounterPower newPower = new ComboCounterPower(p, (CardTagEnum) tag, count);
+            ComboCounterPower newPower = new ComboCounterPower(p, tag, count);
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(p, p, newPower, count)
             );
         } else {
             // 2) 已有时，直接更新 trackedTag 和 amount
             ComboCounterPower existing = (ComboCounterPower) p.getPower(ComboCounterPower.POWER_ID);
-            existing.setCounter((CardTagEnum) tag, count);
+            existing.setCounter(tag, count);
         }
     }
 

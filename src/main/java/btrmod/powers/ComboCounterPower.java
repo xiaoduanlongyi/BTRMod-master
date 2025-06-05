@@ -2,6 +2,7 @@ package btrmod.powers;
 
 import btrmod.BTRMod;
 import btrmod.util.CardTagEnum;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -14,11 +15,11 @@ import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
  * DESCRIPTIONS[1] 就是 "/3" 这个固定后缀。
  */
 public class ComboCounterPower extends BasePower {
-    public static final String POWER_ID = BTRMod.makeID("ComboCounter");
+    public static final String POWER_ID = BTRMod.makeID("ComboCounterPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 
     /** 当前正在统计的角色 Tag (BOCCHI / KITA / NIJIKA / RYO) */
-    private CardTagEnum trackedTag;
+    private AbstractCard.CardTags trackedTag;
     /** 连击的最大需求数＝3 */
     private static final int MAX_COMBO = 3;
 
@@ -28,7 +29,7 @@ public class ComboCounterPower extends BasePower {
      * @param tag         当前正在叠连击标签的角色 (CardTagEnum.BOCCHI / KITA / NIJIKA / RYO)
      * @param initialCount 初始连击数 (通常是 1 或 2)
      */
-    public ComboCounterPower(AbstractCreature owner, CardTagEnum tag, int initialCount) {
+    public ComboCounterPower(AbstractCreature owner, AbstractCard.CardTags tag, int initialCount) {
         super(POWER_ID, PowerType.BUFF, false, owner, null, initialCount);
 
         this.trackedTag = tag;
@@ -44,7 +45,7 @@ public class ComboCounterPower extends BasePower {
      * @param tag   要显示的角色标签 (CardTagEnum.BOCCHI 等)
      * @param count 当前已连续打出的同角色标签的张数 (1, 2)；最大到 2 时依然显示 "2/3"
      */
-    public void setCounter(CardTagEnum tag, int count) {
+    public void setCounter(AbstractCard.CardTags tag, int count) {
         this.trackedTag = tag;
         this.amount = count;
         updateDescription();
@@ -57,13 +58,17 @@ public class ComboCounterPower extends BasePower {
      */
     @Override
     public void updateDescription() {
-        // PowerStrings.DESCRIPTIONS 里：
-        // DESCRIPTIONS[0] = "当前已连续打出 %s 卡："
-        // DESCRIPTIONS[1] = "/3"
-        String tagName = trackedTag.toString().substring(0, 1).toUpperCase()
-                + trackedTag.toString().substring(1).toLowerCase();
+        String tagName = getTagDisplayName(trackedTag);
         this.description = String.format(powerStrings.DESCRIPTIONS[0], tagName)
                 + this.amount
                 + powerStrings.DESCRIPTIONS[1];
+    }
+
+    private String getTagDisplayName(AbstractCard.CardTags tag) {
+        if (tag == CardTagEnum.BOCCHI) return "Bocchi";
+        if (tag == CardTagEnum.KITA) return "Kita";
+        if (tag == CardTagEnum.NIJIKA) return "Nijika";
+        if (tag == CardTagEnum.RYO) return "Ryo";
+        return "Unknown";
     }
 }
