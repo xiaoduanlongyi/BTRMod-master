@@ -29,9 +29,9 @@ public class KitaGone extends BaseCard {
 
     private static final int MAXHP_LOSS = 3;
     private static final int UPG_MAXHP_LOSS = 0;
-    private static final int GROOVE = 5;
+    private static final int GROOVE = 8;
     private static final int UPG_GROOVE = 3;
-    private static final int STRENGTH = 3;
+    private static final int STRENGTH = 5;
     private static final int UPG_STRENGTH = 2;
 
     public KitaGone() {

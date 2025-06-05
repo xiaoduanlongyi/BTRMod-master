@@ -26,7 +26,7 @@ public class NijikaThumbUp extends BaseCard {
     private static final int UPG_BAP = 0;
     private static final int BONUS_BAP_REDUCTION = 2;
     private static final int UPG_BONUS_BAP_REDUCTION = 1;
-    private static final int AFRAID_THRESHOLD = 4;
+    private static final int AFRAID_THRESHOLD = 5;
 
     public NijikaThumbUp() {
         super(ID, info);

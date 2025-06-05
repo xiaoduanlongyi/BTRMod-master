@@ -4,11 +4,12 @@ import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.GroovePower;
 import btrmod.util.CardStats;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
@@ -21,13 +22,17 @@ public class MuscleNijika extends BaseCard {
             CardType.SKILL,
             CardRarity.RARE,
             CardTarget.NONE,
-            2
+            3
     );
+
+    private static final int GROOVE_TO_DIVIDE = 5;
+    private static final int UPG_GROOVE_TO_DIVIDE = -2;
 
     public MuscleNijika() {
         super(ID, info);
 
-        setExhaust(true,false);
+        setMagic(GROOVE_TO_DIVIDE, UPG_GROOVE_TO_DIVIDE);
+        setExhaust(true);
 
         tags.add(NIJIKA);
         tags.add(GROOVE_EXHAUST);
@@ -36,16 +41,24 @@ public class MuscleNijika extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        int rawStacks = 0;
+        int strengthStacksToAdd = MathUtils.floor((float) getGrooveStacks() / magicNumber);
+
         if (p.hasPower(GroovePower.POWER_ID)) {
-            rawStacks = p.getPower(GroovePower.POWER_ID).amount;
-            // 用 RemoveSpecificPowerAction 一次性移除
             addToBot(new RemoveSpecificPowerAction(p, p, GroovePower.POWER_ID));
         }
-
-        if (rawStacks > 0) {
-            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, rawStacks), rawStacks));
+        if (strengthStacksToAdd > 0) {
+            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, strengthStacksToAdd), strengthStacksToAdd));
         }
+    }
+
+    private int getGrooveStacks()
+    {
+        int grooveStacks = 0;
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(GroovePower.POWER_ID)) {
+            grooveStacks = AbstractDungeon.player.getPower(GroovePower.POWER_ID).amount;
+        }
+
+        return grooveStacks;
     }
 
     @Override

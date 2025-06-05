@@ -43,13 +43,19 @@ public class BocchiAfraidPower extends BasePower {
 
     @Override
     public void reducePower(int reduceAmount) {
-        // 先做一次正常扣减
-        super.reducePower(reduceAmount);
-        // 如果玩家身上有 SoloPower，就再多扣一次
+        // 计算实际减少量
+        int totalReduction = reduceAmount;
+
+        // 如果有 NijikaSoloPower，额外减少1
         if (owner.hasPower(NijikaSoloPower.POWER_ID)) {
-            super.reducePower(reduceAmount);
+            totalReduction += 1;
         }
-        updateDescription();
+
+        // 确保不会减到负数
+        totalReduction = Math.min(totalReduction, this.amount);
+
+        // 一次性减少
+        super.reducePower(totalReduction);
     }
 
     @Override
