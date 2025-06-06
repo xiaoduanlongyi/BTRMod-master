@@ -10,9 +10,9 @@ public class FleeGuitaristAction extends AbstractGameAction {
     int additionalAmt;
 
     public FleeGuitaristAction(AbstractCreature target, int block, int additional) {
-        target = target;
-        amount = block;
-        additionalAmt = additional;
+        this.target = target;
+        this.amount = block;
+        this.additionalAmt = additional;
     }
 
     public void update() {

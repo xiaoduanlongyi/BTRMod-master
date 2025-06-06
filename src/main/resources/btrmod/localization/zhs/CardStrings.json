@@ -384,5 +384,10 @@
   "${modID}:FleeGuitarist": {
     "NAME": "逃跑的吉他手",
     "DESCRIPTION": "${modID}:喜多 ！ NL 获得 !B! 点 格挡 。 NL 如果你拥有 ${modID}:扭曲 ，额外获得 !M! 点 格挡 。"
+  },
+
+  "${modID}:PubertySyndrome": {
+    "NAME": "青春症候群",
+    "DESCRIPTION": "当你切换 ${modID}:成员Solo 时，获得 !M! 点 格挡 。"
   }
 }
