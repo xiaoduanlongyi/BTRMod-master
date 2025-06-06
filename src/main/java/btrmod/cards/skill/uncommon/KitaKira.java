@@ -30,13 +30,15 @@ public class KitaKira extends BaseCard {
     );
 
     private static final int DEBUFF = 2;
-    private static final int UPG_DEBUFF = 0;
+    private static final int UPG_DEBUFF = 1;
+    private static final int SELF_DEBUFF = 2;
+    private static final int UPG_SELF_DEBUFF = -1;
 
     public KitaKira() {
         super(ID, info);
 
         setMagic(DEBUFF, UPG_DEBUFF);
-        setCostUpgrade(0);
+        setCustomVar("SELF", SELF_DEBUFF, UPG_SELF_DEBUFF);
         setExhaust(true);
 
         tags.add(KITA);
@@ -47,7 +49,7 @@ public class KitaKira extends BaseCard {
         for(AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, magicNumber, false), magicNumber));
         }
-        addToBot(new ApplyPowerAction(p, p, new VulnerablePower(p, magicNumber, false), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new VulnerablePower(p, customVar("SELF"), false), customVar("SELF")));
         AbstractDungeon.effectList.add(new SpotlightEffect());
     }
 

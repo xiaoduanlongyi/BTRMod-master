@@ -201,7 +201,7 @@
 
   "${modID}:PinkBocchi": {
     "NAME": "粉毛吉他手",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 消耗 !M! 层 ${modID}:律动 ，对所有敌人造成 !D! 伤害X次。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 对所有敌人造成 !D! 伤害X次。 NL 每 !${modID}:GRV_USE! 层 ${modID}:律动 增加1伤害 。"
   },
 
   "${modID}:RyoSuit": {
@@ -339,7 +339,7 @@
 
   "${modID}:KitaKira": {
     "NAME": "喜多闪耀",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 对所有敌人和自己施加 !M! 层 易伤 。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:喜多 ！ NL 对敌人施加 !M! 层 易伤 。 NL 对自己施加 !${modID}:SELF! 层 易伤 。 NL 消耗 。"
   },
 
   "${modID}:BocchiHeartbeat": {
@@ -363,5 +363,26 @@
   "${modID}:BocchiAtWork": {
     "NAME": "打工波奇",
     "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !M! 金币 。 NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 获得 !${modID}:DIST! 层 ${modID}:扭曲 。 NL 消耗 。"
+  },
+
+  "${modID}:NijikaGambade": {
+    "NAME": "虹夏打气",
+    "DESCRIPTION": "${modID}:虹夏 ！ NL 将你的 ${modID}:律动 翻倍 。 NL 进入 ${modID}:虹门 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${modID}:虹夏 ！ NL 将你的 ${modID}:律动 翻倍 。 NL 进入 ${modID}:虹门 。"
+  },
+
+  "${modID}:KitaOmelette": {
+    "NAME": "魔法蛋包饭",
+    "DESCRIPTION": "${modID}:喜多 ！ NL 获得 !M! 层 再生 。 NL 进入 ${modID}:喜门 。"
+  },
+
+  "${modID}:BocchiOmelette": {
+    "NAME": "邪恶蛋包饭",
+    "DESCRIPTION": "${modID}:波奇 ！ NL 每回合开始时，给予所有敌人 !M! 层 中毒 , 给予自己 !${modID}:BAP! 层 ${modID}:波奇自闭 。"
+  },
+
+  "${modID}:FleeGuitarist": {
+    "NAME": "逃跑的吉他手",
+    "DESCRIPTION": "${modID}:喜多 ！ NL 获得 !B! 点 格挡 。 NL 如果你拥有 ${modID}:扭曲 ，额外获得 !M! 点 格挡 。"
   }
 }

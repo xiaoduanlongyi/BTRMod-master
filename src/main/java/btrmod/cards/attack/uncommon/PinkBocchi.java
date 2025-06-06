@@ -3,6 +3,7 @@ package btrmod.cards.attack.uncommon;
 import btrmod.actions.PinkBocchiAction;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
+import btrmod.interfaces.GrooveMultiplierCard;
 import btrmod.powers.BocchiAfraidPower;
 import btrmod.powers.GroovePower;
 import btrmod.powers.SoloPowers.BocchiSoloPower;
@@ -23,7 +24,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.*;
 
-public class PinkBocchi extends BaseCard {
+public class PinkBocchi extends BaseCard implements GrooveMultiplierCard {
     public static final String ID = makeID(PinkBocchi.class.getSimpleName());
     private static final CardStats info = new CardStats(
             KessokuBandChar.Meta.CARD_COLOR,
@@ -33,27 +34,28 @@ public class PinkBocchi extends BaseCard {
             -1
     );
 
-    private static final int DAMAGE = 7;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 5;
+    private static final int UPG_DAMAGE = 0;
     private static  final int GROOVE_TOUSE = 5;
     private static  final int UPG_GROOVE_TOUSE = 0;
+    private static final float GROOVE_MULTIPLIER = 0.34f;
+    private static final float UPG_GROOVE_MULTIPLIER = 0.5f;
 
     public PinkBocchi() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
-        setMagic(GROOVE_TOUSE, UPG_GROOVE_TOUSE);
+        //setMagic(GROOVE_TOUSE, UPG_GROOVE_TOUSE);
+        setCustomVar("GRV_USE", 3, -1);
         this.isMultiDamage = true;
 
         tags.add(BOCCHI);
-
+        tags.add(GROOVE_USE);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new PinkBocchiAction(p, damage, damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
-        addToBot(new ApplyPowerAction(p, p, new BocchiSoloPower(p)));
-        addToBot(new ReducePowerAction(p, p, GroovePower.POWER_ID, magicNumber));
     }
 
     @Override
@@ -68,23 +70,15 @@ public class PinkBocchi extends BaseCard {
     }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        // 先调用父类的检查（比如能量不足、不可选时等）
-        if (!super.canUse(p, m)) {
-            return false;
-        }
-        // 然后检查 GroovePower
-        if (!p.hasPower(GroovePower.POWER_ID)
-                || p.getPower(GroovePower.POWER_ID).amount < this.magicNumber) {
-            // 如果玩家没有 Groove 或者层数 < magicNumber，就禁止打出
-            this.cantUseMessage = "需要 " + this.magicNumber + " 层律动";
-            return false;
-        }
-        return true;
+    public AbstractCard makeCopy() { //Optional
+        return new PinkBocchi();
     }
 
     @Override
-    public AbstractCard makeCopy() { //Optional
-        return new PinkBocchi();
+    public float getGrooveMultiplier() {
+        if(!upgraded)
+            return GROOVE_MULTIPLIER;
+        else
+            return UPG_GROOVE_MULTIPLIER;
     }
 }
