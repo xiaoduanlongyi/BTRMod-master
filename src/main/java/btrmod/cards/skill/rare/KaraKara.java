@@ -3,51 +3,47 @@ package btrmod.cards.skill.rare;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.GroovePower;
-import btrmod.powers.SoloPowers.NijikaSoloPower;
+import btrmod.powers.SoloPowers.RyoSoloPower;
 import btrmod.util.CardStats;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
-import static btrmod.util.CardTagEnum.NIJIKA;
+import static btrmod.util.CardTagEnum.GROOVE_GRANT;
+import static btrmod.util.CardTagEnum.RYO;
 
-public class NijikaGambade extends BaseCard {
-    public static final String ID = makeID(NijikaGambade.class.getSimpleName());
+public class KaraKara extends BaseCard {
+    public static final String ID = makeID(KaraKara.class.getSimpleName());
     private static final CardStats info = new CardStats(
             KessokuBandChar.Meta.CARD_COLOR,
             CardType.SKILL,
             CardRarity.RARE,
             CardTarget.NONE,
-            1
+            2
     );
 
-    private static final int GROOVE_TO_DIVIDE = 10;
-    private static final int UPG_GROOVE_TO_DIVIDE = -3;
 
-    public NijikaGambade() {
+    public KaraKara() {
         super(ID, info);
 
-        setMagic(GROOVE_TO_DIVIDE, UPG_GROOVE_TO_DIVIDE);
+        setExhaust(true);
+        setCostUpgrade(1);
 
-        tags.add(NIJIKA);
+        tags.add(RYO);
+        tags.add(GROOVE_GRANT);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        int energyToAdd = MathUtils.floor((float) getGrooveStacks() / magicNumber);
+        int grooveToAdd = getGrooveStacks();
 
-        if (energyToAdd > 0) {
-            addToBot(new GainEnergyAction(energyToAdd));
+        if (grooveToAdd > 0) {
+            addToBot(new ApplyPowerAction(p, p, new GroovePower(p, grooveToAdd)));
         }
-
-        addToBot(new ApplyPowerAction(p, p, new NijikaSoloPower(p)));
+        addToBot(new ApplyPowerAction(p, p, new RyoSoloPower(p)));
     }
 
     private int getGrooveStacks()
@@ -62,6 +58,6 @@ public class NijikaGambade extends BaseCard {
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new NijikaGambade();
+        return new KaraKara();
     }
 }

@@ -4,12 +4,12 @@ import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.GroovePower;
 import btrmod.util.CardStats;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.unique.ExpertiseAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static btrmod.util.CardTagEnum.*;
 
@@ -23,8 +23,8 @@ public class RyoQuickWrite extends BaseCard {
             0
     );
 
-    private static final int GROOVE = 0;
-    private static final int UPG_GROOVE = 1;
+    private static final int GROOVE = 5;
+    private static final int UPG_GROOVE = -2;
 
     public RyoQuickWrite() {
         super(ID, info);
@@ -33,15 +33,27 @@ public class RyoQuickWrite extends BaseCard {
         setExhaust(true);
 
         tags.add(RYO);
-        tags.add(GROOVE_GRANT);
+        tags.add(GROOVE_EXHAUST);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new ReducePowerAction(p, p, GroovePower.POWER_ID, magicNumber));
         addToBot(new ExpertiseAction(p, 10));
-        if (this.upgraded) {
-            addToBot(new ApplyPowerAction(p, p, new GroovePower(p, magicNumber), magicNumber));
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (!super.canUse(p, m)) {
+            return false;
         }
+        if (!p.hasPower(GroovePower.POWER_ID) ||
+                p.getPower(GroovePower.POWER_ID).amount < magicNumber){
+            cantUseMessage = "需要 " + magicNumber + " 层律动";
+            return false;
+        }
+
+        return true;
     }
 
     @Override

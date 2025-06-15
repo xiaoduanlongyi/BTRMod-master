@@ -185,8 +185,7 @@
 
   "${modID}:RyoQuickWrite": {
     "NAME": "凉子速写",
-    "DESCRIPTION": "${modID}:凉 ！ NL 抽牌直到将手牌抽满。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${modID}:凉 ！ NL 抽牌直到将手牌抽满。 NL 获得 !M! 层 ${modID}:律动 。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:凉 ！ NL 抽牌直到将手牌抽满。 NL 失去 !M! 层 ${modID}:律动 。 NL 消耗 。"
   },
 
   "${modID}:NijikaMiddleFinger": {
@@ -196,7 +195,7 @@
 
   "${modID}:KitaGone": {
     "NAME": "归去来兮",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 失去 !M! 点最大生命。 NL 获得 !${modID}:GRV! 层 ${modID}:律动 。 NL 获得 !${modID}:STR! 层 力量 。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:喜多 ！ NL 失去 !M! 点最大生命。 NL 当你要被杀死时，免死并回复到最大生命值的50%。"
   },
 
   "${modID}:PinkBocchi": {
@@ -367,8 +366,7 @@
 
   "${modID}:NijikaGambade": {
     "NAME": "虹夏打气",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 将你的 ${modID}:律动 翻倍 。 NL 进入 ${modID}:虹门 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${modID}:虹夏 ！ NL 将你的 ${modID}:律动 翻倍 。 NL 进入 ${modID}:虹门 。"
+    "DESCRIPTION": "${modID}:虹夏 ！ NL 每有 !M! 层 ${modID}:律动 ，获得一点 [E] 。 NL 进入 ${modID}:虹门 。"
   },
 
   "${modID}:KitaOmelette": {
@@ -389,5 +387,20 @@
   "${modID}:PubertySyndrome": {
     "NAME": "青春症候群",
     "DESCRIPTION": "当你切换 ${modID}:成员Solo 时，获得 !M! 点 格挡 。"
+  },
+
+  "${modID}:RyoConnection": {
+    "NAME": "波凉贴贴",
+    "DESCRIPTION": "${modID}:凉 ！ NL 抽 !M! 张牌 。 NL 移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 消耗 1张手牌。"
+  },
+
+  "${modID}:KaraKara": {
+    "NAME": "卡拉卡拉",
+    "DESCRIPTION": "${modID}:凉 ！ NL 将 ${modID}:律动 层数翻倍。 NL 进入 ${modID}:凉门 。 NL 消耗 。"
+  },
+
+  "${modID}:Bandman": {
+    "NAME": "乐队人",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 移除所有 ${modID}:律动 。 NL 每有1层 ${modID}:律动 ，获得1金币。 NL 消耗 。"
   }
 }
