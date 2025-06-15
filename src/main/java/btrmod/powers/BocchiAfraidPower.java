@@ -43,6 +43,10 @@ public class BocchiAfraidPower extends BasePower {
 
     @Override
     public void reducePower(int reduceAmount) {
+        if (owner.hasPower(WormBocchiPower.POWER_ID)){
+            return;
+        }
+
         // 计算实际减少量
         int totalReduction = reduceAmount;
 

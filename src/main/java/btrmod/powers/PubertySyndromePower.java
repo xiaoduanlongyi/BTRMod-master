@@ -27,7 +27,7 @@ public class PubertySyndromePower extends BasePower implements OnReceivePowerPow
             this.flash();
             addToBot(new GainBlockAction(owner, owner, amount));
         }
-        return true; // 返回 true 表示继续正常应用 Power
+        return true;
     }
 
     public void updateDescription() {
