@@ -1,4 +1,4 @@
-package btrmod.cards.power.rare;
+package btrmod.cards.power.uncommon;
 
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
@@ -19,7 +19,7 @@ public class SuperBocchi extends BaseCard {
     private static final CardStats info = new CardStats(
             KessokuBandChar.Meta.CARD_COLOR,
             CardType.POWER,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON,
             CardTarget.NONE,
             1
     );

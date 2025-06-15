@@ -111,5 +111,12 @@
     "DESCRIPTIONS": [
       "当你要被杀死时，免死并回复到最大生命值的 #y50% ，随后移除一层该能力。"
     ]
+  },
+
+  "${modID}:WormBocchiPower": {
+    "NAME": "槌子蛇波奇",
+    "DESCRIPTIONS": [
+      "本场战斗无法再降低 #y波奇自闭 。"
+    ]
   }
 }

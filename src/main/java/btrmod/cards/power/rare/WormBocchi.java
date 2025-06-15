@@ -1,10 +1,8 @@
-package btrmod.cards.power.uncommon;
+package btrmod.cards.power.rare;
 
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
-import btrmod.powers.DistortionPower;
-import btrmod.powers.GroovePower;
 import btrmod.powers.WormBocchiPower;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -21,15 +19,15 @@ public class WormBocchi extends BaseCard {
     private static final CardStats info = new CardStats(
             KessokuBandChar.Meta.CARD_COLOR,
             CardType.POWER,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             CardTarget.NONE,
-            2
+            3
     );
 
     public WormBocchi() {
         super(ID, info);
 
-        setCostUpgrade(1);
+        setCostUpgrade(2);
 
         tags.add(BOCCHI);
     }
