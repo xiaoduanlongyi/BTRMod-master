@@ -427,5 +427,16 @@
   "${modID}:BluePlanet": {
     "NAME": "蓝色星球",
     "DESCRIPTION": "移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。"
+  },
+
+  "${modID}:KitaBocchiStyle": {
+    "NAME": "波奇化喜多",
+    "DESCRIPTION": "${modID}:喜多 ！ 虚无 。 NL 手牌中每有1张 ${modID}:波奇 牌， 获得1层 ${modID}:扭曲 。",
+    "UPGRADE_DESCRIPTION": "${modID}:喜多 ！ NL 手牌中每有1张 ${modID}:波奇 牌， 获得1层 ${modID}:扭曲 。"
+  },
+
+  "${modID}:DarwinKita": {
+    "NAME": "达尔文喜多",
+    "DESCRIPTION": "${modID}:喜多 ！ NL 从抽牌堆中选择 !M! 张 ${modID}:波奇 牌放入你的手牌。 NL 消耗 。"
   }
 }
