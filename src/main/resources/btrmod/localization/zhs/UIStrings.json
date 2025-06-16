@@ -12,5 +12,13 @@
       "This": "Contains pairs of Strings, used to get values based on keys.",
       "This is a key": "This is a value."
     }
+  },
+
+  "${modID}:cantUseMessage": {
+    "TEXT": [
+      "没有足够的 #r律动 。",
+      "#r波奇自闭 太高了。",
+      "手牌中不能有 #r喜多 的牌。"
+    ]
   }
 }

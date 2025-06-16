@@ -1,5 +1,6 @@
 package btrmod.cards.attack.uncommon;
 
+import btrmod.BTRMod;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -58,6 +60,7 @@ public class RyoPray extends BaseCard {
         if (AbstractDungeon.player != null && AbstractDungeon.player.hand != null) {
             for (AbstractCard card : AbstractDungeon.player.hand.group) {
                 if (card.hasTag(KITA)) {
+                    cantUseMessage = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("cantUseMessage")).TEXT[2];
                     return false;
                 }
             }

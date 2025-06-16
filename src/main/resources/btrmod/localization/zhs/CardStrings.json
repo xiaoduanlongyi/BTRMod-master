@@ -114,7 +114,7 @@
   },
 
   "${modID}:ConfidentBocchi": {
-    "NAME": "波门",
+    "NAME": "自信波奇",
     "DESCRIPTION": "消耗所有 ${modID}:律动 。 NL 每层 ${modID}:律动 对敌人造成 !M! 伤害。 NL 只有在 ${modID}:波奇自闭 小于 !${modID}:BAP_VALUE! 时可以打出。 NL 进入 ${modID}:波门 。",
     "EXTENDED_DESCRIPTION": [
       " NL （造成 !${modID}:PREVIEW_DAMAGE! 点伤害。）",

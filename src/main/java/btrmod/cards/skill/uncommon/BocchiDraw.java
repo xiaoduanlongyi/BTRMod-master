@@ -1,5 +1,6 @@
 package btrmod.cards.skill.uncommon;
 
+import btrmod.BTRMod;
 import btrmod.actions.DrawAllBocchiCardsAction;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.*;
@@ -54,7 +56,7 @@ public class BocchiDraw extends BaseCard {
         if (!p.hasPower(GroovePower.POWER_ID)
                 || p.getPower(GroovePower.POWER_ID).amount < this.magicNumber) {
             // 如果玩家没有 Groove 或者层数 < magicNumber，就禁止打出
-            this.cantUseMessage = "需要 " + this.magicNumber + " 层律动";
+            this.cantUseMessage = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("cantUseMessage")).TEXT[0];
             return false;
         }
         return true;

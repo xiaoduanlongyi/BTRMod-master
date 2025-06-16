@@ -1,5 +1,6 @@
 package btrmod.cards.attack.rare;
 
+import btrmod.BTRMod;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
@@ -89,7 +90,7 @@ public class ConfidentBocchi extends BaseCard {
         }
         if (p.getPower(BocchiAfraidPower.POWER_ID) != null)
             if (p.getPower(BocchiAfraidPower.POWER_ID).amount > customVar("BAP_VALUE")) {
-            //this.cantUseMessage = "需要 " + this.magicNumber + " 层律动";
+            this.cantUseMessage = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("cantUseMessage")).TEXT[1];
                 return false;
         }
         return true;

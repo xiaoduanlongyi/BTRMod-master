@@ -1,5 +1,6 @@
 package btrmod.cards.attack.uncommon;
 
+import btrmod.BTRMod;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.*;
@@ -54,8 +56,7 @@ public class SixStringBass extends BaseCard {
         // 然后检查 GroovePower
         if (!p.hasPower(GroovePower.POWER_ID)
                 || p.getPower(GroovePower.POWER_ID).amount < this.customVar("GRV")) {
-            // 如果玩家没有 Groove 或者层数 < magicNumber，就禁止打出
-            this.cantUseMessage = "需要 " + this.magicNumber + " 层律动";
+            this.cantUseMessage = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("cantUseMessage")).TEXT[0];
             return false;
         }
         return true;

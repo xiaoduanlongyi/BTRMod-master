@@ -1,5 +1,6 @@
 package btrmod.cards.skill.rare;
 
+import btrmod.BTRMod;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.GroovePower;
@@ -8,6 +9,8 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.unique.ExpertiseAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -19,7 +22,7 @@ public class RyoQuickWrite extends BaseCard {
             KessokuBandChar.Meta.CARD_COLOR,
             CardType.SKILL,
             CardRarity.RARE,
-            CardTarget.NONE,
+            CardTarget.SELF,
             0
     );
 
@@ -49,10 +52,11 @@ public class RyoQuickWrite extends BaseCard {
         }
         if (!p.hasPower(GroovePower.POWER_ID) ||
                 p.getPower(GroovePower.POWER_ID).amount < magicNumber){
-            cantUseMessage = "需要 " + magicNumber + " 层律动";
+
+            this.cantUseMessage = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("cantUseMessage")).TEXT[0];
+
             return false;
         }
-
         return true;
     }
 
