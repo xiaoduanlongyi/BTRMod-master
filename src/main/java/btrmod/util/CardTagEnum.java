@@ -19,4 +19,6 @@ public class CardTagEnum {
     public static AbstractCard.CardTags GROOVE_GRANT;
     @SpireEnum
     public static AbstractCard.CardTags GROOVE_EXHAUST;
+    @SpireEnum
+    public static AbstractCard.CardTags FANTASY;
 }

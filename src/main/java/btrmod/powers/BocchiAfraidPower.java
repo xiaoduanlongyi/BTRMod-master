@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static btrmod.BTRMod.makeID;
 import static btrmod.util.CardTagEnum.BOCCHI;
+import static btrmod.util.CardTagEnum.FANTASY;
 
 public class BocchiAfraidPower extends BasePower {
     public static final String POWER_ID = makeID(BocchiAfraidPower.class.getSimpleName());
@@ -25,7 +26,7 @@ public class BocchiAfraidPower extends BasePower {
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        if (card != null && card.hasTag(BOCCHI)) {
+        if (card != null && card.hasTag(BOCCHI) && !card.hasTag(FANTASY)) {
             float reduction = Math.min(1f, 0.1f * this.amount); // 10% per stack, max 100%
             return damage * (1f - reduction);
         }
@@ -43,7 +44,7 @@ public class BocchiAfraidPower extends BasePower {
 
     @Override
     public void reducePower(int reduceAmount) {
-        if (owner.hasPower(WormBocchiPower.POWER_ID)){
+        if (owner.hasPower(WormBocchiPower.POWER_ID)) {
             return;
         }
 
@@ -58,7 +59,6 @@ public class BocchiAfraidPower extends BasePower {
         // 确保不会减到负数
         totalReduction = Math.min(totalReduction, this.amount);
 
-        // 一次性减少
         super.reducePower(totalReduction);
     }
 
@@ -67,6 +67,18 @@ public class BocchiAfraidPower extends BasePower {
         if (!guitarHeroTriggeredThisCombat) {
             guitarHeroTriggeredThisCombat = true;
             addToBot(new ApplyPowerAction(owner, owner, new GuitarHeroPower(owner, 1), 1));
+        }
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+
+        super.stackPower(stackAmount);
+
+        if (this.amount >= 10) {
+            if (!owner.hasPower(BocchiFantasyPower.POWER_ID)) {
+                addToBot(new ApplyPowerAction(owner, owner, new BocchiFantasyPower(owner)));
+            }
         }
     }
 }

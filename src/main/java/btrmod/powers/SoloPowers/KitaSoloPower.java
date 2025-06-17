@@ -1,5 +1,6 @@
 package btrmod.powers.SoloPowers;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,7 +18,7 @@ public class KitaSoloPower extends SoloPower {
     @Override
     public void atStartOfTurn() {
         super.atStartOfTurn();
-        addToBot(new GainEnergyAction(1));
+        addToBot(new DrawCardAction(2));
         this.flash();
     }
 

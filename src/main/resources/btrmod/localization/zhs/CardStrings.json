@@ -438,5 +438,25 @@
   "${modID}:DarwinKita": {
     "NAME": "达尔文喜多",
     "DESCRIPTION": "${modID}:喜多 ！ NL 从抽牌堆中选择 !M! 张 ${modID}:波奇 牌放入你的手牌。 NL 消耗 。"
+  },
+
+  "${modID}:FantasyDisco": {
+    "NAME": "孤独迪斯科",
+    "DESCRIPTION": "${modID}:波奇幻想 。 NL 回合结束时，受到 !D! 点伤害，获得 !${modID}:GRV! 层 ${modID}:律动 。"
+  },
+
+  "${modID}:FantasyGeisha": {
+    "NAME": "孤独歌妓",
+    "DESCRIPTION": "${modID}:波奇幻想 。 NL 回合结束时，对所有敌人和自己造成 !D! 点伤害，获得 !${modID}:GRV! 层 ${modID}:律动 。"
+  },
+
+  "${modID}:FantasyStone": {
+    "NAME": "孤独美杜莎",
+    "DESCRIPTION": "${modID}:波奇幻想 。 NL 回合结束时，获得 !B! 点 格挡 ，增加 !${modID}:BAP! 层 ${modID}:波奇自闭 。"
+  },
+
+  "${modID}:FantasySurf": {
+    "NAME": "孤独冲浪",
+    "DESCRIPTION": "${modID}:波奇幻想 。 NL 回合结束时，获得 !M! 层 易伤 ，获得 !${modID}:GRV! 层 ${modID}:律动 。"
   }
 }

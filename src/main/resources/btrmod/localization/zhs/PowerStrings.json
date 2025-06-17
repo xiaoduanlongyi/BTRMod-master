@@ -48,7 +48,7 @@
   "${modID}:RyoSoloPower": {
     "NAME": "凉仙贝的Solo",
     "DESCRIPTIONS": [
-      "在凉门状态下，获得和失去的 #y律动 翻倍。 NL 每打出一张 #y凉 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+      "在凉门状态下，获得的 #y律动 翻倍。 NL 每打出一张 #y凉 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
     ]
   },
 
@@ -62,7 +62,7 @@
   "${modID}:KitaSoloPower": {
     "NAME": "喜多的Solo",
     "DESCRIPTIONS": [
-      "在喜多状态下，每回合开始时额外获得 [E] 。 NL 每打出一张 #y喜多 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+      "在喜多状态下，每回合开始时额外抽2张牌。 NL 每打出一张 #y喜多 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
     ]
   },
 
@@ -117,6 +117,13 @@
     "NAME": "槌子蛇波奇",
     "DESCRIPTIONS": [
       "本场战斗无法再降低 #y波奇自闭 。"
+    ]
+  },
+
+  "${modID}:BocchiFantasyPower": {
+    "NAME": "波奇的幻想",
+    "DESCRIPTIONS": [
+      "每回合开始时，随机添加1张 #y幻想 牌至手牌。"
     ]
   }
 }
