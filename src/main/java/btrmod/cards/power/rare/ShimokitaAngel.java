@@ -19,7 +19,7 @@ public class ShimokitaAngel extends BaseCard {
             CardType.POWER,
             CardRarity.RARE,
             CardTarget.NONE,
-            3
+            2
     );
 
     private static final int BOCCHI_AFRAID = 3;

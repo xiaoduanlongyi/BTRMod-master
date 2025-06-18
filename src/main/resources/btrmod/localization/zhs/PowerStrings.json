@@ -125,5 +125,13 @@
     "DESCRIPTIONS": [
       "每回合开始时，随机添加1张 #y幻想 牌至手牌。"
     ]
+  },
+
+  "${modID}:NeverForgetPower": {
+    "NAME": "绝不会忘记",
+    "DESCRIPTIONS": [
+      "每回合第 #b",
+      " 次切换 #y成员Solo 时，获得 [E] 。"
+    ]
   }
 }

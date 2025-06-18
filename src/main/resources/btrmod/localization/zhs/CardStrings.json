@@ -115,7 +115,7 @@
 
   "${modID}:IfConstellation": {
     "NAME": "若能化作星座",
-    "DESCRIPTION": "消耗所有 ${modID}:律动 。 NL 每层 ${modID}:律动 对敌人造成 !M! 伤害。 NL 选择进入一名成员的 ${modID}:Solo 。",
+    "DESCRIPTION": "消耗所有 ${modID}:律动 。 NL 每层 ${modID}:律动 对敌人造成 !M! 伤害。 NL 选择进入一名 ${modID}:成员的独奏 。",
     "EXTENDED_DESCRIPTION": [
       " NL （造成 !${modID}:PREVIEW_DAMAGE! 点伤害。）",
       ""
@@ -205,7 +205,7 @@
 
   "${modID}:RyoSuit": {
     "NAME": "西装凉",
-    "DESCRIPTION": "${modID}:凉 ！ NL 获得 !M! 金币。 NL 将2张凉的小弟放入手牌。 NL 进入 ${modID}:凉门 。"
+    "DESCRIPTION": "${modID}:凉 ！ NL 获得 !M! 金币。 NL 将2张凉的小弟放入手牌。 NL 进入 ${modID}:凉门 。 NL 消耗 。"
   },
 
   "${modID}:RyoHenchman1": {
@@ -386,7 +386,7 @@
 
   "${modID}:PubertySyndrome": {
     "NAME": "青春症候群",
-    "DESCRIPTION": "当你切换 ${modID}:成员Solo 时，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "当你切换 ${modID}:独奏 时，获得 !M! 点 格挡 。"
   },
 
   "${modID}:RyoConnection": {
@@ -473,5 +473,10 @@
   "${modID}:NijikaEnergyDrink": {
     "NAME": "能量饮料",
     "DESCRIPTION": "${modID}:虹夏 ！ NL 获得 !B! 点 格挡 。 NL 在下一回合获得 [E] 。"
+  },
+
+  "${modID}:NeverForget": {
+    "NAME": "绝不会忘记",
+    "DESCRIPTION": "NL 每回合第一次切换 ${modID}:独奏 时 ，获得 [E] 。"
   }
 }
