@@ -27,11 +27,11 @@ public class KitaPipa extends BaseCard {
     );
 
     private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 2;
+    private static final int UPG_DAMAGE = 0;
     private static final int WEAK = 1;
     private static final int UPG_WEAK = 1;
     private static final int GROOVE = 1;
-    private static final int UPG_GROOVE = 0;
+    private static final int UPG_GROOVE = 1;
 
     public KitaPipa() {
         super(ID, info);

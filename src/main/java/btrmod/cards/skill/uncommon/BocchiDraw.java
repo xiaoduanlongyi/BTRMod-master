@@ -32,7 +32,6 @@ public class BocchiDraw extends BaseCard {
     public BocchiDraw() {
         super(ID, info);
 
-        setCostUpgrade(0);
         setMagic(GROOVE, UPG_GROOVE);
         setExhaust(true);
 

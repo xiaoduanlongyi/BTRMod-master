@@ -35,6 +35,7 @@ public class NijikaThumbUp extends BaseCard {
         setCustomVar("BASE", BAP, UPG_BAP);
         setCustomVar("BONUS", BONUS_BAP_REDUCTION, UPG_BONUS_BAP_REDUCTION);
         setCustomVar("THRESHOLD", AFRAID_THRESHOLD);
+        setExhaust(true);
 
         tags.add(NIJIKA);
     }

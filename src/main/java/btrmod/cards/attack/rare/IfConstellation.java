@@ -2,11 +2,14 @@ package btrmod.cards.attack.rare;
 
 import btrmod.BTRMod;
 import btrmod.cards.BaseCard;
+import btrmod.cards.power.special.ToBocchiSolo;
+import btrmod.cards.power.special.ToKitaSolo;
+import btrmod.cards.power.special.ToNijikaSolo;
+import btrmod.cards.power.special.ToRyoSolo;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
 import btrmod.powers.GroovePower;
 import btrmod.powers.SoloPowers.BocchiSoloPower;
-import btrmod.powers.SoloPowers.NijikaSoloPower;
 import btrmod.powers.SoloPowers.SoloPower;
 import btrmod.util.CardStats;
 import com.badlogic.gdx.math.MathUtils;
@@ -14,19 +17,21 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
 
 import static btrmod.util.CardTagEnum.BOCCHI;
 import static btrmod.util.CardTagEnum.GROOVE_EXHAUST;
 
-public class ConfidentBocchi extends BaseCard {
-    public static final String ID = makeID(ConfidentBocchi.class.getSimpleName());
+public class IfConstellation extends BaseCard {
+    public static final String ID = makeID(IfConstellation.class.getSimpleName());
     private static final CardStats INFO = new CardStats(
             KessokuBandChar.Meta.CARD_COLOR,
             CardType.ATTACK,
@@ -36,18 +41,14 @@ public class ConfidentBocchi extends BaseCard {
     );
     private static final int PER_STACK_DAMAGE = 4;
     private static final int UPG_PER_STACK_DAMAGE = 2;
-    private static final int BAP_MAX = 2;
-    private static final int UPG_BAP_MAX = 1;
 
-    public ConfidentBocchi() {
+    public IfConstellation() {
         super(ID, INFO);
         // 初始设个 0，真正的数值我们在 applyPowers 里动态重写
         setDamage(0, 0);
         setMagic(PER_STACK_DAMAGE, UPG_PER_STACK_DAMAGE);
-        setCustomVar("BAP_VALUE", BAP_MAX, UPG_BAP_MAX);
 
         tags.add(GROOVE_EXHAUST);
-        tags.add(BOCCHI);
     }
 
     @Override
@@ -80,20 +81,13 @@ public class ConfidentBocchi extends BaseCard {
             ));
         }
 
-        addToBot(new ApplyPowerAction(p, p, new BocchiSoloPower(p)));
-    }
+        ArrayList<AbstractCard> stanceChoices = new ArrayList();
+        stanceChoices.add(new ToBocchiSolo());
+        stanceChoices.add(new ToKitaSolo());
+        stanceChoices.add(new ToNijikaSolo());
+        stanceChoices.add(new ToRyoSolo());
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (!super.canUse(p, m)) {
-            return false;
-        }
-        if (p.getPower(BocchiAfraidPower.POWER_ID) != null)
-            if (p.getPower(BocchiAfraidPower.POWER_ID).amount > customVar("BAP_VALUE")) {
-            this.cantUseMessage = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("cantUseMessage")).TEXT[1];
-                return false;
-        }
-        return true;
+        addToBot(new ChooseOneAction(stanceChoices));
     }
 
     @Override
@@ -130,6 +124,6 @@ public class ConfidentBocchi extends BaseCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new ConfidentBocchi();
+        return new IfConstellation();
     }
 }

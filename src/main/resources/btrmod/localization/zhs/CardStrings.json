@@ -83,8 +83,8 @@
 
   "${modID}:GuitarHero": {
     "NAME": "吉他英雄",
-    "DESCRIPTION": "${modID}:波奇 ！   虚无 。 NL 每回合打出的第一张 ${modID}:波奇 的牌会打出两次。 NL 进入 ${modID}:波奇酱的solo 。",
-    "UPGRADE_DESCRIPTION": "${modID}:波奇 。 NL 每回合打出的第一张 ${modID}:波奇 的牌会打出两次。 NL 进入 ${modID}:波奇酱的solo 。"
+    "DESCRIPTION": "${modID}:波奇 ！   虚无 。 NL 每回合打出的第一张 ${modID}:波奇 的牌不耗费能量。 NL 进入 ${modID}:波门 。",
+    "UPGRADE_DESCRIPTION": "${modID}:波奇 。 NL 每回合打出的第一张 ${modID}:波奇 的牌不耗费能量。 NL 进入 ${modID}:波门 。"
   },
 
   "${modID}:BocchiLeapOfFaith": {
@@ -113,9 +113,9 @@
     "DESCRIPTION": "${modID}:波奇 ！ NL 随机对敌人造成 !D! 点伤害 !M! 次 。 NL 每次攻击施加1层 易伤 。"
   },
 
-  "${modID}:ConfidentBocchi": {
-    "NAME": "自信波奇",
-    "DESCRIPTION": "消耗所有 ${modID}:律动 。 NL 每层 ${modID}:律动 对敌人造成 !M! 伤害。 NL 只有在 ${modID}:波奇自闭 小于 !${modID}:BAP_VALUE! 时可以打出。 NL 进入 ${modID}:波门 。",
+  "${modID}:IfConstellation": {
+    "NAME": "若能化作星座",
+    "DESCRIPTION": "消耗所有 ${modID}:律动 。 NL 每层 ${modID}:律动 对敌人造成 !M! 伤害。 NL 选择进入一名成员的 ${modID}:Solo 。",
     "EXTENDED_DESCRIPTION": [
       " NL （造成 !${modID}:PREVIEW_DAMAGE! 点伤害。）",
       ""
@@ -220,13 +220,13 @@
 
   "${modID}:BocchiDraw": {
     "NAME": "搜寻",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 消耗 !M! 层 ${modID}:律动 。 NL 将抽牌堆中的所有 ${modID}:波奇 的卡牌抽入手中。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 消耗 !M! 层 ${modID}:律动 。 NL 将抽牌堆中所有 ${modID}:波奇 的卡牌抽入手中。"
   },
 
   "${modID}:RyoThumbUp": {
     "NAME": "凉的肯定",
     "DESCRIPTION": "${modID}:凉 ！ NL 在每回合开始时获得 NL !${modID}:GRV! 层 ${modID}:律动 。",
-    "UPGRADE_DESCRIPTION": "${modID}:凉 ！ 固有 。 NL 在每回合开始时获得 NL !M! 层 ${modID}:律动 。"
+    "UPGRADE_DESCRIPTION": "${modID}:凉 ！ 固有 。 NL 在每回合开始时获得 NL !${modID}:GRV! 层 ${modID}:律动 。"
   },
 
   "${modID}:KitaPipa": {
@@ -283,7 +283,7 @@
 
   "${modID}:NijikaThumbUp": {
     "NAME": "天使的肯定",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 移除 !${modID}:BASE! 层 ${modID}:波奇自闭 。 NL 如果当前 ${modID}:波奇自闭 层数大于 !${modID}:THRESHOLD! ,多移除 !${modID}:BONUS! 层。"
+    "DESCRIPTION": "${modID}:虹夏 ！ NL 移除 !${modID}:BASE! 层 ${modID}:波奇自闭 。 NL 如果当前 ${modID}:波奇自闭 层数大于 !${modID}:THRESHOLD! ,多移除 !${modID}:BONUS! 层。 NL 消耗 。"
   },
 
   "${modID}:AnoBand": {
@@ -330,7 +330,7 @@
 
   "${modID}:DominationKita": {
     "NAME": "支配恶魔",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 手牌中每有一张 ${modID}:波奇 卡，造成 !M! 点伤害。 NL 获得 !${modID}:DISTOR! 层 ${modID}:扭曲 。",
+    "DESCRIPTION": "${modID}:喜多 ！ NL 手牌中每有一张 ${modID}:波奇 的牌，造成 !M! 点伤害。 NL 获得 !${modID}:DISTOR! 层 ${modID}:扭曲 。",
     "EXTENDED_DESCRIPTION": [" NL (造成 ",
       " 点伤害）"
     ]
@@ -431,8 +431,8 @@
 
   "${modID}:KitaBocchiStyle": {
     "NAME": "波奇化喜多",
-    "DESCRIPTION": "${modID}:喜多 ！ 虚无 。 NL 手牌中每有1张 ${modID}:波奇 牌， 获得1层 ${modID}:扭曲 。",
-    "UPGRADE_DESCRIPTION": "${modID}:喜多 ！ NL 手牌中每有1张 ${modID}:波奇 牌， 获得1层 ${modID}:扭曲 。"
+    "DESCRIPTION": "${modID}:喜多 ！ 虚无 。 NL 手牌中每有1张 ${modID}:波奇 的牌， 获得1层 ${modID}:扭曲 。",
+    "UPGRADE_DESCRIPTION": "${modID}:喜多 ！ NL 手牌中每有1张 ${modID}:波奇 的牌， 获得1层 ${modID}:扭曲 。"
   },
 
   "${modID}:DarwinKita": {
@@ -463,5 +463,15 @@
   "${modID}:BocchiQuickDraw": {
     "NAME": "掏出吉他",
     "DESCRIPTION": "${modID}:波奇 ！ NL 造成 !D! 伤害。 NL 抽 !M! 张牌。 NL 丢弃抽到的牌中不增加 ${modID}:律动 的牌。"
+  },
+
+  "${modID}:RollingRolling": {
+    "NAME": "翻转岩石晨光洒落你身",
+    "DESCRIPTION": "每有1层 ${modID}:波奇自闭 ，获得 !M! 层 ${modID}:律动 。 NL 消耗 。"
+  },
+
+  "${modID}:NijikaEnergyDrink": {
+    "NAME": "能量饮料",
+    "DESCRIPTION": "${modID}:虹夏 ！ NL 获得 !B! 点 格挡 。 NL 在下一回合获得 [E] 。"
   }
 }
