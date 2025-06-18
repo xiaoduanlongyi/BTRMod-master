@@ -60,6 +60,13 @@ public class BocchiAfraidPower extends BasePower {
         totalReduction = Math.min(totalReduction, this.amount);
 
         super.reducePower(totalReduction);
+
+        //减到10以下解除BocchiFantasy
+        if (this.amount < 10){
+            if (owner.hasPower(BocchiFantasyPower.POWER_ID)){
+                addToBot(new RemoveSpecificPowerAction(owner, owner, BocchiFantasyPower.POWER_ID));
+            }
+        }
     }
 
     @Override

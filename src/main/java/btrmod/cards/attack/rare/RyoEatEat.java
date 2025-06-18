@@ -34,14 +34,14 @@ public class RyoEatEat extends BaseCard {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(FEED_BUFF, UPG_FEED_BUFF);
-        this.isMultiDamage = true; // so the tooltip shows “6” but we ignore multiDamage and use our action
+        this.isMultiDamage = true;
         setExhaust(true);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // we ignore 'm' here, because our action loops every enemy
-        addToBot(new RyoEatEatAction(p, this.damage, this.magicNumber));
+        addToBot(new RyoEatEatAction(p, this.multiDamage, this.magicNumber));
     }
 
     @Override

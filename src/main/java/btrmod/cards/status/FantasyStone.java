@@ -1,24 +1,19 @@
-package btrmod.cards.special;
+package btrmod.cards.status;
 
 import btrmod.cards.BaseCard;
-import btrmod.character.KessokuBandChar;
-import btrmod.powers.GroovePower;
+import btrmod.powers.BocchiAfraidPower;
 import btrmod.util.CardStats;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static btrmod.util.CardTagEnum.*;
 
-public class FantasySurf extends BaseCard {
-    public static final String ID = makeID(FantasySurf.class.getSimpleName());
+public class FantasyStone extends BaseCard {
+    public static final String ID = makeID(FantasyStone.class.getSimpleName());
     private static final CardStats info = new CardStats(
             CardColor.COLORLESS,
             CardType.STATUS,
@@ -27,21 +22,20 @@ public class FantasySurf extends BaseCard {
             -2
     );
 
-    private static final int VULN = 1;
-    private static final int UPG_VULN = 0;
-    private static final int GROOVE = 1;
-    private static final int UPG_GROOVE = 1;
+    private static final int BLOCK = 5;
+    private static final int UPG_BLOCK = 3;
+    private static final int BAP = 1;
+    private static final int UPG_BAP = 0;
 
-    public FantasySurf() {
+    public FantasyStone() {
         super(ID, info);
 
-        setMagic(VULN, UPG_VULN);
-        setCustomVar("GRV", GROOVE, UPG_GROOVE);
+        setBlock(BLOCK, UPG_BLOCK);
+        setCustomVar("BAP", BAP, UPG_BAP);
         setSelfRetain(true, true);
 
         tags.add(BOCCHI);
         tags.add(FANTASY);
-        tags.add(GROOVE_GRANT);
 
     }
 
@@ -54,22 +48,21 @@ public class FantasySurf extends BaseCard {
         if (AbstractDungeon.player != null && AbstractDungeon.player.hand.contains(this)) {
             this.flash();
 
-            addToBot(new ApplyPowerAction(
+            addToBot(new GainBlockAction(
                     AbstractDungeon.player,
-                    AbstractDungeon.player,
-                    new VulnerablePower(AbstractDungeon.player, magicNumber, false)
+                    block
             ));
 
             addToBot(new ApplyPowerAction(
                     AbstractDungeon.player,
                     AbstractDungeon.player,
-                    new GroovePower(AbstractDungeon.player, customVar("GRV"))
+                    new BocchiAfraidPower(AbstractDungeon.player, customVar("BAP"))
             ));
         }
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new FantasySurf();
+        return new FantasyStone();
     }
 }

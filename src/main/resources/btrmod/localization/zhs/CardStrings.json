@@ -458,5 +458,10 @@
   "${modID}:FantasySurf": {
     "NAME": "孤独冲浪",
     "DESCRIPTION": "${modID}:波奇幻想 。 NL 回合结束时，获得 !M! 层 易伤 ，获得 !${modID}:GRV! 层 ${modID}:律动 。"
+  },
+
+  "${modID}:BocchiQuickDraw": {
+    "NAME": "掏出吉他",
+    "DESCRIPTION": "${modID}:波奇 ！ NL 造成 !D! 伤害。 NL 抽 !M! 张牌。 NL 丢弃抽到的牌中不增加 ${modID}:律动 的牌。"
   }
 }
