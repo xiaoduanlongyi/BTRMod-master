@@ -6,25 +6,18 @@ import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
 import btrmod.powers.GroovePower;
 import btrmod.powers.SoloPowers.BocchiSoloPower;
-import btrmod.powers.SoloPowers.NijikaSoloPower;
-import btrmod.powers.SoloPowers.SoloPower;
 import btrmod.subscribers.ComboSoloSubscriber;
 import btrmod.util.CardStats;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.*;
 
-public class AnoBand extends BaseCard {
-    public static final String ID = makeID(AnoBand.class.getSimpleName());
+public class BocchiRiff extends BaseCard {
+    public static final String ID = makeID(BocchiRiff.class.getSimpleName());
     private static final CardStats INFO = new CardStats(
             KessokuBandChar.Meta.CARD_COLOR,
             CardType.ATTACK,
@@ -39,7 +32,7 @@ public class AnoBand extends BaseCard {
     private static final int GROOVE = 4;
     private static final int UPG_GROOVE = 2;
 
-    public AnoBand() {
+    public BocchiRiff() {
         super(ID, INFO);
 
         setDamage(DAMAGE,UPG_DAMAGE);
@@ -49,6 +42,7 @@ public class AnoBand extends BaseCard {
 
         tags.add(BOCCHI);
         tags.add(GROOVE_GRANT);
+        tags.add(REDUCE_BAP);
     }
 
     @Override
@@ -66,6 +60,6 @@ public class AnoBand extends BaseCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new AnoBand();
+        return new BocchiRiff();
     }
 }

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.NIJIKA;
+import static btrmod.util.CardTagEnum.REDUCE_BAP;
 
 public class NijikaThumbUp extends BaseCard {
     public static final String ID = makeID(NijikaThumbUp.class.getSimpleName());
@@ -38,6 +39,7 @@ public class NijikaThumbUp extends BaseCard {
         setExhaust(true);
 
         tags.add(NIJIKA);
+        tags.add(REDUCE_BAP);
     }
 
     @Override

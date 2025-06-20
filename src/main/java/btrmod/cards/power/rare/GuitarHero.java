@@ -19,13 +19,12 @@ public class GuitarHero extends BaseCard {
             CardType.POWER,
             CardRarity.RARE,
             CardTarget.NONE,
-            3
+            2
     );
 
     public GuitarHero() {
         super(ID, info);
 
-        this.costUpgrade = 2;
         setEthereal(true,false);
 
         tags.add(BOCCHI);

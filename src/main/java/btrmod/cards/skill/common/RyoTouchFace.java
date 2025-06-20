@@ -10,8 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static btrmod.util.CardTagEnum.BOCCHI;
-import static btrmod.util.CardTagEnum.RYO;
+import static btrmod.util.CardTagEnum.*;
 
 public class RyoTouchFace extends BaseCard {
     public static final String ID = makeID(RyoTouchFace.class.getSimpleName());
@@ -35,6 +34,7 @@ public class RyoTouchFace extends BaseCard {
         setBlock(BLOCK, UPG_BLOCK);
 
         tags.add(RYO);
+        tags.add(REDUCE_BAP);
     }
 
     @Override

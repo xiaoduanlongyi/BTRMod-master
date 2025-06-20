@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static btrmod.util.CardTagEnum.REDUCE_BAP;
 import static btrmod.util.CardTagEnum.RYO;
 
 public class RyoConnection extends BaseCard {
@@ -35,6 +36,7 @@ public class RyoConnection extends BaseCard {
         setCustomVar("BAP", BAP_REDUCE, UPG_BAP_REDUCE);
 
         tags.add(RYO);
+        tags.add(REDUCE_BAP);
     }
 
     @Override

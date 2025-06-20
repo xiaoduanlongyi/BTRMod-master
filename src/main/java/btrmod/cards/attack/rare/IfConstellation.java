@@ -44,7 +44,6 @@ public class IfConstellation extends BaseCard {
 
     public IfConstellation() {
         super(ID, INFO);
-        // 初始设个 0，真正的数值我们在 applyPowers 里动态重写
         setDamage(0, 0);
         setMagic(PER_STACK_DAMAGE, UPG_PER_STACK_DAMAGE);
 
@@ -92,7 +91,7 @@ public class IfConstellation extends BaseCard {
 
     @Override
     public void applyPowers() {
-        // 先走父类，保证 this.damage 被重置成 baseDamage(0) 加上 Strength/Vulnerable 等
+
         super.applyPowers();
 
         // 动态计算当前应该显示的伤害：消耗层数 × 4

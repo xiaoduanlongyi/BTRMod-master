@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static btrmod.util.CardTagEnum.REDUCE_BAP;
+
 public class BluePlanet extends BaseCard {
     public static final String ID = makeID(BluePlanet.class.getSimpleName());
     private static final CardStats info = new CardStats(
@@ -25,6 +27,7 @@ public class BluePlanet extends BaseCard {
     public BluePlanet() {
         super(ID, info);
         setCustomVar("BAP", BAP_REDUCE, UPG_BAP_REDUCE);
+        tags.add(REDUCE_BAP);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

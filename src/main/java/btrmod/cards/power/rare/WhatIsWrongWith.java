@@ -1,19 +1,20 @@
 package btrmod.cards.power.rare;
 
-import btrmod.actions.KitaGoneAction;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
-import btrmod.powers.KitaGonePower;
+import btrmod.powers.ShimokitaAngelPower;
+import btrmod.powers.SoloPowers.NijikaSoloPower;
+import btrmod.powers.WhatIsWrongWithPower;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static btrmod.util.CardTagEnum.KITA;
+import static btrmod.util.CardTagEnum.NIJIKA;
 
-public class KitaGone extends BaseCard {
-    public static final String ID = makeID(KitaGone.class.getSimpleName());
+public class WhatIsWrongWith extends BaseCard {
+    public static final String ID = makeID(WhatIsWrongWith.class.getSimpleName());
     private static final CardStats info = new CardStats(
             KessokuBandChar.Meta.CARD_COLOR,
             CardType.POWER,
@@ -22,25 +23,24 @@ public class KitaGone extends BaseCard {
             3
     );
 
-    private static final int MAXHP_LOSS = 10;
-    private static final int UPG_MAXHP_LOSS = -2;
+    private static final int DRAW = 1;
+    private static final int UPG_DRAW = 0;
 
-    public KitaGone() {
+    public WhatIsWrongWith() {
         super(ID, info);
 
-        setMagic(MAXHP_LOSS, UPG_MAXHP_LOSS);
+        setCostUpgrade(2);
+        setMagic(DRAW, UPG_DRAW);
 
-        tags.add(KITA);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new KitaGoneAction(p, magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new KitaGonePower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new WhatIsWrongWithPower(p, magicNumber), magicNumber));
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new KitaGone();
+        return new WhatIsWrongWith();
     }
 }

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.NIJIKA;
+import static btrmod.util.CardTagEnum.REDUCE_BAP;
 
 public class ShimokitaAngel extends BaseCard {
     public static final String ID = makeID(ShimokitaAngel.class.getSimpleName());
@@ -31,6 +32,7 @@ public class ShimokitaAngel extends BaseCard {
         setMagic(BOCCHI_AFRAID, UPG_BOCCHI_AFRAID);
 
         tags.add(NIJIKA);
+        tags.add(REDUCE_BAP);
     }
 
     @Override

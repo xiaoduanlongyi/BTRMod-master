@@ -13,8 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static btrmod.util.CardTagEnum.BOCCHI;
-import static btrmod.util.CardTagEnum.GROOVE_GRANT;
+import static btrmod.util.CardTagEnum.*;
 
 public class KikuriWave extends BaseCard {
     public static final String ID = makeID(KikuriWave.class.getSimpleName());
@@ -40,6 +39,7 @@ public class KikuriWave extends BaseCard {
         setExhaust(true);
 
         tags.add(GROOVE_GRANT);
+        tags.add(REDUCE_BAP);
     }
 
     @Override

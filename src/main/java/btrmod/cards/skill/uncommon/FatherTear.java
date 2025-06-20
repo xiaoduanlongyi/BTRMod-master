@@ -13,8 +13,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static btrmod.util.CardTagEnum.BOCCHI;
-import static btrmod.util.CardTagEnum.GROOVE_GRANT;
+import static btrmod.util.CardTagEnum.*;
 
 public class FatherTear extends BaseCard {
     public static final String ID = makeID(FatherTear.class.getSimpleName());
@@ -41,6 +40,7 @@ public class FatherTear extends BaseCard {
         setCustomVar("GRV", GROOVE, UPG_GROOVE);
 
         tags.add(GROOVE_GRANT);
+        tags.add(REDUCE_BAP);
     }
 
     @Override

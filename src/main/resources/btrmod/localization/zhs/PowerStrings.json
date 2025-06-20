@@ -133,5 +133,21 @@
       "每回合第 #b",
       " 次切换 #y成员Solo 时，获得 [E] 。"
     ]
+  },
+
+  "${modID}:AnoBandPower": {
+    "NAME": "那个乐队",
+    "DESCRIPTIONS": [
+      "当你切换 #ySolo时 ，获得 #b",
+      " 点 #y律动 。"
+    ]
+  },
+
+  "${modID}:WhatIsWrongWithPower": {
+    "NAME": "有何不可",
+    "DESCRIPTIONS": [
+      "每打出 #y1 张 减少 #y波奇自闭 的牌时 ，抽 #b",
+      " 张牌。"
+    ]
   }
 }

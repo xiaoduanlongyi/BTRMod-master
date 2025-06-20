@@ -15,8 +15,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static btrmod.util.CardTagEnum.BOCCHI;
-import static btrmod.util.CardTagEnum.GROOVE_GRANT;
+import static btrmod.util.CardTagEnum.*;
 
 public class RockYou extends BaseCard {
     public static final String ID = makeID(RockYou.class.getSimpleName());
@@ -42,6 +41,7 @@ public class RockYou extends BaseCard {
 
         tags.add(BOCCHI);
         tags.add(GROOVE_GRANT);
+        tags.add(REDUCE_BAP);
     }
 
     @Override

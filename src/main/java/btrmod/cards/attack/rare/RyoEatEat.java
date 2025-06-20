@@ -22,7 +22,7 @@ public class RyoEatEat extends BaseCard {
             CardType.ATTACK,
             CardRarity.RARE,
             CardTarget.ALL_ENEMY,
-            2
+            1
     );
 
     private static final int DAMAGE = 8;           // per enemy

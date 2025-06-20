@@ -3,20 +3,16 @@ package btrmod.cards.attack.common;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
-import btrmod.powers.GroovePower;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static btrmod.util.CardTagEnum.BOCCHI;
-import static btrmod.util.CardTagEnum.GROOVE_GRANT;
+import static btrmod.util.CardTagEnum.*;
 
 public class BocchiHappy extends BaseCard {
     public static final String ID = makeID(BocchiHappy.class.getSimpleName());
@@ -40,6 +36,7 @@ public class BocchiHappy extends BaseCard {
         setCustomVar("BAP", BAP, UPG_BAP);
 
         tags.add(BOCCHI);
+        tags.add(REDUCE_BAP);
     }
 
     @Override

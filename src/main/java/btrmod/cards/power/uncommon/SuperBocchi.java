@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static btrmod.util.CardTagEnum.BOCCHI;
+import static btrmod.util.CardTagEnum.REDUCE_BAP;
 
 public class SuperBocchi extends BaseCard {
     public static final String ID = makeID(SuperBocchi.class.getSimpleName());
@@ -36,6 +37,7 @@ public class SuperBocchi extends BaseCard {
         setCustomVar("BA1",BOCCHI_AFRAID,UPG_BOCCHI_AFRAID);
 
         tags.add(BOCCHI);
+        tags.add(REDUCE_BAP);
     }
 
     @Override

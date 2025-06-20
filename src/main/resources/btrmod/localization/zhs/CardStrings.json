@@ -286,8 +286,8 @@
     "DESCRIPTION": "${modID}:虹夏 ！ NL 移除 !${modID}:BASE! 层 ${modID}:波奇自闭 。 NL 如果当前 ${modID}:波奇自闭 层数大于 !${modID}:THRESHOLD! ,多移除 !${modID}:BONUS! 层。 NL 消耗 。"
   },
 
-  "${modID}:AnoBand": {
-    "NAME": "那个乐队",
+  "${modID}:BocchiRiff": {
+    "NAME": "超燃Riff",
     "DESCRIPTION": "${modID}:波奇 ！ NL 对所有敌人造成 !D! 伤害。 NL 获得 !${modID}:GRV! 层 ${modID}:律动 。 NL 移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 进入 ${modID}:波门 。"
   },
 
@@ -478,5 +478,23 @@
   "${modID}:NeverForget": {
     "NAME": "绝不会忘记",
     "DESCRIPTION": "NL 每回合第一次切换 ${modID}:独奏 时 ，获得 [E] 。"
+  },
+
+  "${modID}:AnoBand": {
+    "NAME": "那个乐队",
+    "DESCRIPTION": "当你切换 ${modID}:独奏 时，获得 !${modID}:GRV! 层 ${modID}:律动 。"
+  },
+
+  "${modID}:WhatIsWrongWith": {
+    "NAME": "有何不可",
+    "DESCRIPTION": "每打出1张减少 ${modID}:波奇自闭 的牌时，抽 !M! 张牌。"
+  },
+
+  "${modID}:Distortion": {
+    "NAME": "失真！！",
+    "DESCRIPTION": "造成 16 点基础伤害 。 NL 每层 ${modID}:扭曲 增加 !M! 点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL (造成 ",
+      " 点伤害）"
+    ]
   }
 }

@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.BOCCHI;
+import static btrmod.util.CardTagEnum.REDUCE_BAP;
 
 public class BocchiGambade extends BaseCard {
     public static final String ID = makeID(BocchiGambade.class.getSimpleName());
@@ -33,6 +34,7 @@ public class BocchiGambade extends BaseCard {
         setMagic(DRAW,UPG_DRAW);
 
         tags.add(BOCCHI);
+        tags.add(REDUCE_BAP);
     }
 
     @Override
