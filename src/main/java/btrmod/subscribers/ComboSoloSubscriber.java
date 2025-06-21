@@ -1,10 +1,12 @@
 package btrmod.subscribers;
 
+import btrmod.patches.ComboPanelPatch;
 import btrmod.powers.ComboCounterPower;
 import btrmod.powers.SoloPowers.BocchiSoloPower;
 import btrmod.powers.SoloPowers.KitaSoloPower;
 import btrmod.powers.SoloPowers.NijikaSoloPower;
 import btrmod.powers.SoloPowers.RyoSoloPower;
+import btrmod.ui.ComboUIPanel;
 import btrmod.util.CardTagEnum;
 import basemod.interfaces.OnCardUseSubscriber;
 import basemod.interfaces.OnPowersModifiedSubscriber;
@@ -29,6 +31,13 @@ import java.util.Map;
 public class ComboSoloSubscriber implements OnCardUseSubscriber, OnStartBattleSubscriber {
     private static final int COMBO_REQUIREMENT = 3;
 
+    // Add reference to UI panel
+    private ComboUIPanel comboPanel;
+
+    public ComboSoloSubscriber() {
+        comboPanel = new ComboUIPanel();
+    }
+
     // 存储最近打出的角色标签
     private LinkedList<AbstractCard.CardTags> recentCharacterTags = new LinkedList<>();
 
@@ -47,6 +56,8 @@ public class ComboSoloSubscriber implements OnCardUseSubscriber, OnStartBattleSu
         AbstractPlayer p = AbstractDungeon.player;
         if (p == null) return;
 
+        ComboUIPanel panel = ComboPanelPatch.getComboPanel();
+
         // 获取这张卡的角色标签
         AbstractCard.CardTags characterTag = getCharacterTag(card);
 
@@ -64,13 +75,22 @@ public class ComboSoloSubscriber implements OnCardUseSubscriber, OnStartBattleSu
             if (currentCount < COMBO_REQUIREMENT) {
                 // 3a. 若未达成三连击，则更新或应用 ComboCounterPower，显示“X/3”
                 applyOrUpdateComboCounter(p, characterTag, currentCount);
-            } else {
+                //update ComboUIPanel
+                if (panel != null) {
+                    panel.updateCombo(characterTag, currentCount);
+                }
+            }
+            else {
                 // 3b. 达成三连击：触发 SoloPower
                 triggerSolo(characterTag);
                 // 发完 Solo 之后，清空连击记录
                 recentCharacterTags.clear();
                 // 同时移除 ComboCounterPower
                 removeComboCounter(p);
+                // Clear the panel
+                if (panel != null) {
+                    panel.clearCombo();
+                }
             }
         }
     }
@@ -170,6 +190,10 @@ public class ComboSoloSubscriber implements OnCardUseSubscriber, OnStartBattleSu
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
         recentCharacterTags.clear();
+        ComboUIPanel panel = ComboPanelPatch.getComboPanel();
+        if (panel != null) {
+            panel.clearCombo();
+        }
     }
 
     /**
