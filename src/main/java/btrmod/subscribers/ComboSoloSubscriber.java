@@ -31,11 +31,7 @@ import java.util.Map;
 public class ComboSoloSubscriber implements OnCardUseSubscriber, OnStartBattleSubscriber {
     private static final int COMBO_REQUIREMENT = 3;
 
-    // Add reference to UI panel
-    private ComboUIPanel comboPanel;
-
     public ComboSoloSubscriber() {
-        comboPanel = new ComboUIPanel();
     }
 
     // 存储最近打出的角色标签
