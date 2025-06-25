@@ -20,14 +20,16 @@ import static btrmod.BTRMod.imagePath;
 public class ComboUIPanel extends AbstractPanel {
     // Panel positioning
     private static final float SHOW_X = 100f * Settings.scale;
-    private static final float SHOW_Y = Settings.HEIGHT / 2f;
+    private static final float SHOW_Y = Settings.HEIGHT * 0.5f;
     private static final float HIDE_X = -200f * Settings.scale;
 
     // UI dimensions
-    private static final float CHARACTER_SIZE = 64f * Settings.scale;
+    private static final float CHARACTER_SIZE = 80f * Settings.scale;
     private static final float SPACING = 10f * Settings.scale;
     private static final float PANEL_WIDTH = CHARACTER_SIZE + 40f * Settings.scale;
-    private static final float PANEL_HEIGHT = (CHARACTER_SIZE * 3) + (SPACING * 2) + 40f * Settings.scale;
+    private static final float PANEL_HEIGHT = 3f * (CHARACTER_SIZE + 40f * Settings.scale);
+    //private static final float PANEL_WIDTH = 120f * Settings.scale;
+    //private static final float PANEL_HEIGHT = 1.27f * (CHARACTER_SIZE + 40f * Settings.scale);
 
     // Textures
     private Texture panelBg;
@@ -135,7 +137,7 @@ public class ComboUIPanel extends AbstractPanel {
 
         // Render character images vertically
         for (int i = 0; i < comboCount; i++) {
-            float y = current_y - PANEL_HEIGHT / 2f + 20f * Settings.scale +
+            float y = current_y - PANEL_HEIGHT / 2f - 10f * Settings.scale +
                     (i * (CHARACTER_SIZE + SPACING));
 
             sb.draw(charTexture,
@@ -151,19 +153,16 @@ public class ComboUIPanel extends AbstractPanel {
                 FontHelper.panelNameFont,
                 comboText,
                 current_x + CHARACTER_SIZE / 2f,
-                current_y + PANEL_HEIGHT / 2f - 20f * Settings.scale,
-                Color.WHITE);
+                current_y + PANEL_HEIGHT / 2f - 10f * Settings.scale,
+                getCharacterColor(currentTag));
     }
 
     private void renderTooltip(SpriteBatch sb) {
         if (currentTag == null || comboCount == 0) return;
 
-        String header = getCharacterName(currentTag) + " Combo";
-        String body = "Current: " + comboCount + "/3";
-
-        if (comboCount == 2) {
-            body += " NL One more for Solo Power!";
-        }
+        String header = getCharacterName(currentTag);
+        String body = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("soloComboPanel")).TEXT[0] + comboCount + " /3";
+        body += getCharacterSoloDescription(currentTag);
 
         TipHelper.renderGenericTip(
                 current_x + PANEL_WIDTH + 10f * Settings.scale,
@@ -182,10 +181,26 @@ public class ComboUIPanel extends AbstractPanel {
     }
 
     private String getCharacterName(AbstractCard.CardTags tag) {
-        if (tag == CardTagEnum.BOCCHI) return "Bocchi";
-        if (tag == CardTagEnum.KITA) return "Kita";
-        if (tag == CardTagEnum.NIJIKA) return "Nijika";
-        if (tag == CardTagEnum.RYO) return "Ryo";
+        if (tag == CardTagEnum.BOCCHI) return CardCrawlGame.languagePack.getUIString(BTRMod.makeID("memberSolo")).TEXT[0];
+        if (tag == CardTagEnum.KITA) return CardCrawlGame.languagePack.getUIString(BTRMod.makeID("memberSolo")).TEXT[1];
+        if (tag == CardTagEnum.NIJIKA) return CardCrawlGame.languagePack.getUIString(BTRMod.makeID("memberSolo")).TEXT[2];
+        if (tag == CardTagEnum.RYO) return CardCrawlGame.languagePack.getUIString(BTRMod.makeID("memberSolo")).TEXT[3];
         return "Unknown";
+    }
+
+    private String getCharacterSoloDescription(AbstractCard.CardTags tag) {
+        if (tag == CardTagEnum.BOCCHI) return CardCrawlGame.languagePack.getUIString(BTRMod.makeID("memberSoloDescription")).TEXT[0];
+        if (tag == CardTagEnum.KITA) return CardCrawlGame.languagePack.getUIString(BTRMod.makeID("memberSoloDescription")).TEXT[1];
+        if (tag == CardTagEnum.NIJIKA) return CardCrawlGame.languagePack.getUIString(BTRMod.makeID("memberSoloDescription")).TEXT[2];
+        if (tag == CardTagEnum.RYO) return CardCrawlGame.languagePack.getUIString(BTRMod.makeID("memberSoloDescription")).TEXT[3];
+        return "Unknown";
+    }
+
+    private Color getCharacterColor(AbstractCard.CardTags tag) {
+        if (tag == CardTagEnum.BOCCHI) return new Color(1f, 0.6f, 0.8f, 1f);  // 粉色
+        if (tag == CardTagEnum.RYO) return new Color(0.4f, 0.6f, 1f, 1f);     // 蓝色
+        if (tag == CardTagEnum.NIJIKA) return new Color(1f, 0.9f, 0.4f, 1f);  // 黄色
+        if (tag == CardTagEnum.KITA) return new Color(1f, 0.5f, 0.3f, 1f);    // 橙红色
+        return Color.WHITE;
     }
 }
