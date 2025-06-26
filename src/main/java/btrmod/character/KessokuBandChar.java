@@ -3,6 +3,7 @@ package btrmod.character;
 import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.AbstractAnimation;
 import basemod.animations.SpriterAnimation;
 import btrmod.cards.attack.basic.*;
 import btrmod.cards.skill.basic.MatureMango;
@@ -120,14 +121,20 @@ public class KessokuBandChar extends CustomPlayer {
     public KessokuBandChar() {
         super(getNames()[0], Meta.KessokuBand,
                 new CustomEnergyOrb(orbTextures, characterPath("energyorb/vfx.png"), layerSpeeds), //Energy Orb
-                new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
+                //new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
+                new AbstractAnimation() { //Change the Animation line to this
+                    @Override
+                    public Type type() {
+                        return Type.NONE; //A NONE animation results in the image given in initializeClass being used
+                    }
+                });
 
-        initializeClass(null,
+        initializeClass(characterPath("KessoukuBandChar.png"),
                 SHOULDER_2,
                 SHOULDER_1,
                 CORPSE,
                 getLoadout(),
-                20.0F, -20.0F, 200.0F, 250.0F, //Character hitbox. x y position, then width and height.
+                20.0F, -20.0F, 200.0F, 300.0F, //Character hitbox. x y position, then width and height.
                 new EnergyManager(ENERGY_PER_TURN));
 
         //Location for text bubbles. You can adjust it as necessary later. For most characters, these values are fine.
