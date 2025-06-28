@@ -196,6 +196,10 @@ public class BTRMod implements
         return resourcesFolder + "/images/relics/" + file;
     }
 
+    public static String audioPath(String file) {
+        return resourcesFolder + "/audio/" + file;
+    }
+
     /**
      * Checks the expected resources path based on the package name.
      */

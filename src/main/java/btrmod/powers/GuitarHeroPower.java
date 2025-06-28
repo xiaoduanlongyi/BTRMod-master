@@ -36,6 +36,7 @@ public class GuitarHeroPower extends BasePower {
 
     @Override
     public void onCardDraw(AbstractCard card) {
+        // 当抽到Bocchi卡时，检查是否应该免费
         if (card.hasTag(BOCCHI)) {
             updateCardCost(card);
         }
@@ -57,8 +58,8 @@ public class GuitarHeroPower extends BasePower {
         // 重置计数器
         if (isPlayer) {
             bocchiCardsPlayedThisTurn = 0;
-            // 恢复所有Bocchi卡的费用
-            updateHandCardsCost();
+            // 移除所有Bocchi卡的免费状态
+            resetHandCardsCost();
         }
     }
 
@@ -76,14 +77,35 @@ public class GuitarHeroPower extends BasePower {
         updateHandCardsCost();
     }
 
+    @Override
+    public void onInitialApplication() {
+        // 初次获得时立即更新手牌
+        updateHandCardsCost();
+    }
+
     /**
      * 更新手牌中所有Bocchi卡的费用
      */
     private void updateHandCardsCost() {
         if (AbstractDungeon.player != null && AbstractDungeon.player.hand != null) {
+            // 首先计算还能免费多少张
+            int remainingFree = this.amount - bocchiCardsPlayedThisTurn;
+            int markedFree = 0;
+
             for (AbstractCard card : AbstractDungeon.player.hand.group) {
                 if (card.hasTag(BOCCHI)) {
-                    updateCardCost(card);
+                    if (markedFree < remainingFree) {
+                        // 这张卡应该免费
+                        if (!card.freeToPlayOnce) {
+                            card.freeToPlayOnce = true;
+                        }
+                        markedFree++;
+                    } else {
+                        // 这张卡不应该免费
+                        if (card.freeToPlayOnce) {
+                            card.freeToPlayOnce = false;
+                        }
+                    }
                 }
             }
         }
@@ -95,16 +117,36 @@ public class GuitarHeroPower extends BasePower {
     private void updateCardCost(AbstractCard card) {
         if (!card.hasTag(BOCCHI)) return;
 
-        // 如果已经打出的Bocchi卡数量小于层数，这张卡应该免费
-        if (bocchiCardsPlayedThisTurn < this.amount) {
-            if (card.cost >= 0 && card.costForTurn > 0) {
-                card.setCostForTurn(0);
+        // 计算还能免费多少张
+        int remainingFree = this.amount - bocchiCardsPlayedThisTurn;
+
+        // 计算这张卡之前有多少张Bocchi卡已经标记为免费
+        int alreadyMarkedFree = 0;
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hand != null) {
+            for (AbstractCard c : AbstractDungeon.player.hand.group) {
+                if (c != card && c.hasTag(BOCCHI) && c.freeToPlayOnce) {
+                    alreadyMarkedFree++;
+                }
             }
+        }
+
+        // 如果还有免费名额
+        if (alreadyMarkedFree < remainingFree) {
+            card.freeToPlayOnce = true;
         } else {
-            // 否则恢复原始费用
-            if (card.cost >= 0) {
-                card.resetAttributes();
-                card.applyPowers();
+            card.freeToPlayOnce = false;
+        }
+    }
+
+    /**
+     * 重置手牌中所有Bocchi卡的免费状态
+     */
+    private void resetHandCardsCost() {
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hand != null) {
+            for (AbstractCard card : AbstractDungeon.player.hand.group) {
+                if (card.hasTag(BOCCHI) && card.freeToPlayOnce) {
+                    card.freeToPlayOnce = false;
+                }
             }
         }
     }

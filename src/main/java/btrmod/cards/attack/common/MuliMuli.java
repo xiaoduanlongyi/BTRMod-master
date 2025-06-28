@@ -13,8 +13,11 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import javax.smartcardio.Card;
 
 import static btrmod.util.CardTagEnum.*;
 
@@ -48,6 +51,8 @@ public class MuliMuli extends BaseCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         addToBot(new ApplyPowerAction(p, p, new GroovePower(p, customVar("GRV"))));
         addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
+
+        CardCrawlGame.sound.play("MuliMuli");
         }
 
     @Override
