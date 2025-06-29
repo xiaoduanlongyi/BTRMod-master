@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -51,6 +52,8 @@ public class KitaKira extends BaseCard {
         }
         addToBot(new ApplyPowerAction(p, p, new VulnerablePower(p, customVar("SELF"), false), customVar("SELF")));
         AbstractDungeon.effectList.add(new SpotlightEffect());
+
+        CardCrawlGame.sound.play("KitaKita1");
     }
 
     @Override

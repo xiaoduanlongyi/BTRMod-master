@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EatGrass extends BaseCard {
@@ -27,7 +28,7 @@ public class EatGrass extends BaseCard {
     public EatGrass() {
         super(ID, info);
 
-        setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
+        setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC);
         setExhaust(true);
 
@@ -37,6 +38,8 @@ public class EatGrass extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new LoseHPAction(p, p, this.magicNumber));
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+
+        CardCrawlGame.sound.play("RyoEatGrass");
     }
 
     @Override

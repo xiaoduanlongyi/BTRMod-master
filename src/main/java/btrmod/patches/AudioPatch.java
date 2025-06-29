@@ -19,6 +19,16 @@ public class AudioPatch {
 
     public static final String CHAR_CHOOSE = "CHAR_CHOOSE";
     public static final String MULIMULI = "MuliMuli";
+    public static final String ESCAPE_GUITAR = "EscapedGuitar";
+    public static final String NIJIKA_FOLLOWUP = "NijikaFollowUp";
+    public static final String DISTORTED_BOCCHI = "DistortedBocchi";
+    public static final String BOCCHI_GHOST = "BocchiGhost";
+    public static final String KITAKITA1 = "KitaKita1";
+    public static final String KITAKITA2 = "KitaKita2";
+    public static final String NIJIKA_SHAKEHEAD = "NijikaShakeHead";
+    public static final String RYO_EATGRASS = "RyoEatGrass";
+    public static final String SHIMOKITA_ANGEL = "ShimokitaAngel";
+    public static final String FADE_AWAY = "FadeAway";
 
 
     // ========== Patch原版SoundMaster ==========
@@ -36,6 +46,16 @@ public class AudioPatch {
             // ======= 此处注册音频 =========
             ___map.put(CHAR_CHOOSE, load("sound/CharChoose.ogg"));
             ___map.put(MULIMULI, load("sound/MuliMuli.ogg"));
+            ___map.put(ESCAPE_GUITAR, load("sound/EscapedGuitar.ogg"));
+            ___map.put(NIJIKA_FOLLOWUP, load("sound/NijikaFollowUp.ogg"));
+            ___map.put(DISTORTED_BOCCHI, load("sound/DistortedBocchi.ogg"));
+            ___map.put(BOCCHI_GHOST, load("sound/BocchiGhost.ogg"));
+            ___map.put(KITAKITA1, load("sound/KitaKita1.ogg"));
+            ___map.put(KITAKITA2, load("sound/KitaKita2.ogg"));
+            ___map.put(NIJIKA_SHAKEHEAD, load("sound/NijikaShakeHead.ogg"));
+            ___map.put(RYO_EATGRASS, load("sound/RyoEatGrass.ogg"));
+            ___map.put(SHIMOKITA_ANGEL, load("sound/ShimokitaAngel.ogg"));
+            ___map.put(FADE_AWAY, load("sound/FadeAway.ogg"));
 
             logger.info("BTR sounds added successfully!");
         }

@@ -8,7 +8,10 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.SpotlightEffect;
 
 import static btrmod.util.CardTagEnum.KITA;
 
@@ -35,6 +38,9 @@ public class KitaKita extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new StunMonsterAction(m, p));
         addToBot(new ApplyPowerAction(p, p, new KitaSoloPower(p)));
+        AbstractDungeon.effectList.add(new SpotlightEffect());
+
+        CardCrawlGame.sound.play("KitaKita2");
     }
 
     @Override

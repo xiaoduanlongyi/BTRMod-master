@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ConfusionPower;
 
@@ -45,6 +46,8 @@ public class BocchiTwist extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new BocchiAfraidPower(p, customVar("BAP"))));
         addToBot(new ApplyPowerAction(p, p, new DistortionPower(p, magicNumber)));
+
+        CardCrawlGame.sound.play("DistortedBocchi");
     }
 
     @Override

@@ -8,6 +8,7 @@ import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.NIJIKA;
@@ -39,6 +40,8 @@ public class ShimokitaAngel extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new ShimokitaAngelPower(p, magicNumber), magicNumber));
         addToBot(new ApplyPowerAction(p, p, new NijikaSoloPower(p)));
+
+        CardCrawlGame.sound.play("ShimokitaAngel");
     }
 
     @Override
