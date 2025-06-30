@@ -29,6 +29,12 @@ public class AudioPatch {
     public static final String RYO_EATGRASS = "RyoEatGrass";
     public static final String SHIMOKITA_ANGEL = "ShimokitaAngel";
     public static final String FADE_AWAY = "FadeAway";
+    public static final String BOCCHI_GAMBADE = "BocchiGambade";
+    public static final String LEAP_OF_FAITH = "LeapOfFaith";
+    public static final String MUSCLE_NIJIKA = "MuscleNijika";
+    public static final String RYO_TOUCHFACE = "RyoTouchFace";
+    public static final String BANDMAN = "BandMan";
+    public static final String BOCCHI_SHOWHEAD = "BocchiShowHead";
 
 
     // ========== Patch原版SoundMaster ==========
@@ -56,6 +62,12 @@ public class AudioPatch {
             ___map.put(RYO_EATGRASS, load("sound/RyoEatGrass.ogg"));
             ___map.put(SHIMOKITA_ANGEL, load("sound/ShimokitaAngel.ogg"));
             ___map.put(FADE_AWAY, load("sound/FadeAway.ogg"));
+            ___map.put(BOCCHI_GAMBADE, load("sound/BocchiGambade.ogg"));
+            ___map.put(LEAP_OF_FAITH, load("sound/LeapOfFaith.ogg"));
+            ___map.put(MUSCLE_NIJIKA, load("sound/MuscleNijika.ogg"));
+            ___map.put(RYO_TOUCHFACE, load("sound/RyoTouchFace.ogg"));
+            ___map.put(BANDMAN, load("sound/BandMan.ogg"));
+            ___map.put(BOCCHI_SHOWHEAD, load("sound/BocchiShowHead.ogg"));
 
             logger.info("BTR sounds added successfully!");
         }

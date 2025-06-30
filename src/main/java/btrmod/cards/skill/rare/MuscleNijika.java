@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -49,6 +50,8 @@ public class MuscleNijika extends BaseCard {
         if (strengthStacksToAdd > 0) {
             addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, strengthStacksToAdd), strengthStacksToAdd));
         }
+
+        CardCrawlGame.sound.play("MuscleNijika");
     }
 
     private int getGrooveStacks()

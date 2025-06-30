@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.*;
@@ -24,8 +25,8 @@ public class RyoTouchFace extends BaseCard {
 
     private static final int BAP_REDUCE = 1;
     private static final int UPG_BAP_REDUCE = 0;
-    private static final int BLOCK = 5;
-    private static final int UPG_BLOCK = 3;
+    private static final int BLOCK = 4;
+    private static final int UPG_BLOCK = 2;
 
     public RyoTouchFace() {
         super(ID, info);
@@ -41,6 +42,8 @@ public class RyoTouchFace extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ReducePowerAction(p, p, BocchiAfraidPower.POWER_ID, magicNumber));
         addToBot(new GainBlockAction(p, p, block));
+
+        CardCrawlGame.sound.play("RyoTouchFace");
     }
 
     @Override

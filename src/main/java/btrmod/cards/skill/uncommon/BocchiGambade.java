@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.BOCCHI;
@@ -41,6 +42,8 @@ public class BocchiGambade extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DrawCardAction(magicNumber));
         addToBot(new ReducePowerAction(p,p, BocchiAfraidPower.POWER_ID,1));
+
+        CardCrawlGame.sound.play("BocchiGambade");
     }
 
     @Override
