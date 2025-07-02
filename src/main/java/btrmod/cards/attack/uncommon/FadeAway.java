@@ -44,7 +44,7 @@ public class FadeAway extends BaseCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.SLASH_HEAVY));
 
-        CardCrawlGame.sound.play("FadeAway");
+        CardCrawlGame.sound.playV("FadeAway", 1.5f);
     }
 
     @Override

@@ -4,10 +4,12 @@ import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.PubertySyndromePower;
 import btrmod.powers.RyoThumbUpPower;
+import btrmod.util.BgmManager;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.RYO;
@@ -34,6 +36,8 @@ public class PubertySyndrome extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new PubertySyndromePower(p, magicNumber)));
+
+        BgmManager.playCustomBGM("bgm/SeisyunComplex.ogg");
     }
 
     @Override

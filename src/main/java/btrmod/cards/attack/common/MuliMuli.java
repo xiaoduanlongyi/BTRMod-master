@@ -52,7 +52,7 @@ public class MuliMuli extends BaseCard {
         addToBot(new ApplyPowerAction(p, p, new GroovePower(p, customVar("GRV"))));
         addToBot(new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
 
-        CardCrawlGame.sound.play("MuliMuli");
+        CardCrawlGame.sound.playV("MuliMuli", 2.0f);
         }
 
     @Override

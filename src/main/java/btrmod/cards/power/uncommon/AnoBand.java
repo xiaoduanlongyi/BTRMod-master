@@ -3,14 +3,13 @@ package btrmod.cards.power.uncommon;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.AnoBandPower;
-import btrmod.powers.RyoThumbUpPower;
+import btrmod.util.BgmManager;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import static btrmod.util.CardTagEnum.RYO;
 
 public class AnoBand extends BaseCard {
     public static final String ID = makeID(AnoBand.class.getSimpleName());
@@ -34,6 +33,8 @@ public class AnoBand extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new AnoBandPower(p, customVar("GRV"))));
+
+        BgmManager.playCustomBGM("bgm/AnoBand.ogg");
     }
 
     @Override
