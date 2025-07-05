@@ -3,6 +3,7 @@ package btrmod.cards.power.uncommon;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.NeverForgetPower;
+import btrmod.util.BgmManager;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -33,6 +34,8 @@ public class NeverForget extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new NeverForgetPower(p, magicNumber)));
+
+        BgmManager.playCustomBGM("bgm/NeverForget.ogg");
     }
 
     @Override

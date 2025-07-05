@@ -92,6 +92,11 @@
     "DESCRIPTION": "${modID}:波奇 。 NL 对所有敌人造成 !D! 伤害。 NL 增加 !M! 层 ${modID}:波奇自闭 。"
   },
 
+  "${modID}:Swing": {
+    "NAME": "大力扫弦",
+    "DESCRIPTION": "${modID}:喜多 。 NL 对所有敌人造成 !D! 伤害。 NL 获得 !${modID}:GRV! 层 ${modID}:律动 。"
+  },
+
   "${modID}:FollowUpNijika": {
     "NAME": "虹夏追击",
     "DESCRIPTION": "${modID}:虹夏 。 NL 造成 !D! 伤害。 NL 如果本场战斗中打出的上一张牌是攻击牌，抽 !M! 张牌。"
@@ -401,7 +406,7 @@
 
   "${modID}:Bandman": {
     "NAME": "乐队人",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 移除所有 ${modID}:律动 。 NL 每有1层 ${modID}:律动 ，获得1金币。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 移除所有 ${modID}:律动 。 NL 每1层 ${modID}:律动 ，获得1金币。 NL 消耗 。"
   },
 
   "${modID}:WormBocchi": {

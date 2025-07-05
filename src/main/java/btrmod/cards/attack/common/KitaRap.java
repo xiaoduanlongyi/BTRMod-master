@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
@@ -50,6 +51,8 @@ public class KitaRap extends BaseCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         addToBot(new DrawCardAction(p, magicNumber));
         addToBot(new ApplyPowerAction(p, p, new GroovePower(p, customVar("GRV")), customVar("GRV")));
+
+        CardCrawlGame.sound.play("KitaRap");
     }
 
     @Override

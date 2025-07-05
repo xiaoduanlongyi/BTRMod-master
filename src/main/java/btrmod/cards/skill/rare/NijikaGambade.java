@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -48,6 +49,8 @@ public class NijikaGambade extends BaseCard {
         }
 
         addToBot(new ApplyPowerAction(p, p, new NijikaSoloPower(p)));
+
+        CardCrawlGame.sound.play("NijikaGambade");
     }
 
     private int getGrooveStacks()

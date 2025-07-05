@@ -4,6 +4,7 @@ import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.GroovePower;
 import btrmod.powers.SoloPowers.RyoSoloPower;
+import btrmod.util.BgmManager;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -44,6 +45,8 @@ public class KaraKara extends BaseCard {
             addToBot(new ApplyPowerAction(p, p, new GroovePower(p, grooveToAdd)));
         }
         addToBot(new ApplyPowerAction(p, p, new RyoSoloPower(p)));
+
+        BgmManager.playCustomBGM("bgm/KaraKara.ogg");
     }
 
     private int getGrooveStacks()

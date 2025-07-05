@@ -11,6 +11,7 @@ import btrmod.powers.BocchiAfraidPower;
 import btrmod.powers.GroovePower;
 import btrmod.powers.SoloPowers.BocchiSoloPower;
 import btrmod.powers.SoloPowers.SoloPower;
+import btrmod.util.BgmManager;
 import btrmod.util.CardStats;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -87,6 +88,8 @@ public class IfConstellation extends BaseCard {
         stanceChoices.add(new ToRyoSolo());
 
         addToBot(new ChooseOneAction(stanceChoices));
+
+        BgmManager.playCustomBGM("bgm/IfConstellation.ogg");
     }
 
     @Override

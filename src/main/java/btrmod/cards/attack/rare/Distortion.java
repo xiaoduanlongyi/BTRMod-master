@@ -4,6 +4,7 @@ import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
 import btrmod.powers.DistortionPower;
+import btrmod.util.BgmManager;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -20,7 +21,7 @@ public class Distortion extends BaseCard {
             CardType.ATTACK,
             CardRarity.UNCOMMON,
             CardTarget.ENEMY,
-            3
+            2
     );
 
     private static final int BASE_DAMAGE = 16;
@@ -40,11 +41,13 @@ public class Distortion extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.SLASH_HEAVY));
+
+        BgmManager.playCustomBGM("bgm/Distortion!!.ogg");
     }
 
     @Override
     public void applyPowers() {
-        // 先获取自闭层数
+        // 先获取Distortion层数
         int distStacks = 0;
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(DistortionPower.POWER_ID)) {
             distStacks = AbstractDungeon.player.getPower(DistortionPower.POWER_ID).amount;

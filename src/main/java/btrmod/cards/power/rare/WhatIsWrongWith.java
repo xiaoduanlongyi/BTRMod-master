@@ -5,6 +5,7 @@ import btrmod.character.KessokuBandChar;
 import btrmod.powers.ShimokitaAngelPower;
 import btrmod.powers.SoloPowers.NijikaSoloPower;
 import btrmod.powers.WhatIsWrongWithPower;
+import btrmod.util.BgmManager;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,16 +21,16 @@ public class WhatIsWrongWith extends BaseCard {
             CardType.POWER,
             CardRarity.RARE,
             CardTarget.NONE,
-            3
+            2
     );
 
-    private static final int DRAW = 1;
+    private static final int DRAW = 2;
     private static final int UPG_DRAW = 0;
 
     public WhatIsWrongWith() {
         super(ID, info);
 
-        setCostUpgrade(2);
+        setCostUpgrade(1);
         setMagic(DRAW, UPG_DRAW);
 
     }
@@ -37,6 +38,8 @@ public class WhatIsWrongWith extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new WhatIsWrongWithPower(p, magicNumber), magicNumber));
+
+        BgmManager.playCustomBGM("bgm/WhatIsWrongWith.ogg");
     }
 
     @Override

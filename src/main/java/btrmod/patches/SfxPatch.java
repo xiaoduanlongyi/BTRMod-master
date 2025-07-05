@@ -35,6 +35,16 @@ public class SfxPatch {
     public static final String RYO_TOUCHFACE = "RyoTouchFace";
     public static final String BANDMAN = "BandMan";
     public static final String BOCCHI_SHOWHEAD = "BocchiShowHead";
+    public static final String SWING = "Swing";
+    public static final String RYO_EATEAT = "RyoEatEat";
+    public static final String PINK_BOCCHI = "PinkBocchi";
+    public static final String NIJIKA_GAMBADE = "NijikaGambade";
+    public static final String KITA_RAP = "KitaRap";
+    public static final String KITA_OMELETTE = "KitaOmelette";
+    public static final String KITA_GONE = "KitaGone";
+    public static final String FIRE_BOCCHI = "FireBocchi";
+    public static final String FALLEN_ANGEL = "FallenAngel";
+    public static final String BOCCHI_OMELETTE = "BocchiOmelete";
 
     // ========== Patch原版SoundMaster ==========
     @SpirePatch(
@@ -68,6 +78,16 @@ public class SfxPatch {
             ___map.put(RYO_TOUCHFACE, load("sound/RyoTouchFace.ogg"));
             ___map.put(BANDMAN, load("sound/BandMan.ogg"));
             ___map.put(BOCCHI_SHOWHEAD, load("sound/BocchiShowHead.ogg"));
+            ___map.put(SWING, load("sound/Swing.ogg"));
+            ___map.put(RYO_EATEAT, load("sound/RyoEatEat.ogg"));
+            ___map.put(PINK_BOCCHI, load("sound/PinkBocchi.ogg"));
+            ___map.put(NIJIKA_GAMBADE, load("sound/NijikaGambade.ogg"));
+            ___map.put(KITA_RAP, load("sound/KitaRap.ogg"));
+            ___map.put(KITA_OMELETTE, load("sound/KitaOmelette.ogg"));
+            ___map.put(KITA_GONE, load("sound/KitaGone.ogg"));
+            ___map.put(FIRE_BOCCHI, load("sound/FireBocchi.ogg"));
+            ___map.put(FALLEN_ANGEL, load("sound/FallenAngel.ogg"));
+            ___map.put(BOCCHI_OMELETTE, load("sound/BocchiOmelette.ogg"));
 
             logger.info("BTR sounds added successfully!");
         }

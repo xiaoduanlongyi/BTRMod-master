@@ -33,7 +33,7 @@ import static btrmod.BTRMod.makeID;
 public class KessokuBandChar extends CustomPlayer {
     //Stats
     public static final int ENERGY_PER_TURN = 3;
-    public static final int MAX_HP = 70;
+    public static final int MAX_HP = 76;
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
@@ -230,7 +230,7 @@ public class KessokuBandChar extends CustomPlayer {
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
         //Similar to doCharSelectScreenSelectEffect, but used for the Custom mode screen. No shaking.
-        return "ATTACK_DAGGER_2";
+        return "CHAR_CHOOSE";
     }
 
     //Don't adjust these four directly, adjust the contents of the CharacterStrings.json file.

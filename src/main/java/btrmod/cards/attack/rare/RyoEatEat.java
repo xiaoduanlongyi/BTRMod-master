@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.RYO;
@@ -42,6 +43,8 @@ public class RyoEatEat extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // we ignore 'm' here, because our action loops every enemy
         addToBot(new RyoEatEatAction(p, this.multiDamage, this.magicNumber));
+
+        CardCrawlGame.sound.play("RyoEatEat");
     }
 
     @Override

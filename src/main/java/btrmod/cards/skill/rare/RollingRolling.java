@@ -5,6 +5,7 @@ import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
 import btrmod.powers.GroovePower;
 import btrmod.powers.SoloPowers.NijikaSoloPower;
+import btrmod.util.BgmManager;
 import btrmod.util.CardStats;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -42,6 +43,8 @@ public class RollingRolling extends BaseCard {
         if (grooveToAdd > 0) {
             addToBot(new ApplyPowerAction(p, p, new GroovePower(p, grooveToAdd)));
         }
+
+        BgmManager.playCustomBGM("bgm/RocknRollMorningLight.ogg");
     }
 
     private int getBAPStacks()

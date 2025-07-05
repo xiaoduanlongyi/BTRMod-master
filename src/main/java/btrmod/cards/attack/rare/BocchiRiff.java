@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.*;
@@ -56,6 +57,8 @@ public class BocchiRiff extends BaseCard {
             combo.clearRecentTags();
         }
         addToBot(new ApplyPowerAction(p, p, new BocchiSoloPower(p)));
+
+        CardCrawlGame.sound.playV("CHAR_CHOOSE", 1.5f);
     }
 
     @Override

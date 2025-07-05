@@ -19,7 +19,7 @@ import static btrmod.BTRMod.imagePath;
 
 public class ComboUIPanel extends AbstractPanel {
     // Panel positioning
-    private static final float SHOW_X = 100f * Settings.scale;
+    private static final float SHOW_X = 75f * Settings.scale;
     private static final float SHOW_Y = Settings.HEIGHT * 0.5f;
     private static final float HIDE_X = -200f * Settings.scale;
 
@@ -160,8 +160,15 @@ public class ComboUIPanel extends AbstractPanel {
     private void renderTooltip(SpriteBatch sb) {
         if (currentTag == null || comboCount == 0) return;
 
-        String header = getCharacterName(currentTag);
-        String body = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("soloComboPanel")).TEXT[0] + comboCount + " /3";
+        //String header = getCharacterName(currentTag);
+        String header = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("soloComboPanel")).TEXT[0];
+
+        String body = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("soloComboPanel")).TEXT[1] +
+                getCharacterName(currentTag) +
+                CardCrawlGame.languagePack.getUIString(BTRMod.makeID("soloComboPanel")).TEXT[2] +
+                comboCount +
+                " /3。 ";
+
         body += getCharacterSoloDescription(currentTag);
 
         TipHelper.renderGenericTip(

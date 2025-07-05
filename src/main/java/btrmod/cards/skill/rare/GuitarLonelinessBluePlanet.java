@@ -6,6 +6,7 @@ import btrmod.cards.power.special.Guitar;
 import btrmod.cards.power.special.Loneliness;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
+import btrmod.util.BgmManager;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -62,6 +63,8 @@ public class GuitarLonelinessBluePlanet extends BaseCard {
         }
 
         this.addToBot(new ChooseOneAction(stanceChoices));
+
+        BgmManager.playCustomBGM("bgm/GuitarLonelinessBluePlanet.ogg");
     }
 
     @Override

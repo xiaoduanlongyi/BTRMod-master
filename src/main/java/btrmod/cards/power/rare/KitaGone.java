@@ -8,6 +8,7 @@ import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.KITA;
@@ -37,6 +38,8 @@ public class KitaGone extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new KitaGoneAction(p, magicNumber));
         addToBot(new ApplyPowerAction(p, p, new KitaGonePower(p, 1)));
+
+        CardCrawlGame.sound.play("KitaGone");
     }
 
     @Override
