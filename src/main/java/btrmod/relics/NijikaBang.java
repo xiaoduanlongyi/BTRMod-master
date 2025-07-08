@@ -1,29 +1,28 @@
 package btrmod.relics;
 
+import basemod.interfaces.OnStartBattleSubscriber;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
+import btrmod.powers.DistortionPower;
+import btrmod.powers.SoloPowers.NijikaSoloPower;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnReceivePowerRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 
 import static btrmod.BTRMod.makeID;
 
-public class BocchiStartRelic extends BaseRelic {
-    private static final String NAME = "BocchiStartRelic"; //The name will be used for determining the image file as well as the ID.
+public class NijikaBang extends BaseRelic {
+    private static final String NAME = "NijikaBang"; //The name will be used for determining the image file as well as the ID.
     public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
-    private static final RelicTier RARITY = RelicTier.STARTER; //The relic's rarity.
+    private static final RelicTier RARITY = RelicTier.UNCOMMON; //The relic's rarity.
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
 
-    private static final int AnxietyLevel = 7;
-
-    public BocchiStartRelic() {
+    public NijikaBang() {
         super(ID, NAME, KessokuBandChar.Meta.CARD_COLOR, RARITY, SOUND);
-    }
-
-    @Override
-    public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
-        super.onUseCard(targetCard, useCardAction);
     }
 
     @Override
@@ -33,14 +32,13 @@ public class BocchiStartRelic extends BaseRelic {
                 new ApplyPowerAction(
                         AbstractDungeon.player,
                         AbstractDungeon.player,
-                        new BocchiAfraidPower(AbstractDungeon.player, AnxietyLevel),
-                        AnxietyLevel
+                        new NijikaSoloPower(AbstractDungeon.player)
                 )
         );
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + AnxietyLevel + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0];
     }
 }

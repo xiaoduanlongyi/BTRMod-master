@@ -51,7 +51,7 @@
     "DESCRIPTION": "${modID}:凉 。 NL 获得 !M! 金币。 NL 将3张吃草放入抽牌堆。 NL 增加1层 ${modID}:波奇自闭 。 NL 消耗 。"
   },
 
-  "${modID}:EatGrass": {
+  "${modID}:EatGrass_DEPRECATE": {
     "NAME": "吃草",
     "DESCRIPTION": "${modID}:凉 。 NL 失去 !M! HP。造成 !D! 点伤害。 NL 消耗 。"
   },
@@ -104,8 +104,7 @@
 
   "${modID}:BocchiGhost": {
     "NAME": "幽灵波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !M! 层 无实体 。 NL 获得2层 ${modID}:波奇自闭 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${modID}:波奇 ！ NL 获得 !M! 层 无实体 。 NL 获得2层 ${modID}:波奇自闭 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !M! 层 无实体 。 NL 获得2层 ${modID}:波奇自闭 。"
   },
 
   "${modID}:CalmHeadBocchi": {
@@ -254,7 +253,7 @@
 
   "${modID}:BocchiTwist": {
     "NAME": "扭曲波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 获得 !M! 层 ${modID}:扭曲 。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 获得 !M! 层 ${modID}:扭曲 。"
   },
 
   "${modID}:SixStringBass": {
@@ -275,7 +274,7 @@
 
   "${modID}:OctopusBocchi": {
     "NAME": "八爪波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !B! 点 格挡 。 NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 消耗 一张随机手牌 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !B! 点 格挡 。 NL 抽 !M! 张牌。 NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。"
   },
 
   "${modID}:FadeAway": {
@@ -296,7 +295,7 @@
     "DESCRIPTION": "${modID}:波奇 ！ NL 对所有敌人造成 !D! 伤害。 NL 获得 !${modID}:GRV! 层 ${modID}:律动 。 NL 移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 进入 ${modID}:波门 。"
   },
 
-  "${modID}:BocchiHappy": {
+  "${modID}:BocchiHappy_DEPRECATE": {
     "NAME": "波奇被夸",
     "DESCRIPTION": "${modID}:波奇 ！ NL 造成 !D! 点伤害。 NL 移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。"
   },
@@ -386,17 +385,13 @@
 
   "${modID}:FleeGuitarist": {
     "NAME": "逃跑的吉他手",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 获得 !B! 点 格挡 。 NL 如果你拥有 ${modID}:扭曲 ，额外获得 !M! 点 格挡 。"
+    "DESCRIPTION": "${modID}:喜多 ！ NL 获得 !B! 点 格挡 。 NL 如果你拥有 ${modID}:扭曲 ，获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "${modID}:喜多 ！ NL 获得 !B! 点 格挡 。 NL 如果你拥有 ${modID}:扭曲 ，获得 [E] [E] 。"
   },
 
   "${modID}:PubertySyndrome": {
     "NAME": "青春症候群",
     "DESCRIPTION": "当你切换 ${modID}:独奏 时，获得 !M! 点 格挡 。"
-  },
-
-  "${modID}:RyoConnection": {
-    "NAME": "波凉贴贴",
-    "DESCRIPTION": "${modID}:凉 ！ NL 抽 !M! 张牌 。 NL 移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 消耗 1张手牌。"
   },
 
   "${modID}:KaraKara": {
@@ -501,5 +496,10 @@
     "EXTENDED_DESCRIPTION": [" NL (造成 ",
       " 点伤害）"
     ]
+  },
+
+  "${modID}:EatGrass": {
+    "NAME": "吃草",
+    "DESCRIPTION": "${modID}:凉 ！ NL 造成 !D! 点伤害 。 NL 如果当前金币少于 !M! ,这张牌再打出1次。 NL 消耗 。"
   }
 }

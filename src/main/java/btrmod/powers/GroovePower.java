@@ -59,9 +59,9 @@ public class GroovePower extends BasePower {
         super.stackPower(stackAmount);
 
         //这些逻辑放在GrooveGrantPatch中实现了
-        //if (owner.hasPower(RyoSoloPower.POWER_ID)) {
-        //    super.stackPower(stackAmount);
-        //}
+        if (owner.hasPower(RyoSoloPower.POWER_ID)) {
+            super.stackPower(stackAmount);
+        }
 
         updateDescription();
     }

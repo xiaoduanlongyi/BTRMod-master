@@ -25,7 +25,7 @@ public class BocchiGhost extends BaseCard {
             1
     );
 
-    private static final int INTANGIBLE = 1;
+    private static final int INTANGIBLE = 2;
     private static final int UPG_INTANGIBLE = 0;
     private static final int BOCCHI_AFRAID = 2;
 
@@ -33,7 +33,6 @@ public class BocchiGhost extends BaseCard {
         super(ID, info);
 
         setMagic(INTANGIBLE, UPG_INTANGIBLE);
-        setExhaust(true,false);
 
         tags.add(BOCCHI);
     }

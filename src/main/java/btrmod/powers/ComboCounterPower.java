@@ -2,6 +2,8 @@ package btrmod.powers;
 
 import btrmod.BTRMod;
 import btrmod.util.CardTagEnum;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -28,6 +30,7 @@ public class ComboCounterPower extends BasePower {
      */
     public ComboCounterPower(AbstractCreature owner, AbstractCard.CardTags tag, int initialCount) {
         super(POWER_ID, PowerType.BUFF, false, owner, null, initialCount);
+        this.priority = -9999; // 极高的优先级，推到最左边
 
         this.trackedTag = tag;
         updateDescription();

@@ -5,6 +5,7 @@ import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,11 +21,13 @@ public class OctopusBocchi extends BaseCard {
             CardType.SKILL,
             CardRarity.COMMON,
             CardTarget.NONE,
-            1
+            0
     );
 
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 4;
     private static final int UPG_BLOCK = 2;
+    private static final int DRAW = 1;
+    private static final int UPG_DRAW = 0;
     private static final int BAP = 2;
     private static final int UPG_BAP = -1;
 
@@ -32,6 +35,7 @@ public class OctopusBocchi extends BaseCard {
         super(ID, info);
 
         setBlock(BLOCK, UPG_BLOCK);
+        setMagic(DRAW, UPG_DRAW);
         setCustomVar("BAP", BAP, UPG_BAP);
 
         tags.add(BOCCHI);
@@ -40,8 +44,8 @@ public class OctopusBocchi extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p,block));
+        addToBot(new DrawCardAction(magicNumber));
         addToBot(new ApplyPowerAction(p, p, new BocchiAfraidPower(p, customVar("BAP"))));
-        addToBot(new ExhaustAction(1, true, false, false));
     }
 
     @Override

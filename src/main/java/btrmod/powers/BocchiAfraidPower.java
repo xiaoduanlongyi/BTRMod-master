@@ -2,11 +2,15 @@ package btrmod.powers;
 
 import btrmod.powers.SoloPowers.BocchiSoloPower;
 import btrmod.powers.SoloPowers.NijikaSoloPower;
+import btrmod.relics.ExtrovertedBocchi;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static btrmod.BTRMod.makeID;
@@ -71,9 +75,12 @@ public class BocchiAfraidPower extends BasePower {
 
     @Override
     public void onRemove() {
-        if (!guitarHeroTriggeredThisCombat) {
-            guitarHeroTriggeredThisCombat = true;
-            addToBot(new ApplyPowerAction(owner, owner, new GuitarHeroPower(owner, 1), 1));
+        //先判定有没有ExtrovertedBocchi，再判定本场战斗有没有通过清除BAP获得过吉他英雄
+        if (!AbstractDungeon.player.hasRelic(ExtrovertedBocchi.ID)) {
+            if (!guitarHeroTriggeredThisCombat) {
+                guitarHeroTriggeredThisCombat = true;
+                addToBot(new ApplyPowerAction(owner, owner, new GuitarHeroPower(owner, 1), 1));
+            }
         }
     }
 
@@ -87,5 +94,15 @@ public class BocchiAfraidPower extends BasePower {
                 addToBot(new ApplyPowerAction(owner, owner, new BocchiFantasyPower(owner)));
             }
         }
+    }
+
+    @Override
+    public void renderAmount(SpriteBatch sb, float x, float y, Color c) {
+        super.renderAmount(sb, x, y, c);
+
+        float alpha = c.a;
+        Color red = Color.RED.cpy();
+        red.a = alpha;
+        super.renderAmount(sb, x, y, red);
     }
 }

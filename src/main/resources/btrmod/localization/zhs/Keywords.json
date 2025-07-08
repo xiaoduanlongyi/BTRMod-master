@@ -105,6 +105,14 @@
   },
 
   {
+    "PROPER_NAME": "吉他英雄",
+    "NAMES": [
+      "吉他英雄"
+    ],
+    "DESCRIPTION": "你在每回合打出的第 #b1 张 #y波奇 的牌不耗费能量。"
+  },
+
+  {
     "PROPER_NAME": "律动",
     "NAMES": [
       "律动"

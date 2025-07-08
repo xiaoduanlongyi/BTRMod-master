@@ -24,19 +24,19 @@ public class FleeGuitarist extends BaseCard {
             CardType.SKILL,
             CardRarity.COMMON,
             CardTarget.NONE,
-            0
+            1
     );
 
-    private static final int BLOCK = 3;
-    private static final int UPG_BLOCK = 1;
-    private static final int BONUS_BLOCK = 9;
-    private static final int UPG_BONUS_BLOCK = 5;
+    private static final int BLOCK = 8;
+    private static final int UPG_BLOCK = 0;
+    private static final int BONUS_ENERGY = 1;
+    private static final int UPG_BONUS_ENERGY = 1;
 
     public FleeGuitarist() {
         super(ID, info);
 
         setBlock(BLOCK, UPG_BLOCK);
-        setMagic(BONUS_BLOCK, UPG_BONUS_BLOCK);
+        setMagic(BONUS_ENERGY, UPG_BONUS_ENERGY);
 
         tags.add(KITA);
     }

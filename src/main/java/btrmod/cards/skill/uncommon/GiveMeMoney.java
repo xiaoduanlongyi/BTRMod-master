@@ -1,7 +1,7 @@
 package btrmod.cards.skill.uncommon;
 
 import btrmod.cards.BaseCard;
-import btrmod.cards.attack.special.EatGrass;
+import btrmod.cards.attack.special.EatGrass_DEPRECATE;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
 import btrmod.util.CardStats;
@@ -31,7 +31,7 @@ public class GiveMeMoney extends BaseCard {
         super(ID, info);
 
         setMagic(MONEY_GAINED,UPG_MONEY_GAINED);
-        this.cardsToPreview = new EatGrass();
+        this.cardsToPreview = new EatGrass_DEPRECATE();
         setExhaust(true,true);
 
         tags.add(RYO);
@@ -40,7 +40,7 @@ public class GiveMeMoney extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainGoldAction(magicNumber));
-        this.addToBot(new MakeTempCardInDrawPileAction(new EatGrass(), 3, true, true));
+        this.addToBot(new MakeTempCardInDrawPileAction(new EatGrass_DEPRECATE(), 3, true, true));
         addToBot(new ApplyPowerAction(p, p, new BocchiAfraidPower(p, 1)));
     }
 

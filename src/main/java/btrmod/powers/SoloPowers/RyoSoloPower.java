@@ -36,7 +36,7 @@ public class RyoSoloPower extends SoloPower{
     private void refreshGrooveCards() {
         // 重新计算手牌中所有带 GROOVE_USE 标签的卡牌
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
-            if (card.hasTag(CardTagEnum.GROOVE_USE)) {
+            if (card.hasTag(CardTagEnum.GROOVE_GRANT)) {
                 card.applyPowers();
             }
         }

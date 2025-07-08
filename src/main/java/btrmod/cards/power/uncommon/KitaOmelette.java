@@ -34,6 +34,7 @@ public class KitaOmelette extends BaseCard {
         setMagic(REGEN, UPG_REGEN);
 
         tags.add(KITA);
+        tags.add(CardTags.HEALING);
     }
 
     @Override

@@ -26,9 +26,9 @@ public class BocchiTwist extends BaseCard {
             1
     );
 
-    private static final int BAP = 2;
+    private static final int BAP = 1;
     private static final int UPG_BAP = 0;
-    private static final int DISTOR = 1;
+    private static final int DISTOR = 2;
     private static final int UPG_DISTOR = 0;
 
     public BocchiTwist() {
@@ -37,7 +37,7 @@ public class BocchiTwist extends BaseCard {
         setMagic(DISTOR,UPG_DISTOR);
         setCustomVar("BAP", BAP, UPG_BAP);
         setCostUpgrade(0);
-        setExhaust(true);
+        setExhaust(false);
 
         tags.add(BOCCHI);
     }

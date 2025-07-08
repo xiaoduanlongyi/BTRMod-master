@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class EatGrass extends BaseCard {
-    public static final String ID = makeID(EatGrass.class.getSimpleName());
+public class EatGrass_DEPRECATE extends BaseCard {
+    public static final String ID = makeID(EatGrass_DEPRECATE.class.getSimpleName());
     private static final CardStats info = new CardStats(
             CardColor.COLORLESS,
             CardType.ATTACK,
@@ -25,7 +25,7 @@ public class EatGrass extends BaseCard {
     private static final int UPG_DAMAGE = 2;
     private static final int MAGIC = 2;
 
-    public EatGrass() {
+    public EatGrass_DEPRECATE() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
@@ -44,6 +44,6 @@ public class EatGrass extends BaseCard {
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new EatGrass();
+        return new EatGrass_DEPRECATE();
     }
 }
