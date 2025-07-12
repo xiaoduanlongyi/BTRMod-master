@@ -46,21 +46,6 @@ public class RyoQuickWrite extends BaseCard {
     }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (!super.canUse(p, m)) {
-            return false;
-        }
-        if (!p.hasPower(GroovePower.POWER_ID) ||
-                p.getPower(GroovePower.POWER_ID).amount < magicNumber){
-
-            this.cantUseMessage = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("cantUseMessage")).TEXT[0];
-
-            return false;
-        }
-        return true;
-    }
-
-    @Override
     public AbstractCard makeCopy() { //Optional
         return new RyoQuickWrite();
     }

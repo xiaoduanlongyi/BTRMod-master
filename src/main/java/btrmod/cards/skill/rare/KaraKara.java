@@ -32,7 +32,6 @@ public class KaraKara extends BaseCard {
         setExhaust(true);
         setCostUpgrade(1);
 
-        tags.add(RYO);
         tags.add(GROOVE_GRANT);
     }
 

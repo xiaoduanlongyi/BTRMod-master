@@ -48,7 +48,7 @@
 
   "${modID}:GiveMeMoney": {
     "NAME": "凉乞钞",
-    "DESCRIPTION": "${modID}:凉 。 NL 获得 !M! 金币。 NL 将3张吃草放入抽牌堆。 NL 增加1层 ${modID}:波奇自闭 。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:凉 。 NL 对所有敌人造成 !D! 伤害，未被格挡的伤害转化为金币 。 NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 消耗 。"
   },
 
   "${modID}:EatGrass_DEPRECATE": {
@@ -83,8 +83,8 @@
 
   "${modID}:GuitarHero": {
     "NAME": "吉他英雄",
-    "DESCRIPTION": "${modID}:波奇 ！   虚无 。 NL 每回合打出的第一张 ${modID}:波奇 的牌不耗费能量。 NL 进入 ${modID}:波门 。",
-    "UPGRADE_DESCRIPTION": "${modID}:波奇 。 NL 每回合打出的第一张 ${modID}:波奇 的牌不耗费能量。 NL 进入 ${modID}:波门 。"
+    "DESCRIPTION": "${modID}:波奇 ！   虚无 。 NL 每回合打出的第一张 ${modID}:波奇 的牌打出两次。 NL 进入 ${modID}:波门 。",
+    "UPGRADE_DESCRIPTION": "${modID}:波奇 。 NL 每回合打出的第一张 ${modID}:波奇 的牌打出两次。 NL 进入 ${modID}:波门 。"
   },
 
   "${modID}:BocchiLeapOfFaith": {
@@ -104,7 +104,7 @@
 
   "${modID}:BocchiGhost": {
     "NAME": "幽灵波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !M! 层 无实体 。 NL 获得2层 ${modID}:波奇自闭 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !M! 层 无实体 。 NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 消耗 。"
   },
 
   "${modID}:CalmHeadBocchi": {
@@ -121,7 +121,7 @@
     "NAME": "若能化作星座",
     "DESCRIPTION": "消耗所有 ${modID}:律动 。 NL 每层 ${modID}:律动 对敌人造成 !M! 伤害。 NL 选择进入一名 ${modID}:成员的独奏 。",
     "EXTENDED_DESCRIPTION": [
-      " NL （造成 !${modID}:PREVIEW_DAMAGE! 点伤害。）",
+      " NL （造成 !D! 点伤害。）",
       ""
     ]
   },
@@ -138,7 +138,7 @@
 
   "${modID}:RyoReturnMoney": {
     "NAME": "下跪还钱",
-    "DESCRIPTION": "${modID}:凉 ！ NL 移除 !M! 层 ${modID}:波奇自闭 。 NL 失去 !${modID}:MONEY_RETURN! 金币 。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:凉 ！ NL 移除 !M! 层 ${modID}:波奇自闭 。 NL 失去 !${modID}:MONEY_RETURN! 金币 。"
   },
 
   "${modID}:KitaKita": {
@@ -258,7 +258,7 @@
 
   "${modID}:SixStringBass": {
     "NAME": "六弦贝斯",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 失去 !${modID}:GRV! 层 ${modID}:律动 。 NL 造成 !D! 点伤害 。 NL 获得 !M! 层 ${modID}:扭曲 。"
+    "DESCRIPTION": "${modID}:喜多 ！ NL 造成 !D! 点伤害 。 NL 失去 !${modID}:GRV! 层 ${modID}:律动 。 NL 获得 !M! 层 ${modID}:扭曲 。"
   },
 
   "${modID}:FatherTear": {
@@ -291,7 +291,7 @@
   },
 
   "${modID}:BocchiRiff": {
-    "NAME": "超燃Riff",
+    "NAME": "即兴Riff",
     "DESCRIPTION": "${modID}:波奇 ！ NL 对所有敌人造成 !D! 伤害。 NL 获得 !${modID}:GRV! 层 ${modID}:律动 。 NL 移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 进入 ${modID}:波门 。"
   },
 
@@ -370,7 +370,7 @@
 
   "${modID}:NijikaGambade": {
     "NAME": "虹夏打气",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 每有 !M! 层 ${modID}:律动 ，获得一点 [E] 。 NL 进入 ${modID}:虹门 。"
+    "DESCRIPTION": "${modID}:虹夏 ！ NL 每有 !M! 层 ${modID}:律动 ，获得 [E] 。 NL 进入 ${modID}:虹门 。"
   },
 
   "${modID}:KitaOmelette": {
@@ -396,11 +396,16 @@
 
   "${modID}:KaraKara": {
     "NAME": "卡拉卡拉",
-    "DESCRIPTION": "${modID}:凉 ！ NL 将 ${modID}:律动 层数翻倍。 NL 进入 ${modID}:凉门 。 NL 消耗 。"
+    "DESCRIPTION": "将 ${modID}:律动 层数翻倍。 NL 进入 ${modID}:凉门 。 NL 消耗 。"
   },
 
   "${modID}:Bandman": {
     "NAME": "乐队人",
+    "DESCRIPTION": "每有1层 ${modID}:律动 ，获得1 格挡 。 NL 失去 !M! 层 ${modID}:律动 。"
+  },
+
+  "${modID}:Bandman_DEPRECATE": {
+    "NAME": "乐队人_DEPRECATE",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 移除所有 ${modID}:律动 。 NL 每1层 ${modID}:律动 ，获得1金币。 NL 消耗 。"
   },
 
@@ -437,7 +442,8 @@
 
   "${modID}:DarwinKita": {
     "NAME": "达尔文喜多",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 从抽牌堆中选择 !M! 张 ${modID}:波奇 牌放入你的手牌。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:喜多 ！ NL 从抽牌堆中选择 !M! 张 ${modID}:波奇 牌放入你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "${modID}:喜多 ！ NL 从抽牌堆中选择 !M! 张 ${modID}:波奇 牌放入你的手牌。"
   },
 
   "${modID}:FantasyDisco": {
@@ -467,7 +473,8 @@
 
   "${modID}:RollingRolling": {
     "NAME": "翻转岩石晨光洒落你身",
-    "DESCRIPTION": "每有1层 ${modID}:波奇自闭 ，获得 !M! 层 ${modID}:律动 。 NL 消耗 。"
+    "DESCRIPTION": "每有1层 ${modID}:波奇自闭 ，获得 !M! ${modID}:律动 和 !B! 格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每有1层 ${modID}:波奇自闭 ，获得 !M! ${modID}:律动 和 !B! 格挡 。 NL 消耗 。"
   },
 
   "${modID}:NijikaEnergyDrink": {

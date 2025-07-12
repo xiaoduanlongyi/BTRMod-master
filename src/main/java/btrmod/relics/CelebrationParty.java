@@ -4,7 +4,9 @@ import btrmod.character.KessokuBandChar;
 import btrmod.powers.GroovePower;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.BTRMod.makeID;
 
@@ -17,25 +19,42 @@ public class CelebrationParty extends BaseRelic {
     private static final int GROOVE_THRESHOLD = 25;
     private static final int HEAL_AMOUNT = 6;
 
+    private int grooveAtCombatEnd = 0;
+
     public CelebrationParty() {
         super(ID, NAME, KessokuBandChar.Meta.CARD_COLOR, RARITY, SOUND);
     }
 
     @Override
-    public void onVictory() {
-        // 检查玩家是否有律动能力
-        if (AbstractDungeon.player.hasPower(GroovePower.POWER_ID)) {
-            GroovePower groovePower = (GroovePower) AbstractDungeon.player.getPower(GroovePower.POWER_ID);
+    public void atBattleStart() {
+        // 战斗开始时重置记录的律动值
+        grooveAtCombatEnd = 0;
+    }
 
-            // 检查律动是否大于25
-            if (groovePower.amount > GROOVE_THRESHOLD) {
-                // 触发遗物效果
-                flash();
-                addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-
-                // 回复生命
-                addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, HEAL_AMOUNT));
+    @Override
+    public void onMonsterDeath(AbstractMonster m) {
+        // 每当有怪物死亡时检查是否所有怪物都死了
+        if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            // 在怪物全部死亡时（战斗即将结束）记录当前律动值
+            if (AbstractDungeon.player.hasPower(GroovePower.POWER_ID)) {
+                GroovePower groovePower = (GroovePower) AbstractDungeon.player.getPower(GroovePower.POWER_ID);
+                grooveAtCombatEnd = groovePower.amount;
             }
+        }
+    }
+
+    @Override
+    public void onVictory() {
+        // 检查记录的律动值是否大于阈值
+        if (grooveAtCombatEnd > GROOVE_THRESHOLD) {
+            flash();
+
+            AbstractPlayer p = AbstractDungeon.player;
+            if (p.currentHealth > 0) {
+                p.heal(6);
+            }
+
+            grooveAtCombatEnd = 0;
         }
     }
 

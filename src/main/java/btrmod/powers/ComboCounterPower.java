@@ -30,7 +30,7 @@ public class ComboCounterPower extends BasePower {
      */
     public ComboCounterPower(AbstractCreature owner, AbstractCard.CardTags tag, int initialCount) {
         super(POWER_ID, PowerType.BUFF, false, owner, null, initialCount);
-        this.priority = -9999; // 极高的优先级，推到最左边
+        this.priority = 9999; // 推到最右边
 
         this.trackedTag = tag;
         updateDescription();
@@ -68,5 +68,15 @@ public class ComboCounterPower extends BasePower {
         if (tag == CardTagEnum.NIJIKA) return "Nijika";
         if (tag == CardTagEnum.RYO) return "Ryo";
         return "Unknown";
+    }
+
+    @Override
+    public void renderIcons(SpriteBatch sb, float x, float y, Color c) {
+        // 不渲染图标
+    }
+
+    @Override
+    public void renderAmount(SpriteBatch sb, float x, float y, Color c) {
+        // 不渲染数字
     }
 }

@@ -26,6 +26,7 @@ public class BocchiAfraidPower extends BasePower {
     public BocchiAfraidPower(AbstractCreature owner, int amount) {
         // id, type=DEBUFF, turnBased=false, owner, source=owner, amt, initDesc=true, loadImage=true
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+        priority = 1;
     }
 
     @Override

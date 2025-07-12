@@ -22,6 +22,15 @@
     ]
   },
 
+  "${modID}:memberName": {
+    "TEXT": [
+      " #y波奇 ",
+      " #y喜多 ",
+      " #y虹夏 ",
+      " #y凉 "
+    ]
+  },
+
   "${modID}:memberSolo": {
     "TEXT": [
       " #y波门 ",

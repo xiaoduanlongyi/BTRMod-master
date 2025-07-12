@@ -4,12 +4,10 @@ import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
 import btrmod.powers.GroovePower;
-import btrmod.powers.SoloPowers.NijikaSoloPower;
 import btrmod.util.BgmManager;
 import btrmod.util.CardStats;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,22 +24,30 @@ public class RollingRolling extends BaseCard {
     );
 
     private static final int BAP_TO_MULT = 2;
-    private static final int UPG_GROOVE_TO_DIVIDE = 1;
+    private static final int UPG_BAP_TO_MULT = 0;
+    private static final int BLOCK = 4;
+    private static final int UPG_BLOCK = 0;
 
     public RollingRolling() {
         super(ID, info);
 
-        setMagic(BAP_TO_MULT, UPG_GROOVE_TO_DIVIDE);
+        setMagic(BAP_TO_MULT, UPG_BAP_TO_MULT);
+        setBlock(BLOCK, UPG_BLOCK);
         setExhaust(true);
+        setInnate(false, true);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         int grooveToAdd = getBAPStacks() * magicNumber;
+        int blockToAdd = getBAPStacks() * block;
 
         if (grooveToAdd > 0) {
             addToBot(new ApplyPowerAction(p, p, new GroovePower(p, grooveToAdd)));
+        }
+        if (blockToAdd > 0){
+            addToBot(new GainBlockAction(p, blockToAdd));
         }
 
         BgmManager.playCustomBGM("bgm/RocknRollMorningLight.ogg");

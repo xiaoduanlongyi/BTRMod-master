@@ -20,16 +20,17 @@ public class KitaGone extends BaseCard {
             CardType.POWER,
             CardRarity.RARE,
             CardTarget.NONE,
-            3
+            1
     );
 
     private static final int MAXHP_LOSS = 10;
-    private static final int UPG_MAXHP_LOSS = -2;
+    private static final int UPG_MAXHP_LOSS = 0;
 
     public KitaGone() {
         super(ID, info);
 
         setMagic(MAXHP_LOSS, UPG_MAXHP_LOSS);
+        setCostUpgrade(0);
 
         tags.add(KITA);
     }

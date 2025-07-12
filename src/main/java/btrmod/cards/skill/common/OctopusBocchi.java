@@ -25,11 +25,11 @@ public class OctopusBocchi extends BaseCard {
     );
 
     private static final int BLOCK = 4;
-    private static final int UPG_BLOCK = 2;
+    private static final int UPG_BLOCK = 0;
     private static final int DRAW = 1;
-    private static final int UPG_DRAW = 0;
-    private static final int BAP = 2;
-    private static final int UPG_BAP = -1;
+    private static final int UPG_DRAW = 1;
+    private static final int BAP = 1;
+    private static final int UPG_BAP = 0;
 
     public OctopusBocchi() {
         super(ID, info);

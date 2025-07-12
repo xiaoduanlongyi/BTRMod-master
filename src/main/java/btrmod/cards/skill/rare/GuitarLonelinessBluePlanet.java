@@ -35,8 +35,8 @@ public class GuitarLonelinessBluePlanet extends BaseCard {
 
     private static final int DIST = 2;
     private static final int UPG_DIST = 1;
-    private static final int GROOVE = 5;
-    private static final int UPG_GROOVE = 2;
+    private static final int GROOVE = 7;
+    private static final int UPG_GROOVE = 3;
     private static final int BAP_REDUCE = 2;
     private static final int UPG_BAP_REDUCE = 1;
 

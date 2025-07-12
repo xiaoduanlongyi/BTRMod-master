@@ -26,7 +26,7 @@ public class RyoReturnMoney extends BaseCard {
 
     private static final int BAP_REDUCE = 2;
     private static final int UPG_BAP_REDUCE = 0;
-    private static final int MONEY = 25;
+    private static final int MONEY = 30;
     private static final int UPG_MONEY = -10;
 
     public RyoReturnMoney() {
@@ -34,8 +34,6 @@ public class RyoReturnMoney extends BaseCard {
 
         setMagic(BAP_REDUCE, UPG_BAP_REDUCE);
         setCustomVar("MONEY_RETURN", MONEY, UPG_MONEY);
-
-        setExhaust(true);
 
         tags.add(RYO);
         tags.add(REDUCE_BAP);

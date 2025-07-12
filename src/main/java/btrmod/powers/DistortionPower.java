@@ -1,5 +1,6 @@
 package btrmod.powers;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -23,9 +24,15 @@ public class DistortionPower extends BasePower {
     public DistortionPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
 
-        // 如果是第一次施加，随机化当前手牌
+        // 延迟随机化手牌，避免影响正在打出的卡牌
         if (!owner.hasPower(POWER_ID)) {
-            randomizeHandCosts();
+            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    randomizeHandCosts();
+                    this.isDone = true;
+                }
+            });
         }
     }
 
@@ -42,8 +49,11 @@ public class DistortionPower extends BasePower {
     }
 
     private void randomizeCardCost(AbstractCard card) {
-        // 跳过已经随机化的卡片、X费用卡、免费卡
-        if (randomizedCards.contains(card) || card.cost < 0 || card.freeToPlayOnce) {
+        // 跳过已经随机化的卡片、X费用卡、免费卡、正在使用的卡
+        if (randomizedCards.contains(card) ||
+                card.cost < 0 ||
+                card.freeToPlayOnce ||
+                AbstractDungeon.player.cardInUse == card) {
             return;
         }
 

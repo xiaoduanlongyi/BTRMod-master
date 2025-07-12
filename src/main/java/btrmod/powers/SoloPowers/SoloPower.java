@@ -3,6 +3,8 @@ package btrmod.powers.SoloPowers;
 import btrmod.powers.BasePower;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.SpotlightPlayerEffect;
 
 import java.util.Arrays;
 import java.util.List;
@@ -20,10 +22,15 @@ public abstract class SoloPower extends BasePower {
 
     public SoloPower(String id, PowerType type, boolean turnBased, AbstractCreature owner) {
         super(id, type, turnBased, owner, 1); // always start at 1
+        this.priority = 0;
     }
 
     @Override
     public void onInitialApplication() {
+        if (owner.isPlayer) {
+            AbstractDungeon.effectList.add(new SpotlightPlayerEffect());
+        }
+
         // remove any other solo power that’s currently on the owner
         for (String otherId : ALL_SOLO_IDS) {
             if (!otherId.equals(this.ID) && owner.hasPower(otherId)) {

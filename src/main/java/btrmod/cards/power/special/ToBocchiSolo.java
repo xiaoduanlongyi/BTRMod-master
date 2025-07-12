@@ -30,7 +30,6 @@ public class ToBocchiSolo extends BaseCard {
 
     public void onChoseThisOption() {
         AbstractPlayer p = AbstractDungeon.player;
-        AbstractDungeon.effectList.add(new SpotlightPlayerEffect());
         addToBot(new ApplyPowerAction(p, p, new BocchiSoloPower(p)));
     }
 

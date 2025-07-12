@@ -25,8 +25,8 @@ public class RevengeOnByrd extends BaseCard {
             1
     );
 
-    private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 3;
+    private static final int UPG_DAMAGE = 1;
     private static final int HITTIME = 4;
     private static final int UPG_HITTIME = 0;
 

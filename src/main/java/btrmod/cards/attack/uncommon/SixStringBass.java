@@ -48,21 +48,6 @@ public class SixStringBass extends BaseCard {
     }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        // 先调用父类的检查（比如能量不足、不可选时等）
-        if (!super.canUse(p, m)) {
-            return false;
-        }
-        // 然后检查 GroovePower
-        if (!p.hasPower(GroovePower.POWER_ID)
-                || p.getPower(GroovePower.POWER_ID).amount < this.customVar("GRV")) {
-            this.cantUseMessage = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("cantUseMessage")).TEXT[0];
-            return false;
-        }
-        return true;
-    }
-
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ReducePowerAction(p, p, GroovePower.POWER_ID, customVar("GRV")));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));

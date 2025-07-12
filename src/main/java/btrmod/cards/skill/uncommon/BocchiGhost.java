@@ -28,11 +28,14 @@ public class BocchiGhost extends BaseCard {
     private static final int INTANGIBLE = 2;
     private static final int UPG_INTANGIBLE = 0;
     private static final int BOCCHI_AFRAID = 2;
+    private static final int UPG_BOCCHI_AFRAID = -1;
 
     public BocchiGhost() {
         super(ID, info);
 
         setMagic(INTANGIBLE, UPG_INTANGIBLE);
+        setCustomVar("BAP", BOCCHI_AFRAID, UPG_BOCCHI_AFRAID);
+        setExhaust(true);
 
         tags.add(BOCCHI);
     }
@@ -40,7 +43,7 @@ public class BocchiGhost extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p,magicNumber)));
-        addToBot(new ApplyPowerAction(p,p, new BocchiAfraidPower(p,BOCCHI_AFRAID)));
+        addToBot(new ApplyPowerAction(p,p, new BocchiAfraidPower(p,customVar("BAP"))));
 
         CardCrawlGame.sound.play("BocchiGhost");
     }

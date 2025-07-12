@@ -7,6 +7,7 @@ import btrmod.cards.power.special.ToKitaSolo;
 import btrmod.cards.power.special.ToNijikaSolo;
 import btrmod.cards.power.special.ToRyoSolo;
 import btrmod.character.KessokuBandChar;
+import btrmod.interfaces.GrooveMultiplierCard;
 import btrmod.powers.BocchiAfraidPower;
 import btrmod.powers.GroovePower;
 import btrmod.powers.SoloPowers.BocchiSoloPower;
@@ -28,10 +29,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 
-import static btrmod.util.CardTagEnum.BOCCHI;
-import static btrmod.util.CardTagEnum.GROOVE_EXHAUST;
+import static btrmod.util.CardTagEnum.*;
 
-public class IfConstellation extends BaseCard {
+public class IfConstellation extends BaseCard implements GrooveMultiplierCard {
     public static final String ID = makeID(IfConstellation.class.getSimpleName());
     private static final CardStats INFO = new CardStats(
             KessokuBandChar.Meta.CARD_COLOR,
@@ -40,8 +40,10 @@ public class IfConstellation extends BaseCard {
             CardTarget.ENEMY,
             2
     );
-    private static final int PER_STACK_DAMAGE = 4;
-    private static final int UPG_PER_STACK_DAMAGE = 2;
+    private static final int PER_STACK_DAMAGE = 3;
+    private static final int UPG_PER_STACK_DAMAGE = 1;
+    private static final float GROOVE_MULTIPLIER = 3;
+    private static final float UPG_GROOVE_MULTIPLIER = 4;
 
     public IfConstellation() {
         super(ID, INFO);
@@ -49,37 +51,27 @@ public class IfConstellation extends BaseCard {
         setMagic(PER_STACK_DAMAGE, UPG_PER_STACK_DAMAGE);
 
         tags.add(GROOVE_EXHAUST);
+        tags.add(GROOVE_USE);
+    }
+
+    @Override
+    public float getGrooveMultiplier() {
+        if (!this.upgraded)
+            return GROOVE_MULTIPLIER;
+        else
+            return UPG_GROOVE_MULTIPLIER;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // 先把所有 Groove 消耗掉，并拿到它的层数
-        int rawStacks = 0;
+        // 把所有 Groove 消耗掉
         if (p.hasPower(GroovePower.POWER_ID)) {
-            rawStacks = p.getPower(GroovePower.POWER_ID).amount;
-            // 用 RemoveSpecificPowerAction 一次性移除
             addToBot(new RemoveSpecificPowerAction(p, p, GroovePower.POWER_ID));
         }
 
-        // What multiplier does BocchiSoloPower impose?
-        float mult = 1f;
-        if (p.hasPower(BocchiSoloPower.POWER_ID)) {
-            mult = ((SoloPower) p.getPower(BocchiSoloPower.POWER_ID))
-                    .getGrooveMultiplier();
-        }
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
 
-        //Effective stacks = raw × multiplier
-        int effectiveStacks = MathUtils.floor(rawStacks * mult);
-
-        // 按消耗层数×伤害 发一次伤害
-        if (rawStacks > 0) {
-            int totalDmg = effectiveStacks * magicNumber;
-            addToBot(new DamageAction(
-                    m,
-                    new DamageInfo(p, totalDmg, DamageInfo.DamageType.NORMAL),
-                    AbstractGameAction.AttackEffect.SLASH_HEAVY
-            ));
-        }
+        BgmManager.playCustomBGM("bgm/IfConstellation.ogg");
 
         ArrayList<AbstractCard> stanceChoices = new ArrayList();
         stanceChoices.add(new ToBocchiSolo());
@@ -88,35 +80,34 @@ public class IfConstellation extends BaseCard {
         stanceChoices.add(new ToRyoSolo());
 
         addToBot(new ChooseOneAction(stanceChoices));
-
-        BgmManager.playCustomBGM("bgm/IfConstellation.ogg");
     }
 
     @Override
     public void applyPowers() {
-
         super.applyPowers();
 
-        // 动态计算当前应该显示的伤害：消耗层数 × 4
-        int rawStacks = AbstractDungeon.player.hasPower(GroovePower.POWER_ID)
-                ? AbstractDungeon.player.getPower(GroovePower.POWER_ID).amount
-                : 0;
-
-        float mult = 1;
-        if (AbstractDungeon.player.hasPower(BocchiSoloPower.POWER_ID)) {
-            mult = ((SoloPower)AbstractDungeon.player
-                    .getPower(BocchiSoloPower.POWER_ID))
-                    .getGrooveMultiplier();
+        // 更新描述以显示总伤害
+        this.rawDescription = cardStrings.DESCRIPTION;
+        if (cardStrings.EXTENDED_DESCRIPTION != null && cardStrings.EXTENDED_DESCRIPTION.length > 0) {
+            int totalDamage = this.damage;
+            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
         }
-
-            int effectiveStacks = MathUtils.floor(rawStacks * mult);
-            int previewDmg = effectiveStacks * magicNumber;
-
-            setCustomVar("PREVIEW_DAMAGE", previewDmg);
-
-            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-            this.initializeDescription();
+        this.initializeDescription();
     }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        super.calculateCardDamage(mo);
+
+        // 更新描述以显示总伤害
+        this.rawDescription = cardStrings.DESCRIPTION;
+        if (cardStrings.EXTENDED_DESCRIPTION != null && cardStrings.EXTENDED_DESCRIPTION.length > 0) {
+            int totalDamage = this.damage;
+            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
+        }
+        this.initializeDescription();
+    }
+
 
     @Override
     public void onMoveToDiscard() {

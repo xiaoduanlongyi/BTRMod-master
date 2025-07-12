@@ -41,7 +41,7 @@ public class ShimokitaAngel extends BaseCard {
         addToBot(new ApplyPowerAction(p, p, new ShimokitaAngelPower(p, magicNumber), magicNumber));
         addToBot(new ApplyPowerAction(p, p, new NijikaSoloPower(p)));
 
-        CardCrawlGame.sound.play("ShimokitaAngel");
+        //CardCrawlGame.sound.play("ShimokitaAngel");
     }
 
     @Override

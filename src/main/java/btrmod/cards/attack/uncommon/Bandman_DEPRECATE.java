@@ -3,7 +3,6 @@ package btrmod.cards.attack.uncommon;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.GroovePower;
-import btrmod.powers.SoloPowers.NijikaSoloPower;
 import btrmod.util.CardStats;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,14 +14,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static btrmod.util.CardTagEnum.RYO;
-
-public class Bandman extends BaseCard {
-    public static final String ID = makeID(Bandman.class.getSimpleName());
+public class Bandman_DEPRECATE extends BaseCard {
+    public static final String ID = makeID(Bandman_DEPRECATE.class.getSimpleName());
     private static final CardStats info = new CardStats(
-            KessokuBandChar.Meta.CARD_COLOR,
+            CardColor.COLORLESS,
             CardType.ATTACK,
-            CardRarity.UNCOMMON,
+            CardRarity.SPECIAL,
             CardTarget.ENEMY,
             2
     );
@@ -32,7 +29,7 @@ public class Bandman extends BaseCard {
     private static final int GROOVE_TO_DIVIDE = 1;
     private static final int UPG_GROOVE_TO_DIVIDE = 0;
 
-    public Bandman() {
+    public Bandman_DEPRECATE() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
@@ -70,6 +67,6 @@ public class Bandman extends BaseCard {
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Bandman();
+        return new Bandman_DEPRECATE();
     }
 }

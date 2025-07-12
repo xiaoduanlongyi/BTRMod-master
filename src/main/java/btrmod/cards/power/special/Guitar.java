@@ -21,8 +21,8 @@ public class Guitar extends BaseCard {
             -2
     );
 
-    private static final int GROOVE = 5;
-    private static final int UPG_GROOVE = 2;
+    private static final int GROOVE = 7;
+    private static final int UPG_GROOVE = 3;
 
     public Guitar() {
         super(ID, info);

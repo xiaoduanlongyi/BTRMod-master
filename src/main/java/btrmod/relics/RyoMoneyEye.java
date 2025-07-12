@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.TrueVictoryRoom;
+import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 
 import static btrmod.BTRMod.makeID;
 
@@ -17,7 +18,7 @@ public class RyoMoneyEye extends BaseRelic {
     private static final RelicTier RARITY = RelicTier.UNCOMMON; //The relic's rarity.
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
 
-    private static final int GOLD = 15;
+    private static final int GOLD = 30;
 
     public RyoMoneyEye() {
         super(ID, NAME, KessokuBandChar.Meta.CARD_COLOR, RARITY, SOUND);
@@ -26,8 +27,12 @@ public class RyoMoneyEye extends BaseRelic {
     @Override
     public void onVictory() {
         flash();
-        addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToTop(new GainGoldAction(GOLD));
+        AbstractDungeon.effectList.add(new RainingGoldEffect(GOLD * 2, true));
+
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.currentHealth > 0) {
+            p.gainGold(GOLD);
+        }
     }
 
     @Override

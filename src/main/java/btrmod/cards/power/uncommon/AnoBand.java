@@ -21,7 +21,7 @@ public class AnoBand extends BaseCard {
             1
     );
 
-    private static final int GROOVE = 2;
+    private static final int GROOVE = 3;
     private static final int UPG_GROOVE = 1;
 
     public AnoBand() {

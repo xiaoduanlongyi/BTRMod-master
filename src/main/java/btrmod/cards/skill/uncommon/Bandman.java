@@ -1,57 +1,55 @@
-package btrmod.cards.skill.rare;
+package btrmod.cards.skill.uncommon;
 
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.GroovePower;
-import btrmod.powers.SoloPowers.NijikaSoloPower;
 import btrmod.util.CardStats;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
-import static btrmod.util.CardTagEnum.NIJIKA;
-
-public class NijikaGambade extends BaseCard {
-    public static final String ID = makeID(NijikaGambade.class.getSimpleName());
+public class Bandman extends BaseCard {
+    public static final String ID = makeID(Bandman.class.getSimpleName());
     private static final CardStats info = new CardStats(
             KessokuBandChar.Meta.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON,
             CardTarget.NONE,
             1
     );
 
-    private static final int GROOVE_TO_DIVIDE = 10;
+    private static final int BLOCK = 1;
+    private static final int UPG_BLOCK = 0;
+    private static final int GROOVE_TO_DIVIDE = 1;
     private static final int UPG_GROOVE_TO_DIVIDE = 0;
+    private static final int GROOVE_TO_REMOVE = 8;
+    private static final int UPG_GROOVE_TO_REMOVE = -3;
 
-    public NijikaGambade() {
+    public Bandman() {
         super(ID, info);
 
-        setMagic(GROOVE_TO_DIVIDE, UPG_GROOVE_TO_DIVIDE);
-        setCostUpgrade(0);
+        setBlock(BLOCK, UPG_BLOCK);
+        setMagic(GROOVE_TO_REMOVE, UPG_GROOVE_TO_REMOVE);
 
-        tags.add(NIJIKA);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        int energyToAdd = MathUtils.floor((float) getGrooveStacks() / magicNumber);
+        int blockToAdd = MathUtils.floor((float) getGrooveStacks() / 1);
 
-        if (energyToAdd > 0) {
-            addToBot(new GainEnergyAction(energyToAdd));
+        if (blockToAdd > 0) {
+            addToBot(new GainBlockAction(p, blockToAdd));
+            addToBot(new ReducePowerAction(p, p, GroovePower.POWER_ID, magicNumber));
         }
 
-        addToBot(new ApplyPowerAction(p, p, new NijikaSoloPower(p)));
-
-        CardCrawlGame.sound.play("NijikaGambade");
+        CardCrawlGame.sound.play("BandMan");
     }
 
     private int getGrooveStacks()
@@ -66,6 +64,6 @@ public class NijikaGambade extends BaseCard {
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new NijikaGambade();
+        return new Bandman();
     }
 }
