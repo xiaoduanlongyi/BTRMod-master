@@ -19,5 +19,148 @@
       "multiword_keywords"
     ],
     "DESCRIPTION": "Make sure the first element in NAMES has no underscores. The rest should use _ in the place of spaces. In card text, you'll use the underscore versions."
+  },
+
+  {
+    "PROPER_NAME": "Bocchi",
+    "NAMES": [
+      "Bocchi",
+      "Bocchi-chan"
+    ],
+    "DESCRIPTION": "Bocchi's turn! NL Play #b3 #yBocchi cards #yconsecutively to enter #yBocchi's #ySolo. NL Cards without character tags played in between do not break the combo."
+  },
+
+  {
+    "PROPER_NAME": "Bocchi's Solo",
+    "NAMES": [
+      "Bocchi-chan's Solo",
+      "Bocchi_Solo",
+      "Bocchi's_Solo"
+    ],
+    "DESCRIPTION": "During Bocchi Solo state, #yGroove #yDamage deals an additional #y50% damage. NL Gain #b1 #yGroove for each #yBocchi card played. NL This state is removed when entering another member's Solo."
+  },
+
+  {
+    "PROPER_NAME": "Kita",
+    "NAMES": [
+      "Kita"
+    ],
+    "DESCRIPTION": "Kita's turn! NL Play #b3 #yKita cards #yconsecutively to enter #yKita's #ySolo. NL Cards without character tags played in between do not break the combo."
+  },
+
+  {
+    "PROPER_NAME": "Kita's Solo",
+    "NAMES": [
+      "Kita's_Solo",
+      "Kita_Solo"
+    ],
+    "DESCRIPTION": "During Kita Solo state, draw #b2 additional cards at the start of each turn. NL Gain #b1 #yGroove for each #yKita card played. NL This state is removed when entering another member's Solo."
+  },
+
+  {
+    "PROPER_NAME": "Nijika",
+    "NAMES": [
+      "Nijika"
+    ],
+    "DESCRIPTION": "Nijika's turn! NL Play #b3 #yNijika cards #yconsecutively to enter #yNijika's #ySolo. NL Cards without character tags played in between do not break the combo."
+  },
+
+  {
+    "PROPER_NAME": "Nijika's Solo",
+    "NAMES": [
+      "Nijika's_Solo",
+      "Nijika_Solo"
+    ],
+    "DESCRIPTION": "During Nijika Solo state, remove an additional #b1 stack when removing #yBocchi #yAnxiety. NL Gain #b1 #yGroove for each #yNijika card played. NL This state is removed when entering another member's Solo."
+  },
+
+  {
+    "PROPER_NAME": "Ryo",
+    "NAMES": [
+      "Ryo",
+      "Ryo_Senbei"
+    ],
+    "DESCRIPTION": "Ryo's turn! NL Play #b3 #yRyo cards #yconsecutively to enter #yRyo's #ySolo. NL Cards without character tags played in between do not break the combo."
+  },
+
+  {
+    "PROPER_NAME": "Ryo's Solo",
+    "NAMES": [
+      "Ryo's_Solo",
+      "Ryo_Solo"
+    ],
+    "DESCRIPTION": "During Ryo Solo state, #yGroove gained is doubled. NL Gain #b1 #yGroove for each #yRyo card played. NL This state is removed when entering another member's Solo."
+  },
+
+  {
+    "PROPER_NAME": "Bocchi's Anxiety",
+    "NAMES": [
+      "Bocchi-chan_Anxiety",
+      "Bocchi_Anxiety",
+      "Bocchi's_Anxiety",
+      "Bocchi_Anxiety",
+      "Bocchi-chan_Anxiety"
+    ],
+    "DESCRIPTION": "Each stack of Anxiety reduces Bocchi's attack damage by #b10%. When Anxiety exceeds #b10 stacks, gain #yFantasy. Once per combat, when Anxiety is reduced to zero, gain #b1 stack of #yGuitar #yHero."
+  },
+
+  {
+    "PROPER_NAME": "Guitar Hero",
+    "NAMES": [
+      "Guitar_Hero"
+    ],
+    "DESCRIPTION": "The first #yBocchi card you play each turn is played twice. Gain [E] at the start of each turn."
+  },
+
+  {
+    "PROPER_NAME": "Groove",
+    "NAMES": [
+      "Groove"
+    ],
+    "DESCRIPTION": "#yGroove increases the #yGroove #yDamage of cards. Some specific cards require sufficient #yGroove to be played."
+  },
+
+  {
+    "PROPER_NAME": "Groove Damage",
+    "NAMES": [
+      "Groove_Damage"
+    ],
+    "DESCRIPTION": "Each stack of #yGroove provides #b1 Groove Damage."
+  },
+
+  {
+    "PROPER_NAME": "Stun",
+    "NAMES": [
+      "Stun"
+    ],
+    "DESCRIPTION": "Stunned units cannot act this turn."
+  },
+
+  {
+    "PROPER_NAME": "Distortion",
+    "NAMES": [
+      "Distortion"
+    ],
+    "DESCRIPTION": "Card costs are randomized. Decreases by #b1 stack at the end of each turn. NL When stacks reach zero, all card costs are restored."
+  },
+
+  {
+    "PROPER_NAME": "Bocchi's Fantasy",
+    "NAMES": [
+      "Bocchi's_Fantasy",
+      "Fantasy",
+      "Bocchi_Fantasy"
+    ],
+    "DESCRIPTION": "Fantasy cards cannot be played and will #yRetain. Card effects are automatically resolved at the end of each turn."
+  },
+
+  {
+    "PROPER_NAME": "Solo",
+    "NAMES": [
+      "Member's_Solo",
+      "Member_Solo",
+      "Solo"
+    ],
+    "DESCRIPTION": "When you play #b3 cards from the same member #yconsecutively, you enter that member's Solo. Each member's Solo provides different beneficial effects."
   }
 ]
