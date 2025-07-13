@@ -20,7 +20,7 @@ public class DarwinKita extends BaseCard {
             CardType.SKILL,
             CardRarity.RARE,
             CardTarget.NONE,
-            0
+            1
     );
 
     private static final int DRAW = 2;
@@ -30,14 +30,15 @@ public class DarwinKita extends BaseCard {
         super(ID, info);
 
         setMagic(DRAW, UPG_DRAW);
-        setExhaust(true, false);
+        setExhaust(true);
+        setCostUpgrade(0);
 
         tags.add(KITA);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SearchForBocchiCardsAction(magicNumber, true));
+        addToBot(new SearchForBocchiCardsAction(magicNumber, true, true));
     }
 
     @Override

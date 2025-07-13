@@ -33,7 +33,6 @@ public class GuitarHero extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p,p,new GuitarHeroPower(p,1),1));
-        addToBot(new ApplyPowerAction(p, p, new BocchiSoloPower(p)));
     }
 
     @Override

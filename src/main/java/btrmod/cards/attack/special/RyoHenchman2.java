@@ -21,7 +21,7 @@ public class RyoHenchman2 extends BaseCard {
             0
     );
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 3;
     private static final int WEAK = 1;
     private static final int UPG_WEAK = 1;

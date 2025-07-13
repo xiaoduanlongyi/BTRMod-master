@@ -29,10 +29,10 @@ public class DominationKita extends BaseCard {
             2
     );
 
-    private static final int DAMAGE_PER_BOCCHI = 8;
-    private static final int UPG_DAMAGE_PER_BOCCHI = 3;
-    private static final int DISTOR = 1;
-    private static final int UPG_DISTOR = 1;
+    private static final int DAMAGE_PER_BOCCHI = 10;
+    private static final int UPG_DAMAGE_PER_BOCCHI = 4;
+    private static final int DISTOR = 2;
+    private static final int UPG_DISTOR = 0;
 
     public DominationKita() {
         super(ID, info);

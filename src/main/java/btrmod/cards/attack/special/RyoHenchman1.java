@@ -21,10 +21,10 @@ public class RyoHenchman1 extends BaseCard {
             0
     );
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 3;
     private static final int VULNER = 1;
-    private static final int UPG_VULNER = 1;
+    private static final int UPG_VULNER = 0;
 
     public RyoHenchman1() {
         super(ID, info);

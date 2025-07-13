@@ -1,5 +1,6 @@
 package btrmod.actions;
 
+import btrmod.powers.BocchiAfraidPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -15,8 +16,9 @@ public class PinkBocchiAction extends AbstractGameAction {
     private final AbstractPlayer p;
     private final DamageInfo.DamageType damageTypeForTurn;
     private final int energyOnUse;
+    private final int BAPThreshold;
 
-    public PinkBocchiAction(AbstractPlayer p, int damage, DamageInfo.DamageType damageTypeForTurn, boolean freeToPlayOnce, int energyOnUse) {
+    public PinkBocchiAction(AbstractPlayer p, int damage, DamageInfo.DamageType damageTypeForTurn, boolean freeToPlayOnce, int energyOnUse, int BAPThreshold) {
         this.p = p;
         this.damage = damage;
         this.freeToPlayOnce = freeToPlayOnce;
@@ -24,6 +26,7 @@ public class PinkBocchiAction extends AbstractGameAction {
         this.actionType = ActionType.SPECIAL;
         this.damageTypeForTurn = damageTypeForTurn;
         this.energyOnUse = energyOnUse;
+        this.BAPThreshold = BAPThreshold;
     }
 
     public void update() {
@@ -35,6 +38,14 @@ public class PinkBocchiAction extends AbstractGameAction {
         if (this.p.hasRelic("Chemical X")) {
             effect += 2;
             this.p.getRelic("Chemical X").flash();
+        }
+
+        if (this.p.getPower(BocchiAfraidPower.POWER_ID) == null)
+            effect += 1;
+
+        if (this.p.getPower(BocchiAfraidPower.POWER_ID) != null)
+            if (this.p.getPower(BocchiAfraidPower.POWER_ID).amount < BAPThreshold) {
+                effect += 1;
         }
 
         if (effect > 0) {

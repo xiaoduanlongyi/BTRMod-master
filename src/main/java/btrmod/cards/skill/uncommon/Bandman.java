@@ -21,7 +21,7 @@ public class Bandman extends BaseCard {
             CardType.SKILL,
             CardRarity.UNCOMMON,
             CardTarget.NONE,
-            1
+            2
     );
 
     private static final int BLOCK = 1;

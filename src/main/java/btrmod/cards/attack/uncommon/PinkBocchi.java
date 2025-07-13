@@ -25,7 +25,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static btrmod.util.CardTagEnum.*;
 
-public class PinkBocchi extends BaseCard implements GrooveMultiplierCard {
+public class PinkBocchi extends BaseCard {
     public static final String ID = makeID(PinkBocchi.class.getSimpleName());
     private static final CardStats info = new CardStats(
             KessokuBandChar.Meta.CARD_COLOR,
@@ -35,28 +35,24 @@ public class PinkBocchi extends BaseCard implements GrooveMultiplierCard {
             -1
     );
 
-    private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 0;
-    private static  final int GROOVE_TOUSE = 5;
-    private static  final int UPG_GROOVE_TOUSE = 0;
-    private static final float GROOVE_MULTIPLIER = 0.34f;
-    private static final float UPG_GROOVE_MULTIPLIER = 0.5f;
+    private static final int DAMAGE = 7;
+    private static final int UPG_DAMAGE = 3;
+    private static final int BAP = 3;
+    private static final int UPG_BAP = 1;
 
     public PinkBocchi() {
         super(ID, info);
 
-        setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
-        //setMagic(GROOVE_TOUSE, UPG_GROOVE_TOUSE);
-        setCustomVar("GRV_USE", 3, -1);
+        setDamage(DAMAGE, UPG_DAMAGE);
+        setMagic(BAP, UPG_BAP);
         this.isMultiDamage = true;
 
         tags.add(BOCCHI);
-        tags.add(GROOVE_USE);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new PinkBocchiAction(p, damage, damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
+        addToBot(new PinkBocchiAction(p, damage, damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse, magicNumber));
 
         CardCrawlGame.sound.play("PinkBocchi");
     }
@@ -66,7 +62,6 @@ public class PinkBocchi extends BaseCard implements GrooveMultiplierCard {
         super.applyPowers();
     }
 
-    // 2) This controls the actual damage against a specific monster
     @Override
     public void calculateCardDamage(AbstractMonster m) {
         super.calculateCardDamage(m);
@@ -75,13 +70,5 @@ public class PinkBocchi extends BaseCard implements GrooveMultiplierCard {
     @Override
     public AbstractCard makeCopy() { //Optional
         return new PinkBocchi();
-    }
-
-    @Override
-    public float getGrooveMultiplier() {
-        if(!upgraded)
-            return GROOVE_MULTIPLIER;
-        else
-            return UPG_GROOVE_MULTIPLIER;
     }
 }

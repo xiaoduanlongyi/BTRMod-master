@@ -33,19 +33,17 @@ public class Ensemble extends BaseCard implements GrooveMultiplierCard {
 
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
+    private static final int GROOVE = 4;
+    private static final int UPG_GROOVE = 0;
     private static final float GROOVE_MULTIPLIER = 1f;
 
     public Ensemble() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
+        setCustomVar("GRV", GROOVE, UPG_GROOVE);
         setCostUpgrade(0);
-        tags.add(GROOVE_USE);
 
-        // register our two custom variables:
-        // BAS = base damage, UPG = upgrade delta
-        setCustomVar("BAS", DAMAGE, UPG_DAMAGE);
-        // GRV = groove bonus (we’ll overwrite this each time in applyPowers)
-        setCustomVar("GRV", 0);
+        tags.add(GROOVE_USE);
     }
 
     @Override
@@ -53,39 +51,36 @@ public class Ensemble extends BaseCard implements GrooveMultiplierCard {
         return GROOVE_MULTIPLIER;
     }
 
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-
-        // 更新描述以显示总伤害
-        this.rawDescription = cardStrings.DESCRIPTION;
-        if (cardStrings.EXTENDED_DESCRIPTION != null && cardStrings.EXTENDED_DESCRIPTION.length > 0) {
-            int totalDamage = this.damage;
-            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
-        }
-        this.initializeDescription();
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
-
-        // 更新描述以显示总伤害
-        this.rawDescription = cardStrings.DESCRIPTION;
-        if (cardStrings.EXTENDED_DESCRIPTION != null && cardStrings.EXTENDED_DESCRIPTION.length > 0) {
-            int totalDamage = this.damage;
-            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
-        }
-        this.initializeDescription();
-    }
+//    @Override
+//    public void applyPowers() {
+//        super.applyPowers();
+//
+//        // 更新描述以显示总伤害
+//        this.rawDescription = cardStrings.DESCRIPTION;
+//        if (cardStrings.EXTENDED_DESCRIPTION != null && cardStrings.EXTENDED_DESCRIPTION.length > 0) {
+//            int totalDamage = this.damage;
+//            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
+//        }
+//        this.initializeDescription();
+//    }
+//
+//    @Override
+//    public void calculateCardDamage(AbstractMonster mo) {
+//        super.calculateCardDamage(mo);
+//
+//        // 更新描述以显示总伤害
+//        this.rawDescription = cardStrings.DESCRIPTION;
+//        if (cardStrings.EXTENDED_DESCRIPTION != null && cardStrings.EXTENDED_DESCRIPTION.length > 0) {
+//            int totalDamage = this.damage;
+//            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
+//        }
+//        this.initializeDescription();
+//    }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(
-                m,
-                new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
-                AbstractGameAction.AttackEffect.SLASH_HEAVY
-        ));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        addToBot(new ApplyPowerAction(p, p, new GroovePower(p, customVar("GRV"))));
     }
 
     @Override

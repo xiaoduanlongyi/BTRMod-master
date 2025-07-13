@@ -31,8 +31,8 @@ public class SixStringBass extends BaseCard {
 
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 4;
-    private static final int DISTOR = 1;
-    private static final int UPG_DISTOR = 1;
+    private static final int DISTOR = 2;
+    private static final int UPG_DISTOR = 0;
     private static final int GROOVE = 3;
     private static final int UPG_GROOVE = 0;
 

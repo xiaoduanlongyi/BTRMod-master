@@ -31,7 +31,7 @@ public class DistortedBocchi extends BaseCard {
         super(ID, info);
 
         setMagic(DISTORT, UPG_DISTORT);
-        setCostUpgrade(1);
+        setInnate(false, true);
 
         tags.add(BOCCHI);
     }
@@ -60,47 +60,47 @@ public class DistortedBocchi extends BaseCard {
         return baseMagicNumber+ afraidStacks;
     }
 
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-
-        // 计算并设置显示的 magicNumber
-        this.magicNumber = calculateDistortAmount();
-        this.isMagicNumberModified = (this.magicNumber != this.baseMagicNumber);
-
-
-        // 更新描述
-        this.rawDescription = cardStrings.DESCRIPTION;
-        if (cardStrings.EXTENDED_DESCRIPTION != null && cardStrings.EXTENDED_DESCRIPTION.length > 0) {
-            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] +
-                    cardStrings.EXTENDED_DESCRIPTION[1];
-        }
-        this.initializeDescription();
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
-
-        // 计算并设置显示的 magicNumber
-        this.magicNumber = calculateDistortAmount();
-        this.isMagicNumberModified = (this.magicNumber != this.baseMagicNumber);
-
-        // 更新描述
-        this.rawDescription = cardStrings.DESCRIPTION;
-        if (cardStrings.EXTENDED_DESCRIPTION != null && cardStrings.EXTENDED_DESCRIPTION.length > 0) {
-            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] +
-                    cardStrings.EXTENDED_DESCRIPTION[1];
-        }
-        this.initializeDescription();
-    }
-
-    @Override
-    public void onMoveToDiscard() {
-        // 重置描述
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.initializeDescription();
-    }
+//    @Override
+//    public void applyPowers() {
+//        super.applyPowers();
+//
+//        // 计算并设置显示的 magicNumber
+//        this.magicNumber = calculateDistortAmount();
+//        this.isMagicNumberModified = (this.magicNumber != this.baseMagicNumber);
+//
+//
+//        // 更新描述
+//        this.rawDescription = cardStrings.DESCRIPTION;
+//        if (cardStrings.EXTENDED_DESCRIPTION != null && cardStrings.EXTENDED_DESCRIPTION.length > 0) {
+//            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] +
+//                    cardStrings.EXTENDED_DESCRIPTION[1];
+//        }
+//        this.initializeDescription();
+//    }
+//
+//    @Override
+//    public void calculateCardDamage(AbstractMonster mo) {
+//        super.calculateCardDamage(mo);
+//
+//        // 计算并设置显示的 magicNumber
+//        this.magicNumber = calculateDistortAmount();
+//        this.isMagicNumberModified = (this.magicNumber != this.baseMagicNumber);
+//
+//        // 更新描述
+//        this.rawDescription = cardStrings.DESCRIPTION;
+//        if (cardStrings.EXTENDED_DESCRIPTION != null && cardStrings.EXTENDED_DESCRIPTION.length > 0) {
+//            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] +
+//                    cardStrings.EXTENDED_DESCRIPTION[1];
+//        }
+//        this.initializeDescription();
+//    }
+//
+//    @Override
+//    public void onMoveToDiscard() {
+//        // 重置描述
+//        this.rawDescription = cardStrings.DESCRIPTION;
+//        this.initializeDescription();
+//    }
 
     @Override
     public AbstractCard makeCopy() { //Optional

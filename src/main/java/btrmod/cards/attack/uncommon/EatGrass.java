@@ -31,8 +31,8 @@ public class EatGrass extends BaseCard {
 
     private static final int DAMAGE = 15;
     private static final int UPG_DAMAGE = 0;
-    private static final int GOLD_THRESHOLD = 99;
-    private static final int UPG_GOLD_THRESHOLD = 50;
+    private static final int GOLD_THRESHOLD = 150;
+    private static final int UPG_GOLD_THRESHOLD = 75;
 
     public EatGrass() {
         super(ID, info);

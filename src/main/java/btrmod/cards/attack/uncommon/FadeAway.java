@@ -23,12 +23,12 @@ public class FadeAway extends BaseCard {
             CardType.ATTACK,
             CardRarity.UNCOMMON,
             CardTarget.ENEMY,
-            1
+            2
     );
 
     private static final int BASE_DAMAGE = 6;
     private static final int UPG_DAMAGE = 0;
-    private static final int DAMAGE_PER_BAP = 2;
+    private static final int DAMAGE_PER_BAP = 3;
     private static final int UPG_DAMAGE_PER_BAP = 1;
 
     public FadeAway() {

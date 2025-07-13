@@ -17,17 +17,23 @@ public class SearchForBocchiCardsAction extends AbstractGameAction {
     private AbstractPlayer player;
     private int numberOfCards;
     private boolean optional;
+    private boolean makeSelectedCardsFree; // 新增：是否让选中的卡牌本回合免费
 
-    public SearchForBocchiCardsAction(int numberOfCards, boolean optional) {
+    public SearchForBocchiCardsAction(int numberOfCards, boolean optional, boolean makeSelectedCardsFree) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.player = AbstractDungeon.player;
         this.numberOfCards = numberOfCards;
         this.optional = optional;
+        this.makeSelectedCardsFree = makeSelectedCardsFree;
+    }
+
+    public SearchForBocchiCardsAction(int numberOfCards, boolean optional) {
+        this(numberOfCards, optional, false);
     }
 
     public SearchForBocchiCardsAction(int numberOfCards) {
-        this(numberOfCards, true);
+        this(numberOfCards, true, false);
     }
 
     @Override
@@ -50,6 +56,10 @@ public class SearchForBocchiCardsAction extends AbstractGameAction {
                             this.player.drawPile.moveToDiscardPile(c);
                             this.player.createHandIsFullDialog();
                         } else {
+                            // 如果需要让卡牌免费，设置freeToPlayOnce
+                            if (this.makeSelectedCardsFree) {
+                                c.setCostForTurn(0);
+                            }
                             this.player.drawPile.moveToHand(c, this.player.drawPile);
                         }
                     }
@@ -94,6 +104,10 @@ public class SearchForBocchiCardsAction extends AbstractGameAction {
                         this.player.drawPile.moveToDiscardPile(c);
                         this.player.createHandIsFullDialog();
                     } else {
+                        // 如果需要让卡牌免费，设置freeToPlayOnce
+                        if (this.makeSelectedCardsFree) {
+                            c.setCostForTurn(0);
+                        }
                         this.player.drawPile.moveToHand(c, this.player.drawPile);
                     }
                 }

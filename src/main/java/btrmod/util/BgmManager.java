@@ -14,6 +14,9 @@ public class BgmManager {
     // 当前自定义BGM的key
     private static String currentCustomBGMKey = null;
 
+    // 当前自定义BGM的原始路径 - 新增这个字段来追踪当前播放的BGM路径
+    private static String currentCustomBGMPath = null;
+
     // 原始BGM信息
     private static String originalBGMKey = null;
     private static boolean wasTemp = false;
@@ -24,9 +27,15 @@ public class BgmManager {
      * @param bgmPath BGM文件路径（相对于audio文件夹）
      */
     public static void playCustomBGM(String bgmPath) {
+        // 检查是否与当前播放的BGM相同
+        if (isPlayingSameBGM(bgmPath)) {
+            logger.info("Already playing BGM: " + bgmPath + ", skipping switch");
+            return;
+        }
+
         // 使用Action来处理BGM切换，避免同时播放多个BGM
         if (isPlayingCustomBGM()) {
-            // 如果已经在播放自定义BGM，使用淡出效果
+            // 如果已经在播放其他自定义BGM，使用淡出效果
             AbstractDungeon.actionManager.addToBottom(new SwitchBGMAction(bgmPath, 0.5f));
         } else {
             // 第一次播放，立即切换
@@ -35,9 +44,22 @@ public class BgmManager {
     }
 
     /**
+     * 检查是否正在播放相同的BGM
+     */
+    private static boolean isPlayingSameBGM(String bgmPath) {
+        return currentCustomBGMPath != null && currentCustomBGMPath.equals(bgmPath);
+    }
+
+    /**
      * 直接播放BGM（由Action调用）
      */
     public static void playCustomBGMDirect(String bgmPath) {
+        // 再次检查，避免在Action执行时仍然重复播放
+        if (isPlayingSameBGM(bgmPath)) {
+            logger.info("Already playing BGM: " + bgmPath + ", skipping switch in direct method");
+            return;
+        }
+
         try {
             // 创建自定义BGM的key
             String customKey = "CUSTOM_" + bgmPath
@@ -52,6 +74,7 @@ public class BgmManager {
             }
 
             currentCustomBGMKey = customKey;
+            currentCustomBGMPath = bgmPath; // 保存当前播放的BGM路径
 
             // 通过游戏的音乐系统播放
             CardCrawlGame.music.playTempBgmInstantly(customKey);
@@ -72,6 +95,8 @@ public class BgmManager {
 
         try {
             currentCustomBGMKey = null;
+            currentCustomBGMPath = null; // 清除当前BGM路径
+            hasStoredOriginalBGM = false; // 重置标志，允许下次播放时重新保存原始BGM
 
             // 淡出当前BGM
             CardCrawlGame.music.fadeOutTempBGM();
@@ -174,5 +199,12 @@ public class BgmManager {
      */
     public static boolean isPlayingCustomBGM() {
         return currentCustomBGMKey != null;
+    }
+
+    /**
+     * 获取当前播放的BGM路径（用于调试）
+     */
+    public static String getCurrentBGMPath() {
+        return currentCustomBGMPath;
     }
 }
