@@ -51,11 +51,11 @@
     ]
   },
 
-  "${modID}:BocchiGhostRelic": {
+  "${modID}:IntangibleBocchi": {
     "NAME": "无实体波奇",
-    "FLAVOR": "太抽象啦",
+    "FLAVOR": "啦~啦啦啦~啦~啦啦啦~",
     "DESCRIPTIONS": [
-      "每当获得 #y${modID}:扭曲 时，获得 #b",
+      "每当获得 #y${modID}:抽象 时，获得 #b",
       " 层 #y无实体 。"
     ]
   },
@@ -71,7 +71,7 @@
 
   "${modID}:Starry": {
     "NAME": "繁星",
-    "FLAVOR": "姐姐星歌为妹妹虹夏打造的家，傲傲傲傲傲傲娇的星歌店长很在意大家。",
+    "FLAVOR": "傲傲傲傲傲傲娇的姐姐星歌为妹妹虹夏打造的家。",
     "DESCRIPTIONS": [
       "当你进入商店时，升级 #b",
       " 张随机卡牌。"

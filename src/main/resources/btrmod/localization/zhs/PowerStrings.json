@@ -41,12 +41,12 @@
   "${modID}:BocchiSoloPower": {
     "NAME": "波奇酱的Solo",
     "DESCRIPTIONS": [
-      "在波门状态下， #y律动 多造成 #y50% 的额外伤害。 NL 每打出一张 #y波奇 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+      "在波门状态下， #y律动伤害 额外造成 #b50% 的伤害。 NL 每打出一张 #y波奇 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
     ]
   },
 
   "${modID}:RyoSoloPower": {
-    "NAME": "凉仙贝的Solo",
+    "NAME": "凉的Solo",
     "DESCRIPTIONS": [
       "在凉门状态下，获得的 #y律动 翻倍。 NL 每打出一张 #y凉 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
     ]
@@ -75,7 +75,7 @@
   },
 
   "${modID}:DistortionPower": {
-    "NAME": "扭曲",
+    "NAME": "抽象",
     "DESCRIPTIONS": [
       "卡牌的费用随机，持续 #b",
       " 回合。"

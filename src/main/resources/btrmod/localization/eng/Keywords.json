@@ -51,6 +51,7 @@
   {
     "PROPER_NAME": "Kita's Solo",
     "NAMES": [
+      "Kita's Solo",
       "Kita's_Solo",
       "Kita_Solo"
     ],
@@ -68,6 +69,7 @@
   {
     "PROPER_NAME": "Nijika's Solo",
     "NAMES": [
+      "Nijika's Solo",
       "Nijika's_Solo",
       "Nijika_Solo"
     ],
@@ -86,6 +88,7 @@
   {
     "PROPER_NAME": "Ryo's Solo",
     "NAMES": [
+      "Ryo's Solo",
       "Ryo's_Solo",
       "Ryo_Solo"
     ],
@@ -95,6 +98,7 @@
   {
     "PROPER_NAME": "Bocchi's Anxiety",
     "NAMES": [
+      "Bocchi's Anxiety",
       "Bocchi-chan_Anxiety",
       "Bocchi_Anxiety",
       "Bocchi's_Anxiety",
@@ -107,6 +111,7 @@
   {
     "PROPER_NAME": "Guitar Hero",
     "NAMES": [
+      "Guitar Hero",
       "Guitar_Hero"
     ],
     "DESCRIPTION": "The first #yBocchi card you play each turn is played twice. Gain [E] at the start of each turn."
@@ -123,6 +128,7 @@
   {
     "PROPER_NAME": "Groove Damage",
     "NAMES": [
+      "Groove Damage",
       "Groove_Damage"
     ],
     "DESCRIPTION": "Each stack of #yGroove provides #b1 Groove Damage."
@@ -147,8 +153,8 @@
   {
     "PROPER_NAME": "Bocchi's Fantasy",
     "NAMES": [
-      "Bocchi's_Fantasy",
       "Fantasy",
+      "Bocchi's_Fantasy",
       "Bocchi_Fantasy"
     ],
     "DESCRIPTION": "Fantasy cards cannot be played and will #yRetain. Card effects are automatically resolved at the end of each turn."
@@ -157,6 +163,7 @@
   {
     "PROPER_NAME": "Solo",
     "NAMES": [
+      "Member's Solo",
       "Member's_Solo",
       "Member_Solo",
       "Solo"

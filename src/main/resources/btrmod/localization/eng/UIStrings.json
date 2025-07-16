@@ -12,5 +12,48 @@
       "This": "Contains pairs of Strings, used to get values based on keys.",
       "This is a key": "This is a value."
     }
+  },
+
+  "${modID}:cantUseMessage": {
+    "TEXT": [
+      "Not enough #rGroove.",
+      "#rBocchi #rAnxiety is too high.",
+      "Cannot have #rKita cards in hand."
+    ]
+  },
+
+  "${modID}:memberName": {
+    "TEXT": [
+      " #yBocchi ",
+      " #yKita ",
+      " #yNijika ",
+      " #yRyo "
+    ]
+  },
+
+  "${modID}:memberSolo": {
+    "TEXT": [
+      " #yBocchi's #ySolo ",
+      " #yKita's #ySolo ",
+      " #yNijika's #ySolo ",
+      " #yRyo's #ySolo "
+    ]
+  },
+
+  "${modID}:soloComboPanel": {
+    "TEXT": [
+      "Combo Progress Bar",
+      "Enter",
+      "Progress: #b"
+    ]
+  },
+
+  "${modID}:memberSoloDescription": {
+    "TEXT": [
+      " NL During Bocchi's Solo, #yGroove #yDamage deals an additional #b50% damage. NL Gain #b1 #yGroove for each #yBocchi card played.",
+      " NL During Kita's Solo, draw #b2 additional cards at the start of each turn. NL Gain #b1 #yGroove for each #yKita card played.",
+      " NL During Nijika's Solo, remove an additional #b1 stack when removing #yBocchi #yAnxiety. NL Gain #b1 #yGroove for each #yNijika card played.",
+      " NL During Ryo's Solo, #yGroove gained is doubled. NL Gain #b1 #yGroove for each #yRyo card played."
+    ]
   }
 }

@@ -10,16 +10,144 @@
     "NAME": "Bocchi's Anxiety Level",
     "DESCRIPTIONS": [
       "Bocchi's attacks deal #b",
-      "% less damage."
+      "% less damage. When Anxiety exceeds #b10 stacks, gain #yFantasy. Once per combat, when Anxiety is reduced to zero, gain #b1 stack of #yGuitar #yHero."
     ]
   },
 
   "${modID}:GuitarHeroPower": {
     "NAME": "Guitar Hero",
     "DESCRIPTIONS": [
-      "The first Bocchi card you play each turn is played twice.",
+      "The first #yBocchi card you play each turn is played twice. Gain [E] at the start of each turn.",
       "The first #b",
-      " Bocchi cards you play each turn are played twice."
+      " #yBocchi cards you play each turn are played twice. Gain "
+    ]
+  },
+
+  "${modID}:ShimokitaAngelPower": {
+    "NAME": "Angel of Shimokita",
+    "DESCRIPTIONS": [
+      "At the start of your turn, remove #b",
+      " #yBocchi #yAnxiety."
+    ]
+  },
+
+  "${modID}:GroovePower": {
+    "NAME": "Groove",
+    "DESCRIPTIONS": [
+      "#yGroove increases the damage of certain cards."
+    ]
+  },
+
+  "${modID}:BocchiSoloPower": {
+    "NAME": "Bocchi's Solo",
+    "DESCRIPTIONS": [
+      "During Bocchi's Solo, #yGroove #yDamage deals an additional #y50% damage. NL Gain #y1 #yGroove for each #yBocchi card played. NL This state is removed when entering another member's Solo."
+    ]
+  },
+
+  "${modID}:RyoSoloPower": {
+    "NAME": "Ryo's Solo",
+    "DESCRIPTIONS": [
+      "During Ryo's Solo, #yGroove gained is doubled. NL Gain #y1 #yGroove for each #yRyo card played. NL This state is removed when entering another member's Solo."
+    ]
+  },
+
+  "${modID}:NijikaSoloPower": {
+    "NAME": "Nijika's Solo",
+    "DESCRIPTIONS": [
+      "During Nijika's Solo, remove an additional #y1 stack when removing #yBocchi #yAnxiety. NL Gain #y1 #yGroove for each #yNijika card played. NL This state is removed when entering another member's Solo."
+    ]
+  },
+
+  "${modID}:KitaSoloPower": {
+    "NAME": "Kita's Solo",
+    "DESCRIPTIONS": [
+      "During Kita's Solo, draw #y2 additional cards at the start of each turn. NL Gain #y1 #yGroove for each #yKita card played. NL This state is removed when entering another member's Solo."
+    ]
+  },
+
+  "${modID}:RyoThumbUpPower": {
+    "NAME": "Ryo's Approval",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yGroove."
+    ]
+  },
+
+  "${modID}:DistortionPower": {
+    "NAME": "Distortion",
+    "DESCRIPTIONS": [
+      "Card costs are randomized for #b",
+      " turns."
+    ]
+  },
+
+  "${modID}:ComboCounterPower": {
+    "NAME": "Character Combo",
+    "DESCRIPTIONS": [
+      "Consecutively played #y%s cards: ",
+      "/3"
+    ]
+  },
+
+  "${modID}:BocchiOmelettePower": {
+    "NAME": "Evil Omelette Rice",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b",
+      " #yPoison to ALL enemies and gain #b1 #yBocchi #yAnxiety."
+    ]
+  },
+
+  "${modID}:PubertySyndromePower": {
+    "NAME": "Seisyun Complex",
+    "DESCRIPTIONS": [
+      "When you switch #ySolo, gain #b",
+      " #yBlock."
+    ]
+  },
+
+  "${modID}:KitaGonePower": {
+    "NAME": "Kita and Ikuyo",
+    "DESCRIPTIONS": [
+      "When you would die, prevent death and heal to #y50% of Max HP, then remove a stack of this power."
+    ]
+  },
+
+  "${modID}:WormBocchiPower": {
+    "NAME": "Hammerhead Snake",
+    "DESCRIPTIONS": [
+      "#yBocchi #yAnxiety can no longer be reduced this combat."
+    ]
+  },
+
+  "${modID}:BocchiFantasyPower": {
+    "NAME": "Bocchi's Fantasy",
+    "DESCRIPTIONS": [
+      "At the start of each turn, add a random #yFantasy card to your hand."
+    ]
+  },
+
+  "${modID}:NeverForgetPower": {
+    "NAME": "Never Forget",
+    "DESCRIPTIONS": [
+      "The #b",
+      "st time you switch #yMember #ySolo each turn, gain [E]."
+    ]
+  },
+
+  "${modID}:AnoBandPower": {
+    "NAME": "That Band",
+    "DESCRIPTIONS": [
+      "When you switch #ySolo, gain #b",
+      " #yGroove."
+    ]
+  },
+
+  "${modID}:WhatIsWrongWithPower": {
+    "NAME": "What Is Wrong With",
+    "DESCRIPTIONS": [
+      "Whenever you play a card that reduces #yBocchi #yAnxiety, draw #b",
+      " cards."
     ]
   }
 }

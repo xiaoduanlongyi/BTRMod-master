@@ -32,7 +32,7 @@
 
   "${modID}:MatureMango": {
     "NAME": "完熟芒果",
-    "DESCRIPTION": "获得 !B! 点 格挡。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
 
   "${modID}:Ensemble": {
@@ -252,13 +252,13 @@
   },
 
   "${modID}:BocchiTwist": {
-    "NAME": "扭曲波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 获得 !M! 层 ${modID}:扭曲 。"
+    "NAME": "抽象波奇",
+    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 获得 !M! 层 ${modID}:抽象 。"
   },
 
   "${modID}:SixStringBass": {
     "NAME": "六弦贝斯",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 造成 !D! 点伤害 。 NL 失去 !${modID}:GRV! 层 ${modID}:律动 。 NL 获得 !M! 层 ${modID}:扭曲 。"
+    "DESCRIPTION": "${modID}:喜多 ！ NL 造成 !D! 点伤害 。 NL 失去 !${modID}:GRV! 层 ${modID}:律动 。 NL 获得 !M! 层 ${modID}:抽象 。"
   },
 
   "${modID}:FatherTear": {
@@ -334,7 +334,7 @@
 
   "${modID}:DominationKita": {
     "NAME": "支配恶魔",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 手牌中每有一张 ${modID}:波奇 的牌，造成 !M! 点伤害。 NL 获得 !${modID}:DISTOR! 层 ${modID}:扭曲 。",
+    "DESCRIPTION": "${modID}:喜多 ！ NL 手牌中每有一张 ${modID}:波奇 的牌，造成 !M! 点伤害。 NL 获得 !${modID}:DISTOR! 层 ${modID}:抽象 。",
     "EXTENDED_DESCRIPTION": [" NL (造成 ",
       " 点伤害）"
     ]
@@ -342,7 +342,7 @@
 
   "${modID}:KitaKira": {
     "NAME": "喜多闪耀",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 对敌人施加 !M! 层 易伤 。 NL 对自己施加 !${modID}:SELF! 层 易伤 。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:喜多 ！ NL 对所有敌人施加 !M! 层 易伤 。 NL 对自己施加 !${modID}:SELF! 层 易伤 。 NL 消耗 。"
   },
 
   "${modID}:BocchiHeartbeat": {
@@ -352,8 +352,8 @@
 
   "${modID}:DistortedBocchi": {
     "NAME": "抽象波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 每有1层 ${modID}:波奇自闭 ，获得1层 ${modID}:扭曲 。",
-    "UPGRADE_DESCRIPTION": "固有 。 ${modID}:波奇 ！ NL 每有1层 ${modID}:波奇自闭 ，获得1层 ${modID}:扭曲 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 每有1层 ${modID}:波奇自闭 ，获得1层 ${modID}:抽象 。",
+    "UPGRADE_DESCRIPTION": "固有 。 ${modID}:波奇 ！ NL 每有1层 ${modID}:波奇自闭 ，获得1层 ${modID}:抽象 。"
   },
 
   "${modID}:RyoPray": {
@@ -363,7 +363,7 @@
 
   "${modID}:BocchiAtWork": {
     "NAME": "打工波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !M! 金币 。 NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 获得 !${modID}:DIST! 层 ${modID}:扭曲 。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !M! 金币 。 NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 获得 !${modID}:DIST! 层 ${modID}:抽象 。 NL 消耗 。"
   },
 
   "${modID}:NijikaGambade": {
@@ -383,8 +383,8 @@
 
   "${modID}:FleeGuitarist": {
     "NAME": "逃跑的吉他手",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 获得 !B! 点 格挡 。 NL 如果你拥有 ${modID}:扭曲 ，获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "${modID}:喜多 ！ NL 获得 !B! 点 格挡 。 NL 如果你拥有 ${modID}:扭曲 ，获得 [E] [E] 。"
+    "DESCRIPTION": "${modID}:喜多 ！ NL 获得 !B! 点 格挡 。 NL 如果你拥有 ${modID}:抽象 ，获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "${modID}:喜多 ！ NL 获得 !B! 点 格挡 。 NL 如果你拥有 ${modID}:抽象 ，获得 [E] [E] 。"
   },
 
   "${modID}:PubertySyndrome": {
@@ -414,7 +414,7 @@
 
   "${modID}:GuitarLonelinessBluePlanet": {
     "NAME": "吉他与孤独与蓝色星球",
-    "DESCRIPTION": "选择：获得 !${modID}:GRV! 层 ${modID}:律动 、 !M! 层 ${modID}:扭曲 、或移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 消耗 。"
+    "DESCRIPTION": "选择：获得 !${modID}:GRV! 层 ${modID}:律动 、 !M! 层 ${modID}:抽象 、或移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 消耗 。"
   },
 
   "${modID}:Guitar": {
@@ -424,7 +424,7 @@
 
   "${modID}:Loneliness": {
     "NAME": "孤独",
-    "DESCRIPTION": "获得 !M! 层 ${modID}:扭曲 。"
+    "DESCRIPTION": "获得 !M! 层 ${modID}:抽象 。"
   },
 
   "${modID}:BluePlanet": {
@@ -434,8 +434,8 @@
 
   "${modID}:KitaBocchiStyle": {
     "NAME": "波奇化喜多",
-    "DESCRIPTION": "${modID}:喜多 ！ 虚无 。 NL 手牌中每有1张 ${modID}:波奇 的牌， 获得1层 ${modID}:扭曲 。",
-    "UPGRADE_DESCRIPTION": "${modID}:喜多 ！ NL 手牌中每有1张 ${modID}:波奇 的牌， 获得1层 ${modID}:扭曲 。"
+    "DESCRIPTION": "${modID}:喜多 ！ 虚无 。 NL 手牌中每有1张 ${modID}:波奇 的牌， 获得1层 ${modID}:抽象 。",
+    "UPGRADE_DESCRIPTION": "${modID}:喜多 ！ NL 手牌中每有1张 ${modID}:波奇 的牌， 获得1层 ${modID}:抽象 。"
   },
 
   "${modID}:DarwinKita": {
@@ -496,7 +496,7 @@
 
   "${modID}:Distortion": {
     "NAME": "失真！！",
-    "DESCRIPTION": "造成 16 点基础伤害 。 NL 每层 ${modID}:扭曲 增加 !M! 点伤害。",
+    "DESCRIPTION": "造成 16 点基础伤害 。 NL 每层 ${modID}:抽象 增加 !M! 点伤害。",
     "EXTENDED_DESCRIPTION": [" NL (造成 ",
       " 点伤害）"
     ]

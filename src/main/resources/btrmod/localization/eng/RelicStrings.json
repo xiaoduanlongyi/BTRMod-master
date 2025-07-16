@@ -8,11 +8,99 @@
   },
 
   "${modID}:BocchiStartRelic": {
-    "NAME": "Bocchi's Rock",
-    "FLAVOR": "XXXXXXXX",
+    "NAME": "Bocchi the Rock",
+    "FLAVOR": "'To have the skills to perform on stage, I practiced guitar 6 hours a day. Before I knew it, middle school was over. I couldn't perform at the culture festival, couldn't find band members, didn't even make friends...'",
     "DESCRIPTIONS": [
       "At the start of each combat, gain #b",
-      " #ystacks of Bocchi’s Anxiety."
+      " #y${modID}:Bocchi_Anxiety."
+    ]
+  },
+
+  "${modID}:ExtrovertedBocchi": {
+    "NAME": "Extroverted Hitori Gotoh",
+    "FLAVOR": "Check out my C chord!",
+    "DESCRIPTIONS": [
+      "Replace #pBocchi #pthe #pRock. At the start of each combat, gain #b",
+      " #y${modID}:Bocchi_Anxiety. Can no longer gain #y${modID}:Guitar_Hero by clearing #yBocchi #yAnxiety."
+    ]
+  },
+
+  "${modID}:BocchiFan": {
+    "NAME": "Bocchi's Fans",
+    "FLAVOR": "Bocchi's number one fans! Deeply captivated by Bocchi's street performance.",
+    "DESCRIPTIONS": [
+      "The first time you reduce #y${modID}:Bocchi_Anxiety each turn, gain [E]."
+    ]
+  },
+
+  "${modID}:CelebrationParty": {
+    "NAME": "After-Party",
+    "FLAVOR": "After a successful live, you've got to celebrate somehow.",
+    "DESCRIPTIONS": [
+      "When you win a combat, if #y${modID}:Groove is greater than #b",
+      ", heal #b",
+      " HP."
+    ]
+  },
+
+  "${modID}:KikuriBeerBottle": {
+    "NAME": "Glass Beer Bottle",
+    "FLAVOR": "A beer bottle just finished by the drunkard senpai Kikuri Hiroi. Can be used as a slide bar.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, choose #b1 of #b3 random #y${modID}:Bocchi cards to add to your hand."
+    ]
+  },
+
+  "${modID}:IntangibleBocchi": {
+    "NAME": "Intangible Bocchi",
+    "FLAVOR": "Too abstract!",
+    "DESCRIPTIONS": [
+      "Whenever you gain #y${modID}:Distortion, gain #b",
+      " Intangible."
+    ]
+  },
+
+  "${modID}:MaidKita": {
+    "NAME": "Maid Kita",
+    "FLAVOR": "Too Kira Kira!",
+    "DESCRIPTIONS": [
+      "Every #b",
+      " turns, #y${modID}:Stun #b1 random enemy."
+    ]
+  },
+
+  "${modID}:Starry": {
+    "NAME": "STARRY",
+    "FLAVOR": "A home created by older sister Seika for younger sister Nijika. The tsun-tsun-tsun-tsun-tsun-tsundere manager Seika really cares about everyone.",
+    "DESCRIPTIONS": [
+      "When you enter a shop, upgrade #b",
+      " random cards."
+    ]
+  },
+
+  "${modID}:NijikaBang": {
+    "NAME": "Magnetic Ahoge",
+    "FLAVOR": "Nijika's ahoge. Can't be used as a guitar pick, and probably can't be eaten like a crispy snack either.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, enter #y${modID}:Nijika's_Solo."
+    ]
+  },
+
+  "${modID}:RyoMoneyEye": {
+    "NAME": "Ryo's Money Eyes",
+    "FLAVOR": "Give me money!",
+    "DESCRIPTIONS": [
+      "At the end of combat, gain #b",
+      " Gold."
+    ]
+  },
+
+  "${modID}:GuitarMan": {
+    "NAME": "Guitar Man",
+    "FLAVOR": "Bocchi-chan's imaginary friend.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain #b",
+      " #y${modID}:Groove."
     ]
   }
 }

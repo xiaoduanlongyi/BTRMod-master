@@ -28,10 +28,10 @@ public class BocchiLeapOfFaith extends BaseCard {
             1
     );
 
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 5;
+    private static final int DAMAGE = 12;
+    private static final int UPG_DAMAGE = 6;
     private static final int BOCCHI_AFRAID = 2;
-    private static final int UPG_BOCCHI_AFRAID = -1;
+    private static final int UPG_BOCCHI_AFRAID = 0;
 
     public BocchiLeapOfFaith() {
         super(ID, info);
