@@ -1,0 +1,170 @@
+[
+  {
+    "PROPER_NAME": "This is displayed in the tooltip.",
+    "NAMES": [
+      "these",
+      "are",
+      "detected",
+      "in",
+      "the",
+      "text"
+    ],
+    "DESCRIPTION": "This is displayed in the tooltip. Spaces should not be used be avoided in NAMES, with the exception of multi-word keywords (see next entry)."
+  },
+  {
+    "PROPER_NAME": "Multiword Keyword",
+    "NAMES": [
+      "multiword keyword",
+      "multiword_keyword",
+      "multiword_keywords"
+    ],
+    "DESCRIPTION": "Make sure the first element in NAMES has no underscores. The rest should use _ in the place of spaces. In card text, you'll use the underscore versions."
+  },
+
+  {
+    "PROPER_NAME": "波奇",
+    "NAMES": [
+      "波奇",
+      "波奇酱"
+    ],
+    "DESCRIPTION": "波奇酱的回合！ NL #y连续 打出 #b3 张 #y波奇 的牌，进入 #y波奇的Solo 。 NL 中途打出的不带角色tag的牌不影响Combo。"
+  },
+
+  {
+    "PROPER_NAME": "波奇酱的Solo",
+    "NAMES": [
+      "波奇酱的Solo",
+      "波门",
+      "波奇的Solo"
+    ],
+    "DESCRIPTION": "在波门状态下， #y律动伤害 额外造成 #b50% 的伤害。 NL 每打出一张带有 #y波奇 的牌，获得 #b1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+  },
+
+  {
+    "PROPER_NAME": "喜多",
+    "NAMES": [
+      "喜多"
+    ],
+    "DESCRIPTION": "喜多的回合！ NL #y连续 打出 #b3 张 #y喜多 的牌，进入 #y喜多的Solo 。 NL 中途打出的不带角色tag的牌不影响Combo。"
+  },
+
+  {
+    "PROPER_NAME": "喜多的Solo",
+    "NAMES": [
+      "喜多的Solo",
+      "喜门"
+    ],
+    "DESCRIPTION": "在喜多状态下，每回合开始时额外抽 #b2 张牌。 NL 每打出一张带有 #y喜多 的牌，获得 #b1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+  },
+
+  {
+    "PROPER_NAME": "虹夏",
+    "NAMES": [
+      "虹夏"
+    ],
+    "DESCRIPTION": "虹夏的回合！ NL #y连续 打出 #b3 张 #y虹夏 的牌，进入 #y虹夏的Solo 。 NL 中途打出的不带角色tag的牌不影响Combo。"
+  },
+
+  {
+    "PROPER_NAME": "虹夏的Solo",
+    "NAMES": [
+      "虹夏的Solo",
+      "虹门"
+    ],
+    "DESCRIPTION": "在虹门状态下， 移除 #y波奇自闭 时，额外移除 #b1 层。 NL 每打出一张带有 #y虹夏 的牌，获得 #b1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+  },
+
+  {
+    "PROPER_NAME": "凉",
+    "NAMES": [
+      "凉",
+      "凉仙贝"
+    ],
+    "DESCRIPTION": "凉的回合！ NL #y连续 打出 #b3 张 #y凉 的牌，进入 #y凉的Solo 。 NL 中途打出的不带角色tag的牌不影响Combo。"
+  },
+
+  {
+    "PROPER_NAME": "凉的Solo",
+    "NAMES": [
+      "凉的Solo",
+      "凉门"
+    ],
+    "DESCRIPTION": "在凉门状态下，获得的 #y律动 翻倍。 NL 每打出一张带有 #y凉 的牌，获得 #b1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+  },
+
+  {
+    "PROPER_NAME": "波奇酱的自闭值",
+    "NAMES": [
+      "波奇酱自闭值",
+      "波奇自闭值",
+      "波奇的自闭值",
+      "波奇自闭",
+      "波奇酱自闭"
+    ],
+    "DESCRIPTION": "每层自闭值使波奇酱的攻击伤害降低 #b10% 。自闭值超过 #b10 层时，获得 #y幻想 。 每场战斗仅限一次，当自闭值清零时，获得 #b1 层 #y吉他英雄 。"
+  },
+
+  {
+    "PROPER_NAME": "吉他英雄",
+    "NAMES": [
+      "吉他英雄"
+    ],
+    "DESCRIPTION": "你在每回合打出的第一张 #y波奇 的牌打出两次。每回合开始时获得 [E] 。"
+  },
+
+  {
+    "PROPER_NAME": "律动",
+    "NAMES": [
+      "律动"
+    ],
+    "DESCRIPTION": "#y律动 会提高卡牌的律动伤害。一些特定的卡牌需要足够的 #y律动 才能打出。"
+  },
+
+  {
+    "PROPER_NAME": "律动伤害",
+    "NAMES": [
+      "律动伤害"
+    ],
+    "DESCRIPTION": "每层 #y律动 提供 #b1 点律动伤害。"
+  },
+
+  {
+    "PROPER_NAME": "眩晕",
+    "NAMES": [
+      "眩晕"
+    ],
+    "DESCRIPTION": "被眩晕的单位本回合无法行动。"
+  },
+
+  {
+    "PROPER_NAME": "抽象",
+    "NAMES": [
+      "抽象",
+      "扭曲"
+    ],
+    "DESCRIPTION": "卡牌的随用随机，每回合结束时减少 #b1 层。 NL 层数清零时，所有的卡牌费用恢复。"
+  },
+
+  {
+    "PROPER_NAME": "波奇幻想",
+    "NAMES": [
+      "波奇的幻想",
+      "幻想",
+      "波奇幻想"
+    ],
+    "DESCRIPTION": "幻想牌不能被打出，且会 #y保留 。每回合结束时自动结算卡牌效果。"
+  },
+
+  {
+    "PROPER_NAME": "独奏",
+    "NAMES": [
+      "成员的独奏",
+      "成员独奏",
+      "独奏",
+      "成员的Solo",
+      "成员Solo",
+      "Solo"
+    ],
+    "DESCRIPTION": "当你 #y连续 打出 #y3 张同一成员的卡牌，会进入该成员的Solo。每个成员的Solo有不同的增益效果。"
+  }
+]

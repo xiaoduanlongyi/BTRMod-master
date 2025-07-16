@@ -1,0 +1,59 @@
+{
+  "${modID}:Example": {
+    "TEXT": [
+      "This is",
+      "an array of Strings."
+    ],
+    "EXTRA_TEXT": [
+      "This is another",
+      "array of Strings."
+    ],
+    "TEXT_DICT": {
+      "This": "Contains pairs of Strings, used to get values based on keys.",
+      "This is a key": "This is a value."
+    }
+  },
+
+  "${modID}:cantUseMessage": {
+    "TEXT": [
+      "没有足够的 #r律动 。",
+      "#r波奇自闭 太高了。",
+      "手牌中不能有 #r喜多 的牌。"
+    ]
+  },
+
+  "${modID}:memberName": {
+    "TEXT": [
+      " #y波奇 ",
+      " #y喜多 ",
+      " #y虹夏 ",
+      " #y凉 "
+    ]
+  },
+
+  "${modID}:memberSolo": {
+    "TEXT": [
+      " #y波门 ",
+      " #y喜门 ",
+      " #y虹门 ",
+      " #y凉门 "
+    ]
+  },
+
+  "${modID}:soloComboPanel": {
+    "TEXT": [
+      "连击进度条",
+      "进入",
+      "进度： #b"
+    ]
+  },
+
+  "${modID}:memberSoloDescription": {
+    "TEXT": [
+      " NL 在 波门 状态下， #y律动伤害 额外造成 #b50% 的伤害。 NL 同时每打出 1 张 #y波奇 的牌，获得 #b1 层 #y律动 。",
+      " NL 在 喜门 状态下，每回合开始时额外抽 #b2 张牌。 NL 同时每打出 1 张 #y喜多 的牌，获得 #b1 层 #y律动 。",
+      " NL 在 虹门 状态下， 移除 #y波奇自闭 时，额外移除 #b1 层。 NL 同时每打出 1 张 #y虹夏 的牌，获得 #b1 层 #y律动 。",
+      " NL 在 凉门 状态下，获得的 #y律动 翻倍。 NL 同时每打出 1 张 #y凉 的牌，获得 #b1 层 #y律动 。"
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+
+  "${modID}:BocchiAfraidPower": {
+    "NAME": "波奇酱的自闭值",
+    "DESCRIPTIONS": [
+      "波奇酱的攻击造成的伤害减少 #b",
+      "%。自闭值超过 #b10 层时，获得 #y幻想 。 每场战斗仅限一次，当自闭值清零时，获得 #b1 层 #y吉他英雄 。"
+    ]
+  },
+
+  "${modID}:GuitarHeroPower": {
+    "NAME": "吉他英雄",
+    "DESCRIPTIONS": [
+      "你在每回合打出的第一张 #y波奇 的牌打出两次。每回合开始时获得 [E]",
+      "你在每回合打出的前 #b",
+      " 张 #y波奇 的牌打出两次。每回合开始时获得 "
+    ]
+  },
+
+  "${modID}:ShimokitaAngelPower": {
+    "NAME": "下北泽的大天使",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，移除 #b",
+      " 点 #y波奇自闭 。"
+    ]
+  },
+
+  "${modID}:GroovePower": {
+    "NAME": "律动",
+    "DESCRIPTIONS": [
+      "#y律动 会使一些特定的卡牌伤害提升。"
+    ]
+  },
+
+  "${modID}:BocchiSoloPower": {
+    "NAME": "波奇酱的Solo",
+    "DESCRIPTIONS": [
+      "在波门状态下， #y律动伤害 额外造成 #b50% 的伤害。 NL 每打出一张 #y波奇 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+    ]
+  },
+
+  "${modID}:RyoSoloPower": {
+    "NAME": "凉的Solo",
+    "DESCRIPTIONS": [
+      "在凉门状态下，获得的 #y律动 翻倍。 NL 每打出一张 #y凉 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+    ]
+  },
+
+  "${modID}:NijikaSoloPower": {
+    "NAME": "虹夏的Solo",
+    "DESCRIPTIONS": [
+      "在虹门状态下， 移除 #y波奇自闭 时，额外移除 #y1 层。 NL 每打出一张 #y虹夏 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+    ]
+  },
+
+  "${modID}:KitaSoloPower": {
+    "NAME": "喜多的Solo",
+    "DESCRIPTIONS": [
+      "在喜门状态下，每回合开始时额外抽2张牌。 NL 每打出一张 #y喜多 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+    ]
+  },
+
+  "${modID}:RyoThumbUpPower": {
+    "NAME": "凉的肯定",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b",
+      " 层 #y律动 。"
+    ]
+  },
+
+  "${modID}:DistortionPower": {
+    "NAME": "抽象",
+    "DESCRIPTIONS": [
+      "卡牌的费用随机，持续 #b",
+      " 回合。"
+    ]
+  },
+
+  "${modID}:ComboCounterPower": {
+    "NAME": "角色连击",
+    "DESCRIPTIONS": [
+      "已连续打出 #y%s 卡：",
+      " /3"
+    ]
+  },
+
+  "${modID}:BocchiOmelettePower": {
+    "NAME": "邪恶蛋包饭",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，给予所有敌人 #b",
+      " 层 #y中毒 ，给予自己 #b1 层 #y波奇自闭 。"
+    ]
+  },
+
+  "${modID}:PubertySyndromePower": {
+    "NAME": "青春症候群",
+    "DESCRIPTIONS": [
+      "当你切换 #ySolo时 ，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+
+  "${modID}:KitaGonePower": {
+    "NAME": "归去来兮",
+    "DESCRIPTIONS": [
+      "当你要被杀死时，免死并回复到最大生命值的 #y50% ，随后移除一层该能力。"
+    ]
+  },
+
+  "${modID}:WormBocchiPower": {
+    "NAME": "槌子蛇波奇",
+    "DESCRIPTIONS": [
+      "本场战斗无法再降低 #y波奇自闭 。"
+    ]
+  },
+
+  "${modID}:BocchiFantasyPower": {
+    "NAME": "波奇的幻想",
+    "DESCRIPTIONS": [
+      "每回合开始时，随机添加1张 #y幻想 牌至手牌。"
+    ]
+  },
+
+  "${modID}:NeverForgetPower": {
+    "NAME": "绝不会忘记",
+    "DESCRIPTIONS": [
+      "每回合第 #b",
+      " 次切换 #y成员Solo 时，获得 [E] 。"
+    ]
+  },
+
+  "${modID}:AnoBandPower": {
+    "NAME": "那个乐队",
+    "DESCRIPTIONS": [
+      "当你切换 #ySolo时 ，获得 #b",
+      " 点 #y律动 。"
+    ]
+  },
+
+  "${modID}:WhatIsWrongWithPower": {
+    "NAME": "有何不可",
+    "DESCRIPTIONS": [
+      "每打出 #y1 张 减少 #y波奇自闭 的牌时 ，抽 #b",
+      " 张牌。"
+    ]
+  }
+}

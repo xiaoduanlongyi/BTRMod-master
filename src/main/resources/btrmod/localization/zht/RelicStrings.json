@@ -1,0 +1,106 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+
+  "${modID}:BocchiStartRelic": {
+    "NAME": "小孤独的摇滚",
+    "FLAVOR": "‘为了有登台的实力，每天练习6小时吉他，不知不觉初中就毕业了，文化祭没能表演，乐队成员没能找到，连朋友也没有交到...’",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，获得 #b",
+      " 层 #y${modID}:波奇自闭值 。"
+    ]
+  },
+
+  "${modID}:ExtrovertedBocchi": {
+    "NAME": "开朗型后藤一里",
+    "FLAVOR": "看我这C和弦！",
+    "DESCRIPTIONS": [
+      "替换 #p小孤独的摇滚 。每场战斗开始时，获得 #b",
+      " 层 #y${modID}:波奇自闭 。无法再通过清除 #y波奇自闭 获得 #y${modID}:吉他英雄 。"
+    ]
+  },
+
+  "${modID}:BocchiFan": {
+    "NAME": "波奇的粉丝",
+    "FLAVOR": "波奇的头号粉丝们！被波奇的露天表演深深吸引。",
+    "DESCRIPTIONS": [
+      "每回合第一次降低 #y${modID}:波奇自闭 时，获得 [E] 。"
+    ]
+  },
+
+  "${modID}:CelebrationParty": {
+    "NAME": "庆功宴",
+    "FLAVOR": "一场成功的live之后，总得配点什么",
+    "DESCRIPTIONS": [
+      "战斗胜利时，如果 #y${modID}:律动 大于 #b",
+      " ，回复 #b",
+      " 点生命。"
+    ]
+  },
+
+  "${modID}:KikuriBeerBottle": {
+    "NAME": "玻璃啤酒罐",
+    "FLAVOR": "酒蒙子前辈广井菊里刚刚喝完的啤酒罐，可以当作滑棒使用。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，你可以从 #b3 张随机 #y${modID}:波奇 的牌中选择 #b1 张增加到你的手牌。"
+    ]
+  },
+
+  "${modID}:IntangibleBocchi": {
+    "NAME": "无实体波奇",
+    "FLAVOR": "啦~啦啦啦~啦~啦啦啦~",
+    "DESCRIPTIONS": [
+      "每当获得 #y${modID}:抽象 时，获得 #b",
+      " 层 #y无实体 。"
+    ]
+  },
+
+  "${modID}:MaidKita": {
+    "NAME": "女仆喜多",
+    "FLAVOR": "太KiraKira啦",
+    "DESCRIPTIONS": [
+      "每 #b",
+      " 回合 #y${modID}:眩晕 #b1 名随机敌人。"
+    ]
+  },
+
+  "${modID}:Starry": {
+    "NAME": "繁星",
+    "FLAVOR": "傲傲傲傲傲傲娇的姐姐星歌为妹妹虹夏打造的家。",
+    "DESCRIPTIONS": [
+      "当你进入商店时，升级 #b",
+      " 张随机卡牌。"
+    ]
+  },
+
+  "${modID}:NijikaBang": {
+    "NAME": "磁悬浮呆毛",
+    "FLAVOR": "虹夏的呆毛，不能当作拨片使用，大概也不能当成妙脆角来吃。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，进入 #y${modID}:虹门 。"
+    ]
+  },
+
+  "${modID}:RyoMoneyEye": {
+    "NAME": "凉的钱眼",
+    "FLAVOR": "借钱！",
+    "DESCRIPTIONS": [
+      "战斗结束时，获得 #b",
+      " 金币。"
+    ]
+  },
+
+  "${modID}:GuitarMan": {
+    "NAME": "吉他男",
+    "FLAVOR": "波奇酱的脑内好友",
+    "DESCRIPTIONS": [
+      "每回合开始时，获得 #b",
+      " 层 #y${modID}:律动 。"
+    ]
+  }
+}
