@@ -23,13 +23,13 @@
     </properties>
 
     <!-- This information will be displayed in ModTheSpire, the modded launcher. -->
-    <name>Bocchi The Spire</name>
-    <version>0.1.0</version>
+    <name>孤独尖塔 Bocchi The Spire</name>
+    <version>1.0.1</version>
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
-    <description>This is a description!\n"This" is a second line of description.
-        This "\\" is a slash. If you add another line like this:
-        All the spaces on the left of this will be gone. If you want spacing on a new line, do it:\n    like this.</description>
+    <description>这是一个以动画《孤独摇滚》为灵感和主题制作的mod。添加了一个名为结束乐队的新角色，80+张卡牌，多种新的独特机制，11个专属遗物，和与卡牌配套的音效和bgm。祝大家玩得开心~\n
+        This is a mod made with inspiration from the anime Bocchi The Rock. It added a new character Kessouku Band with 80+ cards, several new distinct mechanics, 11 character relics, sound effects and bgms that are related to the cards. Enjoy playing~
+</description>
 
     <!--You shouldn't need to change anything below this point, but feel free to look at it.-->
     <!--You'll get a warning regarding these when you package your mod, but don't worry, it's just set up like this for convenience.-->
