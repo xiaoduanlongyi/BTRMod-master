@@ -161,11 +161,6 @@
     "DESCRIPTION": "${modID}:凉 ！ NL 对所有敌人造成 !D! 伤害。 NL 每杀死一个敌人获得 !M! 点最大生命。 NL 消耗 。"
   },
 
-  "${modID}:RockYou": {
-    "NAME": "摇滚！",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !${modID}:GRV! 层 ${modID}:律动 。 NL 移除 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 消耗 。"
-  },
-
   "${modID}:MuscleNijika": {
     "NAME": "爆裂鼓手",
     "DESCRIPTION": "${modID}:虹夏 ！ NL 移除所有 ${modID}:律动 。 NL 每有 !M! 层 ${modID}:律动 ，获得1 力量 。 NL 消耗 。"
@@ -224,7 +219,7 @@
 
   "${modID}:BocchiDraw": {
     "NAME": "搜寻",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 消耗 !M! 层 ${modID}:律动 。 NL 将抽牌堆中所有 ${modID}:波奇 的卡牌抽入手中。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 失去 !M! 层 ${modID}:律动 。 NL 将抽牌堆中所有 ${modID}:波奇 的卡牌抽入手中。"
   },
 
   "${modID}:RyoThumbUp": {
@@ -434,8 +429,7 @@
 
   "${modID}:KitaBocchiStyle": {
     "NAME": "波奇化喜多",
-    "DESCRIPTION": "${modID}:喜多 ！ 虚无 。 NL 手牌中每有1张 ${modID}:波奇 的牌， 获得1层 ${modID}:抽象 。",
-    "UPGRADE_DESCRIPTION": "${modID}:喜多 ！ NL 手牌中每有1张 ${modID}:波奇 的牌， 获得1层 ${modID}:抽象 。"
+    "DESCRIPTION": "${modID}:喜多 ！ 虚无 。 NL 手牌中每有1张 ${modID}:波奇 的牌， 获得 !M! 层 ${modID}:抽象 。"
   },
 
   "${modID}:DarwinKita": {
@@ -461,6 +455,11 @@
   "${modID}:FantasySurf": {
     "NAME": "孤独冲浪",
     "DESCRIPTION": "${modID}:波奇幻想 。 NL 回合结束时，获得 !M! 层 易伤 ，获得 !${modID}:GRV! 层 ${modID}:律动 。"
+  },
+
+  "${modID}:FantasyRockYou": {
+    "NAME": "幻想摇滚",
+    "DESCRIPTION": "${modID}:波奇幻想 。 NL 回合结束时，获得 !${modID}:GRV! 层 ${modID}:律动 。 NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。"
   },
 
   "${modID}:BocchiQuickDraw": {
@@ -505,5 +504,11 @@
   "${modID}:EatGrass": {
     "NAME": "吃草",
     "DESCRIPTION": "${modID}:凉 ！ NL 造成 !D! 点伤害 。 NL 如果当前金币少于 !M! ,这张牌再打出1次。 NL 消耗 。"
+  },
+
+  "${modID}:IntoTheLight": {
+    "NAME": "向光",
+    "DESCRIPTION": "从3张随机技能牌中选择1张放入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从3张随机技能牌中选择1张放入手牌。 这张牌本回合耗能为0 。 NL 消耗 。"
   }
 }

@@ -24,8 +24,8 @@ public class FantasyDisco extends BaseCard {
             -2
     );
 
-    private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = -3;
+    private static final int DAMAGE = 6;
+    private static final int UPG_DAMAGE = -2;
     private static final int GROOVE = 2;
     private static final int UPG_GROOVE = 0;
 

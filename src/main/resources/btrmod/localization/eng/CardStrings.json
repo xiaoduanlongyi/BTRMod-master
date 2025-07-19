@@ -131,10 +131,6 @@
     "NAME": "Have Some Snacks",
     "DESCRIPTION": "${modID}:Ryo! NL Deal !D! damage to ALL enemies. NL Gain !M! Max HP for each enemy killed. NL Exhaust."
   },
-  "${modID}:RockYou": {
-    "NAME": "Rock You!",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain !${modID}:GRV! ${modID}:Groove. NL Remove !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Exhaust."
-  },
   "${modID}:MuscleNijika": {
     "NAME": "Whiplash",
     "DESCRIPTION": "${modID}:Nijika! NL Remove all ${modID}:Groove. NL Gain 1 Strength for every !M! ${modID}:Groove removed. NL Exhaust."
@@ -182,7 +178,7 @@
   },
   "${modID}:BocchiDraw": {
     "NAME": "Seek",
-    "DESCRIPTION": "${modID}:Bocchi! NL Consume !M! ${modID}:Groove. NL Draw all ${modID}:Bocchi cards from your draw pile."
+    "DESCRIPTION": "${modID}:Bocchi! NL Lose !M! ${modID}:Groove. NL Draw all ${modID}:Bocchi cards from your draw pile."
   },
   "${modID}:RyoThumbUp": {
     "NAME": "Ryo's Appreciation",
@@ -356,8 +352,7 @@
   },
   "${modID}:KitaBocchiStyle": {
     "NAME": "Bocchified Kita",
-    "DESCRIPTION": "${modID}:Kita! Ethereal. NL Gain 1 ${modID}:Distortion for each ${modID}:Bocchi card in hand.",
-    "UPGRADE_DESCRIPTION": "${modID}:Kita! NL Gain 1 ${modID}:Distortion for each ${modID}:Bocchi card in hand."
+    "DESCRIPTION": "${modID}:Kita! Ethereal. NL Gain !M! ${modID}:Distortion for each ${modID}:Bocchi card in hand."
   },
   "${modID}:DarwinKita": {
     "NAME": "Darwin Kita",
@@ -381,6 +376,11 @@
   "${modID}:FantasySurf": {
     "NAME": "Lonely Surfing",
     "DESCRIPTION": "${modID}:Bocchi_Fantasy. NL At the end of turn, gain !M! Vulnerable and gain !${modID}:GRV! ${modID}:Groove."
+  },
+
+  "${modID}:FantasyRockYou": {
+    "NAME": "Rock You!",
+    "DESCRIPTION": "${modID}:Bocchi_Fantasy. NL Gain !${modID}:GRV! ${modID}:Groove. NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety."
   },
 
   "${modID}:BocchiQuickDraw": {
@@ -425,5 +425,11 @@
   "${modID}:EatGrass": {
     "NAME": "Eat Grass",
     "DESCRIPTION": "${modID}:Ryo! NL Deal !D! damage. NL If you have less than !M! Gold, play this card again. NL Exhaust."
+  },
+
+  "${modID}:IntoTheLight": {
+    "NAME": "Into The Light",
+    "DESCRIPTION": "Choose 1 of 3 random Skill cards to add to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 random Skill cards to add to your hand. It costs 0 this turn. NL Exhaust."
   }
 }

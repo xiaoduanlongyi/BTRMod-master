@@ -28,7 +28,7 @@ public class BocchiQuickDraw extends BaseCard {
     private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 4;
     private static final int DRAW = 4;
-    private static final int UPG_DRAW = 1;
+    private static final int UPG_DRAW = 0;
 
     public BocchiQuickDraw() {
         super(ID, info);

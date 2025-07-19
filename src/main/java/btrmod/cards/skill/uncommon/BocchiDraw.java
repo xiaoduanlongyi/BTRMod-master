@@ -26,8 +26,8 @@ public class BocchiDraw extends BaseCard {
             1
     );
 
-    private static final int GROOVE = 5;
-    private static final int UPG_GROOVE = -2;
+    private static final int GROOVE = 8;
+    private static final int UPG_GROOVE = -3;
 
     public BocchiDraw() {
         super(ID, info);
@@ -45,21 +45,21 @@ public class BocchiDraw extends BaseCard {
         addToBot(new ReducePowerAction(p, p, GroovePower.POWER_ID, magicNumber));
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        // 先调用父类的检查（比如能量不足、不可选时等）
-        if (!super.canUse(p, m)) {
-            return false;
-        }
-        // 然后检查 GroovePower
-        if (!p.hasPower(GroovePower.POWER_ID)
-                || p.getPower(GroovePower.POWER_ID).amount < this.magicNumber) {
-            // 如果玩家没有 Groove 或者层数 < magicNumber，就禁止打出
-            this.cantUseMessage = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("cantUseMessage")).TEXT[0];
-            return false;
-        }
-        return true;
-    }
+//    @Override
+//    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+//        // 先调用父类的检查（比如能量不足、不可选时等）
+//        if (!super.canUse(p, m)) {
+//            return false;
+//        }
+//        // 然后检查 GroovePower
+//        if (!p.hasPower(GroovePower.POWER_ID)
+//                || p.getPower(GroovePower.POWER_ID).amount < this.magicNumber) {
+//            // 如果玩家没有 Groove 或者层数 < magicNumber，就禁止打出
+//            this.cantUseMessage = CardCrawlGame.languagePack.getUIString(BTRMod.makeID("cantUseMessage")).TEXT[0];
+//            return false;
+//        }
+//        return true;
+//    }
 
     @Override
     public AbstractCard makeCopy() { //Optional

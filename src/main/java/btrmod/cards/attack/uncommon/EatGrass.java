@@ -58,6 +58,8 @@ public class EatGrass extends BaseCard {
             tmp.dontTriggerOnUseCard = true;
             addToBot(new NewQueueCardAction(tmp, m, false, true));
         }
+
+        CardCrawlGame.sound.play("RyoEatGrass");
     }
 
     @Override

@@ -26,8 +26,8 @@ public class MuscleNijika extends BaseCard {
             3
     );
 
-    private static final int GROOVE_TO_DIVIDE = 5;
-    private static final int UPG_GROOVE_TO_DIVIDE = -2;
+    private static final int GROOVE_TO_DIVIDE = 10;
+    private static final int UPG_GROOVE_TO_DIVIDE = -3;
 
     public MuscleNijika() {
         super(ID, info);

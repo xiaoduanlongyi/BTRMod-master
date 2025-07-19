@@ -22,13 +22,17 @@ public class KitaBocchiStyle extends BaseCard {
             CardType.SKILL,
             CardRarity.UNCOMMON,
             CardTarget.NONE,
-            1
+            0
     );
+
+    private static final int DIST = 1;
+    private static final int UPG_DIST = 1;
 
     public KitaBocchiStyle() {
         super(ID, info);
 
-        setEthereal(true, false);
+        setEthereal(true, true);
+        setMagic(DIST, UPG_DIST);
 
         tags.add(KITA);
     }
@@ -45,7 +49,7 @@ public class KitaBocchiStyle extends BaseCard {
         if (AbstractDungeon.player != null && AbstractDungeon.player.hand != null) {
             for (AbstractCard card : AbstractDungeon.player.hand.group) {
                 if (card.hasTag(CardTagEnum.BOCCHI)) {
-                    bocchiCount++;
+                    bocchiCount = bocchiCount + magicNumber;
                 }
             }
         }
