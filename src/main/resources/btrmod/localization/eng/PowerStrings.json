@@ -34,7 +34,7 @@
   "${modID}:GroovePower": {
     "NAME": "Groove",
     "DESCRIPTIONS": [
-      "#yGroove increases the damage of certain cards."
+      "#yGroove increases the #yGroove #yDamage of cards. Some specific cards require sufficient #yGroove to be played."
     ]
   },
 

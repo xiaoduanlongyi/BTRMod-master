@@ -7,147 +7,147 @@
   },
 
   "${modID}:BocchiAfraidPower": {
-    "NAME": "波奇酱的自闭值",
+    "NAME": "波奇醬的自閉值",
     "DESCRIPTIONS": [
-      "波奇酱的攻击造成的伤害减少 #b",
-      "%。自闭值超过 #b10 层时，获得 #y幻想 。 每场战斗仅限一次，当自闭值清零时，获得 #b1 层 #y吉他英雄 。"
+      "波奇醬的攻擊造成的傷害減少 #b",
+      "%。自閉值超過 #b10 層時，獲得 #y幻想 。 每場戰鬥僅限一次，當自閉值清零時，獲得 #b1 層 #y吉他英雄 。"
     ]
   },
 
   "${modID}:GuitarHeroPower": {
     "NAME": "吉他英雄",
     "DESCRIPTIONS": [
-      "你在每回合打出的第一张 #y波奇 的牌打出两次。每回合开始时获得 [E]",
+      "你在每回合打出的第一張 #y波奇 的牌打出兩次。每回合開始時獲得 [E]",
       "你在每回合打出的前 #b",
-      " 张 #y波奇 的牌打出两次。每回合开始时获得 "
+      " 張 #y波奇 的牌打出兩次。每回合開始時獲得 "
     ]
   },
 
   "${modID}:ShimokitaAngelPower": {
-    "NAME": "下北泽的大天使",
+    "NAME": "下北澤的大天使",
     "DESCRIPTIONS": [
-      "在你的回合开始时，移除 #b",
-      " 点 #y波奇自闭 。"
+      "在你的回合開始時，移除 #b",
+      " 點 #y波奇自閉 。"
     ]
   },
 
   "${modID}:GroovePower": {
-    "NAME": "律动",
+    "NAME": "律動",
     "DESCRIPTIONS": [
-      "#y律动 会使一些特定的卡牌伤害提升。"
+      "#y律動 會提高卡牌的律動傷害。一些特定的卡牌需要足夠的 #y律動 才能打出。"
     ]
   },
 
   "${modID}:BocchiSoloPower": {
-    "NAME": "波奇酱的Solo",
+    "NAME": "波奇醬的Solo",
     "DESCRIPTIONS": [
-      "在波门状态下， #y律动伤害 额外造成 #b50% 的伤害。 NL 每打出一张 #y波奇 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+      "在波門狀態下， #y律動傷害 額外造成 #b50% 的傷害。 NL 每打出一張 #y波奇 的牌，獲得 #y1 層 #y律動 。 NL 進入其他成員的Solo時，移除本狀態。"
     ]
   },
 
   "${modID}:RyoSoloPower": {
-    "NAME": "凉的Solo",
+    "NAME": "涼的Solo",
     "DESCRIPTIONS": [
-      "在凉门状态下，获得的 #y律动 翻倍。 NL 每打出一张 #y凉 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+      "在涼門狀態下，獲得的 #y律動 翻倍。 NL 每打出一張 #y涼 的牌，獲得 #y1 層 #y律動 。 NL 進入其他成員的Solo時，移除本狀態。"
     ]
   },
 
   "${modID}:NijikaSoloPower": {
     "NAME": "虹夏的Solo",
     "DESCRIPTIONS": [
-      "在虹门状态下， 移除 #y波奇自闭 时，额外移除 #y1 层。 NL 每打出一张 #y虹夏 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+      "在虹門狀態下， 移除 #y波奇自閉 時，額外移除 #y1 層。 NL 每打出一張 #y虹夏 的牌，獲得 #y1 層 #y律動 。 NL 進入其他成員的Solo時，移除本狀態。"
     ]
   },
 
   "${modID}:KitaSoloPower": {
     "NAME": "喜多的Solo",
     "DESCRIPTIONS": [
-      "在喜门状态下，每回合开始时额外抽2张牌。 NL 每打出一张 #y喜多 的牌，获得 #y1 层 #y律动 。 NL 进入其他成员的Solo时，移除本状态。"
+      "在喜門狀態下，每回合開始時額外抽2張牌。 NL 每打出一張 #y喜多 的牌，獲得 #y1 層 #y律動 。 NL 進入其他成員的Solo時，移除本狀態。"
     ]
   },
 
   "${modID}:RyoThumbUpPower": {
-    "NAME": "凉的肯定",
+    "NAME": "涼的肯定",
     "DESCRIPTIONS": [
-      "在你的回合开始时，获得 #b",
-      " 层 #y律动 。"
+      "在你的回合開始時，獲得 #b",
+      " 層 #y律動 。"
     ]
   },
 
   "${modID}:DistortionPower": {
     "NAME": "抽象",
     "DESCRIPTIONS": [
-      "卡牌的费用随机，持续 #b",
+      "卡牌的費用隨機，持續 #b",
       " 回合。"
     ]
   },
 
   "${modID}:ComboCounterPower": {
-    "NAME": "角色连击",
+    "NAME": "角色連擊",
     "DESCRIPTIONS": [
-      "已连续打出 #y%s 卡：",
+      "已連續打出 #y%s 卡：",
       " /3"
     ]
   },
 
   "${modID}:BocchiOmelettePower": {
-    "NAME": "邪恶蛋包饭",
+    "NAME": "邪惡蛋包飯",
     "DESCRIPTIONS": [
-      "在你的回合开始时，给予所有敌人 #b",
-      " 层 #y中毒 ，给予自己 #b1 层 #y波奇自闭 。"
+      "在你的回合開始時，給予所有敵人 #b",
+      " 層 #y中毒 ，給予自己 #b1 層 #y波奇自閉 。"
     ]
   },
 
   "${modID}:PubertySyndromePower": {
     "NAME": "青春症候群",
     "DESCRIPTIONS": [
-      "当你切换 #ySolo时 ，获得 #b",
-      " 点 #y格挡 。"
+      "當你切換 #ySolo時 ，獲得 #b",
+      " 點 #y格擋 。"
     ]
   },
 
   "${modID}:KitaGonePower": {
-    "NAME": "归去来兮",
+    "NAME": "歸去來兮",
     "DESCRIPTIONS": [
-      "当你要被杀死时，免死并回复到最大生命值的 #y50% ，随后移除一层该能力。"
+      "當你要被殺死時，免死並回復到最大生命值的 #y50% ，隨後移除一層該能力。"
     ]
   },
 
   "${modID}:WormBocchiPower": {
     "NAME": "槌子蛇波奇",
     "DESCRIPTIONS": [
-      "本场战斗无法再降低 #y波奇自闭 。"
+      "本場戰鬥無法再降低 #y波奇自閉 。"
     ]
   },
 
   "${modID}:BocchiFantasyPower": {
     "NAME": "波奇的幻想",
     "DESCRIPTIONS": [
-      "每回合开始时，随机添加1张 #y幻想 牌至手牌。"
+      "每回合開始時，隨機添加1張 #y幻想 牌至手牌。"
     ]
   },
 
   "${modID}:NeverForgetPower": {
-    "NAME": "绝不会忘记",
+    "NAME": "絕不會忘記",
     "DESCRIPTIONS": [
       "每回合第 #b",
-      " 次切换 #y成员Solo 时，获得 [E] 。"
+      " 次切換 #y成員Solo 時，獲得 [E] 。"
     ]
   },
 
   "${modID}:AnoBandPower": {
-    "NAME": "那个乐队",
+    "NAME": "那個樂隊",
     "DESCRIPTIONS": [
-      "当你切换 #ySolo时 ，获得 #b",
-      " 点 #y律动 。"
+      "當你切換 #ySolo時 ，獲得 #b",
+      " 點 #y律動 。"
     ]
   },
 
   "${modID}:WhatIsWrongWithPower": {
     "NAME": "有何不可",
     "DESCRIPTIONS": [
-      "每打出 #y1 张 减少 #y波奇自闭 的牌时 ，抽 #b",
-      " 张牌。"
+      "每打出 #y1 張 減少 #y波奇自閉 的牌時 ，抽 #b",
+      " 張牌。"
     ]
   }
 }
