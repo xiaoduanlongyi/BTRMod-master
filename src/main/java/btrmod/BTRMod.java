@@ -89,8 +89,6 @@ public class BTRMod implements
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
         //Set up the mod information displayed in the in-game mods menu.
         //The information used is taken from your pom.xml file.
-        // 注册开局事件，使用 AddEventParams 来设置这个事件只在游戏开始时出现
-        BaseMod.addEvent(BtrStartingEvent.ID, BtrStartingEvent.class);
 
         //If you want to set up a config panel, that will be done here.
         //You can find information about this on the BaseMod wiki page "Mod Config and Panel".
