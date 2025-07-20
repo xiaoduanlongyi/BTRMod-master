@@ -44,7 +44,7 @@ public class BocchiHeartbeat extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         int currentGrooveStacks = 0;
-        if (p.hasPower((BocchiAfraidPower.POWER_ID))) {
+        if (p.hasPower((GroovePower.POWER_ID))) {
             currentGrooveStacks = p.getPower(GroovePower.POWER_ID).amount;
         }
 

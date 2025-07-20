@@ -404,7 +404,7 @@
 
   "${modID}:WormBocchi": {
     "NAME": "槌子蛇波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 每有1层 ${modID}:波奇自闭 获得1层 无实体 。 NL 无法再移除 ${modID}:波奇自闭 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 本场战斗 ${modID}:波奇自闭 第一次超过10时，获得 !M! 层 无实体 。"
   },
 
   "${modID}:GuitarLonelinessBluePlanet": {

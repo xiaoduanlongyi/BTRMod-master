@@ -16,9 +16,9 @@ public class WormBocchi extends BaseCard {
     private static final CardStats info = new CardStats(
             KessokuBandChar.Meta.CARD_COLOR,
             CardType.POWER,
-            CardRarity.UNCOMMON, // Changed from RARE to UNCOMMON
+            CardRarity.UNCOMMON,
             CardTarget.NONE,
-            1 // Changed cost from 3 to 1
+            2
     );
 
     private static final int INTANGIBLE_AMT = 2;

@@ -2,6 +2,7 @@ package btrmod.powers;
 
 import btrmod.powers.BocchiAfraidPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -21,12 +22,16 @@ public class WormBocchiPower extends BasePower {
         updateDescription();
     }
 
+    public boolean isTriggered() {
+        return triggeredThisCombat;
+    }
+
     @Override
     public void updateDescription() {
         if (triggeredThisCombat) {
-            description = DESCRIPTIONS[1];
+            description = DESCRIPTIONS[2];
         } else {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         }
     }
 
@@ -40,7 +45,7 @@ public class WormBocchiPower extends BasePower {
                 triggeredThisCombat = true;
                 flash();
                 addToBot(new ApplyPowerAction(owner, owner, new IntangiblePlayerPower(owner, amount), amount));
-                updateDescription();
+                addToBot(new RemoveSpecificPowerAction(owner, owner, this));
             }
         }
     }

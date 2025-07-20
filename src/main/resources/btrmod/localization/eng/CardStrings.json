@@ -332,7 +332,7 @@
   },
   "${modID}:WormBocchi": {
     "NAME": "Hammerhead Snake",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain 1 Intangible for each ${modID}:Bocchi_Anxiety. NL ${modID}:Bocchi_Anxiety can no longer be removed."
+    "DESCRIPTION": "${modID}:Bocchi! NL The first time ${modID}:Bocchi_Anxiety exceeds 10 this combat, gain !M! Intangible."
   },
   "${modID}:GuitarLonelinessBluePlanet": {
     "NAME": "Guitar, Loneliness, Blue Planet",

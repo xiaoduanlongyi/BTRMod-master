@@ -332,7 +332,7 @@
   },
   "${modID}:WormBocchi": {
     "NAME": "槌子蛇波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 每有1層 ${modID}:波奇自閉 獲得1層 無實體 。 NL 無法再移除 ${modID}:波奇自閉 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 本場戰鬥 ${modID}:波奇自閉 第一次超過10時，獲得 !M! 層 無實體 。"
   },
   "${modID}:GuitarLonelinessBluePlanet": {
     "NAME": "吉他與孤獨與藍色星球",

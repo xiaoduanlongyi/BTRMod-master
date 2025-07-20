@@ -116,7 +116,9 @@
   "${modID}:WormBocchiPower": {
     "NAME": "Hammerhead Snake",
     "DESCRIPTIONS": [
-      "#yBocchi #yAnxiety can no longer be reduced this combat."
+      "The first time #yBocchi #yAnxiety exceeds #b10 this combat, gain #b",
+      " #yIntangible.",
+      "Already triggered this combat."
     ]
   },
 
