@@ -7,7 +7,16 @@
     ]
   },
 
-  "${modID}:BocchiStartRelic": {
+  "${modID}:Kessouku": {
+    "NAME": "纽带",
+    "FLAVOR": "我是来结束这个乐队的！",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，获得 #b",
+      " 层 #y${modID}:律动 。"
+    ]
+  },
+
+  "${modID}:BocchiTheRockRelic": {
     "NAME": "小孤独的摇滚",
     "FLAVOR": "‘为了有登台的实力，每天练习6小时吉他，不知不觉初中就毕业了，文化祭没能表演，乐队成员没能找到，连朋友也没有交到...’",
     "DESCRIPTIONS": [

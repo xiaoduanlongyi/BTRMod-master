@@ -31,7 +31,7 @@
   },
   "${modID}:Ensemble": {
     "NAME": "合奏！",
-    "DESCRIPTION": "造成 !D! 點 ${modID}:律動傷害 。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
+    "DESCRIPTION": "造成 !D! 點 ${modID}:律動傷害 。"
   },
   "${modID}:ProudBocchi": {
     "NAME": "得意波奇",
@@ -96,7 +96,7 @@
   },
   "${modID}:IfConstellation": {
     "NAME": "若能化作星座",
-    "DESCRIPTION": "消耗所有 ${modID}:律動 。 NL 造成 !M! 倍 ${modID}:律動傷害 。 NL 選擇進入一名 ${modID}:成員的獨奏 。",
+    "DESCRIPTION": "消耗所有 ${modID}:律動 。 NL 造成 !M! 倍 ${modID}:律動傷害 。",
     "EXTENDED_DESCRIPTION": [
       " NL （造成 !D! 點傷害。）",
       ""
@@ -282,7 +282,7 @@
   },
   "${modID}:BocchiHeartbeat": {
     "NAME": "帝王引擎",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 抽 !M! 張牌 。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。 NL 將一張 *灼傷 放入抽牌堆 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 抽 !M! 張牌 。如果 ${modID}:律動 大於 !${modID}:GRV! 層 ，多抽 !${modID}:MORE_DRAW! 張牌。 NL 消耗 。"
   },
   "${modID}:DistortedBocchi": {
     "NAME": "抽象波奇",

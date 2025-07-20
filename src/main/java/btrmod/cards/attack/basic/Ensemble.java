@@ -2,6 +2,10 @@ package btrmod.cards.attack.basic;
 
 import basemod.devcommands.Info;
 import btrmod.cards.BaseCard;
+import btrmod.cards.power.special.ToBocchiSolo;
+import btrmod.cards.power.special.ToKitaSolo;
+import btrmod.cards.power.special.ToNijikaSolo;
+import btrmod.cards.power.special.ToRyoSolo;
 import btrmod.character.KessokuBandChar;
 import btrmod.interfaces.GrooveMultiplierCard;
 import btrmod.powers.GroovePower;
@@ -12,12 +16,15 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+
+import java.util.ArrayList;
 
 import static btrmod.util.CardTagEnum.GROOVE_USE;
 
@@ -28,7 +35,7 @@ public class Ensemble extends BaseCard implements GrooveMultiplierCard {
             CardType.ATTACK,
             CardRarity.BASIC,
             CardTarget.ENEMY,
-            1
+            2
     );
 
     private static final int DAMAGE = 0;
@@ -41,7 +48,7 @@ public class Ensemble extends BaseCard implements GrooveMultiplierCard {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
         setCustomVar("GRV", GROOVE, UPG_GROOVE);
-        setCostUpgrade(0);
+        setCostUpgrade(1);
 
         tags.add(GROOVE_USE);
     }
@@ -80,7 +87,15 @@ public class Ensemble extends BaseCard implements GrooveMultiplierCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new ApplyPowerAction(p, p, new GroovePower(p, customVar("GRV"))));
+//        addToBot(new ApplyPowerAction(p, p, new GroovePower(p, customVar("GRV"))));
+
+//        ArrayList<AbstractCard> stanceChoices = new ArrayList();
+//        stanceChoices.add(new ToBocchiSolo());
+//        stanceChoices.add(new ToKitaSolo());
+//        stanceChoices.add(new ToNijikaSolo());
+//        stanceChoices.add(new ToRyoSolo());
+//
+//        addToBot(new ChooseOneAction(stanceChoices));
     }
 
     @Override

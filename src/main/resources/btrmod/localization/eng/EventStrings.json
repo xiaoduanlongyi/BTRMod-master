@@ -17,5 +17,18 @@
       "[Leave]",
       "Select card to remove. (You can also stick extra text like this in here.)"
     ]
+  },
+
+  "${modID}:BtrStartingEvent": {
+    "NAME": "Bocchi the Rock",
+    "DESCRIPTIONS": [
+      "To become good enough to perform in public, I practiced guitar six hours a day... and before I knew it, I graduated from middle school. NL I never got to perform... ~Culture Festival~ NL I never found... ~Band members~ NL I didn’t even make... ~A single friend~ NL But once I entered high school... @I’ll start a band for sure!!!@",
+      "I still want to be famous, to be someone people talk about. NL @But not alone anymore...@"
+    ],
+    "OPTIONS": [
+      "[Accept] #gGain #pBocchi the Rock.",
+      "[Continue] It has to be the four of us—together!",
+      "Thus sang Bocchi, the closet artist..."
+    ]
   }
 }

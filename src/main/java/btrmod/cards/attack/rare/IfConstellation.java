@@ -38,17 +38,18 @@ public class IfConstellation extends BaseCard implements GrooveMultiplierCard {
             CardType.ATTACK,
             CardRarity.RARE,
             CardTarget.ENEMY,
-            2
+            4
     );
     private static final int PER_STACK_DAMAGE = 3;
-    private static final int UPG_PER_STACK_DAMAGE = 1;
+    private static final int UPG_PER_STACK_DAMAGE = 0;
     private static final float GROOVE_MULTIPLIER = 3;
-    private static final float UPG_GROOVE_MULTIPLIER = 4;
+    private static final float UPG_GROOVE_MULTIPLIER = 3;
 
     public IfConstellation() {
         super(ID, INFO);
         setDamage(0, 0);
         setMagic(PER_STACK_DAMAGE, UPG_PER_STACK_DAMAGE);
+        setCostUpgrade(3);
 
         tags.add(GROOVE_EXHAUST);
         tags.add(GROOVE_USE);
@@ -72,14 +73,6 @@ public class IfConstellation extends BaseCard implements GrooveMultiplierCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
 
         BgmManager.playCustomBGM("bgm/IfConstellation.ogg");
-
-        ArrayList<AbstractCard> stanceChoices = new ArrayList();
-        stanceChoices.add(new ToBocchiSolo());
-        stanceChoices.add(new ToKitaSolo());
-        stanceChoices.add(new ToNijikaSolo());
-        stanceChoices.add(new ToRyoSolo());
-
-        addToBot(new ChooseOneAction(stanceChoices));
     }
 
     @Override

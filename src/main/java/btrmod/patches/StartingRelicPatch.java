@@ -1,6 +1,7 @@
 package btrmod.patches;
 
 import basemod.ReflectionHacks;
+import btrmod.character.KessokuBandChar;
 import btrmod.effects.StartingRelicEffect;
 import btrmod.events.BtrStartingEvent;
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -17,6 +18,7 @@ public class StartingRelicPatch {
     private static final String EVENT_ID = makeID("BtrStartingEvent");
     private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString(EVENT_ID);
     private static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+    private static final String[] OPTIONS = eventStrings.OPTIONS;
 
     // 标记是否已经给过遗物
     private static boolean relicGiven = false;
@@ -35,9 +37,9 @@ public class StartingRelicPatch {
     public static class AddRelicButton {
         @SpirePostfixPatch
         public static void Postfix(NeowRoom __instance, boolean isBoss) {
-            if (!isBoss && !relicGiven) {
+            if (!isBoss && !relicGiven && isPlayingKessokuBand()) {
                 __instance.event.roomEventText.clear();
-                __instance.event.roomEventText.addDialogOption(DESCRIPTIONS[0]); // 使用事件描述作为按钮文本
+                __instance.event.roomEventText.addDialogOption(OPTIONS[2]); // 使用OPTIONS[2]作为按钮文本
             }
         }
     }
@@ -47,7 +49,7 @@ public class StartingRelicPatch {
     public static class FixEventImage {
         @SpirePostfixPatch
         public static void Postfix(NeowEvent __instance, boolean isDone) {
-            if (!relicGiven) {
+            if (!relicGiven && isPlayingKessokuBand()) {
                 __instance.imageEventText.clear();
             }
         }
@@ -58,7 +60,7 @@ public class StartingRelicPatch {
     public static class HandleButtonClick {
         @SpireInsertPatch(rloc = 0)
         public static SpireReturn<Void> Prefix(NeowEvent __instance, int buttonPressed) {
-            if (!relicGiven && buttonPressed == 0) {
+            if (!relicGiven && buttonPressed == 0 && isPlayingKessokuBand()) {
                 // 调用私有方法dismissBubble
                 ReflectionHacks.privateMethod(NeowEvent.class, "dismissBubble").invoke(__instance);
 
@@ -81,5 +83,11 @@ public class StartingRelicPatch {
         public static void Postfix() {
             relicGiven = false;
         }
+    }
+
+    // 辅助方法：检查是否在玩KessokuBandChar
+    private static boolean isPlayingKessokuBand() {
+        return AbstractDungeon.player != null &&
+                AbstractDungeon.player.chosenClass == KessokuBandChar.Meta.KessokuBand;
     }
 }

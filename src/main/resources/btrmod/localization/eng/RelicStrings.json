@@ -7,7 +7,16 @@
     ]
   },
 
-  "${modID}:BocchiStartRelic": {
+  "${modID}:Kessouku": {
+    "NAME": "kessouku",
+    "FLAVOR": "Supposed to be a pun-intended chinese/japanese joke, but I have no idea how to translate into Engligh...",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b",
+      " stack(s) of #y${modID}:Groove."
+    ]
+  },
+
+  "${modID}:BocchiTheRockRelic": {
     "NAME": "Bocchi the Rock",
     "FLAVOR": "'To have the skills to perform on stage, I practiced guitar 6 hours a day. Before I knew it, middle school was over. I couldn't perform at the culture festival, couldn't find band members, didn't even make friends...'",
     "DESCRIPTIONS": [

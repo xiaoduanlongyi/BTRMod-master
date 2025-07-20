@@ -2,7 +2,7 @@ package btrmod.events;
 
 import basemod.abstracts.events.PhasedEvent;
 import basemod.abstracts.events.phases.TextPhase;
-import btrmod.relics.BocchiStartRelic;
+import btrmod.relics.BocchiTheRockRelic;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -30,7 +30,7 @@ public class BtrStartingEvent extends PhasedEvent {
     private static final String[] OPTIONS = eventStrings.OPTIONS;
 
     // 事件图片路径
-    private static final String IMG = "btrmod/images/events/BtrStartingEvent.jpg"; // 你需要添加对应的图片
+    private static final String IMG = "btrmod/images/events/BtrStartingEvent.png"; // 你需要添加对应的图片
 
     // 要给予的特定遗物
     private AbstractRelic relicToGive;
@@ -41,7 +41,7 @@ public class BtrStartingEvent extends PhasedEvent {
         super(ID, NAME, IMG);
 
         // 创建要给予的遗物实例
-        relicToGive = new BocchiStartRelic(); // 替换为你的遗物类
+        relicToGive = new BocchiTheRockRelic(); // 替换为你的遗物类
 
         // 注册开始阶段
         registerPhase("start", new TextPhase(DESCRIPTIONS[0]) // 显示欢迎文本

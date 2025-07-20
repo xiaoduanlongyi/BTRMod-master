@@ -4,18 +4,16 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.AbstractAnimation;
-import basemod.animations.SpriterAnimation;
 import btrmod.cards.attack.basic.*;
 import btrmod.cards.skill.basic.MatureMango;
 import btrmod.cards.skill.basic.ProudBocchi;
-import btrmod.relics.BocchiStartRelic;
+import btrmod.relics.BocchiTheRockRelic;
+import btrmod.relics.Kessouku;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -165,7 +163,7 @@ public class KessokuBandChar extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         //IDs of starting relics. You can have multiple, but one is recommended.
-        retVal.add(BocchiStartRelic.ID);
+        retVal.add(Kessouku.ID);
 
         return retVal;
     }

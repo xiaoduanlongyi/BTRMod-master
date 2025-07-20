@@ -31,7 +31,7 @@
   },
   "${modID}:Ensemble": {
     "NAME": "Ensemble!",
-    "DESCRIPTION": "Deal !D! ${modID}:Groove_Damage. NL Gain !${modID}:GRV! ${modID}:Groove."
+    "DESCRIPTION": "Deal !D! ${modID}:Groove_Damage."
   },
   "${modID}:ProudBocchi": {
     "NAME": "Proud Bocchi",
@@ -96,7 +96,7 @@
   },
   "${modID}:IfConstellation": {
     "NAME": "Constellation",
-    "DESCRIPTION": "Consume all ${modID}:Groove. NL Deal !M! times ${modID}:Groove_Damage. NL Choose to enter a ${modID}:Member's_Solo.",
+    "DESCRIPTION": "Consume all ${modID}:Groove. NL Deal !M! times ${modID}:Groove_Damage.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deal !D! damage.)",
       ""
@@ -282,7 +282,7 @@
   },
   "${modID}:BocchiHeartbeat": {
     "NAME": "Beating Engine",
-    "DESCRIPTION": "${modID}:Bocchi! NL Draw !M! cards. NL Gain !${modID}:GRV! ${modID}:Groove. NL Shuffle a *Burn into your draw pile."
+    "DESCRIPTION": "${modID}:Bocchi! NL Draw !M! cards. If ${modID}:Groove is more than !${modID}:GRV! , draw !${modID}:MORE_DRAW! more cards. NL Exhaust."
   },
   "${modID}:DistortedBocchi": {
     "NAME": "Distorted Bocchi",

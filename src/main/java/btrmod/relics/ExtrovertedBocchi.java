@@ -3,8 +3,6 @@ package btrmod.relics;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static btrmod.BTRMod.makeID;
@@ -24,9 +22,9 @@ public class ExtrovertedBocchi extends BaseRelic {
     @Override
     public void obtain() {
         // 替换 BocchiStartRelic
-        if (AbstractDungeon.player.hasRelic(BocchiStartRelic.ID)) {
+        if (AbstractDungeon.player.hasRelic(BocchiTheRockRelic.ID)) {
             for (int i = 0; i < AbstractDungeon.player.relics.size(); ++i) {
-                if (AbstractDungeon.player.relics.get(i).relicId.equals(BocchiStartRelic.ID)) {
+                if (AbstractDungeon.player.relics.get(i).relicId.equals(BocchiTheRockRelic.ID)) {
                     instantObtain(AbstractDungeon.player, i, true);
                     break;
                 }
@@ -51,7 +49,7 @@ public class ExtrovertedBocchi extends BaseRelic {
 
     @Override
     public boolean canSpawn() {
-        return AbstractDungeon.player.hasRelic(BocchiStartRelic.ID);
+        return AbstractDungeon.player.hasRelic(BocchiTheRockRelic.ID);
     }
 
     @Override
