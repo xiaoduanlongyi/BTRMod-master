@@ -91,8 +91,15 @@ public class BocchiAfraidPower extends BasePower {
         super.stackPower(stackAmount);
 
         if (this.amount >= 10) {
+            // Trigger BocchiFantasyPower
             if (!owner.hasPower(BocchiFantasyPower.POWER_ID)) {
                 addToBot(new ApplyPowerAction(owner, owner, new BocchiFantasyPower(owner)));
+            }
+
+            // Trigger WormBocchiPower if present
+            if (owner.hasPower(WormBocchiPower.POWER_ID)) {
+                WormBocchiPower wormPower = (WormBocchiPower) owner.getPower(WormBocchiPower.POWER_ID);
+                wormPower.onSpecificTrigger();
             }
         }
     }

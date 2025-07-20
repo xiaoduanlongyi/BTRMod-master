@@ -24,8 +24,8 @@ public class PubertySyndrome extends BaseCard {
             1
     );
 
-    private static final int BLOCK = 6;
-    private static final int UPG_BLOCK = 2;
+    private static final int BLOCK = 8;
+    private static final int UPG_BLOCK = 4;
 
     public PubertySyndrome() {
         super(ID, info);

@@ -1,22 +1,53 @@
 package btrmod.powers;
 
+import btrmod.powers.BocchiAfraidPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 
 import static btrmod.BTRMod.makeID;
 
 public class WormBocchiPower extends BasePower {
     public static final String POWER_ID = makeID(WormBocchiPower.class.getSimpleName());
-    private static final PowerType TYPE = PowerType.DEBUFF;
+    private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
-    public WormBocchiPower(AbstractCreature owner) {
-        // id, type=DEBUFF, turnBased=false, owner, source=owner, amt, initDesc=true, loadImage=true
-        super(POWER_ID, TYPE, TURN_BASED, owner, -1);
+    private boolean triggeredThisCombat = false;
+
+    public WormBocchiPower(AbstractCreature owner, int amount) {
+        super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+        updateDescription();
     }
 
+    @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0];
+        if (triggeredThisCombat) {
+            description = DESCRIPTIONS[1];
+        } else {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+        }
+    }
+
+    @Override
+    public void onSpecificTrigger() {
+        // Check if Bocchi's Anxiety has reached or exceeded 10
+        if (!triggeredThisCombat && owner.hasPower(BocchiAfraidPower.POWER_ID)) {
+            int anxietyLevel = owner.getPower(BocchiAfraidPower.POWER_ID).amount;
+
+            if (anxietyLevel >= 10) {
+                triggeredThisCombat = true;
+                flash();
+                addToBot(new ApplyPowerAction(owner, owner, new IntangiblePlayerPower(owner, amount), amount));
+                updateDescription();
+            }
+        }
+    }
+
+    @Override
+    public void atEndOfRound() {
+        // Check anxiety level at the end of each round
+        onSpecificTrigger();
     }
 }

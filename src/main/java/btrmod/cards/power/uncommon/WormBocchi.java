@@ -1,16 +1,13 @@
-package btrmod.cards.power.rare;
+package btrmod.cards.power.uncommon;
 
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
-import btrmod.powers.BocchiAfraidPower;
 import btrmod.powers.WormBocchiPower;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 
 import static btrmod.util.CardTagEnum.BOCCHI;
 
@@ -19,41 +16,29 @@ public class WormBocchi extends BaseCard {
     private static final CardStats info = new CardStats(
             KessokuBandChar.Meta.CARD_COLOR,
             CardType.POWER,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON, // Changed from RARE to UNCOMMON
             CardTarget.NONE,
-            3
+            1 // Changed cost from 3 to 1
     );
+
+    private static final int INTANGIBLE_AMT = 2;
+    private static final int UPGRADE_PLUS_INTANGIBLE = 1;
 
     public WormBocchi() {
         super(ID, info);
 
-        setCostUpgrade(2);
+        setMagic(INTANGIBLE_AMT, UPGRADE_PLUS_INTANGIBLE);
 
         tags.add(BOCCHI);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        {
-            int IntangileStacksToAdd = getBAPStacks();
-
-            addToBot(new ApplyPowerAction(p, p, new WormBocchiPower(p)));
-            addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, IntangileStacksToAdd)));
-        }
-    }
-
-    private int getBAPStacks()
-    {
-        int BAPStacks = 0;
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(BocchiAfraidPower.POWER_ID)) {
-            BAPStacks = AbstractDungeon.player.getPower(BocchiAfraidPower.POWER_ID).amount;
-        }
-
-        return BAPStacks;
+        addToBot(new ApplyPowerAction(p, p, new WormBocchiPower(p, magicNumber), magicNumber));
     }
 
     @Override
-    public AbstractCard makeCopy() { //Optional
+    public AbstractCard makeCopy() {
         return new WormBocchi();
     }
 }

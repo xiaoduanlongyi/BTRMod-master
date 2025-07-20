@@ -1,8 +1,7 @@
-package btrmod.cards.power.uncommon;
+package btrmod.cards.power.rare;
 
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
-import btrmod.powers.RyoThumbUpPower;
 import btrmod.powers.SoloPowers.KitaSoloPower;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -13,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RegenPower;
 
 import static btrmod.util.CardTagEnum.KITA;
-import static btrmod.util.CardTagEnum.RYO;
 
 public class KitaOmelette extends BaseCard {
     public static final String ID = makeID(KitaOmelette.class.getSimpleName());
@@ -22,7 +20,7 @@ public class KitaOmelette extends BaseCard {
             CardType.POWER,
             CardRarity.UNCOMMON,
             CardTarget.NONE,
-            1
+            2
     );
 
     private static final int REGEN = 4;
