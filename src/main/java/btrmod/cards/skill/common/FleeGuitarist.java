@@ -3,6 +3,7 @@ package btrmod.cards.skill.common;
 import btrmod.actions.FleeGuitaristAction;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
+import btrmod.powers.DistortionPower;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -46,6 +47,17 @@ public class FleeGuitarist extends BaseCard {
         addToBot(new FleeGuitaristAction(p, block, magicNumber));
 
         CardCrawlGame.sound.playV("EscapedGuitar", 1.5f);
+    }
+
+    public void triggerOnGlowCheck() {
+        boolean glow = AbstractDungeon.player.hasPower(DistortionPower.POWER_ID);
+
+        if (glow) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        }
+
     }
 
     @Override

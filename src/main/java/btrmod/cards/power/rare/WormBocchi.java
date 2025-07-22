@@ -5,6 +5,7 @@ import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
 import btrmod.powers.WormBocchiPower;
 import btrmod.util.CardStats;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -27,7 +28,7 @@ public class WormBocchi extends BaseCard {
     public WormBocchi() {
         super(ID, info);
 
-        setCostUpgrade(2);
+        setEthereal(true, false);
 
         tags.add(BOCCHI);
     }
@@ -35,7 +36,7 @@ public class WormBocchi extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         {
-            int IntangileStacksToAdd = getBAPStacks();
+            int IntangileStacksToAdd = MathUtils.floor(getBAPStacks()/2f);
 
             addToBot(new ApplyPowerAction(p, p, new WormBocchiPower(p)));
             addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, IntangileStacksToAdd)));

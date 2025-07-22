@@ -108,7 +108,7 @@
   },
   "${modID}:BocchiShowHead": {
     "NAME": "Bocchi Peeks Out",
-    "DESCRIPTION": "${modID}:Bocchi! NL Remove !M! ${modID}:Bocchi_Anxiety."
+    "DESCRIPTION": "${modID}:Bocchi! NL Remove !M! ${modID}:Bocchi_Anxiety. NL Draw 2 cards next turn."
   },
   "${modID}:RyoReturnMoney": {
     "NAME": "Return Money",
@@ -157,7 +157,7 @@
   },
   "${modID}:KitaGone": {
     "NAME": "Kita and Ikuyo",
-    "DESCRIPTION": "${modID}:Kita! NL Lose !M! Max HP. NL When you would die, prevent death and heal to 50% of Max HP."
+    "DESCRIPTION": "${modID}:Kita! Retain. NL Lose !M! Max HP. NL When you would die, prevent death and heal to 50% of Max HP."
   },
   "${modID}:PinkBocchi": {
     "NAME": "Pink-Hair Guitarist",
@@ -316,7 +316,7 @@
   },
   "${modID}:PubertySyndrome": {
     "NAME": "Seisyun Complex",
-    "DESCRIPTION": "When you switch ${modID}:Solo, gain !M! Block."
+    "DESCRIPTION": "When you switch ${modID}:Solo, draw !M! cards."
   },
   "${modID}:KaraKara": {
     "NAME": "Kara Kara",
@@ -332,7 +332,7 @@
   },
   "${modID}:WormBocchi": {
     "NAME": "Hammerhead Snake",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain 1 Intangible for each ${modID}:Bocchi_Anxiety. NL ${modID}:Bocchi_Anxiety can no longer be removed."
+    "DESCRIPTION": "${modID}:Bocchi! NL Gain 1 Intangible for each 2 ${modID}:Bocchi_Anxiety. NL ${modID}:Bocchi_Anxiety can no longer be removed."
   },
   "${modID}:GuitarLonelinessBluePlanet": {
     "NAME": "Guitar, Loneliness, Blue Planet",
@@ -411,7 +411,7 @@
 
   "${modID}:WhatIsWrongWith": {
     "NAME": "What's Wrong With",
-    "DESCRIPTION": "Whenever you play a card that reduces ${modID}:Bocchi_Anxiety, draw !M! cards."
+    "DESCRIPTION": "Whenever you play a card that reduces ${modID}:Bocchi_Anxiety, gain !M! blocks."
   },
 
   "${modID}:Distortion": {

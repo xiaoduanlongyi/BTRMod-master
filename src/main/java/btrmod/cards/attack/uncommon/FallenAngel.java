@@ -35,7 +35,7 @@ public class FallenAngel extends BaseCard {
     private static  final int DEBUFF = 1;
     private static  final int UPG_DEBUFF = 1;
     private static  final int GROOVE = 1;
-    private static  final int UPG_GROOVE = 0;
+    private static  final int UPG_GROOVE = 1;
 
     public FallenAngel() {
         super(ID, info);

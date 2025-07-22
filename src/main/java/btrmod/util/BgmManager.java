@@ -4,6 +4,7 @@ import btrmod.actions.SwitchBGMAction;
 import com.megacrit.cardcrawl.audio.MusicMaster;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -76,6 +77,10 @@ public class BgmManager {
             currentCustomBGMKey = customKey;
             currentCustomBGMPath = bgmPath; // 保存当前播放的BGM路径
 
+            // 在播放新BGM之前，先停止所有当前的音乐， 这样可以避免在Boss战等情况下出现两个BGM同时播放的问题
+            CardCrawlGame.music.silenceTempBgmInstantly();
+            CardCrawlGame.music.silenceBGMInstantly();
+
             // 通过游戏的音乐系统播放
             CardCrawlGame.music.playTempBgmInstantly(customKey);
 
@@ -103,12 +108,10 @@ public class BgmManager {
 
             // 恢复原始BGM
             if (originalBGMKey != null) {
-                if (wasTemp) {
-                    CardCrawlGame.music.playTempBgmInstantly(originalBGMKey);
-                } else {
-                    CardCrawlGame.music.changeBGM(originalBGMKey);
-                }
-                logger.info("Restored original BGM: " + originalBGMKey);
+                // 统一使用 playTempBgmInstantly，这样可以确保正确替换当前播放的音乐
+                // 避免 changeBGM 可能导致的重复播放问题
+                CardCrawlGame.music.playTempBgmInstantly(originalBGMKey);
+                logger.info("Restored original BGM: " + originalBGMKey + " (wasTemp: " + wasTemp + ")");
             } else {
                 // 根据当前场景播放默认BGM
                 playDefaultBGM();
@@ -130,7 +133,19 @@ public class BgmManager {
 
             // 根据房间类型确定BGM
             if (room.monsters != null && !room.monsters.areMonstersBasicallyDead()) {
-                if (AbstractDungeon.bossList != null && !AbstractDungeon.bossList.isEmpty()) {
+                // 检查当前房间是否是Boss房间
+                // 使用 monsters 中是否有 boss 类型的怪物来判断
+                boolean isBossRoom = false;
+                if (room.monsters != null) {
+                    for (AbstractMonster m : room.monsters.monsters) {
+                        if (m.type == AbstractMonster.EnemyType.BOSS) {
+                            isBossRoom = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (isBossRoom) {
                     wasTemp = true;
                     originalBGMKey = getBossBGMKey();
                 } else if (room.eliteTrigger) {

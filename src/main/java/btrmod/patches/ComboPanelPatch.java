@@ -1,5 +1,6 @@
 package btrmod.patches;
 
+import btrmod.character.KessokuBandChar;
 import btrmod.ui.ComboUIPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -28,7 +29,7 @@ public class ComboPanelPatch {
     public static class ShowComboPanelPatch {
         @SpireInsertPatch(locator = Locator.class)
         public static void Insert() {
-            if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player != null && isPlayingKessokuBand()) {
                 ComboPanelField.comboPanel.get(AbstractDungeon.player).show();
             }
         }
@@ -112,5 +113,11 @@ public class ComboPanelPatch {
             return ComboPanelField.comboPanel.get(AbstractDungeon.player);
         }
         return null;
+    }
+
+    // 辅助方法：检查是否在玩KessokuBandChar
+    private static boolean isPlayingKessokuBand() {
+        return AbstractDungeon.player != null &&
+                AbstractDungeon.player.chosenClass == KessokuBandChar.Meta.KessokuBand;
     }
 }

@@ -24,13 +24,14 @@ public class PubertySyndrome extends BaseCard {
             1
     );
 
-    private static final int BLOCK = 6;
-    private static final int UPG_BLOCK = 2;
+    private static final int DRAW = 2;
+    private static final int UPG_DRAW = 0;
 
     public PubertySyndrome() {
         super(ID, info);
 
-        setMagic(BLOCK, UPG_BLOCK);
+        setMagic(DRAW, UPG_DRAW);
+        setCostUpgrade(0);
     }
 
     @Override

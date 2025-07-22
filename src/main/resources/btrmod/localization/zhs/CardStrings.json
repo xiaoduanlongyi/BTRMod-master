@@ -132,7 +132,7 @@
 
   "${modID}:BocchiShowHead": {
     "NAME": "波奇探头",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 移除 !M! 层 ${modID}:波奇自闭 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 移除 !M! 层 ${modID}:波奇自闭 。 NL 在下一回合多抽2张牌。"
   },
 
   "${modID}:RyoReturnMoney": {
@@ -193,7 +193,7 @@
 
   "${modID}:KitaGone": {
     "NAME": "归去来兮",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 失去 !M! 点最大生命。 NL 当你要被杀死时，免死并回复到最大生命值的50%。"
+    "DESCRIPTION": "${modID}:喜多 ！ 保留 。 NL 失去 !M! 点最大生命。 NL 当你要被杀死时，免死并回复到最大生命值的50%。"
   },
 
   "${modID}:PinkBocchi": {
@@ -384,7 +384,7 @@
 
   "${modID}:PubertySyndrome": {
     "NAME": "青春症候群",
-    "DESCRIPTION": "当你切换 ${modID}:独奏 时，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "当你切换 ${modID}:独奏 时，抽 !M! 张牌。"
   },
 
   "${modID}:KaraKara": {
@@ -404,7 +404,7 @@
 
   "${modID}:WormBocchi": {
     "NAME": "槌子蛇波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 每有1层 ${modID}:波奇自闭 获得1层 无实体 。 NL 无法再移除 ${modID}:波奇自闭 。"
+    "DESCRIPTION": "${modID}:波奇 ！ 虚无 。 NL 每有2层 ${modID}:波奇自闭 获得1层 无实体 。 NL 无法再移除 ${modID}:波奇自闭 。"
   },
 
   "${modID}:GuitarLonelinessBluePlanet": {
@@ -490,7 +490,7 @@
 
   "${modID}:WhatIsWrongWith": {
     "NAME": "有何不可",
-    "DESCRIPTION": "每打出1张减少 ${modID}:波奇自闭 的牌时，抽 !M! 张牌。"
+    "DESCRIPTION": "每打出1张减少 ${modID}:波奇自闭 的牌时，获得 !M! 格挡 。"
   },
 
   "${modID}:Distortion": {

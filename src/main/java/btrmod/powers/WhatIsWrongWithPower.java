@@ -1,8 +1,10 @@
 package btrmod.powers;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static btrmod.BTRMod.makeID;
 import static btrmod.util.CardTagEnum.REDUCE_BAP;
@@ -21,15 +23,9 @@ public class WhatIsWrongWithPower extends BasePower {
 
         super.onAfterCardPlayed(usedCard);
 
-        //if (Settings.FAST_MODE) {
-        //    this.addToBot(new VFXAction(new CleaveEffect()));
-        //} else {
-        //    this.addToBot(new VFXAction(this.owner, new CleaveEffect(), 0.2F));
-        //}
-
         if (usedCard.hasTag(REDUCE_BAP)) {
             this.flash();
-            addToBot(new DrawCardAction(amount));
+            addToBot(new GainBlockAction(owner, amount));
         }
     }
 

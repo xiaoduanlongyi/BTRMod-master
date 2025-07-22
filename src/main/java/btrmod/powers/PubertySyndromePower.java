@@ -3,6 +3,7 @@ package btrmod.powers;
 import btrmod.powers.SoloPowers.SoloPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -25,7 +26,7 @@ public class PubertySyndromePower extends BasePower implements OnReceivePowerPow
             // 任何时候获得 SoloPower 都触发格挡
             // 包括从无到有，或从一个切换到另一个
             this.flash();
-            addToBot(new GainBlockAction(owner, owner, amount));
+            addToBot(new DrawCardAction(amount));
         }
         return true;
     }

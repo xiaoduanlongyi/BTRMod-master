@@ -21,17 +21,16 @@ public class WhatIsWrongWith extends BaseCard {
             CardType.POWER,
             CardRarity.RARE,
             CardTarget.NONE,
-            2
+            1
     );
 
-    private static final int DRAW = 2;
-    private static final int UPG_DRAW = 0;
+    private static final int BLOCK = 5;
+    private static final int UPG_BLOCK = 2;
 
     public WhatIsWrongWith() {
         super(ID, info);
 
-        setCostUpgrade(1);
-        setMagic(DRAW, UPG_DRAW);
+        setMagic(BLOCK, UPG_BLOCK);
 
     }
 
