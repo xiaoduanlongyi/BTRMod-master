@@ -63,7 +63,7 @@
   },
   "${modID}:RevengeOnByrd": {
     "NAME": "Revenge the Byrd",
-    "DESCRIPTION": "${modID}:Bocchi! NL Deal !D! damage !M! times."
+    "DESCRIPTION": "${modID}:Bocchi! NL Deal !D! damage !M! times. NL Deal double damage to Byrds."
   },
   "${modID}:GuitarHero": {
     "NAME": "Guitar Hero",
@@ -84,7 +84,7 @@
   },
   "${modID}:BocchiGhost": {
     "NAME": "Ghost Bocchi",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain !M! Intangible. NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Exhaust."
+    "DESCRIPTION": "${modID}:Bocchi! NL Gain !M! Intangible. NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Each time this is played, cost increases by 1 this combat."
   },
   "${modID}:CalmHeadBocchi": {
     "NAME": "Coolheaded",
@@ -322,7 +322,7 @@
     "NAME": "Kara Kara",
     "DESCRIPTION": "Double your ${modID}:Groove. NL Enter ${modID}:Ryo's_Solo. NL Exhaust."
   },
-  "${modID}:Bandman": {
+  "${modID}:Bandman2_DEPRECATE": {
     "NAME": "Band Man",
     "DESCRIPTION": "Gain 1 Block for each ${modID}:Groove. NL Lose !M! ${modID}:Groove."
   },
@@ -431,5 +431,13 @@
     "NAME": "Into The Light",
     "DESCRIPTION": "Choose 1 of 3 random Skill cards to add to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose 1 of 3 random Skill cards to add to your hand. It costs 0 this turn. NL Exhaust."
+  },
+  "${modID}:Bandman": {
+    "NAME": "Band Man",
+    "DESCRIPTION": "Gain !B! Block for each card in hand that grants Groove. NL If ${modID}:Groove is greater than !${modID}:GRV!, gain an additional !M! Block per card.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gain ",
+      " Block)"
+    ]
   }
 }

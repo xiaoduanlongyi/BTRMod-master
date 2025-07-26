@@ -105,7 +105,7 @@
       "Bocchi_Anxiety",
       "Bocchi-chan_Anxiety"
     ],
-    "DESCRIPTION": "Each stack of Anxiety reduces Bocchi's attack damage by #b10%. When Anxiety exceeds #b10 stacks, gain #yFantasy. Once per combat, when Anxiety is reduced to zero, gain #b1 stack of #yGuitar #yHero."
+    "DESCRIPTION": "Each stack of Anxiety reduces Bocchi's attack damage by #b10%. When Anxiety exceeds #b10 stacks, gain #yFantasy. If you have #pBocchi #pthe #pRock, when Anxiety is reduced to zero, gain #b1 stack of #yGuitar #yHero. Once per combat."
   },
 
   {
@@ -131,7 +131,7 @@
       "Groove Damage",
       "Groove_Damage"
     ],
-    "DESCRIPTION": "Each stack of #yGroove provides #b1 Groove Damage."
+    "DESCRIPTION": "Each stack of #yGroove adds #b1 Groove Damage."
   },
 
   {

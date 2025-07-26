@@ -21,7 +21,7 @@
     "FLAVOR": "'To have the skills to perform on stage, I practiced guitar 6 hours a day. Before I knew it, middle school was over. I couldn't perform at the culture festival, couldn't find band members, didn't even make friends...'",
     "DESCRIPTIONS": [
       "At the start of each combat, gain #b",
-      " #y${modID}:Bocchi_Anxiety."
+      " #y${modID}:Bocchi_Anxiety. While having this relic, you can gain #y${modID}:Guitar_Hero by clearing Bocchi Anxiety."
     ]
   },
 
@@ -29,7 +29,7 @@
     "NAME": "Extroverted Hitori Gotoh",
     "FLAVOR": "Check out my C chord!",
     "DESCRIPTIONS": [
-      "Replace #pBocchi #pthe #pRock. At the start of each combat, gain #b",
+      "Replace #pBocchi #pthe #pRock. At the start of each combat, no longer gain ",
       " #y${modID}:Bocchi_Anxiety. Can no longer gain #y${modID}:Guitar_Hero by clearing #yBocchi #yAnxiety."
     ]
   },

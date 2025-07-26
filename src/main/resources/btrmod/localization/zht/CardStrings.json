@@ -63,7 +63,7 @@
   },
   "${modID}:RevengeOnByrd": {
     "NAME": "戰鷹",
-    "DESCRIPTION": "${modID}:波奇 ! NL 造成 !D! 點傷害 !M! 次。"
+    "DESCRIPTION": "${modID}:波奇 ! NL 造成 !D! 點傷害 !M! 次。 NL 對異鳥造成雙倍傷害 。"
   },
   "${modID}:GuitarHero": {
     "NAME": "吉他英雄",
@@ -84,7 +84,7 @@
   },
   "${modID}:BocchiGhost": {
     "NAME": "幽靈波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 獲得 !M! 層 無實體 。 NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 獲得 !M! 層 無實體 。 NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 每打出一次，本場戰鬥中耗能加1。"
   },
   "${modID}:CalmHeadBocchi": {
     "NAME": "冷靜頭腦",
@@ -322,7 +322,7 @@
     "NAME": "卡拉卡拉",
     "DESCRIPTION": "將 ${modID}:律動 層數翻倍。 NL 進入 ${modID}:涼門 。 NL 消耗 。"
   },
-  "${modID}:Bandman": {
+  "${modID}:Bandman2_DEPRECATE": {
     "NAME": "樂隊人",
     "DESCRIPTION": "每有1層 ${modID}:律動 ，獲得1 格擋 。 NL 失去 !M! 層 ${modID}:律動 。"
   },
@@ -419,5 +419,13 @@
     "NAME": "向光",
     "DESCRIPTION": "從3張隨機技能牌中選擇1張放入手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "從3張隨機技能牌中選擇1張放入手牌。 這張牌本回合耗能為0 。 NL 消耗 。"
+  },
+  "${modID}:Bandman": {
+    "NAME": "樂隊人",
+    "DESCRIPTION": "手牌中每有1張給予律動的牌，獲得 !B! 格擋 。 NL 如果 ${modID}:律動 層數大於 !${modID}:GRV! ，每張牌額外獲得 !M! 格擋 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (獲得 ",
+      " 點格擋)"
+    ]
   }
 }
