@@ -40,7 +40,9 @@ public class KitaBocchiStyle extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int DistStacksToApply = getBocchiCount();
-        addToBot(new ApplyPowerAction(p, p, new DistortionPower(p, DistStacksToApply)));
+        if (DistStacksToApply > 0) {
+            addToBot(new ApplyPowerAction(p, p, new DistortionPower(p, DistStacksToApply)));
+        }
     }
 
     private int getBocchiCount(){

@@ -39,7 +39,7 @@ public class Ensemble extends BaseCard implements GrooveMultiplierCard {
     );
 
     private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 0;
+    private static final int UPG_DAMAGE = 4;
     private static final int GROOVE = 4;
     private static final int UPG_GROOVE = 0;
     private static final float GROOVE_MULTIPLIER = 1f;
@@ -48,7 +48,6 @@ public class Ensemble extends BaseCard implements GrooveMultiplierCard {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
         setCustomVar("GRV", GROOVE, UPG_GROOVE);
-        setCostUpgrade(1);
 
         tags.add(GROOVE_USE);
     }
