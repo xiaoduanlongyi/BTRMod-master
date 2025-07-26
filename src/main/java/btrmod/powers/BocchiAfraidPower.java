@@ -2,6 +2,7 @@ package btrmod.powers;
 
 import btrmod.powers.SoloPowers.BocchiSoloPower;
 import btrmod.powers.SoloPowers.NijikaSoloPower;
+import btrmod.relics.BocchiTheRockRelic;
 import btrmod.relics.ExtrovertedBocchi;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -76,8 +77,8 @@ public class BocchiAfraidPower extends BasePower {
 
     @Override
     public void onRemove() {
-        //先判定有没有ExtrovertedBocchi，再判定本场战斗有没有通过清除BAP获得过吉他英雄
-        if (!AbstractDungeon.player.hasRelic(ExtrovertedBocchi.ID)) {
+        //先判定有没有BocchiTheRockRelic，再判定本场战斗有没有通过清除BAP获得过吉他英雄
+        if (AbstractDungeon.player.hasRelic(BocchiTheRockRelic.ID)) {
             if (!guitarHeroTriggeredThisCombat) {
                 guitarHeroTriggeredThisCombat = true;
                 addToBot(new ApplyPowerAction(owner, owner, new GuitarHeroPower(owner, 1), 1));

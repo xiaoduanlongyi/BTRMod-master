@@ -77,7 +77,7 @@
 
   "${modID}:RevengeOnByrd": {
     "NAME": "战鹰",
-    "DESCRIPTION": "${modID}:波奇 ! NL 造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "${modID}:波奇 ! NL 造成 !D! 点伤害 !M! 次。 NL 对异鸟造成双倍伤害 。"
   },
 
   "${modID}:GuitarHero": {
@@ -103,7 +103,7 @@
 
   "${modID}:BocchiGhost": {
     "NAME": "幽灵波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !M! 层 无实体 。 NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !M! 层 无实体 。 NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 每打出一次，本场战斗中耗能加1。"
   },
 
   "${modID}:CalmHeadBocchi": {
@@ -152,8 +152,7 @@
 
   "${modID}:SacrificeBocchi": {
     "NAME": "波奇切腹",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 获得 [E] [E] 。 NL 抽 !M! 张牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${modID}:波奇 ！ NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 获得 [E] [E] [E] 。 NL 抽 !M! 张牌。 NL 消耗 。"
+    "DESCRIPTION": "${modID}:波奇 ！ NL 获得 !${modID}:BAP! 层 ${modID}:波奇自闭 。 NL 获得 [E] [E] 。 NL 抽 !M! 张牌。 NL 消耗 。"
   },
 
   "${modID}:RyoEatEat": {
@@ -392,7 +391,7 @@
     "DESCRIPTION": "将 ${modID}:律动 层数翻倍。 NL 进入 ${modID}:凉门 。 NL 消耗 。"
   },
 
-  "${modID}:Bandman": {
+  "${modID}:Bandman2_DEPRECATE": {
     "NAME": "乐队人",
     "DESCRIPTION": "每有1层 ${modID}:律动 ，获得1 格挡 。 NL 失去 !M! 层 ${modID}:律动 。"
   },
@@ -404,7 +403,8 @@
 
   "${modID}:WormBocchi": {
     "NAME": "槌子蛇波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ 虚无 。 NL 每有2层 ${modID}:波奇自闭 获得1层 无实体 。 NL 无法再移除 ${modID}:波奇自闭 。"
+    "DESCRIPTION": "${modID}:波奇 ！ 虚无 。 NL 每有2层 ${modID}:波奇自闭 获得1层 无实体 。 NL 无法再移除 ${modID}:波奇自闭 。",
+    "UPGRADE_DESCRIPTION": "${modID}:波奇 ！ NL 每有2层 ${modID}:波奇自闭 获得1层 无实体 。 NL 无法再移除 ${modID}:波奇自闭 。"
   },
 
   "${modID}:GuitarLonelinessBluePlanet": {
@@ -510,5 +510,14 @@
     "NAME": "向光",
     "DESCRIPTION": "从3张随机技能牌中选择1张放入手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "从3张随机技能牌中选择1张放入手牌。 这张牌本回合耗能为0 。 NL 消耗 。"
+  },
+
+  "${modID}:Bandman": {
+    "NAME": "乐队人",
+    "DESCRIPTION": "手牌中每有1张给予律动的牌，获得 !B! 格挡 。 NL 如果 ${modID}:律动 层数大于 !${modID}:GRV! ，每张牌额外获得 !M! 格挡 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (获得 ",
+      " 点格挡)"
+    ]
   }
 }

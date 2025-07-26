@@ -17,7 +17,7 @@ public class CelebrationParty extends BaseRelic {
     private static final LandingSound SOUND = LandingSound.HEAVY;
 
     private static final int GROOVE_THRESHOLD = 25;
-    private static final int HEAL_AMOUNT = 6;
+    private static final int HEAL_AMOUNT = 8;
 
     private int grooveAtCombatEnd = 0;
 

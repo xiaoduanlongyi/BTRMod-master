@@ -34,18 +34,18 @@ public class ExtrovertedBocchi extends BaseRelic {
         }
     }
 
-    @Override
-    public void atBattleStartPreDraw() {
-        flash();
-        AbstractDungeon.actionManager.addToTop(
-                new ApplyPowerAction(
-                        AbstractDungeon.player,
-                        AbstractDungeon.player,
-                        new BocchiAfraidPower(AbstractDungeon.player, AnxietyLevel),
-                        AnxietyLevel
-                )
-        );
-    }
+//    @Override
+//    public void atBattleStartPreDraw() {
+//        flash();
+//        AbstractDungeon.actionManager.addToTop(
+//                new ApplyPowerAction(
+//                        AbstractDungeon.player,
+//                        AbstractDungeon.player,
+//                        new BocchiAfraidPower(AbstractDungeon.player, AnxietyLevel),
+//                        AnxietyLevel
+//                )
+//        );
+//    }
 
     @Override
     public boolean canSpawn() {
@@ -54,6 +54,6 @@ public class ExtrovertedBocchi extends BaseRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + AnxietyLevel + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + DESCRIPTIONS[1];
     }
 }

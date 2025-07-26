@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.city.Byrd;
 
 import static btrmod.util.CardTagEnum.BOCCHI;
 
@@ -29,6 +30,7 @@ public class RevengeOnByrd extends BaseCard {
     private static final int UPG_DAMAGE = 1;
     private static final int HITTIME = 4;
     private static final int UPG_HITTIME = 0;
+    private static final float BYRD_DAMAGE_MULTIPLIER = 2.0F;
 
     public RevengeOnByrd() {
         super(ID, info);
@@ -44,6 +46,35 @@ public class RevengeOnByrd extends BaseCard {
         for (int i = 0; i < magicNumber; ++i) {
             addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
+    }
+
+    @Override
+    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
+        // 先调用父类方法计算基础修正
+        float modifiedDamage = super.calculateModifiedCardDamage(player, mo, tmp);
+
+        // 如果目标是Byrd，应用伤害倍率
+        if (isTargetByrd(mo)) {
+            modifiedDamage *= BYRD_DAMAGE_MULTIPLIER;
+        }
+
+        return modifiedDamage;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        // 调用父类方法进行标准计算
+        super.calculateCardDamage(mo);
+    }
+
+    // 检查目标是否为Byrd的辅助方法
+    private boolean isTargetByrd(AbstractMonster m) {
+        if (m == null) {
+            return false;
+        }
+
+        // 使用instanceof判断
+        return m instanceof Byrd;
     }
 
     @Override

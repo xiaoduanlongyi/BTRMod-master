@@ -26,7 +26,7 @@ public class SacrificeBocchi extends BaseCard {
     private static final int DRAW = 3;
     private static final int UPG_DRAW = 2;
     private static final int ENERGY = 2;
-    private static final int UPG_ENERGY = 1;
+    private static final int UPG_ENERGY = 0;
     private static final int BOCCHI_AFRAID = 3;
 
     public SacrificeBocchi() {

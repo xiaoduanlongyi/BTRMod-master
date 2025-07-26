@@ -23,8 +23,8 @@ public class GiveMeMoney extends BaseCard {
             2
     );
 
-    private static final int DAMAGE = 12;
-    private static final int UPG_DAMAGE = 8;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 6;
     private static final int BAP = 2;
     private static final int UPG_BAP = 0;
 

@@ -38,7 +38,7 @@ public class Ensemble extends BaseCard implements GrooveMultiplierCard {
             2
     );
 
-    private static final int DAMAGE = 0;
+    private static final int DAMAGE = 4;
     private static final int UPG_DAMAGE = 0;
     private static final int GROOVE = 4;
     private static final int UPG_GROOVE = 0;

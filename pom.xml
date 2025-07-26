@@ -24,7 +24,7 @@
 
     <!-- This information will be displayed in ModTheSpire, the modded launcher. -->
     <name>孤独尖塔 Bocchi The Spire</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
     <description>这是一个以动画《孤独摇滚》为灵感和主题制作的mod。添加了一个名为结束乐队的新角色，80+张卡牌，多种新的独特机制，11个专属遗物，和与卡牌配套的音效和bgm。祝大家玩得开心~\n

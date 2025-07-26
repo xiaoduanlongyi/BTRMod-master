@@ -15,7 +15,7 @@ public class GuitarMan extends BaseRelic {
     private static final RelicTier RARITY = RelicTier.COMMON; //The relic's rarity.
     private static final LandingSound SOUND = LandingSound.FLAT; //The sound played when the relic is clicked.
 
-    private static final int GROOVE = 2;
+    private static final int GROOVE = 3;
 
     public GuitarMan() {
         super(ID, NAME, KessokuBandChar.Meta.CARD_COLOR, RARITY, SOUND);

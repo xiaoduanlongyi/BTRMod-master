@@ -29,8 +29,8 @@ public class FatherTear extends BaseCard {
     private static final int UPG_BLOCK = 4;
     private static final int BAP = 2;
     private static final int UPG_BAP = 0;
-    private static final int GROOVE = 1;
-    private static final int UPG_GROOVE = 1;
+    private static final int GROOVE = 2;
+    private static final int UPG_GROOVE = 0;
 
     public FatherTear() {
         super(ID, info);
