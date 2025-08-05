@@ -73,6 +73,11 @@ public class BocchiAfraidPower extends BasePower {
                 addToBot(new RemoveSpecificPowerAction(owner, owner, BocchiFantasyPower.POWER_ID));
             }
         }
+
+        // 如果减少后 amount 为 0 或更少，手动移除这个 Power
+        if (this.amount <= 0) {
+            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+        }
     }
 
     @Override

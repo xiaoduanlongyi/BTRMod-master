@@ -81,6 +81,8 @@ public abstract class BaseCard extends CustomCard {
         this.damageUpgrade = 0;
         this.blockUpgrade = 0;
         this.magicUpgrade = 0;
+
+//        initializeCharacterIcon();
     }
 
     private static String getName(String ID) {
@@ -728,4 +730,22 @@ public abstract class BaseCard extends CustomCard {
     public boolean hasCustomVar(String key) {
         return cardVariables.containsKey(key);
     }
+
+//    protected void initializeCharacterIcon() {
+//        AbstractCard.CardTags characterTag = null;
+//
+//        if (this.hasTag(CardTagEnum.BOCCHI)) {
+//            characterTag = CardTagEnum.BOCCHI;
+//        } else if (this.hasTag(CardTagEnum.KITA)) {
+//            characterTag = CardTagEnum.KITA;
+//        } else if (this.hasTag(CardTagEnum.NIJIKA)) {
+//            characterTag = CardTagEnum.NIJIKA;
+//        } else if (this.hasTag(CardTagEnum.RYO)) {
+//            characterTag = CardTagEnum.RYO;
+//        }
+//
+//        if (characterTag != null) {
+//            CardModifierManager.addModifier(this, new CharacterIconCardModifier(characterTag));
+//        }
+//    }
 }

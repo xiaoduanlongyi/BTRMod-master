@@ -19,17 +19,33 @@ public class BocchiOmelettePower extends BasePower {
 
     public void atStartOfTurnPostDraw() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            this.flash();
+            // 获取波奇自闭层数
+            int BAP = 0;
+            if (owner.hasPower(BocchiAfraidPower.POWER_ID)) {
+                BAP = owner.getPower(BocchiAfraidPower.POWER_ID).amount;
+            }
 
-            for(AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-                if (!m.isDead && !m.isDying) {
-                    this.addToBot(new ApplyPowerAction(m, this.owner, new PoisonPower(m, this.owner, this.amount), this.amount));
+            // 如果有波奇自闭层数，对所有敌人施加中毒
+            if (BAP > 0) {
+                this.flash();
+
+                int poisonAmount = this.amount * BAP; // 每层波奇自闭施加amount层中毒
+
+                for(AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+                    if (!m.isDead && !m.isDying) {
+                        this.addToBot(new ApplyPowerAction(m, this.owner, new PoisonPower(m, this.owner, poisonAmount), poisonAmount));
+                    }
                 }
             }
         }
-
-        addToTop(new ApplyPowerAction(owner, owner, new BocchiAfraidPower(owner, 1)));
     }
+
+//    public void atEndOfTurn(boolean isPlayer) {
+//        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+//            this.flash();
+//            addToTop(new ApplyPowerAction(owner, owner, new BocchiAfraidPower(owner, 1)));
+//        }
+//    }
 
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

@@ -20,7 +20,7 @@ public class KitaGone extends BaseCard {
             CardType.POWER,
             CardRarity.RARE,
             CardTarget.NONE,
-            2
+            1
     );
 
     private static final int MAXHP_LOSS = 10;
@@ -30,7 +30,7 @@ public class KitaGone extends BaseCard {
         super(ID, info);
 
         setMagic(MAXHP_LOSS, UPG_MAXHP_LOSS);
-        setCostUpgrade(1);
+        setCostUpgrade(0);
         setSelfRetain(true);
 
         tags.add(KITA);

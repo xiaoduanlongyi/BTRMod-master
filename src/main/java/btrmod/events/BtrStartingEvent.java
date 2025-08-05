@@ -108,5 +108,8 @@ public class BtrStartingEvent extends PhasedEvent {
         AbstractDungeon.getCurrRoom().onPlayerEntry();
         AbstractDungeon.scene.nextRoom(this.node.room);
         AbstractDungeon.currMapNode.setRoom(new NeowRoom(false));
+
+        // 确保使用正确的渲染场景
+        AbstractDungeon.rs = AbstractDungeon.RenderScene.NORMAL;
     }
 }

@@ -2,14 +2,12 @@ package btrmod;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
-import basemod.eventUtil.AddEventParams;
-import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
-import btrmod.events.BtrStartingEvent;
 import btrmod.relics.BaseRelic;
 import btrmod.subscribers.ComboSoloSubscriber;
+import btrmod.util.CardCharacterIconRenderHelper;
 import btrmod.util.GeneralUtils;
 import btrmod.util.KeywordInfo;
 import btrmod.util.TextureLoader;
@@ -25,7 +23,6 @@ import com.evacipated.cardcrawl.modthespire.Patcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
@@ -93,6 +90,8 @@ public class BTRMod implements
         //If you want to set up a config panel, that will be done here.
         //You can find information about this on the BaseMod wiki page "Mod Config and Panel".
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
+
+        CardCharacterIconRenderHelper.initialize();
     }
 
     /*----------Localization----------*/
@@ -123,6 +122,8 @@ public class BTRMod implements
                 e.printStackTrace();
             }
         }
+
+        CardCharacterIconRenderHelper.initialize();
     }
 
     private void loadLocalization(String lang) {

@@ -30,7 +30,7 @@ public class GuitarLonelinessBluePlanet extends BaseCard {
             CardType.SKILL,
             CardRarity.RARE,
             CardTarget.NONE,
-            2
+            1
     );
 
     private static final int DIST = 2;

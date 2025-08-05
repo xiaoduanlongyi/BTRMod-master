@@ -2,8 +2,6 @@ package btrmod.cards.power.rare;
 
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
-import btrmod.powers.ShimokitaAngelPower;
-import btrmod.powers.SoloPowers.NijikaSoloPower;
 import btrmod.powers.WhatIsWrongWithPower;
 import btrmod.util.BgmManager;
 import btrmod.util.CardStats;
@@ -11,8 +9,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import static btrmod.util.CardTagEnum.NIJIKA;
 
 public class WhatIsWrongWith extends BaseCard {
     public static final String ID = makeID(WhatIsWrongWith.class.getSimpleName());

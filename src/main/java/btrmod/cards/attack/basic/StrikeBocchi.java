@@ -1,9 +1,12 @@
 package btrmod.cards.attack.basic;
 
+import basemod.helpers.TooltipInfo;
+import btrmod.BTRMod;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.GroovePower;
 import btrmod.util.CardStats;
+import btrmod.util.KeywordInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -11,6 +14,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static btrmod.util.CardTagEnum.*;
 
@@ -24,9 +30,9 @@ public class StrikeBocchi extends BaseCard {
             1
     );
 
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
-    private static final int GROOVE = 1;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 4;
+    private static final int GROOVE = 2;
     private static final int UPG_GROOVE = 0;
 
     public StrikeBocchi() {
@@ -46,6 +52,21 @@ public class StrikeBocchi extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         addToBot(new ApplyPowerAction(p, p, new GroovePower(p, customVar("GRV"))));
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tips = new ArrayList<>();
+
+        KeywordInfo BocchiInfo = BTRMod.keywords.get("BOCCHI");
+        if (BocchiInfo != null) {
+            tips.add(new TooltipInfo(
+                    BocchiInfo.PROPER_NAME,
+                    BocchiInfo.DESCRIPTION
+            ));
+        }
+
+        return tips;
     }
 
     @Override

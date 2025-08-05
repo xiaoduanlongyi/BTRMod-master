@@ -23,8 +23,8 @@ public class BocchiOmelette extends BaseCard {
             1
     );
 
-    private static final int POISON = 3;
-    private static final int UPG_POISON = 1;
+    private static final int POISON = 1;  // 每层波奇自闭施加的中毒层数
+    private static final int UPG_POISON = 0;
     private static final int BAP = 1;
     private static final int UPG_BAP = 0;
 
@@ -33,6 +33,7 @@ public class BocchiOmelette extends BaseCard {
 
         setMagic(POISON, UPG_POISON);
         setCustomVar("BAP", BAP, UPG_BAP);
+        setInnate(false, true);
 
         tags.add(BOCCHI);
     }

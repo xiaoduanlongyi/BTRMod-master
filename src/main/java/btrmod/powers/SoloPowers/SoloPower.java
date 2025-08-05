@@ -1,9 +1,11 @@
 package btrmod.powers.SoloPowers;
 
 import btrmod.powers.BasePower;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.SpotlightPlayerEffect;
 
 import java.util.Arrays;
@@ -11,7 +13,7 @@ import java.util.List;
 
 import static btrmod.BTRMod.makeID;
 
-public abstract class SoloPower extends BasePower {
+public abstract class SoloPower extends BasePower implements OnReceivePowerPower{
     // list every solo‐power ID here
     private static final List<String> ALL_SOLO_IDS = Arrays.asList(
             makeID("BocchiSoloPower"),
@@ -45,6 +47,21 @@ public abstract class SoloPower extends BasePower {
         this.amount = 1;
         updateDescription();
     }
+
+    @Override
+    public boolean onReceivePower(AbstractPower powerToApply, AbstractCreature target, AbstractCreature source) {
+        // 如果目标是自己且即将获得的Power是Solo Power
+        if (target == this.owner && powerToApply instanceof SoloPower) {
+            // 如果即将获得的是相同的Solo Power，阻止应用
+            if (powerToApply.ID.equals(this.ID)) {
+                // 返回false会取消这个Power的应用
+                return false;
+            }
+        }
+        // 其他情况正常应用
+        return true;
+    }
+
 
     /**
      * How many times each Groove stack should count?

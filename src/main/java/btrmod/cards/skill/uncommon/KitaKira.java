@@ -4,6 +4,7 @@ import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.BocchiAfraidPower;
 import btrmod.powers.GroovePower;
+import btrmod.powers.SoloPowers.KitaSoloPower;
 import btrmod.util.CardStats;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -30,16 +31,16 @@ public class KitaKira extends BaseCard {
             1
     );
 
-    private static final int DEBUFF = 2;
-    private static final int UPG_DEBUFF = 1;
-    private static final int SELF_DEBUFF = 2;
-    private static final int UPG_SELF_DEBUFF = -1;
+    private static final int DEBUFF = 1;
+    private static final int UPG_DEBUFF = 0;
+    private static final int MORE_DEBUFF = 2;
+    private static final int UPG_MORE_DEBUFF = 0;
 
     public KitaKira() {
         super(ID, info);
 
         setMagic(DEBUFF, UPG_DEBUFF);
-        setCustomVar("SELF", SELF_DEBUFF, UPG_SELF_DEBUFF);
+        setCustomVar("MORE", MORE_DEBUFF, UPG_MORE_DEBUFF);
         setExhaust(true);
 
         tags.add(KITA);
@@ -47,10 +48,15 @@ public class KitaKira extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (p.hasPower(KitaSoloPower.POWER_ID))
+        {
+            magicNumber += customVar("MORE");
+        }
+
         for(AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, magicNumber, false), magicNumber));
         }
-        addToBot(new ApplyPowerAction(p, p, new VulnerablePower(p, customVar("SELF"), false), customVar("SELF")));
+
         AbstractDungeon.effectList.add(new SpotlightEffect());
 
         CardCrawlGame.sound.play("KitaKita1");
