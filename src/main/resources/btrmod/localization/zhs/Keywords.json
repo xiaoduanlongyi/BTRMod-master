@@ -32,6 +32,7 @@
   },
 
   {
+    "ID": "BOCCHISOLO",
     "PROPER_NAME": "波奇酱的Solo",
     "NAMES": [
       "波奇酱的Solo",
@@ -42,6 +43,7 @@
   },
 
   {
+    "ID": "KITA",
     "PROPER_NAME": "喜多",
     "NAMES": [
       "喜多"
@@ -50,6 +52,7 @@
   },
 
   {
+    "ID": "KITASOLO",
     "PROPER_NAME": "喜多的Solo",
     "NAMES": [
       "喜多的Solo",
@@ -59,6 +62,7 @@
   },
 
   {
+    "ID": "NIJIKA",
     "PROPER_NAME": "虹夏",
     "NAMES": [
       "虹夏"
@@ -67,6 +71,7 @@
   },
 
   {
+    "ID": "NIJIKASOLO",
     "PROPER_NAME": "虹夏的Solo",
     "NAMES": [
       "虹夏的Solo",
@@ -76,6 +81,7 @@
   },
 
   {
+    "ID": "RYO",
     "PROPER_NAME": "凉",
     "NAMES": [
       "凉",
@@ -85,6 +91,7 @@
   },
 
   {
+    "ID": "RYOSOLO",
     "PROPER_NAME": "凉的Solo",
     "NAMES": [
       "凉的Solo",
@@ -94,6 +101,7 @@
   },
 
   {
+    "ID": "BAP",
     "PROPER_NAME": "波奇酱的自闭值",
     "NAMES": [
       "波奇酱自闭值",
@@ -106,6 +114,7 @@
   },
 
   {
+    "ID": "GUITARHERO",
     "PROPER_NAME": "吉他英雄",
     "NAMES": [
       "吉他英雄"
@@ -114,6 +123,7 @@
   },
 
   {
+    "ID": "GRV",
     "PROPER_NAME": "律动",
     "NAMES": [
       "律动"
@@ -122,6 +132,7 @@
   },
 
   {
+    "ID": "GRVDMG",
     "PROPER_NAME": "律动伤害",
     "NAMES": [
       "律动伤害"
@@ -130,6 +141,7 @@
   },
 
   {
+    "ID": "STUN",
     "PROPER_NAME": "眩晕",
     "NAMES": [
       "眩晕"
@@ -138,6 +150,7 @@
   },
 
   {
+    "ID": "DIST",
     "PROPER_NAME": "抽象",
     "NAMES": [
       "抽象",
@@ -147,6 +160,7 @@
   },
 
   {
+    "ID": "FANTASY",
     "PROPER_NAME": "波奇幻想",
     "NAMES": [
       "波奇的幻想",
@@ -157,6 +171,7 @@
   },
 
   {
+    "ID": "SOLO",
     "PROPER_NAME": "独奏",
     "NAMES": [
       "成员的独奏",

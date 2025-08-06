@@ -11,19 +11,19 @@
   },
   "${modID}:StrikeKita": {
     "NAME": "Strum Strike",
-    "DESCRIPTION": "${modID}:Kita! NL Deal !D! damage. NL Gain !${modID}:GRV! ${modID}:Groove."
+    "DESCRIPTION": "[#d0574e]Kita[]! NL Deal !D! damage. NL Gain !${modID}:GRV! ${modID}:Groove."
   },
   "${modID}:StrikeNijika": {
     "NAME": "Drum Stick Strike",
-    "DESCRIPTION": "${modID}:Nijika! NL Deal !D! damage. NL Gain !${modID}:GRV! ${modID}:Groove."
+    "DESCRIPTION": "[#f2e088]Nijika[]! NL Deal !D! damage. NL Gain !${modID}:GRV! ${modID}:Groove."
   },
   "${modID}:StrikeBocchi": {
     "NAME": "Bend Strike",
-    "DESCRIPTION": "${modID}:Bocchi! NL Deal !D! damage. NL Gain !${modID}:GRV! ${modID}:Groove."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Deal !D! damage. NL Gain !${modID}:GRV! ${modID}:Groove."
   },
   "${modID}:StrikeRyo": {
     "NAME": "Bass Strike",
-    "DESCRIPTION": "${modID}:Ryo! NL Deal !D! damage. NL Gain !${modID}:GRV! ${modID}:Groove."
+    "DESCRIPTION": "[#4061a0]Ryo[]! NL Deal !D! damage. NL Gain !${modID}:GRV! ${modID}:Groove."
   },
   "${modID}:MatureMango": {
     "NAME": "Mature Mango",
@@ -35,64 +35,64 @@
   },
   "${modID}:ProudBocchi": {
     "NAME": "Proud Bocchi",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain !B! Block. NL Remove !M! ${modID}:Bocchi_Anxiety."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain !B! Block. NL Remove !M! ${modID}:Bocchi_Anxiety."
   },
   "${modID}:GiveMeMoney": {
     "NAME": "Begs for Money",
-    "DESCRIPTION": "${modID}:Ryo! NL Deal !D! damage to ALL enemies. Unblocked damage is converted to Gold. NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Exhaust."
+    "DESCRIPTION": "[#4061a0]Ryo[]! NL Deal !D! damage to ALL enemies. Unblocked damage is converted to Gold. NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Exhaust."
   },
   "${modID}:EatGrass_DEPRECATE": {
     "NAME": "Eat Grass",
-    "DESCRIPTION": "${modID}:Ryo! NL Lose !M! HP. Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "[#4061a0]Ryo[]! NL Lose !M! HP. Deal !D! damage. NL Exhaust."
   },
   "${modID}:BocchiGambade": {
     "NAME": "Bocchi Cheer Up",
-    "DESCRIPTION": "${modID}:Bocchi! NL Remove 1 ${modID}:Bocchi_Anxiety. NL Draw !M! cards."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Remove 1 ${modID}:Bocchi_Anxiety. NL Draw !M! cards."
   },
   "${modID}:FireBocchi": {
     "NAME": "Fire Bocchi",
-    "DESCRIPTION": "${modID}:Bocchi! NL Deal !D! damage. NL Apply !M! Vulnerable."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Deal !D! damage. NL Apply !M! Vulnerable. If ${modID}:Bocchi_Anxiety is greater than 5, this card costs 0."
   },
   "${modID}:SuperBocchi": {
     "NAME": "Super Saiyan Bocchi",
-    "DESCRIPTION": "${modID}:Bocchi! NL Remove !${modID}:BA1! ${modID}:Bocchi_Anxiety. NL Gain !M! Strength. NL Gain !M! Dexterity."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Remove !${modID}:BA1! ${modID}:Bocchi_Anxiety. NL Gain !M! Strength. NL Gain !M! Dexterity."
   },
   "${modID}:BocchiScream": {
     "NAME": "Bocchi's Scream",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain !${modID}:BA2! ${modID}:Bocchi_Anxiety. NL ALL enemies lose !M! Strength. NL Exhaust."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain !${modID}:BA2! ${modID}:Bocchi_Anxiety. NL ALL enemies lose !M! Strength. NL Exhaust."
   },
   "${modID}:RevengeOnByrd": {
     "NAME": "Revenge the Byrd",
-    "DESCRIPTION": "${modID}:Bocchi! NL Deal !D! damage !M! times. NL Deal double damage to Byrds."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Deal !D! damage !M! times. NL Deal double damage to Byrds."
   },
   "${modID}:GuitarHero": {
     "NAME": "Guitar Hero",
-    "DESCRIPTION": "${modID}:Bocchi! Ethereal. NL The first ${modID}:Bocchi card you play each turn is played twice. NL Gain [E] at the start of each turn.",
-    "UPGRADE_DESCRIPTION": "${modID}:Bocchi! NL The first ${modID}:Bocchi card you play each turn is played twice. NL Gain [E] at the start of each turn."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! Ethereal. NL The first ${modID}:Bocchi card you play each turn is played twice. NL Gain [E] at the start of each turn.",
+    "UPGRADE_DESCRIPTION": "[#f5a4b6]Bocchi[]! NL The first ${modID}:Bocchi card you play each turn is played twice. NL Gain [E] at the start of each turn."
   },
   "${modID}:BocchiLeapOfFaith": {
     "NAME": "Leap of Faith",
-    "DESCRIPTION": "${modID}:Bocchi! NL Deal !D! damage to ALL enemies. NL Gain !M! ${modID}:Bocchi_Anxiety."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Deal !D! damage to ALL enemies. NL Gain !M! ${modID}:Bocchi_Anxiety."
   },
   "${modID}:Swing": {
     "NAME": "Power Strum",
-    "DESCRIPTION": "${modID}:Kita! NL Deal !D! damage to ALL enemies. NL Gain !${modID}:GRV! ${modID}:Groove."
+    "DESCRIPTION": "[#d0574e]Kita[]! NL Deal !D! damage to ALL enemies. NL Gain !${modID}:GRV! ${modID}:Groove."
   },
   "${modID}:FollowUpNijika": {
     "NAME": "Nijika Follow-up",
-    "DESCRIPTION": "${modID}:Nijika! NL Deal !D! damage. NL If the last card played this combat was an Attack, draw !M! cards."
+    "DESCRIPTION": "[#f2e088]Nijika[]! NL Deal !D! damage. NL If the last card played this combat was an Attack, draw !M! cards."
   },
   "${modID}:BocchiGhost": {
     "NAME": "Ghost Bocchi",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain !M! Intangible. NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Each time this is played, cost increases by 1 this combat."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain !M! Intangible. NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Each time this is played, cost increases by 1 this combat."
   },
   "${modID}:CalmHeadBocchi": {
     "NAME": "Coolheaded",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain !B! Block. NL Draw !M! cards."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain !B! Block. NL Draw !M! cards."
   },
   "${modID}:JawPoke": {
     "NAME": "Jaw Poke",
-    "DESCRIPTION": "${modID}:Bocchi! NL Deal !D! damage to a random enemy !M! times. NL Each hit applies 1 Vulnerable."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Deal !D! damage to a random enemy !M! times. NL Each hit applies 1 Vulnerable."
   },
   "${modID}:IfConstellation": {
     "NAME": "Constellation",
@@ -104,69 +104,69 @@
   },
   "${modID}:ShowBelly": {
     "NAME": "Show Belly",
-    "DESCRIPTION": "${modID}:Bocchi! NL Apply !M! Weak to ALL enemies. NL Remove !B! Block from self. NL Exhaust."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Apply !M! Weak to ALL enemies. NL Remove !B! Block from self. NL Exhaust."
   },
   "${modID}:BocchiShowHead": {
     "NAME": "Bocchi Peeks Out",
-    "DESCRIPTION": "${modID}:Bocchi! NL Remove !M! ${modID}:Bocchi_Anxiety. NL Draw 2 cards next turn."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Remove !M! ${modID}:Bocchi_Anxiety. NL Draw 2 cards next turn."
   },
   "${modID}:RyoReturnMoney": {
     "NAME": "Return Money",
-    "DESCRIPTION": "${modID}:Ryo! NL Remove !M! ${modID}:Bocchi_Anxiety. NL Lose !${modID}:MONEY_RETURN! Gold."
+    "DESCRIPTION": "[#4061a0]Ryo[]! NL Remove !M! ${modID}:Bocchi_Anxiety. NL Lose !${modID}:MONEY_RETURN! Gold."
   },
   "${modID}:KitaKita": {
     "NAME": "Kita~Kita~",
-    "DESCRIPTION": "${modID}:Kita! NL ${modID}:Stun an enemy. NL Enter ${modID}:Kita's_Solo. NL Exhaust."
+    "DESCRIPTION": "[#d0574e]Kita[]! NL ${modID}:Stun an enemy. NL Enter ${modID}:Kita's_Solo. NL Exhaust."
   },
   "${modID}:MuliMuli": {
     "NAME": "Muli Muli",
-    "DESCRIPTION": "${modID}:Bocchi! NL Deal !D! damage. Gain !${modID}:GRV! ${modID}:Groove. NL Place a copy of this card in your discard pile."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Deal !D! damage. Gain !${modID}:GRV! ${modID}:Groove. NL Place a copy of this card in your discard pile."
   },
   "${modID}:SacrificeBocchi": {
     "NAME": "Bocchi Seppuku",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Gain [E] [E]. NL Draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${modID}:Bocchi! NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Gain [E] [E] [E]. NL Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Gain [E] [E]. NL Draw !M! cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Gain [E] [E] [E]. NL Draw !M! cards. NL Exhaust."
   },
   "${modID}:RyoEatEat": {
     "NAME": "Have Some Snacks",
-    "DESCRIPTION": "${modID}:Ryo! NL Deal !D! damage to ALL enemies. NL Gain !M! Max HP for each enemy killed. NL Exhaust."
+    "DESCRIPTION": "[#4061a0]Ryo[]! NL Deal !D! damage to ALL enemies. NL Gain !M! Max HP for each enemy killed. NL Exhaust."
   },
   "${modID}:MuscleNijika": {
     "NAME": "Whiplash",
-    "DESCRIPTION": "${modID}:Nijika! NL Remove all ${modID}:Groove. NL Gain 1 Strength for every !M! ${modID}:Groove removed. NL Exhaust."
+    "DESCRIPTION": "[#f2e088]Nijika[]! NL Remove all ${modID}:Groove. NL Gain 1 Strength for every !M! ${modID}:Groove removed. NL Exhaust."
   },
   "${modID}:RyoTouchFace": {
     "NAME": "Yoshi Yoshi",
-    "DESCRIPTION": "${modID}:Ryo! NL Gain !B! Block. NL Remove !M! ${modID}:Bocchi_Anxiety."
+    "DESCRIPTION": "[#4061a0]Ryo[]! NL Gain !B! Block. NL Remove !M! ${modID}:Bocchi_Anxiety."
   },
   "${modID}:FallenAngel": {
     "NAME": "Fallen Angel",
-    "DESCRIPTION": "${modID}:Nijika! NL Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !${modID}:GRV! ${modID}:Groove."
+    "DESCRIPTION": "[#f2e088]Nijika[]! NL Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain !${modID}:GRV! ${modID}:Groove."
   },
   "${modID}:ShimokitaAngel": {
     "NAME": "Angel of Shimokita",
-    "DESCRIPTION": "${modID}:Nijika! NL Remove !M! ${modID}:Bocchi_Anxiety at the start of each turn. NL Enter ${modID}:Nijika's_Solo."
+    "DESCRIPTION": "[#f2e088]Nijika[]! NL Remove !M! ${modID}:Bocchi_Anxiety at the start of each turn. NL Enter ${modID}:Nijika's_Solo."
   },
   "${modID}:RyoQuickWrite": {
     "NAME": "Ryo Speed Writing",
-    "DESCRIPTION": "${modID}:Ryo! NL Draw cards until your hand is full. NL Lose !M! ${modID}:Groove. NL Exhaust."
+    "DESCRIPTION": "[#4061a0]Ryo[]! NL Draw cards until your hand is full. NL Lose !M! ${modID}:Groove. NL Exhaust."
   },
   "${modID}:NijikaMiddleFinger": {
     "NAME": "Middle Finger",
-    "DESCRIPTION": "${modID}:Nijika! NL Deal !D! damage. NL Gain !${modID}:GRV! ${modID}:Groove. NL Enter ${modID}:Nijika's_Solo."
+    "DESCRIPTION": "[#f2e088]Nijika[]! NL Deal !D! damage. NL Gain !${modID}:GRV! ${modID}:Groove. NL Enter ${modID}:Nijika's_Solo."
   },
   "${modID}:KitaGone": {
     "NAME": "Kita and Ikuyo",
-    "DESCRIPTION": "${modID}:Kita! Retain. NL Lose !M! Max HP. NL When you would die, prevent death and heal to 50% of Max HP."
+    "DESCRIPTION": "[#d0574e]Kita[]! Retain. NL Lose !M! Max HP. NL When you would die, prevent death and heal to 50% of Max HP."
   },
   "${modID}:PinkBocchi": {
     "NAME": "Pink-Hair Guitarist",
-    "DESCRIPTION": "${modID}:Bocchi! NL Deal !D! damage to ALL enemies X times. NL If ${modID}:Bocchi_Anxiety is less than !M!, X is increased by 1."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Deal !D! damage to ALL enemies X times. NL If ${modID}:Bocchi_Anxiety is less than !M!, X is increased by 1."
   },
   "${modID}:RyoSuit": {
     "NAME": "Ryo in Suit",
-    "DESCRIPTION": "${modID}:Ryo! NL Add 2 Ryo's Henchman to your hand. NL Enter ${modID}:Ryo's_Solo.",
-    "UPGRADE_DESCRIPTION": "${modID}:Ryo! NL Add 2 Ryo's Henchman+ to your hand. NL Enter ${modID}:Ryo's_Solo."
+    "DESCRIPTION": "[#4061a0]Ryo[]! NL Add 2 Ryo's Henchman to your hand. NL Enter ${modID}:Ryo's_Solo.",
+    "UPGRADE_DESCRIPTION": "[#4061a0]Ryo[]! NL Add 2 Ryo's Henchman+ to your hand. NL Enter ${modID}:Ryo's_Solo."
   },
   "${modID}:RyoHenchman1": {
     "NAME": "Ryo's Henchman - Death",
@@ -178,20 +178,20 @@
   },
   "${modID}:BocchiDraw": {
     "NAME": "Seek",
-    "DESCRIPTION": "${modID}:Bocchi! NL Lose !M! ${modID}:Groove. NL Draw all ${modID}:Bocchi cards from your draw pile."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Lose !M! ${modID}:Groove. NL Draw all ${modID}:Bocchi cards from your draw pile."
   },
   "${modID}:RyoThumbUp": {
     "NAME": "Ryo's Appreciation",
-    "DESCRIPTION": "${modID}:Ryo! NL Gain !${modID}:GRV! ${modID}:Groove at the start of each turn.",
-    "UPGRADE_DESCRIPTION": "${modID}:Ryo! Innate. NL Gain !${modID}:GRV! ${modID}:Groove at the start of each turn."
+    "DESCRIPTION": "[#4061a0]Ryo[]! NL Gain !${modID}:GRV! ${modID}:Groove at the start of each turn.",
+    "UPGRADE_DESCRIPTION": "[#4061a0]Ryo[]! Innate. NL Gain !${modID}:GRV! ${modID}:Groove at the start of each turn."
   },
   "${modID}:KitaPipa": {
     "NAME": "Pipa Vocal",
-    "DESCRIPTION": "${modID}:Kita! NL Deal !D! damage. NL Apply !M! Weak. NL Gain !${modID}:GRV! ${modID}:Groove."
+    "DESCRIPTION": "[#d0574e]Kita[]! NL Deal !D! damage. NL Apply !M! Weak. NL Gain !${modID}:GRV! ${modID}:Groove."
   },
   "${modID}:NijikaHeadShake": {
     "NAME": "Shake Shake",
-    "DESCRIPTION": "${modID}:Nijika! NL Deal !M! times 0.5X ${modID}:Groove_Damage. NL Exhaust.",
+    "DESCRIPTION": "[#f2e088]Nijika[]! NL Deal !M! times 0.5X ${modID}:Groove_Damage. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deal !D! x !M! = ",
       " damage)"
@@ -199,15 +199,15 @@
   },
   "${modID}:KitaRap": {
     "NAME": "Kita Rap",
-    "DESCRIPTION": "${modID}:Kita! NL Deal !D! damage. NL Draw !M! cards. NL Gain !${modID}:GRV! ${modID}:Groove."
+    "DESCRIPTION": "[#d0574e]Kita[]! NL Deal !D! damage. NL Draw !M! cards. NL Gain !${modID}:GRV! ${modID}:Groove."
   },
   "${modID}:BocchiTwist": {
     "NAME": "Twisted Bocchi",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Gain !M! ${modID}:Distortion."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Gain !M! ${modID}:Distortion."
   },
   "${modID}:SixStringBass": {
     "NAME": "Six-String Bass",
-    "DESCRIPTION": "${modID}:Kita! NL Deal !D! damage. NL Lose !${modID}:GRV! ${modID}:Groove. NL Gain !M! ${modID}:Distortion."
+    "DESCRIPTION": "[#d0574e]Kita[]! NL Deal !D! damage. NL Lose !${modID}:GRV! ${modID}:Groove. NL Gain !M! ${modID}:Distortion."
   },
   "${modID}:FatherTear": {
     "NAME": "Father's Tears",
@@ -220,7 +220,7 @@
   },
   "${modID}:OctopusBocchi": {
     "NAME": "Octopus Bocchi",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain !B! Block. NL Draw !M! cards. NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain !B! Block. NL Draw !M! cards. NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety."
   },
   "${modID}:FadeAway": {
     "NAME": "Fade Away",
@@ -232,15 +232,15 @@
   },
   "${modID}:NijikaThumbUp": {
     "NAME": "Angel's Thumb Up",
-    "DESCRIPTION": "${modID}:Nijika! NL Remove !${modID}:BASE! ${modID}:Bocchi_Anxiety. NL If ${modID}:Bocchi_Anxiety is greater than !${modID}:THRESHOLD!, remove !${modID}:BONUS! additional. NL Exhaust."
+    "DESCRIPTION": "[#f2e088]Nijika[]! NL Remove !${modID}:BASE! ${modID}:Bocchi_Anxiety. NL If ${modID}:Bocchi_Anxiety is greater than !${modID}:THRESHOLD!, remove !${modID}:BONUS! additional. NL Exhaust."
   },
   "${modID}:BocchiRiff": {
     "NAME": "Improvised Riff",
-    "DESCRIPTION": "${modID}:Bocchi! NL Deal !D! damage to ALL enemies. NL Gain !${modID}:GRV! ${modID}:Groove. NL Remove !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Enter ${modID}:Bocchi's_Solo."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Deal !D! damage to ALL enemies. NL Gain !${modID}:GRV! ${modID}:Groove. NL Remove !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Enter ${modID}:Bocchi's_Solo."
   },
   "${modID}:BocchiHappy_DEPRECATE": {
     "NAME": "Praised Bocchi",
-    "DESCRIPTION": "${modID}:Bocchi! NL Deal !D! damage. NL Remove !${modID}:BAP! ${modID}:Bocchi_Anxiety."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Deal !D! damage. NL Remove !${modID}:BAP! ${modID}:Bocchi_Anxiety."
   },
   "${modID}:BocchiOrKita": {
     "NAME": "BocchiKita",
@@ -270,7 +270,7 @@
   },
   "${modID}:DominationKita": {
     "NAME": "Domination Devil",
-    "DESCRIPTION": "${modID}:Kita! NL Deal !M! damage for each ${modID}:Bocchi card in hand. NL Gain !${modID}:DISTOR! ${modID}:Distortion.",
+    "DESCRIPTION": "[#d0574e]Kita[]! NL Deal !M! damage for each ${modID}:Bocchi card in hand. NL Gain !${modID}:DISTOR! ${modID}:Distortion.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deal ",
       " damage)"
@@ -278,41 +278,41 @@
   },
   "${modID}:KitaKira": {
     "NAME": "Kita Kira",
-    "DESCRIPTION": "${modID}:Kita! NL Apply !M! Vulnerable to ALL enemies. NL Apply !${modID}:SELF! Vulnerable to yourself. NL Exhaust."
+    "DESCRIPTION": "[#d0574e]Kita[]! NL Apply !M! Vulnerable to ALL enemies. NL If in ${modID}:Kita's_Solo, Apply !${modID}:MORE! more. NL Exhaust."
   },
   "${modID}:BocchiHeartbeat": {
     "NAME": "Beating Engine",
-    "DESCRIPTION": "${modID}:Bocchi! NL Draw !M! cards. If ${modID}:Groove is more than !${modID}:GRV! , draw !${modID}:MORE_DRAW! more cards. NL Exhaust."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Draw !M! cards. If ${modID}:Groove is more than !${modID}:GRV! , draw !${modID}:MORE_DRAW! more cards. NL Exhaust."
   },
   "${modID}:DistortedBocchi": {
     "NAME": "Distorted Bocchi",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain 1 ${modID}:Distortion for each ${modID}:Bocchi_Anxiety.",
-    "UPGRADE_DESCRIPTION": "Innate. ${modID}:Bocchi! NL Gain 1 ${modID}:Distortion for each ${modID}:Bocchi_Anxiety."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain 1 ${modID}:Distortion for each ${modID}:Bocchi_Anxiety.",
+    "UPGRADE_DESCRIPTION": "Innate. [#f5a4b6]Bocchi[]! NL Gain 1 ${modID}:Distortion for each ${modID}:Bocchi_Anxiety."
   },
   "${modID}:RyoPray": {
     "NAME": "Ryo's Prayer",
-    "DESCRIPTION": "${modID}:Ryo! NL Deal !D! damage. NL Can only be played if you have no ${modID}:Kita cards in hand."
+    "DESCRIPTION": "[#4061a0]Ryo[]! NL Deal !D! damage. NL Can only be played if you have no ${modID}:Kita cards in hand."
   },
   "${modID}:BocchiAtWork": {
     "NAME": "Working Bocchi",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain !M! Gold. NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Gain !${modID}:DIST! ${modID}:Distortion. NL Exhaust."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain !M! Gold. NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Gain !${modID}:DIST! ${modID}:Distortion. NL Exhaust."
   },
   "${modID}:NijikaGambade": {
     "NAME": "Nijika Cheer Up",
-    "DESCRIPTION": "${modID}:Nijika! NL Gain [E] for every !M! ${modID}:Groove. NL Enter ${modID}:Nijika's_Solo."
+    "DESCRIPTION": "[#f2e088]Nijika[]! NL Gain [E] for every !M! ${modID}:Groove. NL Enter ${modID}:Nijika's_Solo."
   },
   "${modID}:KitaOmelette": {
     "NAME": "Magic Omelette Rice",
-    "DESCRIPTION": "${modID}:Kita! NL Gain !M! Regeneration. NL Enter ${modID}:Kita's_Solo."
+    "DESCRIPTION": "[#d0574e]Kita[]! NL Gain !M! Regeneration. NL Enter ${modID}:Kita's_Solo."
   },
   "${modID}:BocchiOmelette": {
     "NAME": "Evil Omelette Rice",
-    "DESCRIPTION": "${modID}:Bocchi! NL At the start of each turn, apply !M! Poison to ALL enemies and gain !${modID}:BAP! ${modID}:Bocchi_Anxiety."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL At the start of each turn, apply 1 Poison to ALL enemies for every ${modID}:Bocchi_Anxiety you have."
   },
   "${modID}:FleeGuitarist": {
     "NAME": "Fled Guitarist",
-    "DESCRIPTION": "${modID}:Kita! NL Gain !B! Block. NL If you have ${modID}:Distortion, gain [E].",
-    "UPGRADE_DESCRIPTION": "${modID}:Kita! NL Gain !B! Block. NL If you have ${modID}:Distortion, gain [E] [E]."
+    "DESCRIPTION": "[#d0574e]Kita[]! NL Gain !B! Block. NL If you have ${modID}:Distortion, gain [E].",
+    "UPGRADE_DESCRIPTION": "[#d0574e]Kita[]! NL Gain !B! Block. NL If you have ${modID}:Distortion, gain [E] [E]."
   },
   "${modID}:PubertySyndrome": {
     "NAME": "Seisyun Complex",
@@ -332,7 +332,7 @@
   },
   "${modID}:WormBocchi": {
     "NAME": "Hammerhead Snake",
-    "DESCRIPTION": "${modID}:Bocchi! NL Gain 1 Intangible for each 2 ${modID}:Bocchi_Anxiety. NL ${modID}:Bocchi_Anxiety can no longer be removed."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain 1 Intangible for each 2 ${modID}:Bocchi_Anxiety. NL ${modID}:Bocchi_Anxiety can no longer be removed."
   },
   "${modID}:GuitarLonelinessBluePlanet": {
     "NAME": "Guitar, Loneliness, Blue Planet",
@@ -352,11 +352,11 @@
   },
   "${modID}:KitaBocchiStyle": {
     "NAME": "Bocchified Kita",
-    "DESCRIPTION": "${modID}:Kita! Ethereal. NL Gain !M! ${modID}:Distortion for each ${modID}:Bocchi card in hand."
+    "DESCRIPTION": "[#d0574e]Kita[]! Ethereal. NL Gain !M! ${modID}:Distortion for each ${modID}:Bocchi card in hand."
   },
   "${modID}:DarwinKita": {
     "NAME": "Darwin Kita",
-    "DESCRIPTION": "${modID}:Kita! NL Choose !M! ${modID}:Bocchi cards from your draw pile to add to your hand. NL They cost 0 this turn. NL Exhaust."
+    "DESCRIPTION": "[#d0574e]Kita[]! NL Choose !M! ${modID}:Bocchi cards from your draw pile to add to your hand. NL They cost 0 this turn. NL Exhaust."
   },
   "${modID}:FantasyDisco": {
     "NAME": "Lonely Disco",
@@ -385,7 +385,7 @@
 
   "${modID}:BocchiQuickDraw": {
     "NAME": "Quick Draw",
-    "DESCRIPTION": "${modID}:Bocchi! NL Deal !D! damage. NL Draw !M! cards. NL Discard any drawn cards that don't increase ${modID}:Groove."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Deal !D! damage. NL Draw !M! cards. NL Discard any drawn cards that don't increase ${modID}:Groove."
   },
 
   "${modID}:RollingRolling": {
@@ -396,7 +396,7 @@
 
   "${modID}:NijikaEnergyDrink": {
     "NAME": "Energy Drink",
-    "DESCRIPTION": "${modID}:Nijika! NL Gain !B! Block. NL Gain [E] next turn."
+    "DESCRIPTION": "[#f2e088]Nijika[]! NL Gain !B! Block. NL Gain [E] next turn."
   },
 
   "${modID}:NeverForget": {
@@ -424,7 +424,7 @@
 
   "${modID}:EatGrass": {
     "NAME": "Eat Grass",
-    "DESCRIPTION": "${modID}:Ryo! NL Deal !D! damage. NL If you have less than !M! Gold, play this card again. NL Exhaust."
+    "DESCRIPTION": "[#4061a0]Ryo[]! NL Deal !D! damage. NL If you have less than !M! Gold, play this card again. NL Exhaust."
   },
 
   "${modID}:IntoTheLight": {
@@ -434,7 +434,7 @@
   },
   "${modID}:Bandman": {
     "NAME": "Band Man",
-    "DESCRIPTION": "Gain !B! Block for each card in hand that grants Groove. NL If ${modID}:Groove is greater than !${modID}:GRV!, gain an additional !M! Block per card.",
+    "DESCRIPTION": "Gain !B! Block for each card in hand that grants Groove. NL If in ${modID}:Ryo's_Solo, gain an additional !M! Block per card.",
     "EXTENDED_DESCRIPTION": [
       " NL (Gain ",
       " Block)"

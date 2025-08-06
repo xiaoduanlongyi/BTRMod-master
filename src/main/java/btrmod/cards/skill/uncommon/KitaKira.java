@@ -33,8 +33,8 @@ public class KitaKira extends BaseCard {
 
     private static final int DEBUFF = 1;
     private static final int UPG_DEBUFF = 0;
-    private static final int MORE_DEBUFF = 2;
-    private static final int UPG_MORE_DEBUFF = 0;
+    private static final int MORE_DEBUFF = 1;
+    private static final int UPG_MORE_DEBUFF = 1;
 
     public KitaKira() {
         super(ID, info);

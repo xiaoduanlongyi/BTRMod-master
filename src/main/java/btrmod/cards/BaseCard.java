@@ -3,8 +3,11 @@ package btrmod.cards;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
+import basemod.helpers.TooltipInfo;
 import btrmod.BTRMod;
 import btrmod.util.CardStats;
+import btrmod.util.CardTagEnum;
+import btrmod.util.KeywordInfo;
 import btrmod.util.TriFunction;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,6 +19,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static btrmod.util.GeneralUtils.removePrefix;
@@ -729,6 +733,44 @@ public abstract class BaseCard extends CustomCard {
      */
     public boolean hasCustomVar(String key) {
         return cardVariables.containsKey(key);
+    }
+
+    // 建立tag到keyword ID的映射
+    private static final Map<AbstractCard.CardTags, String> TAG_TO_KEYWORD = new HashMap<>();
+
+    static {
+        TAG_TO_KEYWORD.put(CardTagEnum.BOCCHI, "BOCCHI");
+        TAG_TO_KEYWORD.put(CardTagEnum.KITA, "KITA");
+        TAG_TO_KEYWORD.put(CardTagEnum.NIJIKA, "NIJIKA");
+        TAG_TO_KEYWORD.put(CardTagEnum.RYO, "RYO");
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tips = new ArrayList<>();
+
+        // 先获取子类可能定义的自定义tooltips
+        List<TooltipInfo> childTips = getAdditionalTooltips();
+        if (childTips != null) {
+            tips.addAll(childTips);
+        }
+
+        // 自动根据tag添加对应的keyword tooltip
+        for (Map.Entry<AbstractCard.CardTags, String> entry : TAG_TO_KEYWORD.entrySet()) {
+            if (this.hasTag(entry.getKey())) {
+                KeywordInfo info = BTRMod.keywords.get(entry.getValue());
+                if (info != null) {
+                    tips.add(new TooltipInfo(info.PROPER_NAME, info.DESCRIPTION));
+                }
+            }
+        }
+
+        return tips;
+    }
+
+    // 子类可以重写这个方法来添加额外的tooltips
+    protected List<TooltipInfo> getAdditionalTooltips() {
+        return null;
     }
 
 //    protected void initializeCharacterIcon() {

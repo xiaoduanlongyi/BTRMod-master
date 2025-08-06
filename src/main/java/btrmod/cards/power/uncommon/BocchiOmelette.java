@@ -20,7 +20,7 @@ public class BocchiOmelette extends BaseCard {
             CardType.POWER,
             CardRarity.UNCOMMON,
             CardTarget.NONE,
-            1
+            2
     );
 
     private static final int POISON = 1;  // 每层波奇自闭施加的中毒层数
@@ -33,7 +33,7 @@ public class BocchiOmelette extends BaseCard {
 
         setMagic(POISON, UPG_POISON);
         setCustomVar("BAP", BAP, UPG_BAP);
-        setInnate(false, true);
+        setCostUpgrade(1);
 
         tags.add(BOCCHI);
     }

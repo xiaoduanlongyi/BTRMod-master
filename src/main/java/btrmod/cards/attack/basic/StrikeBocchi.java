@@ -54,20 +54,20 @@ public class StrikeBocchi extends BaseCard {
         addToBot(new ApplyPowerAction(p, p, new GroovePower(p, customVar("GRV"))));
     }
 
-    @Override
-    public List<TooltipInfo> getCustomTooltips() {
-        List<TooltipInfo> tips = new ArrayList<>();
-
-        KeywordInfo BocchiInfo = BTRMod.keywords.get("BOCCHI");
-        if (BocchiInfo != null) {
-            tips.add(new TooltipInfo(
-                    BocchiInfo.PROPER_NAME,
-                    BocchiInfo.DESCRIPTION
-            ));
-        }
-
-        return tips;
-    }
+//    @Override
+//    public List<TooltipInfo> getCustomTooltips() {
+//        List<TooltipInfo> tips = new ArrayList<>();
+//
+//        KeywordInfo BocchiInfo = BTRMod.keywords.get("BOCCHI");
+//        if (BocchiInfo != null) {
+//            tips.add(new TooltipInfo(
+//                    BocchiInfo.PROPER_NAME,
+//                    BocchiInfo.DESCRIPTION
+//            ));
+//        }
+//
+//        return tips;
+//    }
 
     @Override
     public AbstractCard makeCopy() { //Optional

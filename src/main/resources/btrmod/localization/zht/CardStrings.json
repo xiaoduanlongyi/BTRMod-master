@@ -11,19 +11,19 @@
   },
   "${modID}:StrikeKita": {
     "NAME": "掃弦打擊",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 造成 !D! 點傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
+    "DESCRIPTION": "[#d0574e]喜多[] ！ NL 造成 !D! 點傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
   },
   "${modID}:StrikeNijika": {
     "NAME": "鼓槌打擊",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 造成 !D! 點傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
+    "DESCRIPTION": "[#f2e088]虹夏[] ！ NL 造成 !D! 點傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
   },
   "${modID}:StrikeBocchi": {
     "NAME": "推弦打擊",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 造成 !D! 點傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 造成 !D! 點傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
   },
   "${modID}:StrikeRyo": {
     "NAME": "貝斯打擊",
-    "DESCRIPTION": "${modID}:涼 ！ NL 造成 !D! 點傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
+    "DESCRIPTION": "[#4061a0]涼[] ！ NL 造成 !D! 點傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
   },
   "${modID}:MatureMango": {
     "NAME": "完熟芒果",
@@ -35,64 +35,64 @@
   },
   "${modID}:ProudBocchi": {
     "NAME": "得意波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 獲得 !B! 點 格擋 。 NL 移除 !M! 層 ${modID}:波奇自閉 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 獲得 !B! 點 格擋 。 NL 移除 !M! 層 ${modID}:波奇自閉 。"
   },
   "${modID}:GiveMeMoney": {
     "NAME": "涼乞鈔",
-    "DESCRIPTION": "${modID}:涼 ！ NL 對所有敵人造成 !D! 傷害，未被格擋的傷害轉化為金幣 。 NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 消耗 。"
+    "DESCRIPTION": "[#4061a0]涼[] ！ NL 對所有敵人造成 !D! 傷害，未被格擋的傷害轉化為金幣 。 NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 消耗 。"
   },
   "${modID}:EatGrass_DEPRECATE": {
     "NAME": "吃草",
-    "DESCRIPTION": "${modID}:涼 ！ NL 失去 !M! HP。造成 !D! 點傷害。 NL 消耗 。"
+    "DESCRIPTION": "[#4061a0]涼[] ！ NL 失去 !M! HP。造成 !D! 點傷害。 NL 消耗 。"
   },
   "${modID}:BocchiGambade": {
     "NAME": "波奇打氣",
-    "DESCRIPTION": "${modID}:波奇 ! NL 減少1層 ${modID}:波奇自閉 。 NL 抽 !M! 張牌。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 減少1層 ${modID}:波奇自閉 。 NL 抽 !M! 張牌。"
   },
   "${modID}:FireBocchi": {
     "NAME": "噴火波奇",
-    "DESCRIPTION": "${modID}:波奇 ! NL 造成 !D! 點傷害。 NL 給予 !M! 層 易傷 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 造成 !D! 點傷害。 NL 給予 !M! 層 易傷 。 NL 如果 ${modID}:波奇自閉 層數大於 !${modID}:BAP! ，這張牌耗能為0。"
   },
   "${modID}:SuperBocchi": {
     "NAME": "超級賽亞波奇",
-    "DESCRIPTION": "${modID}:波奇 ! NL 減少 !${modID}:BA1! 層 ${modID}:波奇自閉 。 NL 獲得 !M! 力量 。 NL 獲得 !M! 敏捷 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 減少 !${modID}:BA1! 層 ${modID}:波奇自閉 。 NL 獲得 !M! 力量 。 NL 獲得 !M! 敏捷 。"
   },
   "${modID}:BocchiScream": {
     "NAME": "波奇的吶喊",
-    "DESCRIPTION": "${modID}:波奇 ! NL 獲得 !${modID}:BA2! 層 ${modID}:波奇自閉 。 NL 所有敵人失去 !M! 力量 。 NL 消耗 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 獲得 !${modID}:BA2! 層 ${modID}:波奇自閉 。 NL 所有敵人失去 !M! 力量 。 NL 消耗 。"
   },
   "${modID}:RevengeOnByrd": {
     "NAME": "戰鷹",
-    "DESCRIPTION": "${modID}:波奇 ! NL 造成 !D! 點傷害 !M! 次。 NL 對異鳥造成雙倍傷害 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 造成 !D! 點傷害 !M! 次。 NL 對異鳥造成雙倍傷害 。"
   },
   "${modID}:GuitarHero": {
     "NAME": "吉他英雄",
-    "DESCRIPTION": "${modID}:波奇 ！   虛無 。 NL 每回合打出的第一張 ${modID}:波奇 的牌打出兩次。 NL 每回合開始時獲得 [E] 。",
-    "UPGRADE_DESCRIPTION": "${modID}:波奇 ! NL 每回合打出的第一張 ${modID}:波奇 的牌打出兩次。 NL 每回合開始時獲得 [E] 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ 虛無 。 NL 每回合打出的第一張 ${modID}:波奇 的牌打出兩次。 NL 每回合開始時獲得 [E] 。",
+    "UPGRADE_DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 每回合打出的第一張 ${modID}:波奇 的牌打出兩次。 NL 每回合開始時獲得 [E] 。"
   },
   "${modID}:BocchiLeapOfFaith": {
     "NAME": "信仰之躍",
-    "DESCRIPTION": "${modID}:波奇 ! NL 對所有敵人造成 !D! 傷害。 NL 增加 !M! 層 ${modID}:波奇自閉 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 對所有敵人造成 !D! 傷害。 NL 增加 !M! 層 ${modID}:波奇自閉 。"
   },
   "${modID}:Swing": {
     "NAME": "大力掃弦",
-    "DESCRIPTION": "${modID}:喜多 ! NL 對所有敵人造成 !D! 傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
+    "DESCRIPTION": "[#d0574e]喜多[] ！ NL 對所有敵人造成 !D! 傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
   },
   "${modID}:FollowUpNijika": {
     "NAME": "虹夏追擊",
-    "DESCRIPTION": "${modID}:虹夏 ! NL 造成 !D! 傷害。 NL 如果本場戰鬥中打出的上一張牌是攻擊牌，抽 !M! 張牌。"
+    "DESCRIPTION": "[#f2e088]虹夏[] ！ NL 造成 !D! 傷害。 NL 如果本場戰鬥中打出的上一張牌是攻擊牌，抽 !M! 張牌。"
   },
   "${modID}:BocchiGhost": {
     "NAME": "幽靈波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 獲得 !M! 層 無實體 。 NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 每打出一次，本場戰鬥中耗能加1。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 獲得 !M! 層 無實體 。 NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 每打出一次，本場戰鬥中耗能加1。"
   },
   "${modID}:CalmHeadBocchi": {
     "NAME": "冷靜頭腦",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 獲得 !B! 點 格擋 。 NL 抽 !M! 張牌。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 獲得 !B! 點 格擋 。 NL 抽 !M! 張牌。"
   },
   "${modID}:JawPoke": {
     "NAME": "下巴刺擊",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 隨機對敵人造成 !D! 點傷害 !M! 次 。 NL 每次攻擊施加1層 易傷 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 隨機對敵人造成 !D! 點傷害 !M! 次 。 NL 每次攻擊施加1層 易傷 。"
   },
   "${modID}:IfConstellation": {
     "NAME": "若能化作星座",
@@ -104,69 +104,69 @@
   },
   "${modID}:ShowBelly": {
     "NAME": "露出肚皮",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 給予所有敵人 !M! 層 虛弱 。 NL 移除自身 !B! 點 格擋 。 NL 消耗 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 給予所有敵人 !M! 層 虛弱 。 NL 移除自身 !B! 點 格擋 。 NL 消耗 。"
   },
   "${modID}:BocchiShowHead": {
     "NAME": "波奇探頭",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 移除 !M! 層 ${modID}:波奇自閉 。 NL 在下一回合多抽2張牌"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 移除 !M! 層 ${modID}:波奇自閉 。 NL 在下一回合多抽2張牌"
   },
   "${modID}:RyoReturnMoney": {
     "NAME": "下跪還錢",
-    "DESCRIPTION": "${modID}:涼 ！ NL 移除 !M! 層 ${modID}:波奇自閉 。 NL 失去 !${modID}:MONEY_RETURN! 金幣 。"
+    "DESCRIPTION": "[#4061a0]涼[] ！ NL 移除 !M! 層 ${modID}:波奇自閉 。 NL 失去 !${modID}:MONEY_RETURN! 金幣 。"
   },
   "${modID}:KitaKita": {
     "NAME": "Kita~Kita~",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 使一個敵人 ${modID}:眩暈 。 NL 進入 ${modID}:喜門 。 NL 消耗 。"
+    "DESCRIPTION": "[#d0574e]喜多[] ！ NL 使一個敵人 ${modID}:眩暈 。 NL 進入 ${modID}:喜門 。 NL 消耗 。"
   },
   "${modID}:MuliMuli": {
     "NAME": "牡蠣牡蠣",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 造成 !D! 點傷害。 獲得 !${modID}:GRV! 層 ${modID}:律動 。 NL 在棄牌堆放入一張此牌的複製品。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 造成 !D! 點傷害。 獲得 !${modID}:GRV! 層 ${modID}:律動 。 NL 在棄牌堆放入一張此牌的複製品。"
   },
   "${modID}:SacrificeBocchi": {
     "NAME": "波奇切腹",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 獲得 [E] [E] 。 NL 抽 !M! 張牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "${modID}:波奇 ！ NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 獲得 [E] [E] [E] 。 NL 抽 !M! 張牌。 NL 消耗 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 獲得 [E] [E] 。 NL 抽 !M! 張牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 獲得 [E] [E] [E] 。 NL 抽 !M! 張牌。 NL 消耗 。"
   },
   "${modID}:RyoEatEat": {
     "NAME": "沙縣小吃",
-    "DESCRIPTION": "${modID}:涼 ！ NL 對所有敵人造成 !D! 傷害。 NL 每殺死一個敵人獲得 !M! 點最大生命。 NL 消耗 。"
+    "DESCRIPTION": "[#4061a0]涼[] ！ NL 對所有敵人造成 !D! 傷害。 NL 每殺死一個敵人獲得 !M! 點最大生命。 NL 消耗 。"
   },
   "${modID}:MuscleNijika": {
     "NAME": "爆裂鼓手",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 移除所有 ${modID}:律動 。 NL 每有 !M! 層 ${modID}:律動 ，獲得1 力量 。 NL 消耗 。"
+    "DESCRIPTION": "[#f2e088]虹夏[] ！ NL 移除所有 ${modID}:律動 。 NL 每有 !M! 層 ${modID}:律動 ，獲得1 力量 。 NL 消耗 。"
   },
   "${modID}:RyoTouchFace": {
     "NAME": "喲西喲西",
-    "DESCRIPTION": "${modID}:涼 ！ NL 獲得 !B! 點 格擋。 NL 移除 !M! 層 ${modID}:波奇自閉 。"
+    "DESCRIPTION": "[#4061a0]涼[] ！ NL 獲得 !B! 點 格擋。 NL 移除 !M! 層 ${modID}:波奇自閉 。"
   },
   "${modID}:FallenAngel": {
     "NAME": "下北澤的墮天使",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 造成 !D! 點傷害。 NL 給予 !M! 層 虛弱 。 NL 給予 !M! 層 易傷 。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
+    "DESCRIPTION": "[#f2e088]虹夏[] ！ NL 造成 !D! 點傷害。 NL 給予 !M! 層 虛弱 。 NL 給予 !M! 層 易傷 。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
   },
   "${modID}:ShimokitaAngel": {
     "NAME": "下北澤的大天使",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 在每回合開始時移除 NL !M! 層 ${modID}:波奇自閉 。 NL 進入 ${modID}:虹門 。"
+    "DESCRIPTION": "[#f2e088]虹夏[] ！ NL 在每回合開始時移除 NL !M! 層 ${modID}:波奇自閉 。 NL 進入 ${modID}:虹門 。"
   },
   "${modID}:RyoQuickWrite": {
     "NAME": "涼子速寫",
-    "DESCRIPTION": "${modID}:涼 ！ NL 抽牌直到將手牌抽滿。 NL 失去 !M! 層 ${modID}:律動 。 NL 消耗 。"
+    "DESCRIPTION": "[#4061a0]涼[] ！ NL 抽牌直到將手牌抽滿。 NL 失去 !M! 層 ${modID}:律動 。 NL 消耗 。"
   },
   "${modID}:NijikaMiddleFinger": {
     "NAME": "豎起中指",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 造成 !D! 點傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。 NL 進入 ${modID}:虹門 。"
+    "DESCRIPTION": "[#f2e088]虹夏[] ！ NL 造成 !D! 點傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。 NL 進入 ${modID}:虹門 。"
   },
   "${modID}:KitaGone": {
     "NAME": "歸去來兮",
-    "DESCRIPTION": "${modID}:喜多 ！ 保留 。 NL 失去 !M! 點最大生命。 NL 當你要被殺死時，免死並回復到最大生命值的50%。"
+    "DESCRIPTION": "[#d0574e]喜多[] ！ 保留 。 NL 失去 !M! 點最大生命。 NL 當你要被殺死時，免死並回復到最大生命值的50%。"
   },
   "${modID}:PinkBocchi": {
     "NAME": "粉毛吉他手",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 對所有敵人造成 !D! 傷害X次。 NL 如果 ${modID}:波奇自閉 少於 !M! 層 ，X次數加1 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 對所有敵人造成 !D! 傷害X次。 NL 如果 ${modID}:波奇自閉 少於 !M! 層 ，X次數加1 。"
   },
   "${modID}:RyoSuit": {
     "NAME": "西裝涼",
-    "DESCRIPTION": "${modID}:涼 ！ NL 將2張涼的小弟放入手牌。 NL 進入 ${modID}:涼門 。",
-    "UPGRADE_DESCRIPTION": "${modID}:涼 ！ NL 將2張涼的小弟+放入手牌。 NL 進入 ${modID}:涼門 。"
+    "DESCRIPTION": "[#4061a0]涼[] ！ NL 將2張涼的小弟放入手牌。 NL 進入 ${modID}:涼門 。",
+    "UPGRADE_DESCRIPTION": "[#4061a0]涼[] ！ NL 將2張涼的小弟+放入手牌。 NL 進入 ${modID}:涼門 。"
   },
   "${modID}:RyoHenchman1": {
     "NAME": "涼的小弟 死",
@@ -178,20 +178,20 @@
   },
   "${modID}:BocchiDraw": {
     "NAME": "搜尋",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 失去 !M! 層 ${modID}:律動 。 NL 將抽牌堆中所有 ${modID}:波奇 的卡牌抽入手中。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 失去 !M! 層 ${modID}:律動 。 NL 將抽牌堆中所有 ${modID}:波奇 的卡牌抽入手中。"
   },
   "${modID}:RyoThumbUp": {
     "NAME": "涼的肯定",
-    "DESCRIPTION": "${modID}:涼 ！ NL 在每回合開始時獲得 NL !${modID}:GRV! 層 ${modID}:律動 。",
-    "UPGRADE_DESCRIPTION": "${modID}:涼 ！ 固有 。 NL 在每回合開始時獲得 NL !${modID}:GRV! 層 ${modID}:律動 。"
+    "DESCRIPTION": "[#4061a0]涼[] ！ NL 在每回合開始時獲得 NL !${modID}:GRV! 層 ${modID}:律動 。",
+    "UPGRADE_DESCRIPTION": "[#4061a0]涼[] ！ 固有 。 NL 在每回合開始時獲得 NL !${modID}:GRV! 層 ${modID}:律動 。"
   },
   "${modID}:KitaPipa": {
     "NAME": "琵琶主唱",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 造成 !D! 點傷害。 NL 施加 !M! 層 虛弱 。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
+    "DESCRIPTION": "[#d0574e]喜多[] ！ NL 造成 !D! 點傷害。 NL 施加 !M! 層 虛弱 。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
   },
   "${modID}:NijikaHeadShake": {
     "NAME": "搖搖腦汁",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 造成 !M! 次 0.5倍 ${modID}:律動傷害 。 NL 消耗 。",
+    "DESCRIPTION": "[#f2e088]虹夏[] ！ NL 造成 !M! 次 0.5倍 ${modID}:律動傷害 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL (造成 !D! x !M! =  ",
       " 傷害)"
@@ -199,15 +199,15 @@
   },
   "${modID}:KitaRap": {
     "NAME": "喜多說唱",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 造成 !D! 點傷害。 NL 抽 !M! 張牌。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
+    "DESCRIPTION": "[#d0574e]喜多[] ！ NL 造成 !D! 點傷害。 NL 抽 !M! 張牌。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。"
   },
   "${modID}:BocchiTwist": {
     "NAME": "抽象波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 獲得 !M! 層 ${modID}:抽象 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 獲得 !M! 層 ${modID}:抽象 。"
   },
   "${modID}:SixStringBass": {
     "NAME": "六弦貝斯",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 造成 !D! 點傷害 。 NL 失去 !${modID}:GRV! 層 ${modID}:律動 。 NL 獲得 !M! 層 ${modID}:抽象 。"
+    "DESCRIPTION": "[#d0574e]喜多[] ！ NL 造成 !D! 點傷害 。 NL 失去 !${modID}:GRV! 層 ${modID}:律動 。 NL 獲得 !M! 層 ${modID}:抽象 。"
   },
   "${modID}:FatherTear": {
     "NAME": "老父親的眼淚",
@@ -220,7 +220,7 @@
   },
   "${modID}:OctopusBocchi": {
     "NAME": "八爪波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 獲得 !B! 點 格擋 。 NL 抽 !M! 張牌。 NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 獲得 !B! 點 格擋 。 NL 抽 !M! 張牌。 NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。"
   },
   "${modID}:FadeAway": {
     "NAME": "消逝的波奇",
@@ -232,15 +232,15 @@
   },
   "${modID}:NijikaThumbUp": {
     "NAME": "天使的肯定",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 移除 !${modID}:BASE! 層 ${modID}:波奇自閉 。 NL 如果當前 ${modID}:波奇自閉 層數大於 !${modID}:THRESHOLD! ,多移除 !${modID}:BONUS! 層。 NL 消耗 。"
+    "DESCRIPTION": "[#f2e088]虹夏[] ！ NL 移除 !${modID}:BASE! 層 ${modID}:波奇自閉 。 NL 如果當前 ${modID}:波奇自閉 層數大於 !${modID}:THRESHOLD! ,多移除 !${modID}:BONUS! 層。 NL 消耗 。"
   },
   "${modID}:BocchiRiff": {
     "NAME": "即興Riff",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 對所有敵人造成 !D! 傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。 NL 移除 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 進入 ${modID}:波門 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 對所有敵人造成 !D! 傷害。 NL 獲得 !${modID}:GRV! 層 ${modID}:律動 。 NL 移除 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 進入 ${modID}:波門 。"
   },
   "${modID}:BocchiHappy_DEPRECATE": {
     "NAME": "波奇被誇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 造成 !D! 點傷害。 NL 移除 !${modID}:BAP! 層 ${modID}:波奇自閉 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 造成 !D! 點傷害。 NL 移除 !${modID}:BAP! 層 ${modID}:波奇自閉 。"
   },
   "${modID}:BocchiOrKita": {
     "NAME": "波喜多",
@@ -270,7 +270,7 @@
   },
   "${modID}:DominationKita": {
     "NAME": "支配惡魔",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 手牌中每有一張 ${modID}:波奇 的牌，造成 !M! 點傷害。 NL 獲得 !${modID}:DISTOR! 層 ${modID}:抽象 。",
+    "DESCRIPTION": "[#d0574e]喜多[] ！ NL 手牌中每有一張 ${modID}:波奇 的牌，造成 !M! 點傷害。 NL 獲得 !${modID}:DISTOR! 層 ${modID}:抽象 。",
     "EXTENDED_DESCRIPTION": [
       " NL (造成 ",
       " 點傷害）"
@@ -278,41 +278,41 @@
   },
   "${modID}:KitaKira": {
     "NAME": "喜多閃耀",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 對所有敵人施加 !M! 層 易傷 。 NL 對自己施加 !${modID}:SELF! 層 易傷 。 NL 消耗 。"
+    "DESCRIPTION": "[#d0574e]喜多[] ！ NL 對所有敵人施加 !M! 層 易傷 。 NL 如果處於 ${modID}:喜門 ，多施加 !${modID}:MORE! 層 。 NL 消耗 。"
   },
   "${modID}:BocchiHeartbeat": {
     "NAME": "帝王引擎",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 抽 !M! 張牌 。如果 ${modID}:律動 大於 !${modID}:GRV! 層 ，多抽 !${modID}:MORE_DRAW! 張牌。 NL 消耗 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 抽 !M! 張牌 。如果 ${modID}:律動 大於 !${modID}:GRV! 層 ，多抽 !${modID}:MORE_DRAW! 張牌。 NL 消耗 。"
   },
   "${modID}:DistortedBocchi": {
     "NAME": "抽象波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 每有1層 ${modID}:波奇自閉 ，獲得1層 ${modID}:抽象 。",
-    "UPGRADE_DESCRIPTION": "固有 。 ${modID}:波奇 ！ NL 每有1層 ${modID}:波奇自閉 ，獲得1層 ${modID}:抽象 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 每有1層 ${modID}:波奇自閉 ，獲得1層 ${modID}:抽象 。",
+    "UPGRADE_DESCRIPTION": "固有 。 [#f5a4b6]波奇[] ！ NL 每有1層 ${modID}:波奇自閉 ，獲得1層 ${modID}:抽象 。"
   },
   "${modID}:RyoPray": {
     "NAME": "涼的祈禱",
-    "DESCRIPTION": "${modID}:涼 ！ NL 造成 !D! 點傷害 。 NL 只有在手牌中沒有 ${modID}:喜多 的牌時可以打出。"
+    "DESCRIPTION": "[#4061a0]涼[] ！ NL 造成 !D! 點傷害 。 NL 只有在手牌中沒有 ${modID}:喜多 的牌時可以打出。"
   },
   "${modID}:BocchiAtWork": {
     "NAME": "打工波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 獲得 !M! 金幣 。 NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 獲得 !${modID}:DIST! 層 ${modID}:抽象 。 NL 消耗 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 獲得 !M! 金幣 。 NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 獲得 !${modID}:DIST! 層 ${modID}:抽象 。 NL 消耗 。"
   },
   "${modID}:NijikaGambade": {
     "NAME": "虹夏打氣",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 每有 !M! 層 ${modID}:律動 ，獲得 [E] 。 NL 進入 ${modID}:虹門 。"
+    "DESCRIPTION": "[#f2e088]虹夏[] ！ NL 每有 !M! 層 ${modID}:律動 ，獲得 [E] 。 NL 進入 ${modID}:虹門 。"
   },
   "${modID}:KitaOmelette": {
     "NAME": "魔法蛋包飯",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 獲得 !M! 層 再生 。 NL 進入 ${modID}:喜門 。"
+    "DESCRIPTION": "[#d0574e]喜多[] ！ NL 獲得 !M! 層 再生 。 NL 進入 ${modID}:喜門 。"
   },
   "${modID}:BocchiOmelette": {
     "NAME": "邪惡蛋包飯",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 每回合開始時，給予所有敵人 !M! 層 中毒 , 給予自己 !${modID}:BAP! 層 ${modID}:波奇自閉 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 每回合開始時，每有1層 ${modID}:波奇自閉 ，對所有敵人施加 !M! 層 中毒 。"
   },
   "${modID}:FleeGuitarist": {
     "NAME": "逃跑的吉他手",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 獲得 !B! 點 格擋 。 NL 如果你擁有 ${modID}:抽象 ，獲得 [E] 。",
-    "UPGRADE_DESCRIPTION": "${modID}:喜多 ！ NL 獲得 !B! 點 格擋 。 NL 如果你擁有 ${modID}:抽象 ，獲得 [E] [E] 。"
+    "DESCRIPTION": "[#d0574e]喜多[] ！ NL 獲得 !B! 點 格擋 。 NL 如果你擁有 ${modID}:抽象 ，獲得 [E] 。",
+    "UPGRADE_DESCRIPTION": "[#d0574e]喜多[] ！ NL 獲得 !B! 點 格擋 。 NL 如果你擁有 ${modID}:抽象 ，獲得 [E] [E] 。"
   },
   "${modID}:PubertySyndrome": {
     "NAME": "青春症候群",
@@ -332,7 +332,7 @@
   },
   "${modID}:WormBocchi": {
     "NAME": "槌子蛇波奇",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 每有2層 ${modID}:波奇自閉 獲得1層 無實體 。 NL 無法再移除 ${modID}:波奇自閉 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 每有2層 ${modID}:波奇自閉 獲得1層 無實體 。 NL 無法再移除 ${modID}:波奇自閉 。"
   },
   "${modID}:GuitarLonelinessBluePlanet": {
     "NAME": "吉他與孤獨與藍色星球",
@@ -352,11 +352,11 @@
   },
   "${modID}:KitaBocchiStyle": {
     "NAME": "波奇化喜多",
-    "DESCRIPTION": "${modID}:喜多 ！ 虛無 。 NL 手牌中每有1張 ${modID}:波奇 的牌， 獲得 !M! 層 ${modID}:抽象 。"
+    "DESCRIPTION": "[#d0574e]喜多[] ！ 虛無 。 NL 手牌中每有1張 ${modID}:波奇 的牌， 獲得 !M! 層 ${modID}:抽象 。"
   },
   "${modID}:DarwinKita": {
     "NAME": "達爾文喜多",
-    "DESCRIPTION": "${modID}:喜多 ！ NL 從抽牌堆中選擇 !M! 張 ${modID}:波奇 牌放入你的手牌。 NL 這些牌在本回合耗能變為0 。 NL 消耗 。"
+    "DESCRIPTION": "[#d0574e]喜多[] ！ NL 從抽牌堆中選擇 !M! 張 ${modID}:波奇 牌放入你的手牌。 NL 這些牌在本回合耗能變為0 。 NL 消耗 。"
   },
   "${modID}:FantasyDisco": {
     "NAME": "孤獨迪斯科",
@@ -380,7 +380,7 @@
   },
   "${modID}:BocchiQuickDraw": {
     "NAME": "掏出吉他",
-    "DESCRIPTION": "${modID}:波奇 ！ NL 造成 !D! 傷害。 NL 抽 !M! 張牌。 NL 丟棄抽到的牌中不增加 ${modID}:律動 的牌。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 造成 !D! 傷害。 NL 抽 !M! 張牌。 NL 丟棄抽到的牌中不增加 ${modID}:律動 的牌。"
   },
   "${modID}:RollingRolling": {
     "NAME": "翻轉岩石晨光灑落你身",
@@ -389,7 +389,7 @@
   },
   "${modID}:NijikaEnergyDrink": {
     "NAME": "能量飲料",
-    "DESCRIPTION": "${modID}:虹夏 ！ NL 獲得 !B! 點 格擋 。 NL 在下一回合獲得 [E] 。"
+    "DESCRIPTION": "[#f2e088]虹夏[] ！ NL 獲得 !B! 點 格擋 。 NL 在下一回合獲得 [E] 。"
   },
   "${modID}:NeverForget": {
     "NAME": "絕不會忘記",
@@ -413,7 +413,7 @@
   },
   "${modID}:EatGrass": {
     "NAME": "吃草",
-    "DESCRIPTION": "${modID}:涼 ！ NL 造成 !D! 點傷害 。 NL 如果當前金幣少於 !M! ,這張牌再打出1次。 NL 消耗 。"
+    "DESCRIPTION": "[#4061a0]涼[] ！ NL 造成 !D! 點傷害 。 NL 如果當前金幣少於 !M! ,這張牌再打出1次。 NL 消耗 。"
   },
   "${modID}:IntoTheLight": {
     "NAME": "向光",
@@ -422,7 +422,7 @@
   },
   "${modID}:Bandman": {
     "NAME": "樂隊人",
-    "DESCRIPTION": "手牌中每有1張給予律動的牌，獲得 !B! 格擋 。 NL 如果 ${modID}:律動 層數大於 !${modID}:GRV! ，每張牌額外獲得 !M! 格擋 。",
+    "DESCRIPTION": "手牌中每有1張給予律動的牌，獲得 !B! 格擋 。 NL 如果處於 ${modID}:涼門 ，每張牌額外獲得 !M! 格擋 。",
     "EXTENDED_DESCRIPTION": [
       " NL (獲得 ",
       " 點格擋)"

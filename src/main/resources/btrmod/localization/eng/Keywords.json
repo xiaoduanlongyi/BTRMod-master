@@ -22,6 +22,7 @@
   },
 
   {
+    "ID": "BOCCHI",
     "PROPER_NAME": "Bocchi",
     "NAMES": [
       "Bocchi",
@@ -31,6 +32,7 @@
   },
 
   {
+    "ID": "BOCCHISOLO",
     "PROPER_NAME": "Bocchi's Solo",
     "NAMES": [
       "Bocchi-chan's Solo",
@@ -41,6 +43,7 @@
   },
 
   {
+    "ID": "KITA",
     "PROPER_NAME": "Kita",
     "NAMES": [
       "Kita"
@@ -49,6 +52,7 @@
   },
 
   {
+    "ID": "KITASOLO",
     "PROPER_NAME": "Kita's Solo",
     "NAMES": [
       "Kita's Solo",
@@ -59,6 +63,7 @@
   },
 
   {
+    "ID": "NIJIKA",
     "PROPER_NAME": "Nijika",
     "NAMES": [
       "Nijika"
@@ -67,6 +72,7 @@
   },
 
   {
+    "ID": "NIJIKASOLO",
     "PROPER_NAME": "Nijika's Solo",
     "NAMES": [
       "Nijika's Solo",
@@ -77,6 +83,7 @@
   },
 
   {
+    "ID": "RYO",
     "PROPER_NAME": "Ryo",
     "NAMES": [
       "Ryo",
@@ -86,6 +93,7 @@
   },
 
   {
+    "ID": "RYOSOLO",
     "PROPER_NAME": "Ryo's Solo",
     "NAMES": [
       "Ryo's Solo",
@@ -96,6 +104,7 @@
   },
 
   {
+    "ID": "BAP",
     "PROPER_NAME": "Bocchi's Anxiety",
     "NAMES": [
       "Bocchi's Anxiety",
@@ -109,6 +118,7 @@
   },
 
   {
+    "ID": "GUITARHERO",
     "PROPER_NAME": "Guitar Hero",
     "NAMES": [
       "Guitar Hero",
@@ -118,6 +128,7 @@
   },
 
   {
+    "ID": "GRV",
     "PROPER_NAME": "Groove",
     "NAMES": [
       "Groove"
@@ -126,6 +137,7 @@
   },
 
   {
+    "ID": "GRVDMG",
     "PROPER_NAME": "Groove Damage",
     "NAMES": [
       "Groove Damage",
@@ -135,6 +147,7 @@
   },
 
   {
+    "ID": "STUN",
     "PROPER_NAME": "Stun",
     "NAMES": [
       "Stun"
@@ -143,6 +156,7 @@
   },
 
   {
+    "ID": "DIST",
     "PROPER_NAME": "Distortion",
     "NAMES": [
       "Distortion"
@@ -151,6 +165,7 @@
   },
 
   {
+    "ID": "FANTASY",
     "PROPER_NAME": "Bocchi's Fantasy",
     "NAMES": [
       "Fantasy",
@@ -161,6 +176,7 @@
   },
 
   {
+    "ID": "SOLO",
     "PROPER_NAME": "Solo",
     "NAMES": [
       "Member's Solo",

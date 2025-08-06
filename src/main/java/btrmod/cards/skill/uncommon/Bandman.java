@@ -3,6 +3,8 @@ package btrmod.cards.skill.uncommon;
 import btrmod.cards.BaseCard;
 import btrmod.character.KessokuBandChar;
 import btrmod.powers.GroovePower;
+import btrmod.powers.SoloPowers.KitaSoloPower;
+import btrmod.powers.SoloPowers.RyoSoloPower;
 import btrmod.util.CardStats;
 import btrmod.util.CardTagEnum;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -52,9 +54,8 @@ public class Bandman extends BaseCard {
         // 计算基础格挡值
         int blockAmount = grooveGrantCards * block;
 
-        // 如果当前律动大于35，每张牌额外获得格挡
-        int currentGroove = getGrooveStacks();
-        if (currentGroove > customVar("GRV")) {
+        // 如果处于凉门，每张牌额外获得格挡
+        if (p.hasPower(RyoSoloPower.POWER_ID)) {
             blockAmount += grooveGrantCards * magicNumber;
         }
 
@@ -89,8 +90,8 @@ public class Bandman extends BaseCard {
         }
 
         int blockAmount = grooveGrantCards * block;
-        int currentGroove = getGrooveStacks();
-        if (currentGroove > customVar("GRV")) {
+        // 如果处于凉门，每张牌额外获得格挡
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(RyoSoloPower.POWER_ID)) {
             blockAmount += grooveGrantCards * magicNumber;
         }
 
