@@ -1,0 +1,115 @@
+{
+  "btrmod:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+
+  "btrmod:Kessouku": {
+    "NAME": "결속",
+    "FLAVOR": "이 밴드의 연주를 끝내러 왔다.",
+    "DESCRIPTIONS": [
+      "전투 시작시, #ybtrmod:그루브 를 #b",
+      " 얻습니다."
+    ]
+  },
+
+  "btrmod:BocchiTheRockRelic": {
+    "NAME": "봇치 더 락",
+    "FLAVOR": "'남들 앞에서 연주할 수 있도록 매일 6시간 연습한 결과... 어느새 중학교가 끝나버렸네. 공연은 못 했어, 밴드 멤버... 모으지 못 했어, 애초에 친구 하나도 못 사귀었어...'",
+    "DESCRIPTIONS": [
+      "전투 시작시, #ybtrmod:커뮤증 중첩을 #b",
+      " 얻습니다. 이 유물을 보유하고 있을 경우, 커뮤증 중첩이 0이 되면 #ybtrmod:기타_히어로 를 1 얻습니다."
+    ]
+  },
+
+  "btrmod:ExtrovertedBocchi": {
+    "NAME": "외향적인 고토 히토리",
+    "FLAVOR": "내 C 코드를 봐줘. 어떻게 생각해?",
+    "DESCRIPTIONS": [
+      "#p봇치 #p더 #p락 을 대체합니다. 전투 시작시, 더 이상 #ybtrmod:커뮤증 중첩이 증가하지 않습니다. ",
+      " 대신 #ybtrmod:기타_히어로 효과도 더 이상 얻을 수 없게 됩니다."
+    ]
+  },
+
+  "btrmod:BocchiFan": {
+    "NAME": "봇치의 팬",
+    "FLAVOR": "고토 히토리의 최고의 팬! 봇치의 거리 공연에 깊이 매료된 사람입니다",
+    "DESCRIPTIONS": [
+      "매 턴 처음으로 #ybtrmod:커뮤증 을 감소시켰다면, [E] 를 얻습니다."
+    ]
+  },
+
+  "btrmod:CelebrationParty": {
+    "NAME": "뒤풀이",
+    "FLAVOR": "라이브가 성공적이면, 축하의 의미로 연회 한 번은 해줘야되는거 아니겠습니까?",
+    "DESCRIPTIONS": [
+      "전투 종료시, 보유한 #ybtrmod:그루브 중첩이 #b",
+      " 이상이라면, 체력을 #b",
+      " 회복합니다."
+    ]
+  },
+
+  "btrmod:KikuriBeerBottle": {
+    "NAME": "유리 맥주병",
+    "FLAVOR": "애주가 선배 히로이 키쿠리가 비운 맥주병입니다. 슬라이드 바로 사용할 수 있습니다.",
+    "DESCRIPTIONS": [
+      "전투 시작시, 무작위 3장의 #ybtrmod:봇치 카드 중 1장을 선택해 얻습니다."
+    ]
+  },
+
+  "btrmod:IntangibleBocchi": {
+    "NAME": "불가침 봇치",
+    "FLAVOR": "너무 뒤틀렸잖아!",
+    "DESCRIPTIONS": [
+      "#ybtrmod:디스토션 중첩을 얻을때마다, 불가침 을 #b",
+      " 얻습니다."
+    ]
+  },
+
+  "btrmod:MaidKita": {
+    "NAME": "메이드 키타 이쿠요",
+    "FLAVOR": "너무 반짝거려!",
+    "DESCRIPTIONS": [
+      "매 #b",
+      " 턴 마다, 무작위 적 하나에게 #ybtrmod:기절 을 #b1 부여합니다."
+    ]
+  },
+
+  "btrmod:Starry": {
+    "NAME": "STARRY",
+    "FLAVOR": "이지치 니지카의 언니인 이지치 세이카가 그녀를 위해 만들어낸 거점. 저 언니는 누가 말한것처럼 정말로 츤츤츤츤츤츤츤츤 데레로군요.",
+    "DESCRIPTIONS": [
+      "상점에 진입할 때마다, 무작위 카드 #b",
+      " 장을 강화합니다."
+    ]
+  },
+
+  "btrmod:NijikaBang": {
+    "NAME": "바보털",
+    "FLAVOR": "니지카의 바보털. 기타 피크로 사용할 수도 없고, 음식마냥 먹는 것도 불가능할 겁니다.",
+    "DESCRIPTIONS": [
+      "전투 시작시, #ybtrmod:니지카_솔로 모드로 진입합니다."
+    ]
+  },
+
+  "btrmod:RyoMoneyEye": {
+    "NAME": "료의 탐욕의 눈",
+    "FLAVOR": "돈 좀 줘!",
+    "DESCRIPTIONS": [
+      "전투 종료시, 골드를 #b",
+      " 얻습니다."
+    ]
+  },
+
+  "btrmod:GuitarMan": {
+    "NAME": "기타오",
+    "FLAVOR": "고토 히토리의 상상 친구입니다.",
+    "DESCRIPTIONS": [
+      "매 턴 시작시, #ybtrmod:그루브 를 #b",
+      " 얻습니다."
+    ]
+  }
+}

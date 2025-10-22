@@ -1,0 +1,189 @@
+[
+  {
+    "PROPER_NAME": "This is displayed in the tooltip.",
+    "NAMES": [
+      "these",
+      "are",
+      "detected",
+      "in",
+      "the",
+      "text"
+    ],
+    "DESCRIPTION": "This is displayed in the tooltip. Spaces should not be used be avoided in NAMES, with the exception of multi-word keywords (see next entry)."
+  },
+  {
+    "PROPER_NAME": "Multiword Keyword",
+    "NAMES": [
+      "multiword keyword",
+      "multiword_keyword",
+      "multiword_keywords"
+    ],
+    "DESCRIPTION": "Make sure the first element in NAMES has no underscores. The rest should use _ in the place of spaces. In card text, you'll use the underscore versions."
+  },
+
+  {
+    "ID": "BOCCHI",
+    "PROPER_NAME": "봇치",
+    "NAMES": [
+      "봇치",
+      "히토리"
+    ],
+    "DESCRIPTION": "봇치의 차례! NL #y봇치 카드 #b3 장을 #y연속으로 사용하면, #y봇치 #y솔로 모드로 진입합니다. NL 캐릭터 태그가 없는 카드를 사용하더라도 콤보가 깨지지는 않습니다."
+  },
+
+  {
+    "ID": "BOCCHISOLO",
+    "PROPER_NAME": "고토 히토리의 솔로",
+    "NAMES": [
+      "고토 히토리의 솔로",
+      "봇치_솔로",
+      "히토리_솔로"
+    ],
+    "DESCRIPTION": "봇치 솔로 모드 상태일때는, #y그루브 #y피해 의 피해량이 추가로 #y50% 증가합니다. NL #y봇치 카드를 사용할 때마다, #y그루브 를 추가로 #b1 얻습니다. NL 다른 멤버의 솔로 모드에 진입하면, 이 모드에서 벗어납니다."
+  },
+
+  {
+    "ID": "KITA",
+    "PROPER_NAME": "키타",
+    "NAMES": [
+      "키타"
+    ],
+    "DESCRIPTION": "키타의 차례! NL #y키타 카드 #b3 장을 #y연속으로 사용하면, #y키타 #y솔로 모드로 진입합니다. NL 캐릭터 태그가 없는 카드를 사용하더라도 콤보가 깨지지는 않습니다."
+  },
+
+  {
+    "ID": "KITASOLO",
+    "PROPER_NAME": "키타 이쿠요의 솔로",
+    "NAMES": [
+      "키타 이쿠요의 솔로",
+      "키타_솔로",
+      "키타_솔로"
+    ],
+    "DESCRIPTION": "키타 솔로 모드 상태일때는, 매 턴 시작시 카드 #b2 장을 추가로 뽑습니다. NL #y키타 카드를 사용할 때마다, #y그루브 를 추가로 #b1 얻습니다. NL 다른 멤버의 솔로 모드에 진입하면, 이 모드에서 벗어납니다."
+  },
+
+  {
+    "ID": "NIJIKA",
+    "PROPER_NAME": "니지카",
+    "NAMES": [
+      "니지카"
+    ],
+    "DESCRIPTION": "니지카의 차례! NL #y니지카 카드 #b3 장을 #y연속으로 사용하면, #y니지카 #y솔로 모드로 진입합니다. NL 캐릭터 태그가 없는 카드를 사용하더라도 콤보가 깨지지는 않습니다."
+  },
+
+  {
+    "ID": "NIJIKASOLO",
+    "PROPER_NAME": "이지치 니지카의 솔로",
+    "NAMES": [
+      "이지치 니지카의 솔로",
+      "니지카_솔로",
+      "니지카_솔로"
+    ],
+    "DESCRIPTION": "니지카 솔로 모드 상태일때는, #y커뮤증 중첩을 감소시킬때마다, 추가로 #b1 만큼 더 감소시킵니다. NL #y니지카 카드를 사용할 때마다, #y그루브 를 추가로 #b1 얻습니다. NL 다른 멤버의 솔로 모드에 진입하면, 이 모드에서 벗어납니다."
+  },
+
+  {
+    "ID": "RYO",
+    "PROPER_NAME": "료",
+    "NAMES": [
+      "료",
+      "료_선배"
+    ],
+    "DESCRIPTION": "료의 차례! NL #y료 카드 #b3 장을 #y연속으로 사용하면, #y료 #y솔로 모드로 진입합니다. NL 캐릭터 태그가 없는 카드를 사용하더라도 콤보가 깨지지는 않습니다."
+  },
+
+  {
+    "ID": "RYOSOLO",
+    "PROPER_NAME": "야마다 료의 솔로",
+    "NAMES": [
+      "야마다 료의 솔로",
+      "료_솔로",
+      "료_솔로"
+    ],
+    "DESCRIPTION": "료 솔로 모드 상태일때는, #y그루브 중첩 획득량이 2 배로 증가합니다. NL #y료 카드를 사용할 때마다, #y그루브 를 추가로 #b1 얻습니다. NL 다른 멤버의 솔로 모드에 진입하면, 이 모드에서 벗어납니다."
+  },
+
+  {
+    "ID": "BAP",
+    "PROPER_NAME": "커뮤증",
+    "NAMES": [
+      "커뮤증",
+      "불안감",
+      "봇치의_불안감",
+      "봇치의_커뮤증",
+      "히토리의_불안감",
+      "히토리의_커뮤증"
+    ],
+    "DESCRIPTION": "보유한 커뮤증 중첩 1당, 봇치 카드의 피해량이 #b10% 감소합니다. 커뮤증 보유량이 #b10 이상일시, #y망상 을 얻습니다. #p봇치 #p더 #p락 유물을 보유시, 커뮤증 중첩이 0이 될 경우, #y기타 #y히어로 중첩을 #b1 얻습니다. (전투에서 1번만 발동)."
+  },
+
+  {
+    "ID": "GUITARHERO",
+    "PROPER_NAME": "기타 히어로",
+    "NAMES": [
+      "기타 히어로",
+      "기타_히어로"
+    ],
+    "DESCRIPTION": "매 턴 처음으로 사용하는 #y봇치 카드가 2 번 사용됩니다. 매 턴 시작시, [E] 를 얻습니다."
+  },
+
+  {
+    "ID": "GRV",
+    "PROPER_NAME": "그루브",
+    "NAMES": [
+      "그루브"
+    ],
+    "DESCRIPTION": "#y그루브 는 #y그루브 #y피해 카드의 피해량을 증가시킵니다. 특정 카드는 일정량의 #y그루브 를 보유하고 있어야만 사용할 수 있습니다."
+  },
+
+  {
+    "ID": "GRVDMG",
+    "PROPER_NAME": "그루브 피해",
+    "NAMES": [
+      "그루브 피해",
+      "그루브_피해"
+    ],
+    "DESCRIPTION": "보유한 #y그루브 중첩 1당, 그루브 피해가 #b1 증가합니다."
+  },
+
+  {
+    "ID": "STUN",
+    "PROPER_NAME": "기절",
+    "NAMES": [
+      "기절"
+    ],
+    "DESCRIPTION": "기절한 대상은 1 턴 동안 행동할 수 없습니다."
+  },
+
+  {
+    "ID": "DIST",
+    "PROPER_NAME": "디스토션",
+    "NAMES": [
+      "디스토션"
+    ],
+    "DESCRIPTION": "모든 카드의 비용이 무작위로 변화합니다. 매 턴 시작시 디스토션 중첩이 #b1 감소합니다. NL 중첩이 0이 되면, 카드들의 비용이 다시 원래대로 돌아옵니다."
+  },
+
+  {
+    "ID": "FANTASY",
+    "PROPER_NAME": "봇치의 망상",
+    "NAMES": [
+      "망상",
+      "봇치의 망상",
+      "봇치의_망상"
+    ],
+    "DESCRIPTION": "망상 카드는 사용불가 이며 #y보존 효과를 보유한 카드입니다. 해당 카드들은 턴 종료시에 자동으로 효과를 발동합니다."
+  },
+
+  {
+    "ID": "SOLO",
+    "PROPER_NAME": "솔로",
+    "NAMES": [
+      "결속 밴드 솔로",
+      "멤버_솔로",
+      "밴드멤버_솔로",
+      "솔로"
+    ],
+    "DESCRIPTION": "같은 멤버의 카드 #b3 장을 #y연속으로 사용하면, 해당 멤버의 솔로 모드로 진입합니다. 각 멤버마다 솔로의 효과가 다릅니다."
+  }
+]

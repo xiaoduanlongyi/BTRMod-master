@@ -37,6 +37,8 @@ public class RyoEatEat extends BaseCard {
         setMagic(FEED_BUFF, UPG_FEED_BUFF);
         this.isMultiDamage = true;
         setExhaust(true);
+
+        tags.add(RYO);
     }
 
     @Override

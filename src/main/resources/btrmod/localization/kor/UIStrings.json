@@ -1,0 +1,59 @@
+{
+  "btrmod:Example": {
+    "TEXT": [
+      "This is",
+      "an array of Strings."
+    ],
+    "EXTRA_TEXT": [
+      "This is another",
+      "array of Strings."
+    ],
+    "TEXT_DICT": {
+      "This": "Contains pairs of Strings, used to get values based on keys.",
+      "This is a key": "This is a value."
+    }
+  },
+
+  "btrmod:cantUseMessage": {
+    "TEXT": [
+      "#r그루브 가 부족해.",
+      "보유한 #r커뮤증 중첩이 너무 많아.",
+      "현재 손패에 #r키타 카드가 있어선 안 돼."
+    ]
+  },
+
+  "btrmod:memberName": {
+    "TEXT": [
+      " #y봇치 ",
+      " #y키타 ",
+      " #y니지카 ",
+      " #y료 "
+    ]
+  },
+
+  "btrmod:memberSolo": {
+    "TEXT": [
+      " #y봇치 #y솔로 ",
+      " #y키타 #y솔로 ",
+      " #y니지카 #y솔로 ",
+      " #y료 #y솔로 "
+    ]
+  },
+
+  "btrmod:soloComboPanel": {
+    "TEXT": [
+      "콤보 진행 현황",
+      "현재",
+      "진행 수치: #b"
+    ]
+  },
+
+  "btrmod:memberSoloDescription": {
+    "TEXT": [
+      " NL 봇치 솔로 모드 상태일때는, #y그루브 #y피해 의 피해량이 추가로 #b50% 증가합니다. NL #y봇치 카드를 사용할 때마다, #y그루브 를 추가로 #b1 얻습니다.",
+      " NL 키타 솔로 모드 상태일때는, 매 턴 시작시 카드 #b2 장을 추가로 뽑습니다. NL #y키타 카드를 사용할 때마다, #y그루브 를 추가로 #b1 얻습니다.",
+      " NL 니지카 솔로 모드 상태일때는, #y커뮤증 중첩을 감소시킬때마다, 추가로 #b1 만큼 더 감소합니다. NL #y니지카 카드를 사용할 때마다, #y그루브 를 추가로 #b1 얻습니다.",
+      " NL 료 솔로 모드 상태일때는, #y그루브 중첩 획득량이 2 배로 증가합니다. NL #y료 카드를 사용할 때마다, #y그루브 를 추가로 #b1 얻습니다."
+    ]
+  }
+}
