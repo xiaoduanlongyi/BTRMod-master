@@ -51,7 +51,7 @@
   },
   "${modID}:FireBocchi": {
     "NAME": "Fire Bocchi",
-    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Deal !D! damage. NL Apply !M! Vulnerable. If ${modID}:Bocchi_Anxiety is greater than 5, this card costs 0."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Deal !D! damage. NL Apply !M! Vulnerable. If ${modID}:Bocchi_Anxiety is greater than !${modID}:BAP!, this card costs 0."
   },
   "${modID}:SuperBocchi": {
     "NAME": "Super Saiyan Bocchi",
@@ -124,8 +124,7 @@
   },
   "${modID}:SacrificeBocchi": {
     "NAME": "Bocchi Seppuku",
-    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Gain [E] [E]. NL Draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Gain [E] [E] [E]. NL Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain !${modID}:BAP! ${modID}:Bocchi_Anxiety. NL Gain [E] [E]. NL Draw !M! cards. NL Exhaust."
   },
   "${modID}:RyoEatEat": {
     "NAME": "Have Some Snacks",
@@ -332,7 +331,8 @@
   },
   "${modID}:WormBocchi": {
     "NAME": "Hammerhead Snake",
-    "DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain 1 Intangible for each 2 ${modID}:Bocchi_Anxiety. NL ${modID}:Bocchi_Anxiety can no longer be removed."
+    "DESCRIPTION": "[#f5a4b6]Bocchi[]! Ethereal. NL Gain 1 Intangible for each 2 ${modID}:Bocchi_Anxiety. NL ${modID}:Bocchi_Anxiety can no longer be removed.",
+    "UPGRADE_DESCRIPTION": "[#f5a4b6]Bocchi[]! NL Gain 1 Intangible for each 2 ${modID}:Bocchi_Anxiety. NL ${modID}:Bocchi_Anxiety can no longer be removed."
   },
   "${modID}:GuitarLonelinessBluePlanet": {
     "NAME": "Guitar, Loneliness, Blue Planet",

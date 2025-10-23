@@ -124,8 +124,7 @@
   },
   "${modID}:SacrificeBocchi": {
     "NAME": "波奇切腹",
-    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 獲得 [E] [E] 。 NL 抽 !M! 張牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 獲得 [E] [E] [E] 。 NL 抽 !M! 張牌。 NL 消耗 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 獲得 !${modID}:BAP! 層 ${modID}:波奇自閉 。 NL 獲得 [E] [E] 。 NL 抽 !M! 張牌。 NL 消耗 。"
   },
   "${modID}:RyoEatEat": {
     "NAME": "沙縣小吃",
@@ -332,7 +331,8 @@
   },
   "${modID}:WormBocchi": {
     "NAME": "槌子蛇波奇",
-    "DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 每有2層 ${modID}:波奇自閉 獲得1層 無實體 。 NL 無法再移除 ${modID}:波奇自閉 。"
+    "DESCRIPTION": "[#f5a4b6]波奇[] ！ 虛無 。 NL 每有2層 ${modID}:波奇自閉 獲得1層 無實體 。 NL 無法再移除 ${modID}:波奇自閉 。",
+    "UPGRADE_DESCRIPTION": "[#f5a4b6]波奇[] ！ NL 每有2層 ${modID}:波奇自閉 獲得1層 無實體 。 NL 無法再移除 ${modID}:波奇自閉 。"
   },
   "${modID}:GuitarLonelinessBluePlanet": {
     "NAME": "吉他與孤獨與藍色星球",

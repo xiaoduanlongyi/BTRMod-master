@@ -101,8 +101,8 @@
   "${modID}:PubertySyndromePower": {
     "NAME": "Seisyun Complex",
     "DESCRIPTIONS": [
-      "When you switch #ySolo, gain #b",
-      " #yBlock."
+      "When you switch #ySolo, draw #b",
+      " cards."
     ]
   },
 
@@ -130,8 +130,7 @@
   "${modID}:NeverForgetPower": {
     "NAME": "Never Forget",
     "DESCRIPTIONS": [
-      "The #b",
-      "st time you switch #yMember #ySolo each turn, gain [E]."
+      "The #b1st time you switch #yMember #ySolo each turn, gain [E]."
     ]
   },
 
@@ -146,8 +145,8 @@
   "${modID}:WhatIsWrongWithPower": {
     "NAME": "What Is Wrong With",
     "DESCRIPTIONS": [
-      "Whenever you play a card that reduces #yBocchi #yAnxiety, draw #b",
-      " cards."
+      "Whenever you play a card that reduces #yBocchi #yAnxiety, gain #b",
+      " #yBlock."
     ]
   }
 }

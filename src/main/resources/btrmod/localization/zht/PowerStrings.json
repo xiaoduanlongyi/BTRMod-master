@@ -101,8 +101,8 @@
   "${modID}:PubertySyndromePower": {
     "NAME": "青春症候群",
     "DESCRIPTIONS": [
-      "當你切換 #ySolo時 ，獲得 #b",
-      " 點 #y格擋 。"
+      "當你切換 #ySolo時 ，抽 #b",
+      " 張牌。"
     ]
   },
 
@@ -130,8 +130,7 @@
   "${modID}:NeverForgetPower": {
     "NAME": "絕不會忘記",
     "DESCRIPTIONS": [
-      "每回合第 #b",
-      " 次切換 #y成員Solo 時，獲得 [E] 。"
+      "每回合第 #b1次 切換 #y成員Solo 時，獲得 [E] 。"
     ]
   },
 
@@ -146,8 +145,8 @@
   "${modID}:WhatIsWrongWithPower": {
     "NAME": "有何不可",
     "DESCRIPTIONS": [
-      "每打出 #y1 張 減少 #y波奇自閉 的牌時 ，抽 #b",
-      " 張牌。"
+      "每打出 #y1 張 減少 #y波奇自閉 的牌時 ，獲得 #b",
+      " 點 #y格擋 。"
     ]
   }
 }
