@@ -45,6 +45,6 @@ public class NeverForgetPower extends BasePower implements OnReceivePowerPower {
     }
 
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0];
     }
 }
